@@ -1,0 +1,220 @@
+[2022-05-11 06:55:10,736] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 06:55:10,746] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 06:55:10,746] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 06:55:10,746] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-11 06:55:10,746] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 06:55:10,760] {taskinstance.py:1264} INFO - Executing <Task(riotOperator): staging> on 2022-03-31 21:00:00+00:00
+[2022-05-11 06:55:10,766] {standard_task_runner.py:52} INFO - Started process 1940 to run task
+[2022-05-11 06:55:10,769] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'staging', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpxquptp3y', '--error-file', '/tmp/tmp01yc_1_h']
+[2022-05-11 06:55:10,770] {standard_task_runner.py:77} INFO - Job 4: Subtask staging
+[2022-05-11 06:55:10,826] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [running]> on host c411fdaf6506
+[2022-05-11 06:55:10,876] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=staging
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-11 06:55:10,877] {riot_operator.py:60} INFO - StageToAzureLake not implemented yet
+[2022-05-11 06:55:10,899] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 61, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 66, in upload_to_azureLake
+    wasb_hook = WasbHook(self.azure_conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 113, in __init__
+    self.blob_service_client = self.get_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 117, in get_conn
+    conn = self.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 68, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 410, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `azure_conn_id` isn't defined
+[2022-05-11 06:55:10,908] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=staging, execution_date=20220331T210000, start_date=20220511T065510, end_date=20220511T065510
+[2022-05-11 06:55:10,924] {standard_task_runner.py:89} ERROR - Failed to execute job 4 for task staging
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 61, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 66, in upload_to_azureLake
+    wasb_hook = WasbHook(self.azure_conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 113, in __init__
+    self.blob_service_client = self.get_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 117, in get_conn
+    conn = self.get_connection(self.conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 68, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 410, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `azure_conn_id` isn't defined
+[2022-05-11 06:55:10,942] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-11 06:55:10,969] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-11 07:12:45,984] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 07:12:45,994] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 07:12:45,994] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 07:12:45,994] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-11 07:12:45,994] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 07:12:46,006] {taskinstance.py:1264} INFO - Executing <Task(riotOperator): staging> on 2022-03-31 21:00:00+00:00
+[2022-05-11 07:12:46,010] {standard_task_runner.py:52} INFO - Started process 2601 to run task
+[2022-05-11 07:12:46,013] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'staging', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmp7kkki6bt', '--error-file', '/tmp/tmpv8xpzuss']
+[2022-05-11 07:12:46,013] {standard_task_runner.py:77} INFO - Job 10: Subtask staging
+[2022-05-11 07:12:46,063] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [running]> on host c411fdaf6506
+[2022-05-11 07:12:46,105] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=staging
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-11 07:12:46,106] {riot_operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-05-11 07:12:46,115] {riot_operator.py:68} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f4288cb90a0>>
+[2022-05-11 07:12:46,115] {riot_operator.py:69} INFO - Created Azure Connection
+[2022-05-11 07:12:46,122] {riot_operator.py:72} INFO - Created Riot Connection
+[2022-05-11 07:12:46,663] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-05-11 07:12:46,663] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-05-11 07:12:46,663] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-05-11 07:12:47,187] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-05-11 07:12:47,187] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-05-11 07:12:47,187] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-05-11 07:12:47,188] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 85, in upload_to_azureLake
+    match_details = match['info']['participants']
+TypeError: string indices must be integers
+[2022-05-11 07:12:47,200] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=staging, execution_date=20220331T210000, start_date=20220511T071245, end_date=20220511T071247
+[2022-05-11 07:12:47,212] {standard_task_runner.py:89} ERROR - Failed to execute job 10 for task staging
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 85, in upload_to_azureLake
+    match_details = match['info']['participants']
+TypeError: string indices must be integers
+[2022-05-11 07:12:47,230] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-11 07:12:47,256] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-11 21:53:02,051] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 21:53:02,061] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-11 21:53:02,061] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 21:53:02,061] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-11 21:53:02,061] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-11 21:53:02,071] {taskinstance.py:1264} INFO - Executing <Task(riotOperator): staging> on 2022-03-31 21:00:00+00:00
+[2022-05-11 21:53:02,076] {standard_task_runner.py:52} INFO - Started process 11781 to run task
+[2022-05-11 21:53:02,078] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'staging', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpn9erwj5y', '--error-file', '/tmp/tmpcit8ne01']
+[2022-05-11 21:53:02,079] {standard_task_runner.py:77} INFO - Job 142: Subtask staging
+[2022-05-11 21:53:02,122] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.staging scheduled__2022-03-31T21:00:00+00:00 [running]> on host c411fdaf6506
+[2022-05-11 21:53:02,163] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=staging
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-11 21:53:02,164] {riot_operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-05-11 21:53:02,172] {riot_operator.py:68} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f119a9cc430>>
+[2022-05-11 21:53:02,172] {riot_operator.py:69} INFO - Created Azure Connection
+[2022-05-11 21:53:02,180] {riot_operator.py:72} INFO - Created Riot Connection
+[2022-05-11 21:53:02,447] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-05-11 21:53:02,447] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-05-11 21:53:02,447] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-05-11 21:53:02,739] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-05-11 21:53:02,739] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-05-11 21:53:02,739] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-05-11 21:53:02,743] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 86, in upload_to_azureLake
+    match_details = match['info']['participants']
+TypeError: string indices must be integers
+[2022-05-11 21:53:02,752] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=staging, execution_date=20220331T210000, start_date=20220511T215302, end_date=20220511T215302
+[2022-05-11 21:53:02,765] {standard_task_runner.py:89} ERROR - Failed to execute job 142 for task staging
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_operator.py", line 86, in upload_to_azureLake
+    match_details = match['info']['participants']
+TypeError: string indices must be integers
+[2022-05-11 21:53:02,772] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-11 21:53:02,796] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

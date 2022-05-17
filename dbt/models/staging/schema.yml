@@ -1,0 +1,22 @@
+
+version: 2
+
+sources:
+    - name: league_of_legends_data
+      description: 'League of legends database'
+      schema: 
+      database: 
+      tables:
+        - name: staging_datadragon_champions
+        - name: staging_datadragon_maps
+        - name: staging_datadragon_items
+        - name: staging_datadragon_runes_reforged
+        - name: staging_datadragon_summonerspells
+
+models:
+  - name: stg_champions
+    columns:
+      - name: champion_id
+        tests:
+          - not_null
+          - unique

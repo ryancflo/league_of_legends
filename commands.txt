@@ -1,0 +1,14 @@
+docker-compose up --build
+
+docker-compose rm -v
+
+docker exec -ti broker kafka-topics --list --bootstrap-server broker:29092
+
+
+#################### Azure Connections
+
+user: leagueoflegends
+password: RGAPI-0314b471-323b-4559-aecd-2b5d0801493a
+
+?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupx&se=2023-05-16T12:06:18Z&st=2022-05-16T04:06:18Z&spr=https&sig=MuxmvA8EfKWFegRxN1ALLM%2BLr736zeoY%2BGKNozF398s%3D
+#################### Riot Connections

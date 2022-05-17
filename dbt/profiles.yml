@@ -1,0 +1,13 @@
+dbt:
+  outputs:
+    dev:
+      account: yb06886.west-us-2.azure
+      database: LEAGUE_OF_LEGENDSDB
+      password: Yodude123+
+      role: admin
+      schema: none
+      threads: 0
+      type: snowflake
+      user: ryancflo
+      warehouse: COMPUTE_WH
+  target: dev

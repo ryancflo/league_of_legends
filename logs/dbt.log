@@ -1,0 +1,26 @@
+
+
+============================== 2022-05-04 06:03:24.419310 | 3059863d-e983-43ea-ab37-e76e22985556 ==============================
+06:03:24.419322 [info ] [MainThread]: Running with dbt=1.1.0
+06:03:24.419716 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/ryancflo/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+06:03:24.419829 [debug] [MainThread]: Tracking: tracking
+06:03:24.426653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45b1070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45b1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45a3fd0>]}
+06:03:27.658711 [debug] [MainThread]: Starter project path: /home/ryancflo/.local/lib/python3.8/site-packages/dbt/include/starter_project
+06:09:53.106311 [info ] [MainThread]: Profile dbt written to /home/ryancflo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+06:09:53.106682 [info ] [MainThread]: 
+Your new dbt project "dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+06:09:53.107298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86550>]}
