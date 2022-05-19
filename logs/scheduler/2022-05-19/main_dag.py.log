@@ -1205,3 +1205,92 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
 [2022-05-19 00:37:08,486] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
 [2022-05-19 00:37:08,502] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.093 seconds
+[2022-05-19 00:37:38,727] {processor.py:163} INFO - Started process (PID=12566) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:37:38,729] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:37:38,730] {logging_mixin.py:109} INFO - [2022-05-19 00:37:38,730] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:37:39,404] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-19 00:37:39,735] {logging_mixin.py:109} INFO - [2022-05-19 00:37:39,734] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 50, in <module>
+    staging_dataDragon = riot_matchDetailsToADLSOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
+[2022-05-19 00:37:39,740] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:37:39,749] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.024 seconds
+[2022-05-19 00:38:10,011] {processor.py:163} INFO - Started process (PID=12650) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:10,020] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:38:10,021] {logging_mixin.py:109} INFO - [2022-05-19 00:38:10,021] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:11,124] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-19 00:38:11,793] {logging_mixin.py:109} INFO - [2022-05-19 00:38:11,792] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 50, in <module>
+    staging_dataDragon = riot_matchDetailsToADLSOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
+[2022-05-19 00:38:11,798] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:11,808] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.801 seconds
+[2022-05-19 00:38:41,870] {processor.py:163} INFO - Started process (PID=12747) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:41,871] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:38:41,872] {logging_mixin.py:109} INFO - [2022-05-19 00:38:41,872] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:42,497] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-19 00:38:42,844] {logging_mixin.py:109} INFO - [2022-05-19 00:38:42,843] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 50, in <module>
+    staging_dataDragon = riot_matchDetailsToADLSOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
+[2022-05-19 00:38:42,849] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:38:42,857] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.989 seconds
+[2022-05-19 00:39:26,970] {processor.py:163} INFO - Started process (PID=12834) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:39:28,100] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:39:28,101] {logging_mixin.py:109} INFO - [2022-05-19 00:39:28,101] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:39:37,657] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-19 00:39:38,516] {logging_mixin.py:109} INFO - [2022-05-19 00:39:38,514] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 50, in <module>
+    staging_dataDragon = riot_matchDetailsToADLSOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
+[2022-05-19 00:39:38,524] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:39:38,543] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 11.578 seconds
+[2022-05-19 00:40:09,437] {processor.py:163} INFO - Started process (PID=12948) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:40:09,438] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:40:09,439] {logging_mixin.py:109} INFO - [2022-05-19 00:40:09,439] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:40:10,155] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-19 00:40:10,557] {logging_mixin.py:109} INFO - [2022-05-19 00:40:10,556] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 50, in <module>
+    staging_dataDragon = riot_matchDetailsToADLSOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['region', 'summoner_name'] is required
+[2022-05-19 00:40:10,561] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:40:10,570] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.136 seconds
+[2022-05-19 00:40:41,248] {processor.py:163} INFO - Started process (PID=13047) to work on /opt/airflow/dags/main_dag.py
+[2022-05-19 00:40:41,256] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-19 00:40:41,257] {logging_mixin.py:109} INFO - [2022-05-19 00:40:41,257] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-19 00:40:42,223] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
