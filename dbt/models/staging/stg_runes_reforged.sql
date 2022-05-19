@@ -25,7 +25,7 @@ FROM tbl_runes
 )
 
 SELECT
-    ID,
+    ID as rune_id,
     f1.value:key as rune_name
 FROM tbl,
     LATERAL FLATTEN(input => value_extract) f,

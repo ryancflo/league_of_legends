@@ -11,8 +11,8 @@ from custom_hooks.riot_hook import riotHook
 
 class riot_dataDragonToADLSOperator(BaseOperator):
     """
-    Twitter To Azure DataLake Operator
-    :param twitter_conn_id:             The source twitter connection id.
+    Riot To Azure DataLake Operator
+    :param riot_conn_id:             The source twitter connection id.
     :type azure_conn_id::               string
     :param azure_conn_id::              The destination azure connection id.
     :type azure_conn_id::               string
@@ -52,20 +52,27 @@ class riot_dataDragonToADLSOperator(BaseOperator):
     def execute(self, context):
         self.log.info('StageToAzureLake not implemented yet')
         self.upload_to_azureLake()
-        self.log.info("Upload twitter data to Azure!")
+        self.log.info("Upload league of legends data to Azure!")
 
     def upload_to_azureLake(self):
         #Create Azure Connection
         self.log.info(self.wasb_hook.get_conn)
-        self.log.info("Created Azure Connection")
+        self.log.info("Created Azure Connections")
 
         #Create Riot Connection
         self.log.info(self.wasb_hook.get_conn)
         self.log.info("Created Riot Connection")
         
-        sub_df = pd.DataFrame(index=[1])
-        match = riot_hook.get_champions(version=self.version)
-
+        if self.data_url == 'champions':
+            response_data = riot_hook.get_champions(version=self.version)
+        elif self.data_url == 'maps':
+            response_data = riot_hook.get_maps(version=self.version)
+        elif self.data_url == 'items':
+            response_data = riot_hook.get_items(version=self.version)
+        elif self.data_url == 'runesreforged':
+            response_data = riot_hook.get_runes_reforged(version=self.version)
+        elif self.data_url == 'summonerspells':
+            response_data = riot_hook.get_summoner_spells(version=self.version)
 
         # Write tweet data to temp file.
         with tempfile.TemporaryDirectory() as tmp_dir:

@@ -39,29 +39,35 @@ class riotHook(BaseHook):
     #DataDragonAPI-champions
     def get_champions(version: str):
 
-        champions = lol_watcher.data_dragon.champions(version=version)['data']
+        champions = lol_watcher.data_dragon.champions(version=version)
         return champions
 
     #DataDragonAPI-maps
     def get_maps(version: str):
 
-        maps = lol_watcher.data_dragon.maps(version=version)['data']
+        maps = lol_watcher.data_dragon.maps(version=version)
         return maps
 
     #DataDragonAPI-items
     def get_items(version: str):
 
-        items = lol_watcher.data_dragon.items(version=version)['data']
+        items = lol_watcher.data_dragon.items(version=version)
         return items
 
     #DataDragonAPI-masteries
-    def get_masteries(version: str):
+    # def get_masteries(version: str):
 
-        masteries = lol_watcher.data_dragon.masteries(version=version)['data']
-        return masteries
+    #     masteries = lol_watcher.data_dragon.masteries(version=version)
+    #     return masteries
 
-    #DataDragonAPI-runes
-    def get_runes(version: str):
+    #DataDragonAPI-runes_reforged
+    def get_runes_reforged(version: str):
 
-        runes = lol_watcher.data_dragon.runes(version=version)['data']
-        return runes
+        runes_reforged = lol_watcher.data_dragon.runes_reforged(version=version)
+        return runes_reforged
+        
+    #DataDragonAPI-summoner_spells
+    def get_summoner_spells(version: str):
+
+        runes_reforged = lol_watcher.data_dragon.runes_reforged(version=version)
+        return runes_reforged

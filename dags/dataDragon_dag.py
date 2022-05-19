@@ -12,14 +12,18 @@ from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOp
 
 LEAGUE_VERSION = '12.9.1'
 SNOWFLAKE_CONN_ID = 'snowflake_conn_id'
-CURRENT_TIME = datetime.today()
 
-
-d = datetime.today() - timedelta(days = 1)
-start_epoch = int(d.timestamp())
-
-static_data = ['champions', 'maps', 'items', 'masteries', 'runes']
-file_format = ['DATADRAGON_CHAMPIONS_FILEFORMAT', 'DATADRAGON_MAPS_FILEFORMAT', 'DATADRAGON_ITEMS_FILEFORMAT', 'DATADRAGON_MASTERIES_FILEFORMAT', 'DATADRAGON_RUNES_FILEFORMAT']
+end_epoch= int(datetime.now().timestamp())
+start_epoch = datetime.now() - timedelta(days=2)
+start_epoch = int(start_epoch.timestamp())
+CURRENT_TIME = datetime.now()
+static_data = {
+    'champions' : ['STAGING_DATADRAGON_CHAMPIONS', 'MY_AZURE_DATADRAGON_CHAMPIONS_STAGE'], 
+    'maps' : ['STAGING_DATADRAGON_MAPS', 'MY_AZURE_DATADRAGON_MAPS_STAGE'],
+    'items' : ['STAGING_DATADRAGON_ITEMS', 'MY_AZURE_DATADRAGON_ITEMS_STAGE'] , 
+    'runesreforged' : ['STAGING_DATADRAGON_RUNES_REFORGED', 'MY_AZURE_DATADRAGON_RUNESREFORGED_STAGE'], 
+    'summonerspells' : ['STAGING_DATADRAGON_RUNES_SUMMONERSPELLS', 'MY_AZURE_DATADRAGON_SUMMONERSPELLS_STAGE']
+}
 
 default_args = {
     'owner': 'admin',
@@ -38,98 +42,51 @@ dag = DAG(dag_id = 'league_of_legends_dag',
           schedule_interval='0 * * * *'
         )
 
-def create_dag(dag_id, schedule, task_name, dag, default_args):
 
-    def hello_world_py(*args):
-        print('Hello World')
-        print('This is DAG: {}'.format(task_name))
+with dag as dag:
+    with TaskGroup(group_id='paths') as paths:
+        for data in static_data:
+            with TaskGroup(group_id=f'path_{data}') as path:
 
-    with dag:
-        staging_dataDragon = riot_dataDragonToADLSOperator(
-            task_id='staging_{}'.format(task_name),
-            dag=dag,
-            riot_conn_id = 'riot_conn_id',
-            azure_blob = 'test',
-            azure_conn_id = 'azure_conn_id',
-            version = LEAGUE_VERSION,
-            data_url = task_name,
-            ignore_headers=1
-        )
+                CREATE_DATADRAGON_STAGING_TABLE_SQL_STRING = (
+                f"CREATE OR REPLACE TABLE {static_data[data][0]} (json_data variant);"
+                )
 
-        azure_hashtags_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
-            task_id='azure_{}_snowflake'.format(task_name),
-            dag=dag,
-            azure_keys=['{0}/{1}/{2}/{3}/{4}.json'.format("hashtags_data", CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
-            stage='MY_AZURE_TWITTER_STAGE',
-            table='STAGING_TWITTER_HASHTAGS',
-            file_format='TWITTER_FILEFORMAT',
-            snowflake_conn_id=SNOWFLAKE_CONN_ID
-        )
-        
-        staging_dataDragon >> azure_hashtags_toSnowflake
-    return dag
+                schedule = '@weekly'
 
+                staging_dataDragon = riot_dataDragonToADLSOperator(
+                    task_id='staging_{}'.format(data),
+                    dag=dag,
+                    riot_conn_id = 'riot_conn_id',
+                    azure_blob = 'test',
+                    azure_conn_id = 'azure_conn_id',
+                    version = LEAGUE_VERSION,
+                    data_url = data,
+                    ignore_headers=1
+                )
 
-staging_dataDragon = riot_dataDragonToADLSOperator(
-    task_id='staging_test'
-    dag=dag,
-    riot_conn_id = 'riot_conn_id',
-    azure_blob = 'test',
-    azure_conn_id = 'azure_conn_id',
-    version = LEAGUE_VERSION,
-    data_url = champions,
-    ignore_headers=1
-)
+                create_staging_tables = SnowflakeOperator(
+                    task_id='Create_StagingSnowflake_Tables_{}'.format(data),
+                    dag=dag,
+                    sql=CREATE_DATADRAGON_STAGING_TABLE_SQL_STRING,
+                    snowflake_conn_id=SNOWFLAKE_CONN_ID
+                )
 
-azure_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
-    task_id='azure_snowflake',
-    dag=dag,
-    azure_keys=['{0}/{1}/{2}/{3}/{4}.json'.format("datadragon-champions", CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
-    stage='MY_AZURE_DATADRAGON_CHAMPIONS_STAGE',
-    table='STAGING_TWITTER_HASHTAGS',
-    file_format='DATADRAGON_CHAMPIONS_FILEFORMAT',
-    snowflake_conn_id=SNOWFLAKE_CONN_ID
-)
+                azure_hashtags_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
+                    task_id='azure_{}_snowflake'.format(data),
+                    dag=dag,
+                    azure_keys=['datadragon-{0}/{1}/{2}/{3}/{4}.json'.format(data, CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+                    stage=static_data[data][1],
+                    table=static_data[data][0],
+                    file_format='DATADRAGON_FILEFORMAT',
+                    snowflake_conn_id=SNOWFLAKE_CONN_ID
+                )
 
+                staging_dataDragon >> create_staging_tables >> azure_hashtags_toSnowflake
+    
 
-# for data in static_data:
-#     dag_id = 'loop_hello_world_{}'.format(data)
-
-#     schedule = '@weekly'
-
-#     globals()[dag_id] = create_dag(dag_id,
-#                                 schedule,
-#                                 data,
-#                                 dag,
-#                                 default_args)
-
-
-# with dag as dag:
-#     with TaskGroup(group_id='load_toSnowflakeStaging') as load_toSnowflakeStaging:
-#         snowflake_op_sql_str = SnowflakeOperator(
-#             task_id='snowflake_op_sql_str',
-#             dag=dag,
-#             sql=CREATE_TABLE_SQL_STRING,
-#             warehouse=SNOWFLAKE_WAREHOUSE,
-#             database=SNOWFLAKE_DATABASE,
-#             schema=SNOWFLAKE_SCHEMA,
-#             role=SNOWFLAKE_ROLE,
-#         )
-            
-#         snowflake_op_with_params = SnowflakeOperator(
-#             task_id='snowflake_op_with_params',
-#             dag=dag,
-#             sql=SQL_INSERT_STATEMENT,
-#             parameters={"id": 56},
-#             warehouse=SNOWFLAKE_WAREHOUSE,
-#             database=SNOWFLAKE_DATABASE,
-#             schema=SNOWFLAKE_SCHEMA,
-#             role=SNOWFLAKE_ROLE,
-#         )
-
-#         []
 
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> staging_dataDragon >> azure_toSnowflake >> end_operator
+start_operator >> paths >> end_operator

@@ -66,10 +66,6 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         #Create Azure Connection
         self.log.info(self.wasb_hook.get_conn)
         self.log.info("Created Azure Connection")
-
-        #Create Riot Connection
-        self.log.info(self.wasb_hook.get_conn)
-        self.log.info("Created Riot Connection")
         
         match_history = self.riot_hook.get_latest_match_history(                 
             self.region,

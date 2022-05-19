@@ -13,7 +13,7 @@
 WITH tbl_items AS
 (
 SELECT 
-    key as champion_id,
+    key as item_id,
     value:name as name,
     value:plaintext as plaintext,
     value:gold:base as gold_base,
@@ -21,14 +21,14 @@ SELECT
     CASE WHEN value:stats = {} THEN NULL ELSE value:stats END AS stats,
     CASE WHEN value:effect = {} THEN NULL ELSE value:effect END AS effects
 FROM
-  {{ source('league_of_legends_data', 'staging_datadragon_champions') }},
+  {{ source('league_of_legends_data', 'staging_datadragon_items') }},
   LATERAL FLATTEN(input => json_data)
 ),
 
 pivot_source AS
 (
 SELECT
-    champion_id,
+    item_id,
     key,
     value
 FROM tbl_items, 
@@ -48,7 +48,7 @@ FROM pivot_source
 tbl_effects AS
 (
 SELECT 
-    champion_id,
+    item_id,
     CASE WHEN effects:Effect1Amount IS NULL THEN NULL ELSE effects:Effect1Amount END AS effect1,
     CASE WHEN effects:Effect2Amount IS NULL THEN NULL ELSE effects:Effect2Amount END AS effect2,
     CASE WHEN effects:Effect3Amount IS NULL THEN NULL ELSE effects:Effect3Amount END AS effect3,
@@ -78,9 +78,9 @@ SELECT
     *
 FROM tbl_items 
     LEFT JOIN tbl_effects 
-        ON tbl_items.champion_id = tbl.effects.champion_id 
+        ON tbl_items.item_id = tbl.effects.item_id 
     LEFT JOIN tbl_stats 
-        ON tbl_items.champion_id = tbl.stats.champion_id 
+        ON tbl_items.item_id = tbl.stats.item_id 
 
 
 
