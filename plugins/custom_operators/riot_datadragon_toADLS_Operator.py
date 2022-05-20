@@ -3,6 +3,7 @@ import logging
 from os import path 
 import tempfile
 import pandas as pd
+import json
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.microsoft.azure.hooks.wasb import WasbHook
 from airflow.models import BaseOperator
@@ -33,6 +34,7 @@ class riot_dataDragonToADLSOperator(BaseOperator):
                  azure_conn_id: str,
                  version: str,
                  data_url: str,
+                 end_epoch: int,
                  region: str  = None,
                  ignore_headers=1,
                  *args, **kwargs):
@@ -44,9 +46,9 @@ class riot_dataDragonToADLSOperator(BaseOperator):
         self.azure_conn_id = azure_conn_id
         self.version = version
         self.data_url = data_url
+        self.end_epoch = end_epoch
         self.region = region
-        self.wasb_hook = WasbHook(self.azure_conn_id)
-        self.riot_hook = riotHook(self.riot_conn_id)
+        
         
 
     def execute(self, context):
@@ -56,23 +58,23 @@ class riot_dataDragonToADLSOperator(BaseOperator):
 
     def upload_to_azureLake(self):
         #Create Azure Connection
-        self.log.info(self.wasb_hook.get_conn)
+        wasb_hook = WasbHook(self.azure_conn_id)
+        
+        self.log.info(wasb_hook.get_conn)
         self.log.info("Created Azure Connections")
 
-        #Create Riot Connection
-        self.log.info(self.wasb_hook.get_conn)
-        self.log.info("Created Riot Connection")
-        
+        riot_hook = riotHook(self.riot_conn_id)
+
         if self.data_url == 'champions':
-            response_data = riot_hook.get_champions(version=self.version)
+            response_data = riot_hook.get_champions(self.version)
         elif self.data_url == 'maps':
-            response_data = riot_hook.get_maps(version=self.version)
+            response_data = riot_hook.get_maps(self.version)
         elif self.data_url == 'items':
-            response_data = riot_hook.get_items(version=self.version)
+            response_data = riot_hook.get_items(self.version)
         elif self.data_url == 'runesreforged':
-            response_data = riot_hook.get_runes_reforged(version=self.version)
+            response_data = riot_hook.get_runes_reforged(self.version)
         elif self.data_url == 'summonerspells':
-            response_data = riot_hook.get_summoner_spells(version=self.version)
+            response_data = riot_hook.get_summoner_spells(self.version)
 
         # Write tweet data to temp file.
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -81,11 +83,12 @@ class riot_dataDragonToADLSOperator(BaseOperator):
                 json.dump(response_data, fp)
 
             # Upload file to Azure Blob.
+            self.log.info("About to load to Azure!")
+            self.log.info(self.data_url)
             wasb_hook.load_file(
                 tmp_path,
-                container_name="leagueoflegends",
-                blob_name="datadragon-{url_path}/{year}/{month}/{day}/{hour}.json".format(
-                    url_path = self.data_url,
+                container_name="datadragon-{url_path}".format(url_path = self.data_url),
+                blob_name="{year}/{month}/{day}/{hour}.json".format(
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
                     day=self.end_epoch.day,

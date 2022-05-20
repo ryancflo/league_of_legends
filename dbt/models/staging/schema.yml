@@ -4,8 +4,8 @@ version: 2
 sources:
     - name: league_of_legends_data
       description: 'League of legends database'
-      schema: 
-      database: 
+      schema: PUBLIC
+      database: LEAGUE_OF_LEGENDSDB
       tables:
         - name: staging_datadragon_champions
         - name: staging_datadragon_maps

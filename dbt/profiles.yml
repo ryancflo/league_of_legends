@@ -5,7 +5,7 @@ dbt:
       database: LEAGUE_OF_LEGENDSDB
       password: Yodude123+
       role: admin
-      schema: none
+      schema: PUBLIC
       threads: 10
       type: snowflake
       user: ryancflo

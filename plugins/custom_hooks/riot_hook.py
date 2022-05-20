@@ -10,10 +10,10 @@ class riotHook(BaseHook):
         self.api_key = self.connection.extra_dejson.get('API_KEY')
         self.lol_watcher = LolWatcher(self.api_key)
     
-    def get_latest_match_history(   
+    def get_matchlist_by_puuid(   
         self,
         my_region: str,
-        summoner_name: str,
+        puuid: str,
         start: int = None,
         count: int = None,
         queue: int = None,
@@ -22,52 +22,50 @@ class riotHook(BaseHook):
         end_epoch: int = None
     ):
 
-        # A MatchHistory is a lazy list, meaning it's elements only get loaded as-needed.
-        me = self.lol_watcher.summoner.by_name(my_region, summoner_name)
-        match_history = self.lol_watcher.match.matchlist_by_puuid(my_region, me['puuid'], count)
-        
-        return match_history
+        match_history_list = self.lol_watcher.match.matchlist_by_puuid(my_region, puuid, count, start_epoch, end_epoch)
+        return match_history_list
 
-    def get_match_byid(
-        my_region: str, 
-        match_type: str
-    ):
+    def get_match_byid(self, my_region: str, match_id: str):
 
-        matches = self.lol_watcher.match.by_id(my_region, match_type)
-        return matches
+        match_details = self.lol_watcher.match.by_id(my_region, match_id)
+        return match_details
 
     #DataDragonAPI-champions
-    def get_champions(version: str):
+    def get_champions(self, league_version: str):
 
-        champions = lol_watcher.data_dragon.champions(version=version)
-        return champions
+        champions = self.lol_watcher.data_dragon.champions(league_version)
+        return champions['data']
 
     #DataDragonAPI-maps
-    def get_maps(version: str):
+    def get_maps(self, league_version: str):
 
-        maps = lol_watcher.data_dragon.maps(version=version)
-        return maps
+        maps = self.lol_watcher.data_dragon.maps(league_version)
+        return maps['data']
 
     #DataDragonAPI-items
-    def get_items(version: str):
+    def get_items(self, league_version: str):
 
-        items = lol_watcher.data_dragon.items(version=version)
+        items = self.lol_watcher.data_dragon.items(league_version)
         return items
 
-    #DataDragonAPI-masteries
-    # def get_masteries(version: str):
-
-    #     masteries = lol_watcher.data_dragon.masteries(version=version)
-    #     return masteries
-
     #DataDragonAPI-runes_reforged
-    def get_runes_reforged(version: str):
+    def get_runes_reforged(self, league_version: str):
 
-        runes_reforged = lol_watcher.data_dragon.runes_reforged(version=version)
+        runes_reforged = self.lol_watcher.data_dragon.runes_reforged(league_version)
         return runes_reforged
         
     #DataDragonAPI-summoner_spells
-    def get_summoner_spells(version: str):
+    def get_summoner_spells(self, league_version: str):
 
-        runes_reforged = lol_watcher.data_dragon.runes_reforged(version=version)
-        return runes_reforged
+        summoner_spells = self.lol_watcher.data_dragon.summoner_spells(league_version)
+        return summoner_spells['data']
+
+    def get_challenger_players(self, my_region: str, mode: str):
+
+        challengers = lol_watcher.league.challenger_by_queue(my_region, mode)
+        return challengers
+
+    def get_summoner_byid(self, my_region: str, summoner_id: str):
+
+        summoner = lol_watcher.summoner.by_id(my_region,summoner_id)
+        return summoner

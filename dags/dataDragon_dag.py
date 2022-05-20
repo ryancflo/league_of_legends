@@ -7,22 +7,17 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 from custom_operators.riot_datadragon_toADLS_Operator import riot_dataDragonToADLSOperator
 from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOperator
-# from airflow.providers.dbt.cloud.hooks.dbt import DbtCloudHook, DbtCloudJobRunStatus
-# from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
 
 LEAGUE_VERSION = '12.9.1'
 SNOWFLAKE_CONN_ID = 'snowflake_conn_id'
-
-end_epoch= int(datetime.now().timestamp())
-start_epoch = datetime.now() - timedelta(days=2)
-start_epoch = int(start_epoch.timestamp())
 CURRENT_TIME = datetime.now()
+
 static_data = {
     'champions' : ['STAGING_DATADRAGON_CHAMPIONS', 'MY_AZURE_DATADRAGON_CHAMPIONS_STAGE'], 
     'maps' : ['STAGING_DATADRAGON_MAPS', 'MY_AZURE_DATADRAGON_MAPS_STAGE'],
     'items' : ['STAGING_DATADRAGON_ITEMS', 'MY_AZURE_DATADRAGON_ITEMS_STAGE'] , 
     'runesreforged' : ['STAGING_DATADRAGON_RUNES_REFORGED', 'MY_AZURE_DATADRAGON_RUNESREFORGED_STAGE'], 
-    'summonerspells' : ['STAGING_DATADRAGON_RUNES_SUMMONERSPELLS', 'MY_AZURE_DATADRAGON_SUMMONERSPELLS_STAGE']
+    'summonerspells' : ['STAGING_DATADRAGON_SUMMONERSPELLS', 'MY_AZURE_DATADRAGON_SUMMONERSPELLS_STAGE']
 }
 
 default_args = {
@@ -62,6 +57,7 @@ with dag as dag:
                     azure_conn_id = 'azure_conn_id',
                     version = LEAGUE_VERSION,
                     data_url = data,
+                    end_epoch = CURRENT_TIME,
                     ignore_headers=1
                 )
 
@@ -75,7 +71,7 @@ with dag as dag:
                 azure_hashtags_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
                     task_id='azure_{}_snowflake'.format(data),
                     dag=dag,
-                    azure_keys=['datadragon-{0}/{1}/{2}/{3}/{4}.json'.format(data, CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+                    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
                     stage=static_data[data][1],
                     table=static_data[data][0],
                     file_format='DATADRAGON_FILEFORMAT',

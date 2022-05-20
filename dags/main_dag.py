@@ -1,18 +1,19 @@
 import os
 from datetime import datetime, timedelta
 from airflow import DAG
+from airflow.utils.task_group import TaskGroup
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 from custom_operators.riot_matchdetails_toADLS_Operator import riot_matchDetailsToADLSOperator
 from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOperator
-# from airflow.providers.dbt.cloud.hooks.dbt import DbtCloudHook, DbtCloudJobRunStatus
-# from airflow.providers.dbt.cloud.operators.dbt import DbtCloudRunJobOperator
 
 LEAGUE_VERSION = '12.9.1'
 
-d = datetime.today() - timedelta(days = 1)
-start_epoch = int(d.timestamp())
+end_epoch= int(datetime.now().timestamp())
+start_epoch = datetime.now() - timedelta(days=1)
+start_epoch = int(start_epoch.timestamp())
+
 
 static_data = ['champions', 'map', 'items', 'masteries', 'runes']
 
@@ -82,6 +83,28 @@ with dag as dag:
         )
 
         []
+
+task_1 = BashOperator(
+    task_id='daily_transform',
+    bash_command='cd /dbt && dbt run --models transform --profiles-dir .',
+    env={
+        'dbt_user': '{{ var.value.dbt_user }}',
+        'dbt_password': '{{ var.value.dbt_password }}',
+        **os.environ
+    },
+    dag=dag
+)
+
+task_2 = BashOperator(
+    task_id='daily_analysis',
+    bash_command='cd /dbt && dbt run --models analysis --profiles-dir .',
+    env={
+        'dbt_user': '{{ var.value.dbt_user }}',
+        'dbt_password': '{{ var.value.dbt_password }}',
+        **os.environ
+    },
+    dag=dag
+)
 
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
