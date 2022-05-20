@@ -1,0 +1,281 @@
+[2022-05-19 06:03:22,874] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:03:22,893] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:03:22,894] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:03:22,894] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:03:22,895] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:03:22,914] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_maps.staging_maps> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:03:22,920] {standard_task_runner.py:52} INFO - Started process 336 to run task
+[2022-05-19 06:03:22,926] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.staging_maps', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmp_3x8h_54', '--error-file', '/tmp/tmpypp1gu6_']
+[2022-05-19 06:03:22,927] {standard_task_runner.py:77} INFO - Job 154: Subtask paths.path_maps.staging_maps
+[2022-05-19 06:03:22,984] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:03:23,052] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.staging_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:03:23,052] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:03:23,053] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3339264ac0>>
+[2022-05-19 06:03:23,053] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:03:23,054] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = riot_hook.get_maps(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:03:23,070] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_maps.staging_maps, execution_date=20220331T210000, start_date=20220519T060322, end_date=20220519T060323
+[2022-05-19 06:03:23,089] {standard_task_runner.py:89} ERROR - Failed to execute job 154 for task paths.path_maps.staging_maps
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = riot_hook.get_maps(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:03:23,098] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 06:12:36,618] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:12:36,639] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:12:36,639] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:12:36,640] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:12:36,640] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:12:36,666] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_maps.staging_maps> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:12:36,674] {standard_task_runner.py:52} INFO - Started process 616 to run task
+[2022-05-19 06:12:36,682] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.staging_maps', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpvjxvsgxk', '--error-file', '/tmp/tmppxs0ir03']
+[2022-05-19 06:12:36,683] {standard_task_runner.py:77} INFO - Job 155: Subtask paths.path_maps.staging_maps
+[2022-05-19 06:12:36,778] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:12:36,871] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.staging_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:12:36,872] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:12:36,872] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3333b16250>>
+[2022-05-19 06:12:36,872] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:12:36,873] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = riot_hook.get_maps(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:12:36,897] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_maps.staging_maps, execution_date=20220331T210000, start_date=20220519T061236, end_date=20220519T061236
+[2022-05-19 06:12:36,925] {standard_task_runner.py:89} ERROR - Failed to execute job 155 for task paths.path_maps.staging_maps
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = riot_hook.get_maps(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:12:36,975] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 06:14:48,910] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:14:48,935] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:14:48,935] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:14:48,935] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:14:48,936] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:14:48,956] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_maps.staging_maps> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:14:48,964] {standard_task_runner.py:52} INFO - Started process 699 to run task
+[2022-05-19 06:14:48,972] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.staging_maps', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpq71ah901', '--error-file', '/tmp/tmp06bz1i_n']
+[2022-05-19 06:14:48,974] {standard_task_runner.py:77} INFO - Job 162: Subtask paths.path_maps.staging_maps
+[2022-05-19 06:14:49,092] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:14:49,198] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.staging_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:14:49,198] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:14:49,199] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3333b17670>>
+[2022-05-19 06:14:49,199] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:14:49,200] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = self.riot_hook.get_maps(version=self.version)
+TypeError: get_maps() got multiple values for argument 'version'
+[2022-05-19 06:14:49,229] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_maps.staging_maps, execution_date=20220331T210000, start_date=20220519T061448, end_date=20220519T061449
+[2022-05-19 06:14:49,279] {standard_task_runner.py:89} ERROR - Failed to execute job 162 for task paths.path_maps.staging_maps
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = self.riot_hook.get_maps(version=self.version)
+TypeError: get_maps() got multiple values for argument 'version'
+[2022-05-19 06:14:49,308] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 07:31:38,752] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 07:31:38,765] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 07:31:38,765] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 07:31:38,765] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 07:31:38,765] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 07:31:38,781] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_maps.staging_maps> on 2022-03-31 21:00:00+00:00
+[2022-05-19 07:31:38,786] {standard_task_runner.py:52} INFO - Started process 1417 to run task
+[2022-05-19 07:31:38,797] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.staging_maps', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '194', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpli7i06xs', '--error-file', '/tmp/tmp5hxsx1nu']
+[2022-05-19 07:31:38,797] {standard_task_runner.py:77} INFO - Job 194: Subtask paths.path_maps.staging_maps
+[2022-05-19 07:31:38,930] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 07:31:38,997] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.staging_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 07:31:38,998] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 07:31:38,998] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3333b9a490>>
+[2022-05-19 07:31:38,998] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 07:31:38,998] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = self.riot_hook.get_maps(version=self.version)
+TypeError: get_maps() got multiple values for argument 'version'
+[2022-05-19 07:31:39,008] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_maps.staging_maps, execution_date=20220331T210000, start_date=20220519T073138, end_date=20220519T073139
+[2022-05-19 07:31:39,021] {standard_task_runner.py:89} ERROR - Failed to execute job 194 for task paths.path_maps.staging_maps
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 65, in upload_to_azureLake
+    response_data = self.riot_hook.get_maps(version=self.version)
+TypeError: get_maps() got multiple values for argument 'version'
+[2022-05-19 07:31:39,050] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-20 04:50:13,019] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-20 04:50:13,030] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-20 04:50:13,030] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:50:13,030] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-20 04:50:13,030] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:50:13,041] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_maps.staging_maps> on 2022-03-31 21:00:00+00:00
+[2022-05-20 04:50:13,046] {standard_task_runner.py:52} INFO - Started process 5156 to run task
+[2022-05-20 04:50:13,048] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.staging_maps', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '665', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmp0jezb9wr', '--error-file', '/tmp/tmphcf08o78']
+[2022-05-20 04:50:13,049] {standard_task_runner.py:77} INFO - Job 665: Subtask paths.path_maps.staging_maps
+[2022-05-20 04:50:13,092] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.staging_maps scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-20 04:50:13,142] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.staging_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-20 04:50:13,143] {riot_datadragon_toADLS_Operator.py:55} INFO - StageToAzureLake not implemented yet
+[2022-05-20 04:50:13,156] {riot_datadragon_toADLS_Operator.py:63} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f9c740d1580>>
+[2022-05-20 04:50:13,156] {riot_datadragon_toADLS_Operator.py:64} INFO - Created Azure Connections
+[2022-05-20 04:50:13,321] {riot_datadragon_toADLS_Operator.py:86} INFO - About to load to Azure!
+[2022-05-20 04:50:13,322] {riot_datadragon_toADLS_Operator.py:87} INFO - maps
+[2022-05-20 04:50:13,324] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/datadragon-maps/2022/5/20/4.json'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '674'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '55d0945e-d7f8-11ec-9118-0242ac140004'/n    'Authorization': 'REDACTED'/nA body is sent with the request
+[2022-05-20 04:50:13,766] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Fri, 20 May 2022 04:50:15 GMT'/n    'ETag': '"0x8DA3A1C3B3253BE"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '9c61924d-d01e-0080-0205-6c4281000000'/n    'x-ms-client-request-id': '55d0945e-d7f8-11ec-9118-0242ac140004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Fri, 20 May 2022 04:50:15 GMT'
+[2022-05-20 04:50:13,770] {riot_datadragon_toADLS_Operator.py:57} INFO - Upload league of legends data to Azure!
+[2022-05-20 04:50:13,795] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=league_of_legends_dag, task_id=paths.path_maps.staging_maps, execution_date=20220331T210000, start_date=20220520T045013, end_date=20220520T045013
+[2022-05-20 04:50:13,825] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-20 04:50:13,856] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

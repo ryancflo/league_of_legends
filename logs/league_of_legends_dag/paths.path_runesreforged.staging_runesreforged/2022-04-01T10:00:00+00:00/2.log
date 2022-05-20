@@ -1,0 +1,29 @@
+[2022-05-20 01:19:35,066] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_runesreforged.staging_runesreforged scheduled__2022-04-01T10:00:00+00:00 [queued]>
+[2022-05-20 01:19:35,084] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_runesreforged.staging_runesreforged scheduled__2022-04-01T10:00:00+00:00 [queued]>
+[2022-05-20 01:19:35,085] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 01:19:35,085] {taskinstance.py:1244} INFO - Starting attempt 2 of 2
+[2022-05-20 01:19:35,085] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 01:19:35,108] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_runesreforged.staging_runesreforged> on 2022-04-01 10:00:00+00:00
+[2022-05-20 01:19:35,114] {standard_task_runner.py:52} INFO - Started process 174 to run task
+[2022-05-20 01:19:35,118] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_runesreforged.staging_runesreforged', 'scheduled__2022-04-01T10:00:00+00:00', '--job-id', '437', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmp6jub02bh', '--error-file', '/tmp/tmpd39i8f96']
+[2022-05-20 01:19:35,119] {standard_task_runner.py:77} INFO - Job 437: Subtask paths.path_runesreforged.staging_runesreforged
+[2022-05-20 01:19:35,189] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_runesreforged.staging_runesreforged scheduled__2022-04-01T10:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-20 01:19:35,250] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_runesreforged.staging_runesreforged
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-01T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-01T10:00:00+00:00
+[2022-05-20 01:19:35,251] {riot_datadragon_toADLS_Operator.py:55} INFO - StageToAzureLake not implemented yet
+[2022-05-20 01:19:35,262] {riot_datadragon_toADLS_Operator.py:63} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f58301251f0>>
+[2022-05-20 01:19:35,263] {riot_datadragon_toADLS_Operator.py:64} INFO - Created Azure Connections
+[2022-05-20 01:19:35,386] {riot_datadragon_toADLS_Operator.py:86} INFO - About to load to Azure!
+[2022-05-20 01:19:35,386] {riot_datadragon_toADLS_Operator.py:87} INFO - runesreforged
+[2022-05-20 01:19:35,652] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/datadragon-runesreforged/2022/5/20/1.json'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '39147'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': 'e92ced2e-d7da-11ec-b1ef-0242ac140007'/n    'Authorization': 'REDACTED'/nA body is sent with the request
+[2022-05-20 01:19:35,936] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Fri, 20 May 2022 01:19:35 GMT'/n    'ETag': '"0x8DA39FECD60E2D1"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '32433026-b01e-005c-31e7-6b10d2000000'/n    'x-ms-client-request-id': 'e92ced2e-d7da-11ec-b1ef-0242ac140007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Fri, 20 May 2022 01:19:35 GMT'
+[2022-05-20 01:19:35,943] {riot_datadragon_toADLS_Operator.py:57} INFO - Upload league of legends data to Azure!
+[2022-05-20 01:19:35,973] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=league_of_legends_dag, task_id=paths.path_runesreforged.staging_runesreforged, execution_date=20220401T100000, start_date=20220520T011935, end_date=20220520T011935
+[2022-05-20 01:19:36,014] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-20 01:19:36,069] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,281 @@
+[2022-05-19 06:03:22,708] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:03:22,723] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:03:22,724] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:03:22,724] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:03:22,724] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:03:22,740] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_summonerspells.staging_summonerspells> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:03:22,746] {standard_task_runner.py:52} INFO - Started process 332 to run task
+[2022-05-19 06:03:22,748] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_summonerspells.staging_summonerspells', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmp12qm_31c', '--error-file', '/tmp/tmppdc6prh_']
+[2022-05-19 06:03:22,749] {standard_task_runner.py:77} INFO - Job 151: Subtask paths.path_summonerspells.staging_summonerspells
+[2022-05-19 06:03:22,806] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:03:22,877] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_summonerspells.staging_summonerspells
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:03:22,878] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:03:22,879] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3338c48550>>
+[2022-05-19 06:03:22,879] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:03:22,880] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = riot_hook.get_summoner_spells(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:03:22,898] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_summonerspells.staging_summonerspells, execution_date=20220331T210000, start_date=20220519T060322, end_date=20220519T060322
+[2022-05-19 06:03:22,916] {standard_task_runner.py:89} ERROR - Failed to execute job 151 for task paths.path_summonerspells.staging_summonerspells
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = riot_hook.get_summoner_spells(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:03:22,962] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 06:12:36,679] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:12:36,700] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:12:36,700] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:12:36,701] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:12:36,701] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:12:36,725] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_summonerspells.staging_summonerspells> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:12:36,732] {standard_task_runner.py:52} INFO - Started process 617 to run task
+[2022-05-19 06:12:36,738] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_summonerspells.staging_summonerspells', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '156', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpfgcrbqf9', '--error-file', '/tmp/tmpf9fwed53']
+[2022-05-19 06:12:36,739] {standard_task_runner.py:77} INFO - Job 156: Subtask paths.path_summonerspells.staging_summonerspells
+[2022-05-19 06:12:36,831] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:12:36,926] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_summonerspells.staging_summonerspells
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:12:36,927] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:12:36,927] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3333af26d0>>
+[2022-05-19 06:12:36,928] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:12:36,928] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = riot_hook.get_summoner_spells(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:12:36,950] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_summonerspells.staging_summonerspells, execution_date=20220331T210000, start_date=20220519T061236, end_date=20220519T061236
+[2022-05-19 06:12:36,973] {standard_task_runner.py:89} ERROR - Failed to execute job 156 for task paths.path_summonerspells.staging_summonerspells
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = riot_hook.get_summoner_spells(version=self.version)
+NameError: name 'riot_hook' is not defined
+[2022-05-19 06:12:36,992] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 06:14:49,039] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:14:49,062] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 06:14:49,063] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:14:49,064] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 06:14:49,064] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 06:14:49,095] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_summonerspells.staging_summonerspells> on 2022-03-31 21:00:00+00:00
+[2022-05-19 06:14:49,104] {standard_task_runner.py:52} INFO - Started process 701 to run task
+[2022-05-19 06:14:49,111] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_summonerspells.staging_summonerspells', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpecb3h245', '--error-file', '/tmp/tmpzeg98347']
+[2022-05-19 06:14:49,113] {standard_task_runner.py:77} INFO - Job 164: Subtask paths.path_summonerspells.staging_summonerspells
+[2022-05-19 06:14:49,221] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 06:14:49,349] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_summonerspells.staging_summonerspells
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 06:14:49,351] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 06:14:49,351] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3331467490>>
+[2022-05-19 06:14:49,352] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 06:14:49,352] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = self.riot_hook.get_summoner_spells(version=self.version)
+TypeError: get_summoner_spells() got multiple values for argument 'version'
+[2022-05-19 06:14:49,376] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_summonerspells.staging_summonerspells, execution_date=20220331T210000, start_date=20220519T061449, end_date=20220519T061449
+[2022-05-19 06:14:49,417] {standard_task_runner.py:89} ERROR - Failed to execute job 164 for task paths.path_summonerspells.staging_summonerspells
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 71, in upload_to_azureLake
+    response_data = self.riot_hook.get_summoner_spells(version=self.version)
+TypeError: get_summoner_spells() got multiple values for argument 'version'
+[2022-05-19 06:14:49,447] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 07:31:38,612] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 07:31:38,626] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-19 07:31:38,626] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 07:31:38,627] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-19 07:31:38,627] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 07:31:38,641] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_summonerspells.staging_summonerspells> on 2022-03-31 21:00:00+00:00
+[2022-05-19 07:31:38,647] {standard_task_runner.py:52} INFO - Started process 1414 to run task
+[2022-05-19 07:31:38,651] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_summonerspells.staging_summonerspells', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '190', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmprw4k07bp', '--error-file', '/tmp/tmp581jkb4l']
+[2022-05-19 07:31:38,652] {standard_task_runner.py:77} INFO - Job 190: Subtask paths.path_summonerspells.staging_summonerspells
+[2022-05-19 07:31:38,706] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-19 07:31:38,766] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_summonerspells.staging_summonerspells
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-19 07:31:38,767] {riot_datadragon_toADLS_Operator.py:53} INFO - StageToAzureLake not implemented yet
+[2022-05-19 07:31:38,767] {riot_datadragon_toADLS_Operator.py:59} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f3331469490>>
+[2022-05-19 07:31:38,767] {riot_datadragon_toADLS_Operator.py:60} INFO - Created Azure Connections
+[2022-05-19 07:31:38,768] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 72, in upload_to_azureLake
+    response_data = self.riot_hook.get_summoner_spells(version=self.version)
+TypeError: get_summoner_spells() got multiple values for argument 'version'
+[2022-05-19 07:31:38,781] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=league_of_legends_dag, task_id=paths.path_summonerspells.staging_summonerspells, execution_date=20220331T210000, start_date=20220519T073138, end_date=20220519T073138
+[2022-05-19 07:31:38,798] {standard_task_runner.py:89} ERROR - Failed to execute job 190 for task paths.path_summonerspells.staging_summonerspells
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 54, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_datadragon_toADLS_Operator.py", line 72, in upload_to_azureLake
+    response_data = self.riot_hook.get_summoner_spells(version=self.version)
+TypeError: get_summoner_spells() got multiple values for argument 'version'
+[2022-05-19 07:31:38,824] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-20 04:50:13,134] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-20 04:50:13,147] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [queued]>
+[2022-05-20 04:50:13,147] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:50:13,147] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-20 04:50:13,147] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:50:13,160] {taskinstance.py:1264} INFO - Executing <Task(riot_dataDragonToADLSOperator): paths.path_summonerspells.staging_summonerspells> on 2022-03-31 21:00:00+00:00
+[2022-05-20 04:50:13,166] {standard_task_runner.py:52} INFO - Started process 5160 to run task
+[2022-05-20 04:50:13,171] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_summonerspells.staging_summonerspells', 'scheduled__2022-03-31T21:00:00+00:00', '--job-id', '669', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpffkvah9b', '--error-file', '/tmp/tmpz0ilq4cw']
+[2022-05-20 04:50:13,172] {standard_task_runner.py:77} INFO - Job 669: Subtask paths.path_summonerspells.staging_summonerspells
+[2022-05-20 04:50:13,234] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_summonerspells.staging_summonerspells scheduled__2022-03-31T21:00:00+00:00 [running]> on host ca9a242fab95
+[2022-05-20 04:50:13,289] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_summonerspells.staging_summonerspells
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-31T21:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-31T21:00:00+00:00
+[2022-05-20 04:50:13,289] {riot_datadragon_toADLS_Operator.py:55} INFO - StageToAzureLake not implemented yet
+[2022-05-20 04:50:13,301] {riot_datadragon_toADLS_Operator.py:63} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f9c7405f490>>
+[2022-05-20 04:50:13,302] {riot_datadragon_toADLS_Operator.py:64} INFO - Created Azure Connections
+[2022-05-20 04:50:13,448] {riot_datadragon_toADLS_Operator.py:86} INFO - About to load to Azure!
+[2022-05-20 04:50:13,449] {riot_datadragon_toADLS_Operator.py:87} INFO - summonerspells
+[2022-05-20 04:50:13,451] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/datadragon-summonerspells/2022/5/20/4.json'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '39147'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '55e3f576-d7f8-11ec-9c28-0242ac140004'/n    'Authorization': 'REDACTED'/nA body is sent with the request
+[2022-05-20 04:50:13,766] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Fri, 20 May 2022 04:50:15 GMT'/n    'ETag': '"0x8DA3A1C3B334114"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '46a30be7-c01e-0094-4a05-6c81e5000000'/n    'x-ms-client-request-id': '55e3f576-d7f8-11ec-9c28-0242ac140004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Fri, 20 May 2022 04:50:14 GMT'
+[2022-05-20 04:50:13,770] {riot_datadragon_toADLS_Operator.py:57} INFO - Upload league of legends data to Azure!
+[2022-05-20 04:50:13,805] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=league_of_legends_dag, task_id=paths.path_summonerspells.staging_summonerspells, execution_date=20220331T210000, start_date=20220520T045013, end_date=20220520T045013
+[2022-05-20 04:50:13,826] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-20 04:50:13,870] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

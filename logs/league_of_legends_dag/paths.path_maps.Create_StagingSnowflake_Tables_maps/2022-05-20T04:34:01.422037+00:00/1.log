@@ -1,0 +1,36 @@
+[2022-05-20 04:34:09,056] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.Create_StagingSnowflake_Tables_maps manual__2022-05-20T04:34:01.422037+00:00 [queued]>
+[2022-05-20 04:34:09,072] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: league_of_legends_dag.paths.path_maps.Create_StagingSnowflake_Tables_maps manual__2022-05-20T04:34:01.422037+00:00 [queued]>
+[2022-05-20 04:34:09,073] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:34:09,073] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-05-20 04:34:09,073] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-20 04:34:09,095] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): paths.path_maps.Create_StagingSnowflake_Tables_maps> on 2022-05-20 04:34:01.422037+00:00
+[2022-05-20 04:34:09,103] {standard_task_runner.py:52} INFO - Started process 4424 to run task
+[2022-05-20 04:34:09,107] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'league_of_legends_dag', 'paths.path_maps.Create_StagingSnowflake_Tables_maps', 'manual__2022-05-20T04:34:01.422037+00:00', '--job-id', '639', '--raw', '--subdir', 'DAGS_FOLDER/dataDragon_dag.py', '--cfg-path', '/tmp/tmpt9k7whmq', '--error-file', '/tmp/tmp16ta3mf3']
+[2022-05-20 04:34:09,108] {standard_task_runner.py:77} INFO - Job 639: Subtask paths.path_maps.Create_StagingSnowflake_Tables_maps
+[2022-05-20 04:34:09,169] {logging_mixin.py:109} INFO - Running <TaskInstance: league_of_legends_dag.paths.path_maps.Create_StagingSnowflake_Tables_maps manual__2022-05-20T04:34:01.422037+00:00 [running]> on host ca9a242fab95
+[2022-05-20 04:34:09,234] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=league_of_legends_dag
+AIRFLOW_CTX_TASK_ID=paths.path_maps.Create_StagingSnowflake_Tables_maps
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-20T04:34:01.422037+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-20T04:34:01.422037+00:00
+[2022-05-20 04:34:09,235] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_DATADRAGON_MAPS (json_data variant);
+[2022-05-20 04:34:09,249] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.5.1, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-05-20 04:34:09,250] {connection.py:868} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-05-20 04:34:09,250] {connection.py:886} INFO - Setting use_openssl_only mode to False
+[2022-05-20 04:34:10,085] {cursor.py:637} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-05-20 04:34:10,169] {cursor.py:661} INFO - query execution done
+[2022-05-20 04:34:10,170] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_DATADRAGON_MAPS (json_data variant);, parameters: None
+[2022-05-20 04:34:10,170] {cursor.py:637} INFO - query: [CREATE OR REPLACE TABLE STAGING_DATADRAGON_MAPS (json_data variant);]
+[2022-05-20 04:34:10,362] {cursor.py:661} INFO - query execution done
+[2022-05-20 04:34:10,362] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_DATADRAGON_MAPS successfully created.'}
+[2022-05-20 04:34:10,362] {json_result.py:127} INFO - fetching data done
+[2022-05-20 04:34:10,362] {snowflake.py:338} INFO - Rows affected: 1
+[2022-05-20 04:34:10,363] {snowflake.py:339} INFO - Snowflake query id: 01a46292-0000-f2a1-0000-d9690003863e
+[2022-05-20 04:34:10,363] {connection.py:499} INFO - closed
+[2022-05-20 04:34:10,405] {connection.py:502} INFO - No async queries seem to be running, deleting session
+[2022-05-20 04:34:10,526] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=league_of_legends_dag, task_id=paths.path_maps.Create_StagingSnowflake_Tables_maps, execution_date=20220520T043401, start_date=20220520T043409, end_date=20220520T043410
+[2022-05-20 04:34:10,565] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-20 04:34:10,640] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
