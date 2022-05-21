@@ -68,7 +68,7 @@ with dag as dag:
                     snowflake_conn_id=SNOWFLAKE_CONN_ID
                 )
 
-                azure_hashtags_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
+                copy_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
                     task_id='azure_{}_snowflake'.format(data),
                     dag=dag,
                     azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
@@ -78,7 +78,7 @@ with dag as dag:
                     snowflake_conn_id=SNOWFLAKE_CONN_ID
                 )
 
-                staging_dataDragon >> create_staging_tables >> azure_hashtags_toSnowflake
+                staging_dataDragon >> create_staging_tables >> copy_toSnowflake
     
 
 

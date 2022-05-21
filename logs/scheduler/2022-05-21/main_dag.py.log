@@ -1,0 +1,1047 @@
+[2022-05-21 00:00:00,212] {processor.py:163} INFO - Started process (PID=13712) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:00,213] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:00:00,213] {logging_mixin.py:109} INFO - [2022-05-21 00:00:00,213] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:00,822] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:00:01,117] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:01,127] {logging_mixin.py:109} INFO - [2022-05-21 00:00:01,127] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:00:01,139] {logging_mixin.py:109} INFO - [2022-05-21 00:00:01,139] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:00:01,156] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.946 seconds
+[2022-05-21 00:00:31,323] {processor.py:163} INFO - Started process (PID=13806) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:31,324] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:00:31,324] {logging_mixin.py:109} INFO - [2022-05-21 00:00:31,324] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:31,948] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:00:32,256] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:00:32,265] {logging_mixin.py:109} INFO - [2022-05-21 00:00:32,265] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:00:32,277] {logging_mixin.py:109} INFO - [2022-05-21 00:00:32,277] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:00:32,293] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.972 seconds
+[2022-05-21 00:01:02,351] {processor.py:163} INFO - Started process (PID=13891) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:02,352] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:01:02,353] {logging_mixin.py:109} INFO - [2022-05-21 00:01:02,353] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:02,854] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:01:03,201] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:03,211] {logging_mixin.py:109} INFO - [2022-05-21 00:01:03,211] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:01:03,245] {logging_mixin.py:109} INFO - [2022-05-21 00:01:03,245] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:01:03,320] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.968 seconds
+[2022-05-21 00:01:33,377] {processor.py:163} INFO - Started process (PID=13984) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:33,378] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:01:33,379] {logging_mixin.py:109} INFO - [2022-05-21 00:01:33,378] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:33,964] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:01:34,263] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:01:34,273] {logging_mixin.py:109} INFO - [2022-05-21 00:01:34,273] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:01:34,286] {logging_mixin.py:109} INFO - [2022-05-21 00:01:34,286] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:01:34,301] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.927 seconds
+[2022-05-21 00:02:04,532] {processor.py:163} INFO - Started process (PID=14068) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:04,533] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:02:04,534] {logging_mixin.py:109} INFO - [2022-05-21 00:02:04,534] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:05,095] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:02:05,358] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:05,367] {logging_mixin.py:109} INFO - [2022-05-21 00:02:05,367] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:02:05,379] {logging_mixin.py:109} INFO - [2022-05-21 00:02:05,379] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:02:05,392] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.864 seconds
+[2022-05-21 00:02:35,841] {processor.py:163} INFO - Started process (PID=14160) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:35,849] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:02:35,850] {logging_mixin.py:109} INFO - [2022-05-21 00:02:35,850] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:36,476] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:02:36,785] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:02:36,827] {logging_mixin.py:109} INFO - [2022-05-21 00:02:36,827] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:02:36,890] {logging_mixin.py:109} INFO - [2022-05-21 00:02:36,890] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:02:36,916] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.077 seconds
+[2022-05-21 00:03:07,173] {processor.py:163} INFO - Started process (PID=14250) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:07,174] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:03:07,174] {logging_mixin.py:109} INFO - [2022-05-21 00:03:07,174] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:07,780] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:03:08,093] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:08,101] {logging_mixin.py:109} INFO - [2022-05-21 00:03:08,101] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:03:08,113] {logging_mixin.py:109} INFO - [2022-05-21 00:03:08,113] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:03:08,121] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.951 seconds
+[2022-05-21 00:03:38,227] {processor.py:163} INFO - Started process (PID=14350) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:38,228] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:03:38,228] {logging_mixin.py:109} INFO - [2022-05-21 00:03:38,228] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:38,799] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:03:39,079] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:03:39,087] {logging_mixin.py:109} INFO - [2022-05-21 00:03:39,087] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:03:39,099] {logging_mixin.py:109} INFO - [2022-05-21 00:03:39,099] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:03:39,113] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.889 seconds
+[2022-05-21 00:04:09,742] {processor.py:163} INFO - Started process (PID=14439) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:09,743] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:04:09,744] {logging_mixin.py:109} INFO - [2022-05-21 00:04:09,744] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:10,650] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:04:10,988] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:10,997] {logging_mixin.py:109} INFO - [2022-05-21 00:04:10,997] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:04:11,011] {logging_mixin.py:109} INFO - [2022-05-21 00:04:11,011] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:04:11,026] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.286 seconds
+[2022-05-21 00:04:41,058] {processor.py:163} INFO - Started process (PID=14535) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:41,059] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:04:41,060] {logging_mixin.py:109} INFO - [2022-05-21 00:04:41,060] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:41,641] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:04:42,058] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:04:42,072] {logging_mixin.py:109} INFO - [2022-05-21 00:04:42,071] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:04:42,093] {logging_mixin.py:109} INFO - [2022-05-21 00:04:42,093] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:04:42,104] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.048 seconds
+[2022-05-21 00:05:12,127] {processor.py:163} INFO - Started process (PID=14631) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:12,127] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:05:12,128] {logging_mixin.py:109} INFO - [2022-05-21 00:05:12,128] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:12,775] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:05:13,090] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:13,099] {logging_mixin.py:109} INFO - [2022-05-21 00:05:13,099] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:05:13,112] {logging_mixin.py:109} INFO - [2022-05-21 00:05:13,112] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:05:13,122] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.997 seconds
+[2022-05-21 00:05:43,518] {processor.py:163} INFO - Started process (PID=14716) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:43,525] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:05:43,525] {logging_mixin.py:109} INFO - [2022-05-21 00:05:43,525] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:44,155] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:05:44,534] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:05:44,542] {logging_mixin.py:109} INFO - [2022-05-21 00:05:44,542] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:05:44,557] {logging_mixin.py:109} INFO - [2022-05-21 00:05:44,557] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:05:44,566] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.050 seconds
+[2022-05-21 00:06:14,927] {processor.py:163} INFO - Started process (PID=14816) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:14,929] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:06:14,929] {logging_mixin.py:109} INFO - [2022-05-21 00:06:14,929] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:15,582] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:06:15,918] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:15,927] {logging_mixin.py:109} INFO - [2022-05-21 00:06:15,926] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:06:15,938] {logging_mixin.py:109} INFO - [2022-05-21 00:06:15,937] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:06:15,947] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.022 seconds
+[2022-05-21 00:06:46,381] {processor.py:163} INFO - Started process (PID=14905) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:46,382] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:06:46,383] {logging_mixin.py:109} INFO - [2022-05-21 00:06:46,383] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:47,063] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:06:47,373] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:06:47,383] {logging_mixin.py:109} INFO - [2022-05-21 00:06:47,382] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:06:47,396] {logging_mixin.py:109} INFO - [2022-05-21 00:06:47,396] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:06:47,411] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.032 seconds
+[2022-05-21 00:07:18,333] {processor.py:163} INFO - Started process (PID=14999) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:18,340] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:07:18,341] {logging_mixin.py:109} INFO - [2022-05-21 00:07:18,341] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:19,060] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:07:19,430] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:19,439] {logging_mixin.py:109} INFO - [2022-05-21 00:07:19,438] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:07:19,452] {logging_mixin.py:109} INFO - [2022-05-21 00:07:19,452] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:07:19,462] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.132 seconds
+[2022-05-21 00:07:50,327] {processor.py:163} INFO - Started process (PID=15102) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:50,328] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:07:50,328] {logging_mixin.py:109} INFO - [2022-05-21 00:07:50,328] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:50,805] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:07:51,072] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:07:51,079] {logging_mixin.py:109} INFO - [2022-05-21 00:07:51,079] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:07:51,091] {logging_mixin.py:109} INFO - [2022-05-21 00:07:51,091] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:07:51,106] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.781 seconds
+[2022-05-21 00:08:21,767] {processor.py:163} INFO - Started process (PID=15196) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:21,768] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:08:21,768] {logging_mixin.py:109} INFO - [2022-05-21 00:08:21,768] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:22,266] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:08:22,549] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:22,558] {logging_mixin.py:109} INFO - [2022-05-21 00:08:22,557] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:08:22,575] {logging_mixin.py:109} INFO - [2022-05-21 00:08:22,575] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:08:22,585] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.820 seconds
+[2022-05-21 00:08:52,643] {processor.py:163} INFO - Started process (PID=15279) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:52,651] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:08:52,651] {logging_mixin.py:109} INFO - [2022-05-21 00:08:52,651] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:53,162] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:08:53,487] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:08:53,495] {logging_mixin.py:109} INFO - [2022-05-21 00:08:53,494] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:08:53,506] {logging_mixin.py:109} INFO - [2022-05-21 00:08:53,506] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:08:53,525] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.884 seconds
+[2022-05-21 00:32:37,717] {processor.py:163} INFO - Started process (PID=15345) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:32:37,718] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:32:37,719] {logging_mixin.py:109} INFO - [2022-05-21 00:32:37,719] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:32:40,594] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:32:41,542] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:32:41,562] {logging_mixin.py:109} INFO - [2022-05-21 00:32:41,561] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:32:41,600] {logging_mixin.py:109} INFO - [2022-05-21 00:32:41,600] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:32:41,616] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 3.904 seconds
+[2022-05-21 00:33:12,388] {processor.py:163} INFO - Started process (PID=15430) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:12,389] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:33:12,389] {logging_mixin.py:109} INFO - [2022-05-21 00:33:12,389] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:12,954] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:33:13,423] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:13,431] {logging_mixin.py:109} INFO - [2022-05-21 00:33:13,431] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:33:13,469] {logging_mixin.py:109} INFO - [2022-05-21 00:33:13,469] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:33:13,487] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.101 seconds
+[2022-05-21 00:33:43,677] {processor.py:163} INFO - Started process (PID=15522) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:43,678] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:33:43,679] {logging_mixin.py:109} INFO - [2022-05-21 00:33:43,679] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:44,289] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:33:44,699] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:33:44,709] {logging_mixin.py:109} INFO - [2022-05-21 00:33:44,708] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:33:44,722] {logging_mixin.py:109} INFO - [2022-05-21 00:33:44,722] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:33:44,733] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.059 seconds
+[2022-05-21 00:34:14,951] {processor.py:163} INFO - Started process (PID=15607) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:14,952] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:34:14,954] {logging_mixin.py:109} INFO - [2022-05-21 00:34:14,953] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:15,580] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:34:15,979] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:15,988] {logging_mixin.py:109} INFO - [2022-05-21 00:34:15,988] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:34:15,999] {logging_mixin.py:109} INFO - [2022-05-21 00:34:15,999] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:34:16,006] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.059 seconds
+[2022-05-21 00:34:41,965] {processor.py:163} INFO - Started process (PID=15691) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:41,977] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:34:41,977] {logging_mixin.py:109} INFO - [2022-05-21 00:34:41,977] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:42,562] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:34:42,980] {logging_mixin.py:109} INFO - [2022-05-21 00:34:42,979] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:34:42,992] {processor.py:690} INFO - Deactivated 1 DAGs which are no longer present in /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:42,993] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:34:43,001] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.039 seconds
+[2022-05-21 00:35:13,192] {processor.py:163} INFO - Started process (PID=15782) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:13,194] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:35:13,195] {logging_mixin.py:109} INFO - [2022-05-21 00:35:13,195] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:13,840] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:35:14,295] {logging_mixin.py:109} INFO - [2022-05-21 00:35:14,294] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:35:14,308] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:14,324] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.134 seconds
+[2022-05-21 00:35:44,730] {processor.py:163} INFO - Started process (PID=15867) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:44,731] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:35:44,731] {logging_mixin.py:109} INFO - [2022-05-21 00:35:44,731] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:45,337] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:35:45,712] {logging_mixin.py:109} INFO - [2022-05-21 00:35:45,711] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:35:45,725] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:35:45,741] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.015 seconds
+[2022-05-21 00:36:15,837] {processor.py:163} INFO - Started process (PID=15953) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:15,839] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:36:15,839] {logging_mixin.py:109} INFO - [2022-05-21 00:36:15,839] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:16,436] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:36:16,822] {logging_mixin.py:109} INFO - [2022-05-21 00:36:16,821] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:36:16,836] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:16,850] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.015 seconds
+[2022-05-21 00:36:47,384] {processor.py:163} INFO - Started process (PID=16046) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:47,385] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:36:47,386] {logging_mixin.py:109} INFO - [2022-05-21 00:36:47,386] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:47,978] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:36:48,445] {logging_mixin.py:109} INFO - [2022-05-21 00:36:48,443] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:36:48,460] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:36:48,470] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.088 seconds
+[2022-05-21 00:37:18,735] {processor.py:163} INFO - Started process (PID=16131) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:18,737] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:37:18,737] {logging_mixin.py:109} INFO - [2022-05-21 00:37:18,737] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:19,335] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:37:19,753] {logging_mixin.py:109} INFO - [2022-05-21 00:37:19,752] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:37:19,766] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:19,782] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.050 seconds
+[2022-05-21 00:37:49,804] {processor.py:163} INFO - Started process (PID=16225) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:49,812] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:37:49,813] {logging_mixin.py:109} INFO - [2022-05-21 00:37:49,813] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:50,460] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:37:50,898] {logging_mixin.py:109} INFO - [2022-05-21 00:37:50,897] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:37:50,918] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:37:50,933] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.130 seconds
+[2022-05-21 00:38:21,449] {processor.py:163} INFO - Started process (PID=16313) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:21,450] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:38:21,451] {logging_mixin.py:109} INFO - [2022-05-21 00:38:21,451] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:22,039] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:38:22,431] {logging_mixin.py:109} INFO - [2022-05-21 00:38:22,431] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:38:22,447] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:22,464] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.018 seconds
+[2022-05-21 00:38:52,947] {processor.py:163} INFO - Started process (PID=16407) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:52,948] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:38:52,949] {logging_mixin.py:109} INFO - [2022-05-21 00:38:52,948] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:53,505] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:38:53,984] {logging_mixin.py:109} INFO - [2022-05-21 00:38:53,982] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:38:54,001] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:38:54,013] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.068 seconds
+[2022-05-21 00:39:24,439] {processor.py:163} INFO - Started process (PID=16491) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:24,440] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:39:24,441] {logging_mixin.py:109} INFO - [2022-05-21 00:39:24,441] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:25,094] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:39:25,509] {logging_mixin.py:109} INFO - [2022-05-21 00:39:25,509] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 65, in <module>
+    [create_matchdetails, create_matchinfo]
+NameError: name 'create_matchinfo' is not defined
+[2022-05-21 00:39:25,524] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:25,532] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.096 seconds
+[2022-05-21 00:39:43,700] {processor.py:163} INFO - Started process (PID=16591) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:43,701] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:39:43,702] {logging_mixin.py:109} INFO - [2022-05-21 00:39:43,702] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:44,182] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:39:44,524] {logging_mixin.py:109} INFO - [2022-05-21 00:39:44,523] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:39:44,537] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:39:44,550] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.853 seconds
+[2022-05-21 00:40:14,934] {processor.py:163} INFO - Started process (PID=16675) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:14,942] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:40:14,943] {logging_mixin.py:109} INFO - [2022-05-21 00:40:14,943] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:15,498] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:40:15,828] {logging_mixin.py:109} INFO - [2022-05-21 00:40:15,828] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:40:15,841] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:15,854] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.924 seconds
+[2022-05-21 00:40:45,879] {processor.py:163} INFO - Started process (PID=16768) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:45,880] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:40:45,881] {logging_mixin.py:109} INFO - [2022-05-21 00:40:45,881] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:46,376] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:40:46,701] {logging_mixin.py:109} INFO - [2022-05-21 00:40:46,700] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:40:46,712] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:40:46,726] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.849 seconds
+[2022-05-21 00:41:16,950] {processor.py:163} INFO - Started process (PID=16853) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:16,951] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:41:16,951] {logging_mixin.py:109} INFO - [2022-05-21 00:41:16,951] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:17,523] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:41:17,853] {logging_mixin.py:109} INFO - [2022-05-21 00:41:17,852] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:41:17,864] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:17,879] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.931 seconds
+[2022-05-21 00:41:48,721] {processor.py:163} INFO - Started process (PID=16946) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:48,725] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:41:48,726] {logging_mixin.py:109} INFO - [2022-05-21 00:41:48,726] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:49,372] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:41:49,719] {logging_mixin.py:109} INFO - [2022-05-21 00:41:49,718] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:41:49,732] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:41:49,746] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.027 seconds
+[2022-05-21 00:42:20,144] {processor.py:163} INFO - Started process (PID=17031) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:20,145] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:42:20,145] {logging_mixin.py:109} INFO - [2022-05-21 00:42:20,145] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:20,690] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:42:21,012] {logging_mixin.py:109} INFO - [2022-05-21 00:42:21,011] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:42:21,024] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:21,038] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.895 seconds
+[2022-05-21 00:42:51,488] {processor.py:163} INFO - Started process (PID=17124) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:51,495] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:42:51,496] {logging_mixin.py:109} INFO - [2022-05-21 00:42:51,496] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:52,063] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:42:52,420] {logging_mixin.py:109} INFO - [2022-05-21 00:42:52,419] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:42:52,435] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:52,451] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.964 seconds
+[2022-05-21 00:42:58,666] {processor.py:163} INFO - Started process (PID=17146) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:58,667] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:42:58,667] {logging_mixin.py:109} INFO - [2022-05-21 00:42:58,667] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:59,166] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:42:59,499] {logging_mixin.py:109} INFO - [2022-05-21 00:42:59,498] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:42:59,511] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:42:59,526] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.862 seconds
+[2022-05-21 00:43:29,964] {processor.py:163} INFO - Started process (PID=17238) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:29,965] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:43:29,965] {logging_mixin.py:109} INFO - [2022-05-21 00:43:29,965] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:30,594] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:43:30,987] {logging_mixin.py:109} INFO - [2022-05-21 00:43:30,986] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:43:31,000] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:31,010] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.049 seconds
+[2022-05-21 00:43:34,488] {processor.py:163} INFO - Started process (PID=17284) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:34,488] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:43:34,489] {logging_mixin.py:109} INFO - [2022-05-21 00:43:34,489] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:35,027] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:43:35,388] {logging_mixin.py:109} INFO - [2022-05-21 00:43:35,387] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 73, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:43:35,402] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:43:35,410] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.925 seconds
+[2022-05-21 00:44:05,514] {processor.py:163} INFO - Started process (PID=17376) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:05,515] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:44:05,516] {logging_mixin.py:109} INFO - [2022-05-21 00:44:05,516] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:06,112] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:44:06,486] {logging_mixin.py:109} INFO - [2022-05-21 00:44:06,485] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 73, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:44:06,500] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:06,515] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.003 seconds
+[2022-05-21 00:44:09,533] {processor.py:163} INFO - Started process (PID=17395) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:09,533] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:44:09,534] {logging_mixin.py:109} INFO - [2022-05-21 00:44:09,534] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:10,128] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:44:10,484] {logging_mixin.py:109} INFO - [2022-05-21 00:44:10,483] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:44:10,498] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:10,512] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.981 seconds
+[2022-05-21 00:44:40,793] {processor.py:163} INFO - Started process (PID=17479) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:40,800] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:44:40,801] {logging_mixin.py:109} INFO - [2022-05-21 00:44:40,801] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:41,529] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:44:41,950] {logging_mixin.py:109} INFO - [2022-05-21 00:44:41,949] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:44:41,968] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:44:41,982] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.192 seconds
+[2022-05-21 00:45:05,770] {processor.py:163} INFO - Started process (PID=17556) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:05,771] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:45:05,772] {logging_mixin.py:109} INFO - [2022-05-21 00:45:05,772] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:06,406] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:45:06,877] {logging_mixin.py:109} INFO - [2022-05-21 00:45:06,876] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:45:06,891] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:06,901] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.133 seconds
+[2022-05-21 00:45:37,020] {processor.py:163} INFO - Started process (PID=17651) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:37,021] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:45:37,022] {logging_mixin.py:109} INFO - [2022-05-21 00:45:37,021] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:37,687] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:45:38,103] {logging_mixin.py:109} INFO - [2022-05-21 00:45:38,103] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:45:38,117] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:45:38,129] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.112 seconds
+[2022-05-21 00:46:08,190] {processor.py:163} INFO - Started process (PID=17742) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:08,191] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:46:08,191] {logging_mixin.py:109} INFO - [2022-05-21 00:46:08,191] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:08,751] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:46:09,105] {logging_mixin.py:109} INFO - [2022-05-21 00:46:09,105] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:46:09,118] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:09,134] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.947 seconds
+[2022-05-21 00:46:20,543] {processor.py:163} INFO - Started process (PID=17771) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:20,544] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:46:20,544] {logging_mixin.py:109} INFO - [2022-05-21 00:46:20,544] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:21,143] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:46:21,553] {logging_mixin.py:109} INFO - [2022-05-21 00:46:21,552] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:46:21,567] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:21,578] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.037 seconds
+[2022-05-21 00:46:51,917] {processor.py:163} INFO - Started process (PID=17856) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:51,918] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:46:51,919] {logging_mixin.py:109} INFO - [2022-05-21 00:46:51,919] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:52,514] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:46:53,001] {logging_mixin.py:109} INFO - [2022-05-21 00:46:53,000] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:46:53,015] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:46:53,055] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.141 seconds
+[2022-05-21 00:47:11,347] {processor.py:163} INFO - Started process (PID=17940) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:11,348] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:47:11,348] {logging_mixin.py:109} INFO - [2022-05-21 00:47:11,348] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:11,882] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:47:12,263] {logging_mixin.py:109} INFO - [2022-05-21 00:47:12,263] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:47:12,275] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:12,285] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.940 seconds
+[2022-05-21 00:47:42,640] {processor.py:163} INFO - Started process (PID=18024) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:42,647] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:47:42,648] {logging_mixin.py:109} INFO - [2022-05-21 00:47:42,648] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:43,209] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:47:43,663] {logging_mixin.py:109} INFO - [2022-05-21 00:47:43,662] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:47:43,676] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:47:43,702] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.064 seconds
+[2022-05-21 00:48:13,720] {processor.py:163} INFO - Started process (PID=18118) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:13,727] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:48:13,728] {logging_mixin.py:109} INFO - [2022-05-21 00:48:13,728] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:14,335] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:48:14,741] {logging_mixin.py:109} INFO - [2022-05-21 00:48:14,740] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:48:14,757] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:14,771] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.053 seconds
+[2022-05-21 00:48:44,908] {processor.py:163} INFO - Started process (PID=18203) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:44,913] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:48:44,913] {logging_mixin.py:109} INFO - [2022-05-21 00:48:44,913] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:45,503] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:48:45,885] {logging_mixin.py:109} INFO - [2022-05-21 00:48:45,885] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:48:45,898] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:48:45,913] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.008 seconds
+[2022-05-21 00:49:16,423] {processor.py:163} INFO - Started process (PID=18295) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:16,424] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:49:16,424] {logging_mixin.py:109} INFO - [2022-05-21 00:49:16,424] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:16,906] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:49:17,290] {logging_mixin.py:109} INFO - [2022-05-21 00:49:17,290] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:49:17,303] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:17,318] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.897 seconds
+[2022-05-21 00:49:47,554] {processor.py:163} INFO - Started process (PID=18380) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:47,556] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:49:47,557] {logging_mixin.py:109} INFO - [2022-05-21 00:49:47,556] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:48,158] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:49:48,536] {logging_mixin.py:109} INFO - [2022-05-21 00:49:48,535] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:49:48,547] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:49:48,556] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.003 seconds
+[2022-05-21 00:50:18,820] {processor.py:163} INFO - Started process (PID=18473) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:18,822] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:50:18,823] {logging_mixin.py:109} INFO - [2022-05-21 00:50:18,823] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:19,581] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:50:19,959] {logging_mixin.py:109} INFO - [2022-05-21 00:50:19,958] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:50:19,972] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:19,987] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.170 seconds
+[2022-05-21 00:50:50,234] {processor.py:163} INFO - Started process (PID=18557) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:50,235] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:50:50,235] {logging_mixin.py:109} INFO - [2022-05-21 00:50:50,235] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:50,786] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:50:51,213] {logging_mixin.py:109} INFO - [2022-05-21 00:50:51,212] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 72, in <module>
+    task_id='azure_{}_snowflake'.format(data),
+NameError: name 'data' is not defined
+[2022-05-21 00:50:51,226] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:50:51,234] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.002 seconds
+[2022-05-21 00:51:12,465] {processor.py:163} INFO - Started process (PID=18629) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:12,466] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:51:12,466] {logging_mixin.py:109} INFO - [2022-05-21 00:51:12,466] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:13,064] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:51:13,485] {logging_mixin.py:109} INFO - [2022-05-21 00:51:13,484] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 75, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:51:13,499] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:13,514] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.052 seconds
+[2022-05-21 00:51:43,662] {processor.py:163} INFO - Started process (PID=18714) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:43,662] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:51:43,663] {logging_mixin.py:109} INFO - [2022-05-21 00:51:43,663] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:44,406] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:51:44,893] {logging_mixin.py:109} INFO - [2022-05-21 00:51:44,893] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 75, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:51:44,908] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:51:44,926] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.267 seconds
+[2022-05-21 00:52:15,262] {processor.py:163} INFO - Started process (PID=18813) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:15,264] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:52:15,264] {logging_mixin.py:109} INFO - [2022-05-21 00:52:15,264] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:15,838] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:52:16,223] {logging_mixin.py:109} INFO - [2022-05-21 00:52:16,222] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 75, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:52:16,236] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:16,251] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.991 seconds
+[2022-05-21 00:52:46,698] {processor.py:163} INFO - Started process (PID=18900) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:46,699] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:52:46,700] {logging_mixin.py:109} INFO - [2022-05-21 00:52:46,700] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:47,246] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:52:47,630] {logging_mixin.py:109} INFO - [2022-05-21 00:52:47,630] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 75, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:52:47,642] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:47,652] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.957 seconds
+[2022-05-21 00:52:56,313] {processor.py:163} INFO - Started process (PID=18932) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:56,313] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:52:56,314] {logging_mixin.py:109} INFO - [2022-05-21 00:52:56,314] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:56,895] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:52:57,293] {logging_mixin.py:109} INFO - [2022-05-21 00:52:57,292] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 66, in <module>
+    task_id='create_{data}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:52:57,307] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:52:57,321] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.011 seconds
+[2022-05-21 00:53:00,325] {processor.py:163} INFO - Started process (PID=18950) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:00,326] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:53:00,326] {logging_mixin.py:109} INFO - [2022-05-21 00:53:00,326] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:00,891] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:53:01,266] {logging_mixin.py:109} INFO - [2022-05-21 00:53:01,265] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 67, in <module>
+    task_id='create_{data}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:53:01,280] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:01,289] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.966 seconds
+[2022-05-21 00:53:32,002] {processor.py:163} INFO - Started process (PID=19045) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:32,004] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:53:32,005] {logging_mixin.py:109} INFO - [2022-05-21 00:53:32,004] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:32,540] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:53:32,929] {logging_mixin.py:109} INFO - [2022-05-21 00:53:32,928] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 67, in <module>
+    task_id='create_{data}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:53:32,943] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:53:32,959] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.959 seconds
+[2022-05-21 00:54:03,624] {processor.py:163} INFO - Started process (PID=19130) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:03,626] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:54:03,627] {logging_mixin.py:109} INFO - [2022-05-21 00:54:03,626] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:04,219] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:54:04,590] {logging_mixin.py:109} INFO - [2022-05-21 00:54:04,589] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 67, in <module>
+    task_id='create_{data}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:54:04,606] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:04,616] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.993 seconds
+[2022-05-21 00:54:09,850] {processor.py:163} INFO - Started process (PID=19160) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:09,859] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:54:09,860] {logging_mixin.py:109} INFO - [2022-05-21 00:54:09,860] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:10,577] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:54:10,963] {logging_mixin.py:109} INFO - [2022-05-21 00:54:10,963] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 67, in <module>
+    task_id='create_{data}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:54:10,976] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:10,990] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.142 seconds
+[2022-05-21 00:54:41,657] {processor.py:163} INFO - Started process (PID=19245) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:41,657] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:54:41,658] {logging_mixin.py:109} INFO - [2022-05-21 00:54:41,658] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:42,312] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:54:42,673] {logging_mixin.py:109} INFO - [2022-05-21 00:54:42,672] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 67, in <module>
+    task_id='create_{}'.format(data),
+KeyError: 'data'
+[2022-05-21 00:54:42,687] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:54:42,701] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.046 seconds
+[2022-05-21 00:55:00,079] {processor.py:163} INFO - Started process (PID=19325) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:00,079] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:55:00,080] {logging_mixin.py:109} INFO - [2022-05-21 00:55:00,080] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:00,596] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:55:00,980] {logging_mixin.py:109} INFO - [2022-05-21 00:55:00,979] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 76, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:55:00,994] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:01,007] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.931 seconds
+[2022-05-21 00:55:31,405] {processor.py:163} INFO - Started process (PID=19410) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:31,412] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:55:31,413] {logging_mixin.py:109} INFO - [2022-05-21 00:55:31,413] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:32,085] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:55:32,535] {logging_mixin.py:109} INFO - [2022-05-21 00:55:32,534] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 76, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:55:32,557] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:55:32,573] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.170 seconds
+[2022-05-21 00:56:02,834] {processor.py:163} INFO - Started process (PID=19504) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:02,842] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:56:02,842] {logging_mixin.py:109} INFO - [2022-05-21 00:56:02,842] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:03,498] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:56:03,876] {logging_mixin.py:109} INFO - [2022-05-21 00:56:03,875] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 76, in <module>
+    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+NameError: name 'CURRENT_TIME' is not defined
+[2022-05-21 00:56:03,891] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:03,907] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.074 seconds
+[2022-05-21 00:56:19,175] {processor.py:163} INFO - Started process (PID=19535) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:19,176] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:56:19,176] {logging_mixin.py:109} INFO - [2022-05-21 00:56:19,176] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:19,819] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:56:20,249] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:20,448] {logging_mixin.py:109} INFO - [2022-05-21 00:56:20,448] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:56:20,469] {logging_mixin.py:109} INFO - [2022-05-21 00:56:20,469] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:56:20,496] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.322 seconds
+[2022-05-21 00:56:51,300] {processor.py:163} INFO - Started process (PID=19621) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:51,307] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:56:51,308] {logging_mixin.py:109} INFO - [2022-05-21 00:56:51,307] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:51,886] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:56:52,308] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:56:52,319] {logging_mixin.py:109} INFO - [2022-05-21 00:56:52,319] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:56:52,336] {logging_mixin.py:109} INFO - [2022-05-21 00:56:52,336] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:56:52,346] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.048 seconds
+[2022-05-21 00:57:22,635] {processor.py:163} INFO - Started process (PID=19715) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:22,636] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:57:22,637] {logging_mixin.py:109} INFO - [2022-05-21 00:57:22,637] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:23,246] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:57:23,656] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:23,670] {logging_mixin.py:109} INFO - [2022-05-21 00:57:23,669] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:57:23,683] {logging_mixin.py:109} INFO - [2022-05-21 00:57:23,683] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:57:23,691] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.060 seconds
+[2022-05-21 00:57:53,939] {processor.py:163} INFO - Started process (PID=19801) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:53,939] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:57:53,940] {logging_mixin.py:109} INFO - [2022-05-21 00:57:53,940] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:54,573] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:57:55,007] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:57:55,020] {logging_mixin.py:109} INFO - [2022-05-21 00:57:55,020] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:57:55,035] {logging_mixin.py:109} INFO - [2022-05-21 00:57:55,034] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:57:55,044] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.107 seconds
+[2022-05-21 00:58:25,146] {processor.py:163} INFO - Started process (PID=19896) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:25,148] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:58:25,148] {logging_mixin.py:109} INFO - [2022-05-21 00:58:25,148] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:25,753] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:58:26,206] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:26,218] {logging_mixin.py:109} INFO - [2022-05-21 00:58:26,217] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:58:26,230] {logging_mixin.py:109} INFO - [2022-05-21 00:58:26,230] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:58:26,240] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.095 seconds
+[2022-05-21 00:58:32,592] {processor.py:163} INFO - Started process (PID=19957) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:32,594] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:58:32,594] {logging_mixin.py:109} INFO - [2022-05-21 00:58:32,594] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:33,146] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:58:33,540] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:33,551] {logging_mixin.py:109} INFO - [2022-05-21 00:58:33,551] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:58:33,564] {logging_mixin.py:109} INFO - [2022-05-21 00:58:33,563] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:58:33,574] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.983 seconds
+[2022-05-21 00:58:52,856] {processor.py:163} INFO - Started process (PID=19998) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:52,857] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:58:52,858] {logging_mixin.py:109} INFO - [2022-05-21 00:58:52,858] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:53,422] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:58:53,775] {logging_mixin.py:109} INFO - [2022-05-21 00:58:53,774] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 70, in <module>
+    sql=static_data[data][4],
+IndexError: list index out of range
+[2022-05-21 00:58:53,788] {processor.py:690} INFO - Deactivated 1 DAGs which are no longer present in /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:53,788] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:58:53,802] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.948 seconds
+[2022-05-21 00:59:24,379] {processor.py:163} INFO - Started process (PID=20083) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:24,380] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:59:24,380] {logging_mixin.py:109} INFO - [2022-05-21 00:59:24,380] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:24,921] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:59:25,275] {logging_mixin.py:109} INFO - [2022-05-21 00:59:25,274] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/main_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/main_dag.py", line 70, in <module>
+    sql=static_data[data][4],
+IndexError: list index out of range
+[2022-05-21 00:59:25,287] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:25,303] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.927 seconds
+[2022-05-21 00:59:25,997] {processor.py:163} INFO - Started process (PID=20115) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:25,998] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:59:25,999] {logging_mixin.py:109} INFO - [2022-05-21 00:59:25,998] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:26,570] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:59:26,995] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:27,187] {logging_mixin.py:109} INFO - [2022-05-21 00:59:27,186] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:59:27,201] {logging_mixin.py:109} INFO - [2022-05-21 00:59:27,200] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:59:27,225] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.230 seconds
+[2022-05-21 00:59:57,248] {processor.py:163} INFO - Started process (PID=20200) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:57,249] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 00:59:57,250] {logging_mixin.py:109} INFO - [2022-05-21 00:59:57,249] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:57,905] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 00:59:58,370] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 00:59:58,384] {logging_mixin.py:109} INFO - [2022-05-21 00:59:58,383] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 00:59:58,399] {logging_mixin.py:109} INFO - [2022-05-21 00:59:58,399] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 00:59:58,410] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.164 seconds
+[2022-05-21 01:00:28,495] {processor.py:163} INFO - Started process (PID=20289) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:00:28,496] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:00:28,497] {logging_mixin.py:109} INFO - [2022-05-21 01:00:28,496] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:00:29,157] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:00:29,570] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:00:29,749] {logging_mixin.py:109} INFO - [2022-05-21 01:00:29,748] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:00:29,764] {logging_mixin.py:109} INFO - [2022-05-21 01:00:29,764] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:00:29,784] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.291 seconds
+[2022-05-21 01:00:59,826] {processor.py:163} INFO - Started process (PID=20393) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:00:59,827] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:00:59,828] {logging_mixin.py:109} INFO - [2022-05-21 01:00:59,828] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:01:00,440] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:01:00,818] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:01:00,827] {logging_mixin.py:109} INFO - [2022-05-21 01:01:00,827] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:01:00,840] {logging_mixin.py:109} INFO - [2022-05-21 01:01:00,839] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:01:00,855] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.031 seconds
+[2022-05-21 01:01:31,076] {processor.py:163} INFO - Started process (PID=20483) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:01:31,077] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:01:31,078] {logging_mixin.py:109} INFO - [2022-05-21 01:01:31,078] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:01:31,666] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:01:32,046] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:01:32,055] {logging_mixin.py:109} INFO - [2022-05-21 01:01:32,055] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:01:32,067] {logging_mixin.py:109} INFO - [2022-05-21 01:01:32,067] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:01:32,075] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.001 seconds
+[2022-05-21 01:02:02,480] {processor.py:163} INFO - Started process (PID=20578) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:02,481] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:02:02,482] {logging_mixin.py:109} INFO - [2022-05-21 01:02:02,482] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:03,007] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:02:03,385] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:03,395] {logging_mixin.py:109} INFO - [2022-05-21 01:02:03,394] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:02:03,406] {logging_mixin.py:109} INFO - [2022-05-21 01:02:03,406] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:02:03,419] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.941 seconds
+[2022-05-21 01:02:33,439] {processor.py:163} INFO - Started process (PID=20664) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:33,448] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:02:33,449] {logging_mixin.py:109} INFO - [2022-05-21 01:02:33,448] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:34,114] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:02:34,528] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:02:34,537] {logging_mixin.py:109} INFO - [2022-05-21 01:02:34,537] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:02:34,550] {logging_mixin.py:109} INFO - [2022-05-21 01:02:34,550] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:02:34,559] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.122 seconds

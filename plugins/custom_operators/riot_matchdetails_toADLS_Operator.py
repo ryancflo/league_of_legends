@@ -13,11 +13,7 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
     """
     Riot To Azure DataLake Operator
     :param riot_conn_id:             The source Riot connection id.
-    :type azure_conn_id::               string
-    :param azure_conn_id::              The destination azure connection id.
-    :type azure_conn_id::               string
-    :param azure_bucket:                The destination azure bucket.
-    :type azure_bucket:                 string
+    :type riot_conn_id::               string
     :param azure_key:                   The destination azure key.
     :type azure_key:                    string
     :param start_epoch:                 start_time of the query.
@@ -29,14 +25,10 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
     @apply_defaults
     def __init__(self,
                  riot_conn_id: str,
-                 azure_blob: str,
                  azure_conn_id: str,
                  region: str,
-                 summoner_name: str,
-                 mode: str,
+                 queue: str,
                  count: int = None,
-                 queue: int = None,
-                 match_type: str = None,
                  start_epoch: int = None,
                  end_epoch: int = None,
                  ignore_headers=1,
@@ -45,14 +37,10 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         super(riot_matchDetailsToADLSOperator, self).__init__(*args, **kwargs)
 
         self.riot_conn_id = riot_conn_id
-        self.azure_blob = azure_blob
         self.azure_conn_id = azure_conn_id
         self.region = region
-        self.summoner_name = summoner_name
-        self.mode = mode
-        self.count = count
         self.queue = queue
-        self.match_type = match_type
+        self.count = count
         self.start_epoch = start_epoch
         self.end_epoch = end_epoch
 
@@ -63,16 +51,18 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         self.upload_to_azureLake()
         self.log.info("Upload twitter data to Azure!")
 
-        wasb_hook = WasbHook(self.azure_conn_id)
-        riot_hook = riotHook(self.riot_conn_id)
+
 
     def upload_to_azureLake(self):
         #Create Azure Connection
-        self.log.info(.wasb_hook.get_conn)
+        wasb_hook = WasbHook(self.azure_conn_id)
+        self.log.info(wasb_hook.get_conn)
         self.log.info("Created Azure Connection")
 
+        riot_hook = riotHook(self.riot_conn_id)
+
         #Fetch top 10 Challenger players
-        challengers = riot_hook.get_challenger_players(self.region, self.mode)
+        challengers = riot_hook.get_challenger_players(self.region, self.queue)
         players = challengers.pop('entries')
         players.sort(key=lambda x: x['leaguePoints'], reverse=True)
         top10_players = players[:10]
@@ -118,14 +108,15 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_path = path.join(tmp_dir, "match_details.csv")
             tmp_path2 = path.join(tmp_dir, "match_info.csv")
-
+            tmp_path3 = path.join(tmp_dir, "reponse_data.json")
             sub_df.to_csv(tmp_path, header=True, index=False, columns=list(sub_df.axes[1]))
             match_info_df.to_csv(tmp_path2, header=True, index=False, columns=list(match_info_df.axes[1]))
+            json.dump(top10_players, tmp_path3)
 
             # Upload file to Azure Blob.
             wasb_hook.load_file(
                 tmp_path,
-                container_name="match-detalis"
+                container_name="match-detalis",
                 blob_name="{year}/{month}/{day}/{hour}.csv".format(
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
@@ -135,11 +126,22 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
 
             wasb_hook.load_file(
                 tmp_path2,
-                container_name="match-info"
+                container_name="match-info",
                 blob_name="{year}/{month}/{day}/{hour}.csv".format(
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
                     day=self.end_epoch.day,
                     hour=self.end_epoch.hour)
                 )
+
+            wasb_hook.load_file(
+                tmp_path3,
+                container_name="players",
+                blob_name="{year}/{month}/{day}/{hour}.json".format(
+                    year=self.end_epoch.year,
+                    month=self.end_epoch.month,
+                    day=self.end_epoch.day,
+                    hour=self.end_epoch.hour)
+                )
+
 

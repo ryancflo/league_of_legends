@@ -4,18 +4,23 @@ from airflow import DAG
 from airflow.utils.task_group import TaskGroup
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.bash import BashOperator
 from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 from custom_operators.riot_matchdetails_toADLS_Operator import riot_matchDetailsToADLSOperator
 from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOperator
+from sql_helpers.sql_queries import sqlQueries
 
-LEAGUE_VERSION = '12.9.1'
-
+SNOWFLAKE_CONN_ID = 'snowflake_conn_id'
 end_epoch= int(datetime.now().timestamp())
 start_epoch = datetime.now() - timedelta(days=1)
 start_epoch = int(start_epoch.timestamp())
+CURRENT_TIME = datetime.now()
 
-
-static_data = ['champions', 'map', 'items', 'masteries', 'runes']
+static_data = {
+    'matchdetails' : ['STAGING_DATADRAGON_MATCHDETAILS', 'MY_AZURE_MATCH_DETAILS_STAGE', 'MATCH_DETAILS_FILEFORMAT', sqlQueries.CREATE_MATCHDETAILS_STAGING_TABLE_SQL_STRING], 
+    'matchinfo' : ['STAGING_DATADRAGON_MATCHINFO', 'MY_AZURE_MATCH_INFO_STAGE', 'MATCH_INFO_FILEFORMAT', sqlQueries.CREATE_MATCHINFO_STAGING_TABLE_SQL_STRING],
+    'players' : ['STAGING_DATADRAGON_PLAYERS', 'MY_AZURE_PLAYERS_STAGE', 'PLAYERS_FILEFORMAT', sqlQueries.CREATE_PLAYERS_STAGING_TABLE_SQL_STRING]
+}
 
 default_args = {
     'owner': 'admin',
@@ -27,62 +32,56 @@ default_args = {
     'email_on_retry': False
 }
 
-dag = DAG(dag_id = 'league_of_legends_dag',
+dag = DAG(dag_id = 'match_details_dag',
           default_args=default_args,
           max_active_runs=1,
           description='Load and transform data in Azure with Airflow',
           schedule_interval='0 * * * *'
         )
 
-staging_matchDetails = riot_matchDetailsToADLSOperator(
+staging_matchData = riot_matchDetailsToADLSOperator(
     task_id='staging',
     dag=dag,
     riot_conn_id = 'riot_conn_id',
     # start_epoch = start_epoch,
-    end_epoch = datetime.now(),
-    count = 5,
-    summoner_name = 'dild0wacker',
-    azure_blob = 'test',
+    # end_epoch = datetime.now(),
+    queue = "RANKED_SOLO_5x5",
+    count = 3,
     azure_conn_id = 'azure_conn_id',
     region = 'na1',
     ignore_headers=1
 )
 
-staging_dataDragon = riot_matchDetailsToADLSOperator(
-    task_id='staging2',
-    dag=dag,
-    riot_conn_id = 'riot_conn_id',
-    azure_blob = 'test',
-    azure_conn_id = 'azure_conn_id',
-    version = LEAGUE_VERSION,
-    data_url = static_data,
-    ignore_headers=1
-)
+# create_matchdinfo = SnowflakeOperator(
+#     task_id='create_matchdinfo',
+#     dag=dag,
+#     sql=sqlQueries.CREATE_MATCHINFO_STAGING_TABLE_SQL_STRING,
+#     snowflake_conn_id=SNOWFLAKE_CONN_ID
+# )
 
 with dag as dag:
-    with TaskGroup(group_id='load_toSnowflakeStaging') as load_toSnowflakeStaging:
-        snowflake_op_sql_str = SnowflakeOperator(
-            task_id='snowflake_op_sql_str',
-            dag=dag,
-            sql=CREATE_TABLE_SQL_STRING,
-            warehouse=SNOWFLAKE_WAREHOUSE,
-            database=SNOWFLAKE_DATABASE,
-            schema=SNOWFLAKE_SCHEMA,
-            role=SNOWFLAKE_ROLE,
-        )
-            
-        snowflake_op_with_params = SnowflakeOperator(
-            task_id='snowflake_op_with_params',
-            dag=dag,
-            sql=SQL_INSERT_STATEMENT,
-            parameters={"id": 56},
-            warehouse=SNOWFLAKE_WAREHOUSE,
-            database=SNOWFLAKE_DATABASE,
-            schema=SNOWFLAKE_SCHEMA,
-            role=SNOWFLAKE_ROLE,
-        )
+    with TaskGroup(group_id='paths') as paths:
+        for data in static_data:
+            with TaskGroup(group_id=f'path_{data}') as path:
 
-        []
+                create_stage = SnowflakeOperator(
+                    task_id='create_{}'.format(data),
+                    dag=dag,
+                    sql=static_data[data][3],
+                    snowflake_conn_id=SNOWFLAKE_CONN_ID
+                )
+
+                copy_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
+                    task_id='azure_{}_snowflake'.format(data),
+                    dag=dag,
+                    azure_keys=['{0}/{1}/{2}/{3}.json'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+                    stage=static_data[data][1],
+                    table=static_data[data][0],
+                    file_format=static_data[data][2],
+                    snowflake_conn_id=SNOWFLAKE_CONN_ID
+                )
+
+                create_stage >> copy_toSnowflake
 
 task_1 = BashOperator(
     task_id='daily_transform',
@@ -109,4 +108,4 @@ task_2 = BashOperator(
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> end_operator
+start_operator >> staging_matchData >> paths >> end_operator
