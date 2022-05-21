@@ -1045,3 +1045,11 @@ IndexError: list index out of range
 [2022-05-21 01:02:34,537] {logging_mixin.py:109} INFO - [2022-05-21 01:02:34,537] {dag.py:2398} INFO - Sync 1 DAGs
 [2022-05-21 01:02:34,550] {logging_mixin.py:109} INFO - [2022-05-21 01:02:34,550] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
 [2022-05-21 01:02:34,559] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 1.122 seconds
+[2022-05-21 01:03:05,186] {processor.py:163} INFO - Started process (PID=20758) to work on /opt/airflow/dags/main_dag.py
+[2022-05-21 01:03:05,187] {processor.py:642} INFO - Processing file /opt/airflow/dags/main_dag.py for tasks to queue
+[2022-05-21 01:03:05,187] {logging_mixin.py:109} INFO - [2022-05-21 01:03:05,187] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:03:05,711] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+[2022-05-21 01:03:06,081] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/main_dag.py
+[2022-05-21 01:03:06,092] {logging_mixin.py:109} INFO - [2022-05-21 01:03:06,091] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-05-21 01:03:06,104] {logging_mixin.py:109} INFO - [2022-05-21 01:03:06,104] {dag.py:2937} INFO - Setting next_dagrun for match_details_dag to 2022-03-31T21:00:00+00:00
+[2022-05-21 01:03:06,115] {processor.py:171} INFO - Processing /opt/airflow/dags/main_dag.py took 0.931 seconds
