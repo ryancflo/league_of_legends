@@ -556,3 +556,131 @@
 [2022-06-10 01:09:52,270] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
 [2022-06-10 01:09:52,278] {logging_mixin.py:109} INFO - [2022-06-10 01:09:52,278] {dag.py:2398} INFO - Sync 1 DAGs
 [2022-06-10 01:09:52,297] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.915 seconds
+[2022-06-10 01:10:22,487] {processor.py:163} INFO - Started process (PID=691) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:22,488] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-10 01:10:22,489] {logging_mixin.py:109} INFO - [2022-06-10 01:10:22,489] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:23,391] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:23,402] {logging_mixin.py:109} INFO - [2022-06-10 01:10:23,401] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:10:23,432] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.947 seconds
+[2022-06-10 01:10:53,642] {processor.py:163} INFO - Started process (PID=757) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:53,643] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-10 01:10:53,644] {logging_mixin.py:109} INFO - [2022-06-10 01:10:53,644] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:54,632] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:10:54,642] {logging_mixin.py:109} INFO - [2022-06-10 01:10:54,641] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:10:54,664] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.025 seconds
+[2022-06-10 01:11:25,464] {processor.py:163} INFO - Started process (PID=823) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:11:25,466] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-10 01:11:25,467] {logging_mixin.py:109} INFO - [2022-06-10 01:11:25,467] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:11:26,310] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:11:26,319] {logging_mixin.py:109} INFO - [2022-06-10 01:11:26,319] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:11:26,352] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.890 seconds
+[2022-06-10 01:11:56,631] {processor.py:163} INFO - Started process (PID=889) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:11:56,646] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-10 01:11:56,646] {logging_mixin.py:109} INFO - [2022-06-10 01:11:56,646] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-10 01:11:57,713] {processor.py:174} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.18.0.2), port 5432 failed: FATAL:  the database system is shutting down
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 165, in _run_file_processor
+    result: Tuple[int, int] = dag_file_processor.process_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 651, in process_file
+    self._deactivate_missing_dags(session, dagbag, file_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/dag_processing/processor.py", line 685, in _deactivate_missing_dags
+    session.query(DagModel)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 4063, in update
+    update_op.exec_()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1696, in exec_
+    self._do_pre_synchronize()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1805, in _do_pre_synchronize
+    self.matched_rows = session.execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1295, in execute
+    return self._connection_for_bind(bind, close_with_result=True).execute(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1150, in _connection_for_bind
+    return self.transaction._connection_for_bind(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 433, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2302, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2339, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1583, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2336, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 364, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 778, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 495, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 140, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 137, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 309, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 440, in __init__
+    self.__connect(first_connect_check=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 656, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 508, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.18.0.2), port 5432 failed: FATAL:  the database system is shutting down
+
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
