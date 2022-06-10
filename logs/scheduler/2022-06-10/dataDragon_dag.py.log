@@ -1,0 +1,651 @@
+[2022-06-10 00:19:50,300] {processor.py:163} INFO - Started process (PID=30) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:19:50,300] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:19:50,301] {logging_mixin.py:109} INFO - [2022-06-10 00:19:50,301] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:19:52,188] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:19:52,895] {logging_mixin.py:109} INFO - [2022-06-10 00:19:52,895] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:19:52,916] {logging_mixin.py:109} INFO - [2022-06-10 00:19:52,916] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:19:52,937] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 2.642 seconds
+[2022-06-10 00:20:23,902] {processor.py:163} INFO - Started process (PID=96) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:23,902] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:20:23,903] {logging_mixin.py:109} INFO - [2022-06-10 00:20:23,903] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:24,757] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:24,856] {logging_mixin.py:109} INFO - [2022-06-10 00:20:24,856] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:20:24,869] {logging_mixin.py:109} INFO - [2022-06-10 00:20:24,869] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:20:24,877] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.978 seconds
+[2022-06-10 00:20:55,012] {processor.py:163} INFO - Started process (PID=162) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:55,014] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:20:55,014] {logging_mixin.py:109} INFO - [2022-06-10 00:20:55,014] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:56,039] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:20:56,155] {logging_mixin.py:109} INFO - [2022-06-10 00:20:56,154] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:20:56,170] {logging_mixin.py:109} INFO - [2022-06-10 00:20:56,170] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:20:56,181] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.171 seconds
+[2022-06-10 00:21:26,552] {processor.py:163} INFO - Started process (PID=228) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:26,554] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:21:26,554] {logging_mixin.py:109} INFO - [2022-06-10 00:21:26,554] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:27,596] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:27,679] {logging_mixin.py:109} INFO - [2022-06-10 00:21:27,678] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:21:27,692] {logging_mixin.py:109} INFO - [2022-06-10 00:21:27,692] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:21:27,780] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.230 seconds
+[2022-06-10 00:21:58,013] {processor.py:163} INFO - Started process (PID=294) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:58,014] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:21:58,014] {logging_mixin.py:109} INFO - [2022-06-10 00:21:58,014] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:58,880] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:21:58,972] {logging_mixin.py:109} INFO - [2022-06-10 00:21:58,971] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:21:58,984] {logging_mixin.py:109} INFO - [2022-06-10 00:21:58,984] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:21:58,994] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.984 seconds
+[2022-06-10 00:22:29,183] {processor.py:163} INFO - Started process (PID=360) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:22:29,188] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:22:29,188] {logging_mixin.py:109} INFO - [2022-06-10 00:22:29,188] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:22:30,163] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:22:30,173] {logging_mixin.py:109} INFO - [2022-06-10 00:22:30,173] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:22:30,185] {logging_mixin.py:109} INFO - [2022-06-10 00:22:30,185] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:22:30,208] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.027 seconds
+[2022-06-10 00:23:00,401] {processor.py:163} INFO - Started process (PID=426) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:00,402] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:23:00,403] {logging_mixin.py:109} INFO - [2022-06-10 00:23:00,403] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:01,461] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:01,473] {logging_mixin.py:109} INFO - [2022-06-10 00:23:01,473] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:23:01,485] {logging_mixin.py:109} INFO - [2022-06-10 00:23:01,485] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:23:01,495] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.096 seconds
+[2022-06-10 00:23:31,589] {processor.py:163} INFO - Started process (PID=492) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:31,590] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:23:31,590] {logging_mixin.py:109} INFO - [2022-06-10 00:23:31,590] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:32,697] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:23:32,715] {logging_mixin.py:109} INFO - [2022-06-10 00:23:32,714] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:23:32,735] {logging_mixin.py:109} INFO - [2022-06-10 00:23:32,735] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:23:32,749] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.162 seconds
+[2022-06-10 00:24:02,916] {processor.py:163} INFO - Started process (PID=558) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:02,921] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:24:02,922] {logging_mixin.py:109} INFO - [2022-06-10 00:24:02,922] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:03,835] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:03,844] {logging_mixin.py:109} INFO - [2022-06-10 00:24:03,844] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:24:03,856] {logging_mixin.py:109} INFO - [2022-06-10 00:24:03,856] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:24:03,869] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.955 seconds
+[2022-06-10 00:24:33,948] {processor.py:163} INFO - Started process (PID=624) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:33,949] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:24:33,949] {logging_mixin.py:109} INFO - [2022-06-10 00:24:33,949] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:34,846] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:24:34,857] {logging_mixin.py:109} INFO - [2022-06-10 00:24:34,856] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:24:34,868] {logging_mixin.py:109} INFO - [2022-06-10 00:24:34,868] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:24:34,877] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.931 seconds
+[2022-06-10 00:25:04,983] {processor.py:163} INFO - Started process (PID=690) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:04,984] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:25:04,985] {logging_mixin.py:109} INFO - [2022-06-10 00:25:04,985] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:05,992] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:06,002] {logging_mixin.py:109} INFO - [2022-06-10 00:25:06,002] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:25:06,013] {logging_mixin.py:109} INFO - [2022-06-10 00:25:06,013] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:25:06,022] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.040 seconds
+[2022-06-10 00:25:36,798] {processor.py:163} INFO - Started process (PID=756) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:36,799] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:25:36,800] {logging_mixin.py:109} INFO - [2022-06-10 00:25:36,800] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:37,609] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:25:37,620] {logging_mixin.py:109} INFO - [2022-06-10 00:25:37,620] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:25:37,634] {logging_mixin.py:109} INFO - [2022-06-10 00:25:37,634] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:25:37,645] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.848 seconds
+[2022-06-10 00:26:07,751] {processor.py:163} INFO - Started process (PID=822) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:07,755] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:26:07,756] {logging_mixin.py:109} INFO - [2022-06-10 00:26:07,756] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:08,705] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:08,715] {logging_mixin.py:109} INFO - [2022-06-10 00:26:08,715] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:26:08,729] {logging_mixin.py:109} INFO - [2022-06-10 00:26:08,729] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:26:08,738] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.989 seconds
+[2022-06-10 00:26:38,931] {processor.py:163} INFO - Started process (PID=888) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:38,935] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:26:38,936] {logging_mixin.py:109} INFO - [2022-06-10 00:26:38,936] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:40,095] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:26:40,113] {logging_mixin.py:109} INFO - [2022-06-10 00:26:40,112] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:26:40,134] {logging_mixin.py:109} INFO - [2022-06-10 00:26:40,134] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:26:40,147] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.218 seconds
+[2022-06-10 00:27:10,894] {processor.py:163} INFO - Started process (PID=954) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:10,895] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:27:10,896] {logging_mixin.py:109} INFO - [2022-06-10 00:27:10,896] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:11,780] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:11,795] {logging_mixin.py:109} INFO - [2022-06-10 00:27:11,794] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:27:11,823] {logging_mixin.py:109} INFO - [2022-06-10 00:27:11,822] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:27:11,842] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.952 seconds
+[2022-06-10 00:27:42,122] {processor.py:163} INFO - Started process (PID=1020) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:42,123] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:27:42,124] {logging_mixin.py:109} INFO - [2022-06-10 00:27:42,124] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:43,017] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:27:43,028] {logging_mixin.py:109} INFO - [2022-06-10 00:27:43,028] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:27:43,042] {logging_mixin.py:109} INFO - [2022-06-10 00:27:43,041] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:27:43,053] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.933 seconds
+[2022-06-10 00:28:13,084] {processor.py:163} INFO - Started process (PID=1086) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:13,085] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:28:13,085] {logging_mixin.py:109} INFO - [2022-06-10 00:28:13,085] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:14,181] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:14,197] {logging_mixin.py:109} INFO - [2022-06-10 00:28:14,197] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:28:14,215] {logging_mixin.py:109} INFO - [2022-06-10 00:28:14,215] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:28:14,231] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.149 seconds
+[2022-06-10 00:28:44,899] {processor.py:163} INFO - Started process (PID=1152) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:44,900] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:28:44,901] {logging_mixin.py:109} INFO - [2022-06-10 00:28:44,900] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:45,943] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:28:45,954] {logging_mixin.py:109} INFO - [2022-06-10 00:28:45,954] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:28:45,967] {logging_mixin.py:109} INFO - [2022-06-10 00:28:45,967] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:28:45,977] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.080 seconds
+[2022-06-10 00:29:16,221] {processor.py:163} INFO - Started process (PID=1218) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:16,222] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:29:16,222] {logging_mixin.py:109} INFO - [2022-06-10 00:29:16,222] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:17,253] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:17,270] {logging_mixin.py:109} INFO - [2022-06-10 00:29:17,270] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:29:17,288] {logging_mixin.py:109} INFO - [2022-06-10 00:29:17,287] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:29:17,303] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.084 seconds
+[2022-06-10 00:29:47,518] {processor.py:163} INFO - Started process (PID=1284) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:47,519] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:29:47,519] {logging_mixin.py:109} INFO - [2022-06-10 00:29:47,519] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:48,624] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:29:48,637] {logging_mixin.py:109} INFO - [2022-06-10 00:29:48,637] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:29:48,650] {logging_mixin.py:109} INFO - [2022-06-10 00:29:48,650] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:29:48,660] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.145 seconds
+[2022-06-10 00:30:18,737] {processor.py:163} INFO - Started process (PID=1350) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:18,738] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:30:18,738] {logging_mixin.py:109} INFO - [2022-06-10 00:30:18,738] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:19,658] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:19,671] {logging_mixin.py:109} INFO - [2022-06-10 00:30:19,670] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:30:19,687] {logging_mixin.py:109} INFO - [2022-06-10 00:30:19,687] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:30:19,697] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.962 seconds
+[2022-06-10 00:30:49,821] {processor.py:163} INFO - Started process (PID=1416) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:49,821] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:30:49,822] {logging_mixin.py:109} INFO - [2022-06-10 00:30:49,822] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:50,754] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:30:50,765] {logging_mixin.py:109} INFO - [2022-06-10 00:30:50,764] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:30:50,779] {logging_mixin.py:109} INFO - [2022-06-10 00:30:50,779] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:30:50,788] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.969 seconds
+[2022-06-10 00:31:20,835] {processor.py:163} INFO - Started process (PID=1482) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:20,837] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:31:20,838] {logging_mixin.py:109} INFO - [2022-06-10 00:31:20,838] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:21,863] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:21,881] {logging_mixin.py:109} INFO - [2022-06-10 00:31:21,880] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:31:21,897] {logging_mixin.py:109} INFO - [2022-06-10 00:31:21,897] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:31:21,910] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.077 seconds
+[2022-06-10 00:31:52,471] {processor.py:163} INFO - Started process (PID=1548) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:52,484] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:31:52,485] {logging_mixin.py:109} INFO - [2022-06-10 00:31:52,485] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:53,436] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:31:53,448] {logging_mixin.py:109} INFO - [2022-06-10 00:31:53,447] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:31:53,462] {logging_mixin.py:109} INFO - [2022-06-10 00:31:53,462] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:31:53,478] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.010 seconds
+[2022-06-10 00:32:23,877] {processor.py:163} INFO - Started process (PID=1614) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:23,878] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:32:23,878] {logging_mixin.py:109} INFO - [2022-06-10 00:32:23,878] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:24,846] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:24,858] {logging_mixin.py:109} INFO - [2022-06-10 00:32:24,857] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:32:24,874] {logging_mixin.py:109} INFO - [2022-06-10 00:32:24,874] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:32:24,891] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.015 seconds
+[2022-06-10 00:32:55,257] {processor.py:163} INFO - Started process (PID=1680) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:55,264] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:32:55,265] {logging_mixin.py:109} INFO - [2022-06-10 00:32:55,265] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:56,389] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:32:56,400] {logging_mixin.py:109} INFO - [2022-06-10 00:32:56,399] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:32:56,415] {logging_mixin.py:109} INFO - [2022-06-10 00:32:56,415] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:32:56,425] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.169 seconds
+[2022-06-10 00:33:26,638] {processor.py:163} INFO - Started process (PID=1746) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:26,639] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:33:26,639] {logging_mixin.py:109} INFO - [2022-06-10 00:33:26,639] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:27,642] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:27,656] {logging_mixin.py:109} INFO - [2022-06-10 00:33:27,656] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:33:27,672] {logging_mixin.py:109} INFO - [2022-06-10 00:33:27,672] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:33:27,683] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.046 seconds
+[2022-06-10 00:33:57,779] {processor.py:163} INFO - Started process (PID=1812) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:57,779] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:33:57,780] {logging_mixin.py:109} INFO - [2022-06-10 00:33:57,780] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:58,865] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:33:58,881] {logging_mixin.py:109} INFO - [2022-06-10 00:33:58,880] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:33:58,895] {logging_mixin.py:109} INFO - [2022-06-10 00:33:58,894] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:33:58,907] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.130 seconds
+[2022-06-10 00:34:29,323] {processor.py:163} INFO - Started process (PID=1878) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:34:29,327] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:34:29,328] {logging_mixin.py:109} INFO - [2022-06-10 00:34:29,328] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:34:32,261] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:34:32,277] {logging_mixin.py:109} INFO - [2022-06-10 00:34:32,277] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:34:32,295] {logging_mixin.py:109} INFO - [2022-06-10 00:34:32,295] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:34:32,306] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 2.988 seconds
+[2022-06-10 00:35:02,520] {processor.py:163} INFO - Started process (PID=1944) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:02,521] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:35:02,522] {logging_mixin.py:109} INFO - [2022-06-10 00:35:02,522] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:03,852] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:03,868] {logging_mixin.py:109} INFO - [2022-06-10 00:35:03,867] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:35:03,885] {logging_mixin.py:109} INFO - [2022-06-10 00:35:03,885] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:35:03,897] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.381 seconds
+[2022-06-10 00:35:34,112] {processor.py:163} INFO - Started process (PID=2010) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:34,116] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:35:34,117] {logging_mixin.py:109} INFO - [2022-06-10 00:35:34,117] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:35,196] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:35:35,208] {logging_mixin.py:109} INFO - [2022-06-10 00:35:35,208] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:35:35,224] {logging_mixin.py:109} INFO - [2022-06-10 00:35:35,224] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:35:35,234] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.124 seconds
+[2022-06-10 00:36:05,303] {processor.py:163} INFO - Started process (PID=2076) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:05,304] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:36:05,306] {logging_mixin.py:109} INFO - [2022-06-10 00:36:05,305] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:06,645] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:06,662] {logging_mixin.py:109} INFO - [2022-06-10 00:36:06,662] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:36:06,681] {logging_mixin.py:109} INFO - [2022-06-10 00:36:06,680] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:36:06,695] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.394 seconds
+[2022-06-10 00:36:37,434] {processor.py:163} INFO - Started process (PID=2142) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:37,436] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:36:37,437] {logging_mixin.py:109} INFO - [2022-06-10 00:36:37,437] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:38,847] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:36:38,865] {logging_mixin.py:109} INFO - [2022-06-10 00:36:38,865] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:36:38,891] {logging_mixin.py:109} INFO - [2022-06-10 00:36:38,890] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:36:38,905] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.474 seconds
+[2022-06-10 00:37:08,976] {processor.py:163} INFO - Started process (PID=2208) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:08,979] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:37:08,980] {logging_mixin.py:109} INFO - [2022-06-10 00:37:08,980] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:10,116] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:10,130] {logging_mixin.py:109} INFO - [2022-06-10 00:37:10,130] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:37:10,149] {logging_mixin.py:109} INFO - [2022-06-10 00:37:10,149] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:37:10,160] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.187 seconds
+[2022-06-10 00:37:40,572] {processor.py:163} INFO - Started process (PID=2274) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:40,572] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:37:40,573] {logging_mixin.py:109} INFO - [2022-06-10 00:37:40,573] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:41,686] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:37:41,700] {logging_mixin.py:109} INFO - [2022-06-10 00:37:41,700] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:37:41,717] {logging_mixin.py:109} INFO - [2022-06-10 00:37:41,717] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:37:41,728] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.159 seconds
+[2022-06-10 00:38:12,244] {processor.py:163} INFO - Started process (PID=2340) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:12,245] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:38:12,245] {logging_mixin.py:109} INFO - [2022-06-10 00:38:12,245] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:13,372] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:13,389] {logging_mixin.py:109} INFO - [2022-06-10 00:38:13,388] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:38:13,406] {logging_mixin.py:109} INFO - [2022-06-10 00:38:13,406] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:38:13,419] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.177 seconds
+[2022-06-10 00:38:43,732] {processor.py:163} INFO - Started process (PID=2406) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:43,734] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:38:43,734] {logging_mixin.py:109} INFO - [2022-06-10 00:38:43,734] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:44,895] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:38:44,911] {logging_mixin.py:109} INFO - [2022-06-10 00:38:44,910] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:38:44,927] {logging_mixin.py:109} INFO - [2022-06-10 00:38:44,927] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:38:44,938] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.210 seconds
+[2022-06-10 00:39:15,642] {processor.py:163} INFO - Started process (PID=2472) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:15,643] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:39:15,644] {logging_mixin.py:109} INFO - [2022-06-10 00:39:15,644] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:16,971] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:16,989] {logging_mixin.py:109} INFO - [2022-06-10 00:39:16,988] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:39:17,012] {logging_mixin.py:109} INFO - [2022-06-10 00:39:17,012] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:39:17,034] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.395 seconds
+[2022-06-10 00:39:47,844] {processor.py:163} INFO - Started process (PID=2538) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:47,846] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:39:47,851] {logging_mixin.py:109} INFO - [2022-06-10 00:39:47,848] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:48,996] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:39:49,008] {logging_mixin.py:109} INFO - [2022-06-10 00:39:49,008] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:39:49,022] {logging_mixin.py:109} INFO - [2022-06-10 00:39:49,022] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:39:49,033] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.192 seconds
+[2022-06-10 00:40:19,654] {processor.py:163} INFO - Started process (PID=2604) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:19,655] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:40:19,655] {logging_mixin.py:109} INFO - [2022-06-10 00:40:19,655] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:20,690] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:20,702] {logging_mixin.py:109} INFO - [2022-06-10 00:40:20,702] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:40:20,717] {logging_mixin.py:109} INFO - [2022-06-10 00:40:20,717] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:40:20,732] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.080 seconds
+[2022-06-10 00:40:51,119] {processor.py:163} INFO - Started process (PID=2670) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:51,119] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:40:51,120] {logging_mixin.py:109} INFO - [2022-06-10 00:40:51,120] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:52,146] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:40:52,162] {logging_mixin.py:109} INFO - [2022-06-10 00:40:52,162] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:40:52,179] {logging_mixin.py:109} INFO - [2022-06-10 00:40:52,178] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:40:52,190] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.073 seconds
+[2022-06-10 00:41:22,623] {processor.py:163} INFO - Started process (PID=2736) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:22,625] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:41:22,626] {logging_mixin.py:109} INFO - [2022-06-10 00:41:22,626] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:23,775] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:23,786] {logging_mixin.py:109} INFO - [2022-06-10 00:41:23,785] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:41:23,798] {logging_mixin.py:109} INFO - [2022-06-10 00:41:23,798] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:41:23,813] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.192 seconds
+[2022-06-10 00:41:53,924] {processor.py:163} INFO - Started process (PID=2802) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:53,925] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:41:53,925] {logging_mixin.py:109} INFO - [2022-06-10 00:41:53,925] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:54,981] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:41:54,992] {logging_mixin.py:109} INFO - [2022-06-10 00:41:54,992] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:41:55,005] {logging_mixin.py:109} INFO - [2022-06-10 00:41:55,005] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:41:55,020] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.098 seconds
+[2022-06-10 00:42:25,788] {processor.py:163} INFO - Started process (PID=2868) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:25,791] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:42:25,792] {logging_mixin.py:109} INFO - [2022-06-10 00:42:25,791] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:26,854] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:26,867] {logging_mixin.py:109} INFO - [2022-06-10 00:42:26,867] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:42:26,882] {logging_mixin.py:109} INFO - [2022-06-10 00:42:26,882] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:42:26,893] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.107 seconds
+[2022-06-10 00:42:57,110] {processor.py:163} INFO - Started process (PID=2949) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:57,111] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:42:57,112] {logging_mixin.py:109} INFO - [2022-06-10 00:42:57,112] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:58,101] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:42:58,113] {logging_mixin.py:109} INFO - [2022-06-10 00:42:58,112] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:42:58,130] {logging_mixin.py:109} INFO - [2022-06-10 00:42:58,129] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:42:58,140] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.032 seconds
+[2022-06-10 00:43:28,528] {processor.py:163} INFO - Started process (PID=3000) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:43:28,528] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:43:28,529] {logging_mixin.py:109} INFO - [2022-06-10 00:43:28,529] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:43:29,714] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:43:29,736] {logging_mixin.py:109} INFO - [2022-06-10 00:43:29,735] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:43:29,761] {logging_mixin.py:109} INFO - [2022-06-10 00:43:29,760] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:43:29,778] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.252 seconds
+[2022-06-10 00:43:59,965] {processor.py:163} INFO - Started process (PID=3066) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:43:59,967] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:43:59,968] {logging_mixin.py:109} INFO - [2022-06-10 00:43:59,967] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:44:00,997] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:44:01,009] {logging_mixin.py:109} INFO - [2022-06-10 00:44:01,009] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:44:01,025] {logging_mixin.py:109} INFO - [2022-06-10 00:44:01,025] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:44:01,036] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.072 seconds
+[2022-06-10 00:44:31,104] {processor.py:163} INFO - Started process (PID=3132) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:44:31,105] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:44:31,106] {logging_mixin.py:109} INFO - [2022-06-10 00:44:31,106] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:44:32,137] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:44:32,150] {logging_mixin.py:109} INFO - [2022-06-10 00:44:32,149] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:44:32,165] {logging_mixin.py:109} INFO - [2022-06-10 00:44:32,165] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:44:32,185] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.082 seconds
+[2022-06-10 00:45:02,444] {processor.py:163} INFO - Started process (PID=3198) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:02,445] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:45:02,446] {logging_mixin.py:109} INFO - [2022-06-10 00:45:02,446] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:03,497] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:03,508] {logging_mixin.py:109} INFO - [2022-06-10 00:45:03,508] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:45:03,523] {logging_mixin.py:109} INFO - [2022-06-10 00:45:03,523] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:45:03,534] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.093 seconds
+[2022-06-10 00:45:33,610] {processor.py:163} INFO - Started process (PID=3264) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:33,612] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:45:33,613] {logging_mixin.py:109} INFO - [2022-06-10 00:45:33,613] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:35,108] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:45:35,125] {logging_mixin.py:109} INFO - [2022-06-10 00:45:35,125] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:45:35,146] {logging_mixin.py:109} INFO - [2022-06-10 00:45:35,146] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:45:35,162] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.555 seconds
+[2022-06-10 00:46:05,941] {processor.py:163} INFO - Started process (PID=3330) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:05,942] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:46:05,943] {logging_mixin.py:109} INFO - [2022-06-10 00:46:05,943] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:07,202] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:07,217] {logging_mixin.py:109} INFO - [2022-06-10 00:46:07,216] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:46:07,239] {logging_mixin.py:109} INFO - [2022-06-10 00:46:07,238] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:46:07,250] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.311 seconds
+[2022-06-10 00:46:37,880] {processor.py:163} INFO - Started process (PID=3396) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:37,882] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:46:37,883] {logging_mixin.py:109} INFO - [2022-06-10 00:46:37,883] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:39,036] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:46:39,051] {logging_mixin.py:109} INFO - [2022-06-10 00:46:39,051] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:46:39,071] {logging_mixin.py:109} INFO - [2022-06-10 00:46:39,071] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:46:39,084] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.206 seconds
+[2022-06-10 00:47:09,579] {processor.py:163} INFO - Started process (PID=3462) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:09,580] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:47:09,581] {logging_mixin.py:109} INFO - [2022-06-10 00:47:09,581] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:10,819] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:10,836] {logging_mixin.py:109} INFO - [2022-06-10 00:47:10,835] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:47:10,854] {logging_mixin.py:109} INFO - [2022-06-10 00:47:10,854] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:47:10,867] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.291 seconds
+[2022-06-10 00:47:41,291] {processor.py:163} INFO - Started process (PID=3528) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:41,292] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:47:41,293] {logging_mixin.py:109} INFO - [2022-06-10 00:47:41,293] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:42,476] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:47:42,494] {logging_mixin.py:109} INFO - [2022-06-10 00:47:42,493] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:47:42,511] {logging_mixin.py:109} INFO - [2022-06-10 00:47:42,511] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:47:42,528] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.239 seconds
+[2022-06-10 00:48:12,948] {processor.py:163} INFO - Started process (PID=3594) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:12,949] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:48:12,950] {logging_mixin.py:109} INFO - [2022-06-10 00:48:12,950] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:14,166] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:14,182] {logging_mixin.py:109} INFO - [2022-06-10 00:48:14,181] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:48:14,198] {logging_mixin.py:109} INFO - [2022-06-10 00:48:14,198] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:48:14,212] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.267 seconds
+[2022-06-10 00:48:44,840] {processor.py:163} INFO - Started process (PID=3660) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:44,842] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:48:44,842] {logging_mixin.py:109} INFO - [2022-06-10 00:48:44,842] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:46,086] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:48:46,103] {logging_mixin.py:109} INFO - [2022-06-10 00:48:46,103] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:48:46,123] {logging_mixin.py:109} INFO - [2022-06-10 00:48:46,123] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:48:46,135] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.298 seconds
+[2022-06-10 00:49:16,611] {processor.py:163} INFO - Started process (PID=3726) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:16,611] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:49:16,612] {logging_mixin.py:109} INFO - [2022-06-10 00:49:16,612] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:17,628] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:17,641] {logging_mixin.py:109} INFO - [2022-06-10 00:49:17,641] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:49:17,657] {logging_mixin.py:109} INFO - [2022-06-10 00:49:17,657] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:49:17,667] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.059 seconds
+[2022-06-10 00:49:47,717] {processor.py:163} INFO - Started process (PID=3792) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:47,718] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:49:47,719] {logging_mixin.py:109} INFO - [2022-06-10 00:49:47,718] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:48,774] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:49:48,792] {logging_mixin.py:109} INFO - [2022-06-10 00:49:48,791] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:49:48,807] {logging_mixin.py:109} INFO - [2022-06-10 00:49:48,807] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:49:48,823] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.108 seconds
+[2022-06-10 00:50:19,536] {processor.py:163} INFO - Started process (PID=3858) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:19,537] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:50:19,538] {logging_mixin.py:109} INFO - [2022-06-10 00:50:19,538] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:20,916] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:20,931] {logging_mixin.py:109} INFO - [2022-06-10 00:50:20,931] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:50:20,948] {logging_mixin.py:109} INFO - [2022-06-10 00:50:20,947] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:50:20,960] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.426 seconds
+[2022-06-10 00:50:51,455] {processor.py:163} INFO - Started process (PID=3924) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:51,456] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:50:51,456] {logging_mixin.py:109} INFO - [2022-06-10 00:50:51,456] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:52,518] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:50:52,532] {logging_mixin.py:109} INFO - [2022-06-10 00:50:52,531] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:50:52,546] {logging_mixin.py:109} INFO - [2022-06-10 00:50:52,546] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:50:52,560] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.107 seconds
+[2022-06-10 00:51:22,841] {processor.py:163} INFO - Started process (PID=3990) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:22,843] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:51:22,843] {logging_mixin.py:109} INFO - [2022-06-10 00:51:22,843] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:24,063] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:24,078] {logging_mixin.py:109} INFO - [2022-06-10 00:51:24,077] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:51:24,094] {logging_mixin.py:109} INFO - [2022-06-10 00:51:24,094] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:51:24,112] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.275 seconds
+[2022-06-10 00:51:54,192] {processor.py:163} INFO - Started process (PID=4056) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:54,193] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:51:54,193] {logging_mixin.py:109} INFO - [2022-06-10 00:51:54,193] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:55,233] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:51:55,247] {logging_mixin.py:109} INFO - [2022-06-10 00:51:55,246] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:51:55,264] {logging_mixin.py:109} INFO - [2022-06-10 00:51:55,264] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:51:55,276] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.087 seconds
+[2022-06-10 00:52:25,360] {processor.py:163} INFO - Started process (PID=4122) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:25,364] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:52:25,364] {logging_mixin.py:109} INFO - [2022-06-10 00:52:25,364] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:26,438] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:26,453] {logging_mixin.py:109} INFO - [2022-06-10 00:52:26,452] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:52:26,471] {logging_mixin.py:109} INFO - [2022-06-10 00:52:26,471] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:52:26,488] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.130 seconds
+[2022-06-10 00:52:56,759] {processor.py:163} INFO - Started process (PID=4188) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:56,762] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:52:56,762] {logging_mixin.py:109} INFO - [2022-06-10 00:52:56,762] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:57,870] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:52:57,884] {logging_mixin.py:109} INFO - [2022-06-10 00:52:57,883] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:52:57,900] {logging_mixin.py:109} INFO - [2022-06-10 00:52:57,900] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:52:57,918] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.161 seconds
+[2022-06-10 00:53:28,201] {processor.py:163} INFO - Started process (PID=4254) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:53:28,202] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:53:28,202] {logging_mixin.py:109} INFO - [2022-06-10 00:53:28,202] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:53:29,260] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:53:29,273] {logging_mixin.py:109} INFO - [2022-06-10 00:53:29,273] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:53:29,290] {logging_mixin.py:109} INFO - [2022-06-10 00:53:29,289] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:53:29,305] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.106 seconds
+[2022-06-10 00:53:59,536] {processor.py:163} INFO - Started process (PID=4320) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:53:59,542] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:53:59,543] {logging_mixin.py:109} INFO - [2022-06-10 00:53:59,543] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:54:00,529] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:54:00,542] {logging_mixin.py:109} INFO - [2022-06-10 00:54:00,542] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:54:00,556] {logging_mixin.py:109} INFO - [2022-06-10 00:54:00,556] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:54:00,570] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.035 seconds
+[2022-06-10 00:54:31,200] {processor.py:163} INFO - Started process (PID=4386) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:54:31,201] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:54:31,202] {logging_mixin.py:109} INFO - [2022-06-10 00:54:31,202] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:54:32,248] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:54:32,262] {logging_mixin.py:109} INFO - [2022-06-10 00:54:32,262] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:54:32,276] {logging_mixin.py:109} INFO - [2022-06-10 00:54:32,276] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:54:32,288] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.090 seconds
+[2022-06-10 00:55:02,567] {processor.py:163} INFO - Started process (PID=4452) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:02,568] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:55:02,569] {logging_mixin.py:109} INFO - [2022-06-10 00:55:02,569] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:03,649] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:03,660] {logging_mixin.py:109} INFO - [2022-06-10 00:55:03,660] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:55:03,673] {logging_mixin.py:109} INFO - [2022-06-10 00:55:03,673] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:55:03,682] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.118 seconds
+[2022-06-10 00:55:33,965] {processor.py:163} INFO - Started process (PID=4518) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:33,968] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:55:33,969] {logging_mixin.py:109} INFO - [2022-06-10 00:55:33,969] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:35,267] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:55:35,287] {logging_mixin.py:109} INFO - [2022-06-10 00:55:35,287] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:55:35,307] {logging_mixin.py:109} INFO - [2022-06-10 00:55:35,307] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:55:35,326] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.363 seconds
+[2022-06-10 00:56:05,623] {processor.py:163} INFO - Started process (PID=4584) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:05,624] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:56:05,624] {logging_mixin.py:109} INFO - [2022-06-10 00:56:05,624] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:06,552] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:06,563] {logging_mixin.py:109} INFO - [2022-06-10 00:56:06,563] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:56:06,578] {logging_mixin.py:109} INFO - [2022-06-10 00:56:06,578] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:56:06,594] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.971 seconds
+[2022-06-10 00:56:36,659] {processor.py:163} INFO - Started process (PID=4650) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:36,660] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:56:36,661] {logging_mixin.py:109} INFO - [2022-06-10 00:56:36,661] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:37,602] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:56:37,612] {logging_mixin.py:109} INFO - [2022-06-10 00:56:37,611] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:56:37,624] {logging_mixin.py:109} INFO - [2022-06-10 00:56:37,624] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:56:37,632] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.975 seconds
+[2022-06-10 00:57:07,656] {processor.py:163} INFO - Started process (PID=4716) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:57:07,657] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:57:07,657] {logging_mixin.py:109} INFO - [2022-06-10 00:57:07,657] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:57:08,636] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:57:08,645] {logging_mixin.py:109} INFO - [2022-06-10 00:57:08,645] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:57:08,659] {logging_mixin.py:109} INFO - [2022-06-10 00:57:08,659] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:57:08,668] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.014 seconds
+[2022-06-10 00:58:01,610] {processor.py:163} INFO - Started process (PID=29) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:01,611] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:58:01,612] {logging_mixin.py:109} INFO - [2022-06-10 00:58:01,612] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:03,137] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:03,152] {logging_mixin.py:109} INFO - [2022-06-10 00:58:03,151] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:58:03,172] {logging_mixin.py:109} INFO - [2022-06-10 00:58:03,172] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:58:03,183] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.576 seconds
+[2022-06-10 00:58:33,375] {processor.py:163} INFO - Started process (PID=95) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:33,375] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:58:33,376] {logging_mixin.py:109} INFO - [2022-06-10 00:58:33,376] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:34,179] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:58:34,273] {logging_mixin.py:109} INFO - [2022-06-10 00:58:34,272] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:58:34,289] {logging_mixin.py:109} INFO - [2022-06-10 00:58:34,289] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:58:34,298] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.925 seconds
+[2022-06-10 00:59:04,939] {processor.py:163} INFO - Started process (PID=161) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:04,944] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:59:04,944] {logging_mixin.py:109} INFO - [2022-06-10 00:59:04,944] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:05,783] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:05,878] {logging_mixin.py:109} INFO - [2022-06-10 00:59:05,877] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:59:05,890] {logging_mixin.py:109} INFO - [2022-06-10 00:59:05,890] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:59:05,904] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.967 seconds
+[2022-06-10 00:59:36,115] {processor.py:163} INFO - Started process (PID=227) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:36,116] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 00:59:36,116] {logging_mixin.py:109} INFO - [2022-06-10 00:59:36,116] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:36,937] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 00:59:37,021] {logging_mixin.py:109} INFO - [2022-06-10 00:59:37,021] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 00:59:37,035] {logging_mixin.py:109} INFO - [2022-06-10 00:59:37,034] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 00:59:37,044] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.937 seconds
+[2022-06-10 01:00:07,128] {processor.py:163} INFO - Started process (PID=293) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:07,131] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:00:07,132] {logging_mixin.py:109} INFO - [2022-06-10 01:00:07,132] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:07,979] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:08,232] {logging_mixin.py:109} INFO - [2022-06-10 01:00:08,232] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:00:08,244] {logging_mixin.py:109} INFO - [2022-06-10 01:00:08,244] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:00:08,261] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.135 seconds
+[2022-06-10 01:00:38,423] {processor.py:163} INFO - Started process (PID=359) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:38,424] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:00:38,425] {logging_mixin.py:109} INFO - [2022-06-10 01:00:38,425] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:39,398] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:00:39,410] {logging_mixin.py:109} INFO - [2022-06-10 01:00:39,409] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:00:39,422] {logging_mixin.py:109} INFO - [2022-06-10 01:00:39,422] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:00:39,430] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.010 seconds
+[2022-06-10 01:01:09,577] {processor.py:163} INFO - Started process (PID=425) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:09,582] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:01:09,582] {logging_mixin.py:109} INFO - [2022-06-10 01:01:09,582] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:10,513] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:10,525] {logging_mixin.py:109} INFO - [2022-06-10 01:01:10,525] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:01:10,538] {logging_mixin.py:109} INFO - [2022-06-10 01:01:10,538] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:01:10,548] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.973 seconds
+[2022-06-10 01:01:40,779] {processor.py:163} INFO - Started process (PID=491) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:40,779] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:01:40,780] {logging_mixin.py:109} INFO - [2022-06-10 01:01:40,780] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:41,697] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:01:41,708] {logging_mixin.py:109} INFO - [2022-06-10 01:01:41,707] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:01:41,720] {logging_mixin.py:109} INFO - [2022-06-10 01:01:41,720] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:01:41,730] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.953 seconds
+[2022-06-10 01:02:12,389] {processor.py:163} INFO - Started process (PID=573) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:12,390] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:02:12,390] {logging_mixin.py:109} INFO - [2022-06-10 01:02:12,390] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:13,215] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:13,225] {logging_mixin.py:109} INFO - [2022-06-10 01:02:13,224] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:02:13,236] {logging_mixin.py:109} INFO - [2022-06-10 01:02:13,236] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:02:13,244] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.856 seconds
+[2022-06-10 01:02:43,484] {processor.py:163} INFO - Started process (PID=642) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:43,486] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:02:43,487] {logging_mixin.py:109} INFO - [2022-06-10 01:02:43,486] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:44,392] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:02:44,403] {logging_mixin.py:109} INFO - [2022-06-10 01:02:44,403] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:02:44,419] {logging_mixin.py:109} INFO - [2022-06-10 01:02:44,419] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:02:44,427] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.944 seconds
+[2022-06-10 01:03:14,491] {processor.py:163} INFO - Started process (PID=708) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:03:14,491] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:03:14,492] {logging_mixin.py:109} INFO - [2022-06-10 01:03:14,492] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:03:15,310] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:03:15,321] {logging_mixin.py:109} INFO - [2022-06-10 01:03:15,321] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:03:15,334] {logging_mixin.py:109} INFO - [2022-06-10 01:03:15,333] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:03:15,354] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.866 seconds
+[2022-06-10 01:05:07,813] {processor.py:163} INFO - Started process (PID=30) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:07,814] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:05:07,816] {logging_mixin.py:109} INFO - [2022-06-10 01:05:07,815] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:10,526] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:10,539] {logging_mixin.py:109} INFO - [2022-06-10 01:05:10,539] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:05:10,553] {logging_mixin.py:109} INFO - [2022-06-10 01:05:10,552] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:05:10,565] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 2.756 seconds
+[2022-06-10 01:05:40,973] {processor.py:163} INFO - Started process (PID=96) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:40,974] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:05:40,974] {logging_mixin.py:109} INFO - [2022-06-10 01:05:40,974] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:41,864] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:05:41,874] {logging_mixin.py:109} INFO - [2022-06-10 01:05:41,874] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:05:41,886] {logging_mixin.py:109} INFO - [2022-06-10 01:05:41,886] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:05:41,896] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.924 seconds
+[2022-06-10 01:06:12,105] {processor.py:163} INFO - Started process (PID=162) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:12,110] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:06:12,111] {logging_mixin.py:109} INFO - [2022-06-10 01:06:12,111] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:13,022] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:13,032] {logging_mixin.py:109} INFO - [2022-06-10 01:06:13,031] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:06:13,043] {logging_mixin.py:109} INFO - [2022-06-10 01:06:13,043] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:06:13,051] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.949 seconds
+[2022-06-10 01:06:43,076] {processor.py:163} INFO - Started process (PID=228) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:43,077] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:06:43,078] {logging_mixin.py:109} INFO - [2022-06-10 01:06:43,078] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:44,006] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:06:44,020] {logging_mixin.py:109} INFO - [2022-06-10 01:06:44,019] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:06:44,035] {logging_mixin.py:109} INFO - [2022-06-10 01:06:44,035] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:06:44,044] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.970 seconds
+[2022-06-10 01:07:14,080] {processor.py:163} INFO - Started process (PID=293) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:14,080] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:07:14,081] {logging_mixin.py:109} INFO - [2022-06-10 01:07:14,081] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:15,043] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:15,052] {logging_mixin.py:109} INFO - [2022-06-10 01:07:15,051] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:07:15,062] {logging_mixin.py:109} INFO - [2022-06-10 01:07:15,062] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:07:15,076] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.999 seconds
+[2022-06-10 01:07:45,290] {processor.py:163} INFO - Started process (PID=359) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:45,296] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:07:45,296] {logging_mixin.py:109} INFO - [2022-06-10 01:07:45,296] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:46,156] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:07:46,167] {logging_mixin.py:109} INFO - [2022-06-10 01:07:46,166] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:07:46,181] {logging_mixin.py:109} INFO - [2022-06-10 01:07:46,180] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:07:46,190] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.902 seconds
+[2022-06-10 01:08:16,555] {processor.py:163} INFO - Started process (PID=428) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:16,556] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:08:16,557] {logging_mixin.py:109} INFO - [2022-06-10 01:08:16,557] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:17,610] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:17,621] {logging_mixin.py:109} INFO - [2022-06-10 01:08:17,620] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:08:17,634] {logging_mixin.py:109} INFO - [2022-06-10 01:08:17,634] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:08:17,644] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 1.091 seconds
+[2022-06-10 01:08:47,759] {processor.py:163} INFO - Started process (PID=494) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:47,764] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:08:47,765] {logging_mixin.py:109} INFO - [2022-06-10 01:08:47,765] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:48,693] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:08:48,707] {logging_mixin.py:109} INFO - [2022-06-10 01:08:48,706] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:08:48,723] {logging_mixin.py:109} INFO - [2022-06-10 01:08:48,723] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:08:48,732] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.975 seconds
+[2022-06-10 01:09:19,504] {processor.py:163} INFO - Started process (PID=560) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:19,505] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:09:19,506] {logging_mixin.py:109} INFO - [2022-06-10 01:09:19,506] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:20,387] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:20,396] {logging_mixin.py:109} INFO - [2022-06-10 01:09:20,396] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:09:20,408] {logging_mixin.py:109} INFO - [2022-06-10 01:09:20,407] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:09:20,416] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.915 seconds
+[2022-06-10 01:09:51,386] {processor.py:163} INFO - Started process (PID=626) to work on /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:51,388] {processor.py:642} INFO - Processing file /opt/airflow/dags/dataDragon_dag.py for tasks to queue
+[2022-06-10 01:09:51,388] {logging_mixin.py:109} INFO - [2022-06-10 01:09:51,388] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:52,243] {processor.py:654} INFO - DAG(s) dict_keys(['league_of_legends_dag']) retrieved from /opt/airflow/dags/dataDragon_dag.py
+[2022-06-10 01:09:52,254] {logging_mixin.py:109} INFO - [2022-06-10 01:09:52,253] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-10 01:09:52,266] {logging_mixin.py:109} INFO - [2022-06-10 01:09:52,266] {dag.py:2937} INFO - Setting next_dagrun for league_of_legends_dag to 2022-03-31T21:00:00+00:00
+[2022-06-10 01:09:52,274] {processor.py:171} INFO - Processing /opt/airflow/dags/dataDragon_dag.py took 0.889 seconds

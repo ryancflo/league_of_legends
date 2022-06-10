@@ -1,26 +1,1567 @@
+2022-06-07 20:44:42.114754 (MainThread): Running with dbt=0.21.1
+2022-06-07 20:44:42.812264 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 20:44:43.128395 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 20:44:43.129100 (MainThread): Tracking: tracking
+2022-06-07 20:44:43.129439 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f104c4d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4ed8436040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4ed8436df0>]}
+2022-06-07 20:44:43.137531 (MainThread): Set downloads directory='/tmp/dbt-downloads-6_5e2u8x'
+2022-06-07 20:44:43.138120 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+2022-06-07 20:44:43.514914 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+2022-06-07 20:44:43.515706 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 20:44:43.830603 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 20:44:43.880505 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 20:44:44.234395 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 20:44:44.235228 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 20:44:44.552418 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 20:44:44.574164 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 20:44:44.939278 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 20:44:44.940668 (MainThread): Installing dbt-labs/dbt_utils@0.8.0
+2022-06-07 20:44:45.399202 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f104c4d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4ed83663d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4ed84365b0>]}
+2022-06-07 20:44:45.399601 (MainThread): Flushing usage events
+2022-06-07 20:44:45.728132 (MainThread): Encountered an error:
+2022-06-07 20:44:45.728796 (MainThread): [Errno 13] Permission denied: '/opt/airflow/dbt/packages/dbt-utils-0.8.0'
+2022-06-07 20:44:45.730753 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/deps.py", line 66, in run
+    package.install(self.config, renderer)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/deps/registry.py", line 74, in install
+    system.untar_package(tar_path, deps_path, package_name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 490, in untar_package
+    tarball.extractall(dest_dir)
+  File "/usr/local/lib/python3.8/tarfile.py", line 2028, in extractall
+    self.extract(tarinfo, path, set_attrs=not tarinfo.isdir(),
+  File "/usr/local/lib/python3.8/tarfile.py", line 2069, in extract
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "/usr/local/lib/python3.8/tarfile.py", line 2143, in _extract_member
+    self.makedir(tarinfo, targetpath)
+  File "/usr/local/lib/python3.8/tarfile.py", line 2172, in makedir
+    os.mkdir(targetpath, 0o700)
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/packages/dbt-utils-0.8.0'
+
+2022-06-07 20:45:31.223467 (MainThread): Running with dbt=0.21.1
+2022-06-07 20:45:31.906903 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 20:45:32.259956 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 20:45:32.260625 (MainThread): Tracking: tracking
+2022-06-07 20:45:32.261018 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f432d574ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42f54c1ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42f54c19d0>]}
+2022-06-07 20:45:32.261781 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f432d574ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42f54c1ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42f54c19d0>]}
+2022-06-07 20:45:32.262441 (MainThread): Flushing usage events
+2022-06-07 20:45:32.663688 (MainThread): Encountered an error:
+2022-06-07 20:45:32.664508 (MainThread): [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+2022-06-07 20:45:32.666500 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/deps.py", line 46, in run
+    system.make_directory(self.config.modules_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 109, in make_directory
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 103, in make_directory
+    os.makedirs(path)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+
+2022-06-07 20:46:53.476629 (MainThread): Running with dbt=0.21.1
+2022-06-07 20:46:54.136002 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 20:46:54.499153 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 20:46:54.499743 (MainThread): Tracking: tracking
+2022-06-07 20:46:54.500079 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effedd9fd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effb5d4d640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effb5d4dca0>]}
+2022-06-07 20:46:54.500534 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effedd9fd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effb5d4d640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7effb5d4dca0>]}
+2022-06-07 20:46:54.500863 (MainThread): Flushing usage events
+2022-06-07 20:46:54.927049 (MainThread): Encountered an error:
+2022-06-07 20:46:54.927700 (MainThread): [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+2022-06-07 20:46:54.929316 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/deps.py", line 46, in run
+    system.make_directory(self.config.modules_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 109, in make_directory
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 103, in make_directory
+    os.makedirs(path)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+
+2022-06-07 20:50:56.795610 (MainThread): Running with dbt=0.21.1
+2022-06-07 20:50:57.466515 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 20:50:57.796535 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 20:50:57.797101 (MainThread): Tracking: tracking
+2022-06-07 20:50:57.797396 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba474dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe82302c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe82302d30>]}
+2022-06-07 20:50:57.797848 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbeba474dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe82302c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbe82302d30>]}
+2022-06-07 20:50:57.798168 (MainThread): Flushing usage events
+2022-06-07 20:50:58.206344 (MainThread): Encountered an error:
+2022-06-07 20:50:58.207043 (MainThread): [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+2022-06-07 20:50:58.208686 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/deps.py", line 46, in run
+    system.make_directory(self.config.modules_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 109, in make_directory
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 103, in make_directory
+    os.makedirs(path)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+
+2022-06-07 20:55:51.807354 (MainThread): Running with dbt=0.21.1
+2022-06-07 20:55:52.482042 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 20:55:52.789433 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 20:55:52.790060 (MainThread): Tracking: tracking
+2022-06-07 20:55:52.790413 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4fbfe22c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f87d7aac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f87d7ac10>]}
+2022-06-07 20:55:52.790937 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4fbfe22c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f87d7aac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4f87d7ac10>]}
+2022-06-07 20:55:52.791279 (MainThread): Flushing usage events
+2022-06-07 20:55:53.177738 (MainThread): Encountered an error:
+2022-06-07 20:55:53.178608 (MainThread): [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+2022-06-07 20:55:53.180342 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/deps.py", line 46, in run
+    system.make_directory(self.config.modules_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 109, in make_directory
+    raise e
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/clients/system.py", line 103, in make_directory
+    os.makedirs(path)
+  File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/opt/airflow/dbt/dbt_packages'
+
+2022-06-07 21:01:18.318871 (MainThread): Running with dbt=0.21.1
+2022-06-07 21:01:19.010103 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 21:01:19.319347 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 21:01:19.320017 (MainThread): Tracking: tracking
+2022-06-07 21:01:19.320350 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13929f9d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a99cca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a99c940>]}
+2022-06-07 21:01:19.321191 (MainThread): Set downloads directory='/tmp/dbt-downloads-vfphv9qe'
+2022-06-07 21:01:19.321643 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+2022-06-07 21:01:19.507623 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+2022-06-07 21:01:19.508377 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:01:19.626164 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:01:19.649788 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 21:01:19.813462 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 21:01:19.814377 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:01:19.936995 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:01:19.959520 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 21:01:20.122432 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 21:01:20.122960 (MainThread): Installing dbt-labs/dbt_utils@0.8.0
+2022-06-07 21:01:20.593514 (MainThread):   Installed from version 0.8.0
+2022-06-07 21:01:20.593832 (MainThread):   Updated version available: 0.8.5
+2022-06-07 21:01:20.594330 (MainThread): Sending event: {'category': 'dbt', 'action': 'package', 'label': '89f924c2-1836-400b-8a29-ed07d379a99b', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a8cf550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a8cf490>]}
+2022-06-07 21:01:20.595025 (MainThread): 
+Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+2022-06-07 21:01:20.596034 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a8cb0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13929f9d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f135a8cf070>]}
+2022-06-07 21:01:20.596523 (MainThread): Flushing usage events
+2022-06-07 21:10:54.172815 (MainThread): Running with dbt=0.21.1
+2022-06-07 21:10:54.949045 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 21:10:55.389991 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 21:10:55.390527 (MainThread): Tracking: tracking
+2022-06-07 21:10:55.390853 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b59ccf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85edb81be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b5b05400>]}
+2022-06-07 21:10:55.391786 (MainThread): Set downloads directory='/tmp/dbt-downloads-odvt4eta'
+2022-06-07 21:10:55.392169 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+2022-06-07 21:10:55.572068 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+2022-06-07 21:10:55.573237 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:10:55.694130 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:10:55.727766 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.5.json
+2022-06-07 21:10:55.895924 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.5.json 200
+2022-06-07 21:10:55.896548 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:10:56.014454 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:10:56.035638 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.5.json
+2022-06-07 21:10:56.206600 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.5.json 200
+2022-06-07 21:10:56.207271 (MainThread): Installing dbt-labs/dbt_utils@0.8.5
+2022-06-07 21:10:56.787508 (MainThread):   Installed from version 0.8.5
+2022-06-07 21:10:56.787997 (MainThread):   Up to date!
+2022-06-07 21:10:56.788755 (MainThread): Sending event: {'category': 'dbt', 'action': 'package', 'label': '69570e1a-c403-4ea4-8a14-b14ebf04d5e4', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b5aa9fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b5af5a30>]}
+2022-06-07 21:10:56.789678 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85edb81be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b5af5be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85b5af5c10>]}
+2022-06-07 21:10:56.790433 (MainThread): Flushing usage events
+2022-06-07 21:11:00.555296 (MainThread): Got an exception trying to initialize tracking
+2022-06-07 21:11:00.555698 (MainThread): Running with dbt=0.21.1
+2022-06-07 21:11:01.410623 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 21:11:01.735963 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/opt/airflow/dbt', project_dir='/opt/airflow/dbt', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target='dev', test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2022-06-07 21:11:01.737263 (MainThread): Tracking: do not track
+2022-06-07 21:11:01.753079 (MainThread): Flushing usage events
+2022-06-07 21:11:01.753484 (MainThread): Encountered an error:
+2022-06-07 21:11:01.753749 (MainThread): Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.1
+      Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils
+2022-06-07 21:11:01.758008 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 367, in load_projects
+    project = self.new_project(str(path))
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 144, in new_project
+    project = Project.from_project_root(
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 643, in from_project_root
+    return partial.render(renderer)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 289, in render
+    return self.create_project(rendered)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 301, in create_project
+    dbt_version = _get_required_version(
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 226, in _get_required_version
+    validate_version(dbt_version, project_dict['name'])
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 203, in validate_version
+    raise DbtProjectError(msg)
+dbt.exceptions.DbtProjectError: Runtime Error
+  This version of dbt is not supported with the 'dbt_utils' package.
+    Installed version of dbt: =0.21.1
+    Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+  Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+  
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 438, in run
+    self._runtime_initialize()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 154, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 92, in _runtime_initialize
+    self.load_manifest()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 79, in load_manifest
+    self.manifest = ManifestLoader.get_full_manifest(self.config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 179, in get_full_manifest
+    projects = config.load_dependencies()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 347, in load_dependencies
+    for project_name, project in self.load_projects(project_paths):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 369, in load_projects
+    raise DbtProjectError(
+dbt.exceptions.DbtProjectError: Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.1
+      Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils
+
+2022-06-07 21:16:46.226757 (MainThread): Running with dbt=0.21.1
+2022-06-07 21:16:46.920073 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 21:16:47.280494 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/airflow/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2022-06-07 21:16:47.281025 (MainThread): Tracking: tracking
+2022-06-07 21:16:47.281406 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45c7b43f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3c550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3cfa0>]}
+2022-06-07 21:16:47.282263 (MainThread): Set downloads directory='/tmp/dbt-downloads-zxgudlwf'
+2022-06-07 21:16:47.282709 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+2022-06-07 21:16:47.647254 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+2022-06-07 21:16:47.647994 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:16:47.964055 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:16:47.988368 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 21:16:48.344299 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 21:16:48.345302 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+2022-06-07 21:16:48.658478 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+2022-06-07 21:16:48.683152 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json
+2022-06-07 21:16:49.045521 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils/0.8.0.json 200
+2022-06-07 21:16:49.046493 (MainThread): Installing dbt-labs/dbt_utils@0.8.0
+2022-06-07 21:16:49.564986 (MainThread):   Installed from version 0.8.0
+2022-06-07 21:16:49.565305 (MainThread):   Updated version available: 0.8.5
+2022-06-07 21:16:49.565657 (MainThread): Sending event: {'category': 'dbt', 'action': 'package', 'label': '9e5ac811-961b-43ff-98ce-37bdf3ad4704', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3c400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3c100>]}
+2022-06-07 21:16:49.566046 (MainThread): 
+Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+2022-06-07 21:16:49.566768 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458f9c18e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3c970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f458fa3cf10>]}
+2022-06-07 21:16:49.567281 (MainThread): Flushing usage events
+2022-06-07 21:16:53.053592 (MainThread): Got an exception trying to initialize tracking
+2022-06-07 21:16:53.053824 (MainThread): Running with dbt=0.21.1
+2022-06-07 21:16:53.773854 (MainThread): You have an incompatible version of 'pyarrow' installed (6.0.1), please install a version that adheres to: 'pyarrow<3.1.0,>=3.0.0; extra == "pandas"'
+2022-06-07 21:16:54.089680 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/opt/airflow/dbt', project_dir='/opt/airflow/dbt', record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target='dev', test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2022-06-07 21:16:54.090691 (MainThread): Tracking: do not track
+2022-06-07 21:16:54.106655 (MainThread): Flushing usage events
+2022-06-07 21:16:54.107072 (MainThread): Encountered an error:
+2022-06-07 21:16:54.107393 (MainThread): Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.1
+      Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils
+2022-06-07 21:16:54.108987 (MainThread): Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 367, in load_projects
+    project = self.new_project(str(path))
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 144, in new_project
+    project = Project.from_project_root(
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 643, in from_project_root
+    return partial.render(renderer)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 289, in render
+    return self.create_project(rendered)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 301, in create_project
+    dbt_version = _get_required_version(
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 226, in _get_required_version
+    validate_version(dbt_version, project_dict['name'])
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/project.py", line 203, in validate_version
+    raise DbtProjectError(msg)
+dbt.exceptions.DbtProjectError: Runtime Error
+  This version of dbt is not supported with the 'dbt_utils' package.
+    Installed version of dbt: =0.21.1
+    Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+  Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+  
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 438, in run
+    self._runtime_initialize()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 154, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 92, in _runtime_initialize
+    self.load_manifest()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/task/runnable.py", line 79, in load_manifest
+    self.manifest = ManifestLoader.get_full_manifest(self.config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 179, in get_full_manifest
+    projects = config.load_dependencies()
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 347, in load_dependencies
+    for project_name, project in self.load_projects(project_paths):
+  File "/home/airflow/.local/lib/python3.8/site-packages/dbt/config/runtime.py", line 369, in load_projects
+    raise DbtProjectError(
+dbt.exceptions.DbtProjectError: Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.1
+      Required version of dbt for 'dbt_utils': ['>=1.0.0', '<2.0.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /opt/airflow/dbt_packages/dbt_utils/dbt_project.yml
+
+Error encountered in /opt/airflow/dbt_packages/dbt_utils
 
 
-============================== 2022-05-04 06:03:24.419310 | 3059863d-e983-43ea-ab37-e76e22985556 ==============================
-06:03:24.419322 [info ] [MainThread]: Running with dbt=1.1.0
-06:03:24.419716 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/ryancflo/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
-06:03:24.419829 [debug] [MainThread]: Tracking: tracking
-06:03:24.426653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45b1070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45b1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67f45a3fd0>]}
-06:03:27.658711 [debug] [MainThread]: Starter project path: /home/ryancflo/.local/lib/python3.8/site-packages/dbt/include/starter_project
-06:09:53.106311 [info ] [MainThread]: Profile dbt written to /home/ryancflo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-06:09:53.106682 [info ] [MainThread]: 
-Your new dbt project "dbt" was created!
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+============================== 2022-06-07 21:42:23.170440 | e3ca3888-0c0f-4e75-9a14-0376d4bd3c4a ==============================
+21:42:23.170566 [info ] [MainThread]: Running with dbt=1.1.0
+21:42:23.171486 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+21:42:23.171704 [debug] [MainThread]: Tracking: tracking
+21:42:23.173204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d35c4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d35c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d35cc10>]}
+21:42:23.175849 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-janl5x3_'
+21:42:23.176632 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+21:42:23.562198 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+21:42:23.563164 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:42:23.873263 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:42:23.946299 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+21:42:24.426528 [info ] [MainThread]:   Installed from version 0.8.0
+21:42:24.427053 [info ] [MainThread]:   Updated version available: 0.8.5
+21:42:24.427578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'e3ca3888-0c0f-4e75-9a14-0376d4bd3c4a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d336d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d336850>]}
+21:42:24.427891 [info ] [MainThread]: 
+21:42:24.428335 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+21:42:24.429068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8da265f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d3365e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d9d3fdca0>]}
 
-  https://docs.getdbt.com/docs/configure-your-profile
 
-One more thing:
+============================== 2022-06-07 21:42:29.195848 | f351d168-4270-46c8-8bc1-5f0bcec78a26 ==============================
+21:42:29.195871 [info ] [MainThread]: Running with dbt=1.1.0
+21:42:29.196382 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:42:29.197068 [debug] [MainThread]: Tracking: do not track
+21:42:29.218249 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+21:42:29.251616 [debug] [MainThread]: Parsing macros/match_details.sql
+21:42:29.251921 [debug] [MainThread]: Parsing macros/adapters.sql
+21:42:29.295579 [debug] [MainThread]: Parsing macros/catalog.sql
+21:42:29.297809 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:42:29.299137 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+21:42:29.304182 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:42:29.325876 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:42:29.340135 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:42:29.343850 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:42:29.360090 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:42:29.384489 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:42:29.404832 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:42:29.417562 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:42:29.423425 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:42:29.428845 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:42:29.438607 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:42:29.452837 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:42:29.458752 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:42:29.461318 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:42:29.463985 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:42:29.474361 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:42:29.479723 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:42:29.480669 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:42:29.482026 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:42:29.483290 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:42:29.484908 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:42:29.487439 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:42:29.491645 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:42:29.493719 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:42:29.495850 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:42:29.501166 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:42:29.517386 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:42:29.523919 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:42:29.525887 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:42:29.536874 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:42:29.556962 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:42:29.570537 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:42:29.586204 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:42:29.615455 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:42:29.627698 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:42:29.641391 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:42:29.649196 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:42:29.652272 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:42:29.654071 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:42:29.661280 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:42:29.666179 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:42:29.669852 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:42:29.677650 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:42:29.681192 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+21:42:29.683574 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+21:42:29.684843 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+21:42:29.694971 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+21:42:29.697256 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+21:42:29.699137 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+21:42:29.702494 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+21:42:29.705645 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+21:42:29.710953 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+21:42:29.712882 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+21:42:29.715023 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+21:42:29.716365 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+21:42:29.723367 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+21:42:29.727341 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+21:42:29.729964 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+21:42:29.731375 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+21:42:29.733493 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+21:42:29.735101 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+21:42:29.736891 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+21:42:29.738443 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+21:42:29.744074 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+21:42:29.745399 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+21:42:29.748780 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+21:42:29.755151 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+21:42:29.758236 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+21:42:29.760302 [debug] [MainThread]: Parsing macros/sql/star.sql
+21:42:29.765407 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+21:42:29.767593 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+21:42:29.772093 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+21:42:29.774042 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+21:42:29.783176 [debug] [MainThread]: Parsing macros/sql/union.sql
+21:42:29.791990 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+21:42:29.794011 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+21:42:29.800497 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+21:42:29.805135 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+21:42:29.809050 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+21:42:29.813058 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+21:42:29.817984 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+21:42:29.824171 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+21:42:29.829970 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+21:42:29.831635 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+21:42:29.833388 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+21:42:29.835864 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+21:42:29.839633 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+21:42:29.840950 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+21:42:29.842362 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+21:42:29.844030 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+21:42:29.845507 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+21:42:29.869895 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+21:42:29.872769 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+21:42:29.876347 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+21:42:29.878772 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+21:42:29.880617 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+21:42:29.883451 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+21:42:29.885879 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+21:42:29.887921 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+21:42:29.891048 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+21:42:29.899943 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+21:42:29.904071 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+21:42:29.906769 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+21:42:29.908266 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+21:42:29.909764 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+21:42:29.911409 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+21:42:29.915295 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+21:42:29.917202 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+21:42:30.430853 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+21:42:30.450251 [debug] [MainThread]: 1603: static parser failed on staging_datadragon/stg_items.sql
 
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 
-  https://community.getdbt.com/
+============================== 2022-06-07 21:43:41.353578 | d017d53a-b762-45ba-97d9-79e9bd2cf67b ==============================
+21:43:41.353616 [info ] [MainThread]: Running with dbt=1.1.0
+21:43:41.354471 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+21:43:41.354736 [debug] [MainThread]: Tracking: tracking
+21:43:41.355858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683dfbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683dfac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683dfaf0>]}
+21:43:41.356619 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-rcd14zks'
+21:43:41.356961 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+21:43:41.717938 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+21:43:41.718693 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+21:43:42.122356 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+21:43:42.225495 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+21:43:42.781292 [info ] [MainThread]:   Installed from version 0.8.0
+21:43:42.781708 [info ] [MainThread]:   Updated version available: 0.8.5
+21:43:42.782124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd017d53a-b762-45ba-97d9-79e9bd2cf67b', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683dfaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683f4220>]}
+21:43:42.782401 [info ] [MainThread]: 
+21:43:42.782765 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+21:43:42.783352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683f4c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa06d7c12e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0683fcfd0>]}
 
-Happy modeling!
 
-06:09:53.107298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f67eec86550>]}
+============================== 2022-06-07 21:43:47.541910 | ebeeb7c5-c57b-4a75-858b-4cf99e967126 ==============================
+21:43:47.541943 [info ] [MainThread]: Running with dbt=1.1.0
+21:43:47.542769 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:43:47.542986 [debug] [MainThread]: Tracking: do not track
+21:43:47.565369 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+21:43:47.589815 [debug] [MainThread]: Parsing macros/match_details.sql
+21:43:47.590188 [debug] [MainThread]: Parsing macros/adapters.sql
+21:43:47.637670 [debug] [MainThread]: Parsing macros/catalog.sql
+21:43:47.639837 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+21:43:47.641167 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+21:43:47.645805 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+21:43:47.655628 [debug] [MainThread]: Parsing macros/materializations/table.sql
+21:43:47.659425 [debug] [MainThread]: Parsing macros/materializations/view.sql
+21:43:47.662869 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+21:43:47.669162 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:43:47.682040 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:43:47.693011 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:43:47.698754 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:43:47.704875 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:43:47.711703 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:43:47.715769 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:43:47.724423 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:43:47.727220 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:43:47.729096 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:43:47.730873 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:43:47.739745 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:43:47.745455 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:43:47.746396 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:43:47.747409 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:43:47.748428 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:43:47.750045 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:43:47.752964 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:43:47.757597 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:43:47.759727 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:43:47.762360 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:43:47.767595 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:43:47.785880 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:43:47.793510 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:43:47.795692 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:43:47.807871 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:43:47.827908 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:43:47.843113 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:43:47.858961 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:43:47.878214 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:43:47.890883 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:43:47.892790 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:43:47.898613 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:43:47.902583 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:43:47.904710 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:43:47.912749 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:43:47.916831 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:43:47.920567 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:43:47.929435 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:43:47.935020 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+21:43:47.936961 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+21:43:47.937960 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+21:43:47.948456 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+21:43:47.950623 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+21:43:47.953655 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+21:43:47.956755 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+21:43:47.959475 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+21:43:47.963831 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+21:43:47.965559 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+21:43:47.967627 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+21:43:47.969111 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+21:43:47.975948 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+21:43:47.979835 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+21:43:47.982326 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+21:43:47.983751 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+21:43:47.985839 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+21:43:47.987403 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+21:43:47.989018 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+21:43:47.990906 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+21:43:47.997560 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+21:43:47.998882 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+21:43:48.001177 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+21:43:48.003526 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+21:43:48.006721 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+21:43:48.008754 [debug] [MainThread]: Parsing macros/sql/star.sql
+21:43:48.013960 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+21:43:48.016044 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+21:43:48.021236 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+21:43:48.023423 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+21:43:48.031904 [debug] [MainThread]: Parsing macros/sql/union.sql
+21:43:48.043106 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+21:43:48.045263 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+21:43:48.051705 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+21:43:48.058227 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+21:43:48.062744 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+21:43:48.066880 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+21:43:48.072278 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+21:43:48.079439 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+21:43:48.085056 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+21:43:48.086583 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+21:43:48.088341 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+21:43:48.090855 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+21:43:48.094369 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+21:43:48.095556 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+21:43:48.096818 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+21:43:48.098132 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+21:43:48.099452 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+21:43:48.123642 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+21:43:48.125883 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+21:43:48.128190 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+21:43:48.130335 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+21:43:48.132084 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+21:43:48.135937 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+21:43:48.138757 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+21:43:48.140745 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+21:43:48.143411 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+21:43:48.152152 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+21:43:48.156094 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+21:43:48.158476 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+21:43:48.162997 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+21:43:48.164781 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+21:43:48.166621 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+21:43:48.169950 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+21:43:48.171944 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+21:43:48.623919 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+21:43:48.638059 [debug] [MainThread]: 1603: static parser failed on staging_datadragon/stg_items.sql
+
+
+============================== 2022-06-10 00:23:33.228532 | 6bc4d5ae-9d9d-4a05-9ddd-87414f45cb21 ==============================
+00:23:33.228552 [info ] [MainThread]: Running with dbt=1.1.0
+00:23:33.230143 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+00:23:33.230459 [debug] [MainThread]: Tracking: tracking
+00:23:33.231765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea01730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea016d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea01220>]}
+00:23:33.233246 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-wlcfwkav'
+00:23:33.233750 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+00:23:33.640084 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+00:23:33.640982 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+00:23:33.957702 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+00:23:34.010390 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+00:23:34.626329 [info ] [MainThread]:   Installed from version 0.8.5
+00:23:34.626806 [info ] [MainThread]:   Up to date!
+00:23:34.627291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '6bc4d5ae-9d9d-4a05-9ddd-87414f45cb21', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea01550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea01520>]}
+00:23:34.627967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50e8775e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50e960100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff50ea01580>]}
+
+
+============================== 2022-06-10 00:23:38.947879 | 530ae15c-798b-40ee-a7d9-85701b01e989 ==============================
+00:23:38.947915 [info ] [MainThread]: Running with dbt=1.1.0
+00:23:38.948576 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+00:23:38.948773 [debug] [MainThread]: Tracking: do not track
+00:23:38.969982 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+00:23:39.017235 [debug] [MainThread]: Parsing macros/match_details.sql
+00:23:39.017566 [debug] [MainThread]: Parsing macros/adapters.sql
+00:23:39.057671 [debug] [MainThread]: Parsing macros/catalog.sql
+00:23:39.059761 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+00:23:39.061163 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+00:23:39.065891 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+00:23:39.078568 [debug] [MainThread]: Parsing macros/materializations/table.sql
+00:23:39.082295 [debug] [MainThread]: Parsing macros/materializations/view.sql
+00:23:39.084176 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+00:23:39.090397 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+00:23:39.101923 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+00:23:39.113573 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+00:23:39.118811 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+00:23:39.121983 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+00:23:39.126119 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+00:23:39.130012 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+00:23:39.137588 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+00:23:39.140425 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+00:23:39.142111 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+00:23:39.143723 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+00:23:39.154972 [debug] [MainThread]: Parsing macros/etc/statement.sql
+00:23:39.160658 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+00:23:39.161582 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+00:23:39.162529 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+00:23:39.163519 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+00:23:39.165324 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+00:23:39.167829 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+00:23:39.172243 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+00:23:39.174247 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+00:23:39.176148 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+00:23:39.182607 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+00:23:39.201733 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+00:23:39.208309 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+00:23:39.210181 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+00:23:39.221657 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+00:23:39.240354 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+00:23:39.253644 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+00:23:39.269177 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+00:23:39.286160 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+00:23:39.297068 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+00:23:39.298783 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+00:23:39.304004 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+00:23:39.307671 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+00:23:39.309255 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+00:23:39.316545 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+00:23:39.319347 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+00:23:39.323323 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+00:23:39.330579 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+00:23:39.334304 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+00:23:39.344087 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+00:23:39.350314 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+00:23:39.351426 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+00:23:39.361339 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+00:23:39.363538 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+00:23:39.365403 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+00:23:39.366963 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+00:23:39.368712 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+00:23:39.372445 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+00:23:39.374719 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+00:23:39.378574 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+00:23:39.380075 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+00:23:39.381933 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+00:23:39.382985 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+00:23:39.390569 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+00:23:39.395408 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+00:23:39.397904 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+00:23:39.400192 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+00:23:39.401909 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+00:23:39.404037 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+00:23:39.405633 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+00:23:39.407375 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+00:23:39.408760 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+00:23:39.414105 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+00:23:39.415561 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+00:23:39.417681 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+00:23:39.420210 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+00:23:39.422998 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+00:23:39.424786 [debug] [MainThread]: Parsing macros/sql/star.sql
+00:23:39.428710 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+00:23:39.430804 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+00:23:39.435697 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+00:23:39.437734 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+00:23:39.440823 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+00:23:39.449409 [debug] [MainThread]: Parsing macros/sql/union.sql
+00:23:39.460660 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+00:23:39.462561 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+00:23:39.468692 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+00:23:39.473472 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+00:23:39.476977 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+00:23:39.481554 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+00:23:39.488988 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+00:23:39.493830 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+00:23:39.500933 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+00:23:39.507273 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+00:23:39.508797 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+00:23:39.511203 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+00:23:39.514060 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+00:23:39.515727 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+00:23:39.519246 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+00:23:39.520732 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+00:23:39.522054 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+00:23:39.523387 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+00:23:39.524726 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+00:23:39.548868 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+00:23:39.550994 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+00:23:39.553240 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+00:23:39.555546 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+00:23:39.557443 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+00:23:39.560831 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+00:23:39.563406 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+00:23:39.565293 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+00:23:39.568116 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+00:23:39.577861 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+00:23:39.581846 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+00:23:39.584202 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+00:23:39.585562 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+00:23:39.586921 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+00:23:39.588789 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+00:23:39.591800 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+00:23:39.593481 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+00:23:40.038848 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+00:23:40.051584 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+00:23:40.054456 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+00:23:40.057476 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+00:23:40.060445 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+00:23:40.063843 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+00:23:40.066525 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_players.sql
+00:23:40.069726 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql
+00:23:40.072808 [debug] [MainThread]: 1699: static parser successfully parsed warehouse/maps.sql
+00:23:40.076047 [debug] [MainThread]: 1603: static parser failed on warehouse/match_details.sql
+
+
+============================== 2022-06-10 00:30:59.825842 | 81ac0d70-f362-4a28-98d4-1d8e21dca029 ==============================
+00:30:59.825858 [info ] [MainThread]: Running with dbt=1.1.0
+00:30:59.826337 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+00:30:59.826522 [debug] [MainThread]: Tracking: tracking
+00:30:59.827545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f010be80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f010b220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f010b700>]}
+00:30:59.828622 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-nfki4zmb'
+00:30:59.829327 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+00:31:00.051898 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+00:31:00.052653 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+00:31:00.171151 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+00:31:00.234672 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+00:31:00.833255 [info ] [MainThread]:   Installed from version 0.8.5
+00:31:00.833697 [info ] [MainThread]:   Up to date!
+00:31:00.834135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '81ac0d70-f362-4a28-98d4-1d8e21dca029', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f010b730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f028f610>]}
+00:31:00.834899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f55bbf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f00f5280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f57f00eeee0>]}
+
+
+============================== 2022-06-10 00:31:05.505370 | 8eec78d1-c645-46ba-b3bf-02db336b19b8 ==============================
+00:31:05.505391 [info ] [MainThread]: Running with dbt=1.1.0
+00:31:05.505919 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+00:31:05.506127 [debug] [MainThread]: Tracking: do not track
+00:31:05.527496 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+00:31:05.549258 [debug] [MainThread]: Parsing macros/match_details.sql
+00:31:05.549685 [debug] [MainThread]: Parsing macros/adapters.sql
+00:31:05.594080 [debug] [MainThread]: Parsing macros/catalog.sql
+00:31:05.596457 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+00:31:05.597850 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+00:31:05.602411 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+00:31:05.612418 [debug] [MainThread]: Parsing macros/materializations/table.sql
+00:31:05.616216 [debug] [MainThread]: Parsing macros/materializations/view.sql
+00:31:05.617838 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+00:31:05.625417 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+00:31:05.642400 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+00:31:05.653510 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+00:31:05.658657 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+00:31:05.661981 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+00:31:05.665714 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+00:31:05.668162 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+00:31:05.676480 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+00:31:05.679920 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+00:31:05.681927 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+00:31:05.683830 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+00:31:05.693446 [debug] [MainThread]: Parsing macros/etc/statement.sql
+00:31:05.699344 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+00:31:05.700326 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+00:31:05.701416 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+00:31:05.702523 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+00:31:05.705113 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+00:31:05.708154 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+00:31:05.713860 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+00:31:05.716080 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+00:31:05.718277 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+00:31:05.723997 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+00:31:05.744403 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+00:31:05.752747 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+00:31:05.754896 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+00:31:05.766336 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+00:31:05.785917 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+00:31:05.800696 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+00:31:05.816982 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+00:31:05.837202 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+00:31:05.848790 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+00:31:05.851058 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+00:31:05.856013 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+00:31:05.859111 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+00:31:05.860790 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+00:31:05.867872 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+00:31:05.870779 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+00:31:05.874025 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+00:31:05.881780 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+00:31:05.885887 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+00:31:05.895183 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+00:31:05.902300 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+00:31:05.903447 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+00:31:05.914975 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+00:31:05.917208 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+00:31:05.918799 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+00:31:05.920594 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+00:31:05.922433 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+00:31:05.925447 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+00:31:05.927692 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+00:31:05.932961 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+00:31:05.934419 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+00:31:05.936308 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+00:31:05.937394 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+00:31:05.943929 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+00:31:05.947708 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+00:31:05.950150 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+00:31:05.952344 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+00:31:05.953669 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+00:31:05.956353 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+00:31:05.957876 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+00:31:05.959451 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+00:31:05.960711 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+00:31:05.966241 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+00:31:05.967599 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+00:31:05.969363 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+00:31:05.972183 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+00:31:05.975061 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+00:31:05.976951 [debug] [MainThread]: Parsing macros/sql/star.sql
+00:31:05.981485 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+00:31:05.983307 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+00:31:05.987544 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+00:31:05.989341 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+00:31:05.992375 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+00:31:06.000859 [debug] [MainThread]: Parsing macros/sql/union.sql
+00:31:06.012354 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+00:31:06.014295 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+00:31:06.020368 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+00:31:06.025058 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+00:31:06.029178 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+00:31:06.033082 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+00:31:06.041418 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+00:31:06.046410 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+00:31:06.053133 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+00:31:06.059780 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+00:31:06.061341 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+00:31:06.063196 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+00:31:06.065870 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+00:31:06.067693 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+00:31:06.071310 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+00:31:06.072964 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+00:31:06.074450 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+00:31:06.075767 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+00:31:06.076942 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+00:31:06.104073 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+00:31:06.106547 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+00:31:06.109158 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+00:31:06.111507 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+00:31:06.113212 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+00:31:06.116456 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+00:31:06.118985 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+00:31:06.122337 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+00:31:06.126234 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+00:31:06.135155 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+00:31:06.139655 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+00:31:06.142164 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+00:31:06.143712 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+00:31:06.145169 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+00:31:06.146728 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+00:31:06.150020 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+00:31:06.152173 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+00:31:06.647898 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+00:31:06.661334 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+00:31:06.665653 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+00:31:06.668412 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+00:31:06.671852 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+00:31:06.674656 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+00:31:06.677496 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql
+
+
+============================== 2022-06-10 00:34:36.696309 | 3ed296ca-306c-4e2b-99e0-e761e91fdb23 ==============================
+00:34:36.696329 [info ] [MainThread]: Running with dbt=1.1.0
+00:34:36.696881 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+00:34:36.697169 [debug] [MainThread]: Tracking: tracking
+00:34:36.698953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f55907c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f55907d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f55907730>]}
+00:34:36.700216 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-mrt1vshw'
+00:34:36.700984 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+00:34:36.939630 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+00:34:36.940764 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+00:34:37.119074 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+00:34:37.186993 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+00:34:37.770431 [info ] [MainThread]:   Installed from version 0.8.5
+00:34:37.770886 [info ] [MainThread]:   Up to date!
+00:34:37.771287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '3ed296ca-306c-4e2b-99e0-e761e91fdb23', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f5585ed30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f559fda30>]}
+00:34:37.771791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f5590cac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f5587abe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f55866370>]}
+
+
+============================== 2022-06-10 00:34:43.137874 | 4ae1cb10-ac17-4401-b45c-d4854442f456 ==============================
+00:34:43.137902 [info ] [MainThread]: Running with dbt=1.1.0
+00:34:43.138868 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+00:34:43.139138 [debug] [MainThread]: Tracking: do not track
+00:34:43.172301 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+00:34:43.198697 [debug] [MainThread]: Parsing macros/match_details.sql
+00:34:43.199222 [debug] [MainThread]: Parsing macros/adapters.sql
+00:34:43.249851 [debug] [MainThread]: Parsing macros/catalog.sql
+00:34:43.252397 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+00:34:43.254042 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+00:34:43.259489 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+00:34:43.273957 [debug] [MainThread]: Parsing macros/materializations/table.sql
+00:34:43.279008 [debug] [MainThread]: Parsing macros/materializations/view.sql
+00:34:43.281016 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+00:34:43.288806 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+00:34:43.303672 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+00:34:43.320870 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+00:34:43.327901 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+00:34:43.332706 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+00:34:43.336433 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+00:34:43.341130 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+00:34:43.355595 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+00:34:43.359957 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+00:34:43.362519 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+00:34:43.364608 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+00:34:43.377407 [debug] [MainThread]: Parsing macros/etc/statement.sql
+00:34:43.384142 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+00:34:43.385416 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+00:34:43.387095 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+00:34:43.388505 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+00:34:43.390569 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+00:34:43.394923 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+00:34:43.400674 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+00:34:43.403661 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+00:34:43.406146 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+00:34:43.412772 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+00:34:43.434354 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+00:34:43.444448 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+00:34:43.447131 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+00:34:43.460789 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+00:34:43.486389 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+00:34:43.503002 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+00:34:43.522028 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+00:34:43.541156 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+00:34:43.555057 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+00:34:43.557407 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+00:34:43.564151 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+00:34:43.568216 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+00:34:43.570736 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+00:34:43.580043 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+00:34:43.584162 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+00:34:43.589212 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+00:34:43.598614 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+00:34:43.605871 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+00:34:43.616850 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+00:34:43.624470 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+00:34:43.626044 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+00:34:43.638091 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+00:34:43.640613 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+00:34:43.643008 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+00:34:43.646260 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+00:34:43.648351 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+00:34:43.653360 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+00:34:43.656059 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+00:34:43.661287 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+00:34:43.663465 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+00:34:43.665845 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+00:34:43.667301 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+00:34:43.674562 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+00:34:43.678748 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+00:34:43.681576 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+00:34:43.684020 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+00:34:43.685682 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+00:34:43.687993 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+00:34:43.689742 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+00:34:43.691710 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+00:34:43.693676 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+00:34:43.699762 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+00:34:43.701312 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+00:34:43.703357 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+00:34:43.706205 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+00:34:43.710054 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+00:34:43.712095 [debug] [MainThread]: Parsing macros/sql/star.sql
+00:34:43.716770 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+00:34:43.718836 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+00:34:43.724427 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+00:34:43.727268 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+00:34:43.731417 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+00:34:43.741590 [debug] [MainThread]: Parsing macros/sql/union.sql
+00:34:43.755730 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+00:34:43.758310 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+00:34:43.766413 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+00:34:43.775618 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+00:34:43.780652 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+00:34:43.786070 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+00:34:43.796945 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+00:34:43.802734 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+00:34:43.811809 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+00:34:43.822817 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+00:34:43.825508 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+00:34:43.828190 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+00:34:43.831553 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+00:34:43.834006 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+00:34:43.838096 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+00:34:43.839880 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+00:34:43.841797 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+00:34:43.843359 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+00:34:43.844845 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+00:34:43.874961 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+00:34:43.877521 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+00:34:43.880667 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+00:34:43.883399 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+00:34:43.885344 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+00:34:43.889055 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+00:34:43.891885 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+00:34:43.894312 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+00:34:43.897714 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+00:34:43.907689 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+00:34:43.913666 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+00:34:43.916793 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+00:34:43.918333 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+00:34:43.919857 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+00:34:43.921760 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+00:34:43.925211 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+00:34:43.927256 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+00:34:44.517833 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+00:34:44.540616 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+00:34:44.547644 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+00:34:44.551991 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+00:34:44.557977 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+00:34:44.562896 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+00:34:44.566200 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql
+
+
+============================== 2022-06-10 00:54:58.544415 | 102df033-f797-490d-a441-2177d9592ec0 ==============================
+00:54:58.544433 [info ] [MainThread]: Running with dbt=1.1.0
+00:54:58.545022 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+00:54:58.545268 [debug] [MainThread]: Tracking: tracking
+00:54:58.546628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4449f2ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4449d5b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4449d5bb0>]}
+00:54:58.547485 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-g626_qno'
+00:54:58.547827 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+00:54:58.790246 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+00:54:58.790964 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+00:54:58.960753 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+00:54:59.050502 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+00:54:59.665376 [info ] [MainThread]:   Installed from version 0.8.5
+00:54:59.666556 [info ] [MainThread]:   Up to date!
+00:54:59.667461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '102df033-f797-490d-a441-2177d9592ec0', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4449d5bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc444b76250>]}
+00:54:59.668891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc449db62e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4449dc160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc444a80ee0>]}
+
+
+============================== 2022-06-10 00:55:04.882375 | a466a63b-0d34-4665-86ac-d21964596ccf ==============================
+00:55:04.882397 [info ] [MainThread]: Running with dbt=1.1.0
+00:55:04.883057 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+00:55:04.883328 [debug] [MainThread]: Tracking: do not track
+00:55:04.907186 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+00:55:04.930360 [debug] [MainThread]: Parsing macros/match_details.sql
+00:55:04.930747 [debug] [MainThread]: Parsing macros/adapters.sql
+00:55:04.981309 [debug] [MainThread]: Parsing macros/catalog.sql
+00:55:04.983741 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+00:55:04.985102 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+00:55:04.990013 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+00:55:05.001065 [debug] [MainThread]: Parsing macros/materializations/table.sql
+00:55:05.005193 [debug] [MainThread]: Parsing macros/materializations/view.sql
+00:55:05.007114 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+00:55:05.014135 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+00:55:05.027528 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+00:55:05.045688 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+00:55:05.052579 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+00:55:05.056784 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+00:55:05.061757 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+00:55:05.067005 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+00:55:05.076461 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+00:55:05.080495 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+00:55:05.083867 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+00:55:05.087028 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+00:55:05.098395 [debug] [MainThread]: Parsing macros/etc/statement.sql
+00:55:05.104237 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+00:55:05.105379 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+00:55:05.106634 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+00:55:05.107937 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+00:55:05.109956 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+00:55:05.114377 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+00:55:05.120576 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+00:55:05.124293 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+00:55:05.128439 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+00:55:05.135887 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+00:55:05.155524 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+00:55:05.163727 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+00:55:05.166431 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+00:55:05.181614 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+00:55:05.209760 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+00:55:05.224610 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+00:55:05.245487 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+00:55:05.273267 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+00:55:05.285739 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+00:55:05.287754 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+00:55:05.293504 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+00:55:05.296856 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+00:55:05.298681 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+00:55:05.307259 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+00:55:05.310610 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+00:55:05.314541 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+00:55:05.325275 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+00:55:05.329480 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+00:55:05.340288 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+00:55:05.348041 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+00:55:05.349699 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+00:55:05.363176 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+00:55:05.366889 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+00:55:05.370117 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+00:55:05.372774 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+00:55:05.375979 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+00:55:05.380772 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+00:55:05.383869 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+00:55:05.388543 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+00:55:05.390702 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+00:55:05.392994 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+00:55:05.394465 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+00:55:05.404061 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+00:55:05.408335 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+00:55:05.412536 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+00:55:05.415933 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+00:55:05.417599 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+00:55:05.420094 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+00:55:05.422283 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+00:55:05.424578 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+00:55:05.426131 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+00:55:05.434125 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+00:55:05.435967 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+00:55:05.438096 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+00:55:05.441280 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+00:55:05.445385 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+00:55:05.447712 [debug] [MainThread]: Parsing macros/sql/star.sql
+00:55:05.452277 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+00:55:05.454895 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+00:55:05.461262 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+00:55:05.464456 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+00:55:05.470116 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+00:55:05.482980 [debug] [MainThread]: Parsing macros/sql/union.sql
+00:55:05.499190 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+00:55:05.501578 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+00:55:05.512809 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+00:55:05.520704 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+00:55:05.525676 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+00:55:05.530450 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+00:55:05.539731 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+00:55:05.545269 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+00:55:05.553024 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+00:55:05.564233 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+00:55:05.566903 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+00:55:05.570869 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+00:55:05.575301 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+00:55:05.578409 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+00:55:05.584616 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+00:55:05.586625 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+00:55:05.588998 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+00:55:05.591129 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+00:55:05.593085 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+00:55:05.626231 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+00:55:05.629566 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+00:55:05.633459 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+00:55:05.636431 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+00:55:05.638801 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+00:55:05.644227 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+00:55:05.648715 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+00:55:05.655900 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+00:55:05.661512 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+00:55:05.682856 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+00:55:05.690208 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+00:55:05.694478 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+00:55:05.697053 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+00:55:05.699911 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+00:55:05.704626 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+00:55:05.714146 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+00:55:05.717445 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+00:55:06.336550 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+00:55:06.350629 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+00:55:06.353851 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+00:55:06.357395 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+00:55:06.360932 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+00:55:06.364610 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+00:55:06.367533 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql
+
+
+============================== 2022-06-10 00:58:39.670879 | 5d0c6d15-3c37-4595-bc39-d34f206b8bfb ==============================
+00:58:39.670893 [info ] [MainThread]: Running with dbt=1.1.0
+00:58:39.671393 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+00:58:39.671632 [debug] [MainThread]: Tracking: tracking
+00:58:39.672713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cefcf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cefc220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cefc790>]}
+00:58:39.673468 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-7ai759a5'
+00:58:39.673830 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+00:58:40.052529 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+00:58:40.054452 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+00:58:40.365375 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+00:58:40.420870 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+00:58:41.021581 [info ] [MainThread]:   Installed from version 0.8.5
+00:58:41.022486 [info ] [MainThread]:   Up to date!
+00:58:41.023019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '5d0c6d15-3c37-4595-bc39-d34f206b8bfb', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cefc6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cfc0220>]}
+00:58:41.023670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0ce13640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cee04c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4b0cef4160>]}
+
+
+============================== 2022-06-10 00:58:45.506015 | cde3d78a-db16-4c3d-af88-0de1d91a22e2 ==============================
+00:58:45.506038 [info ] [MainThread]: Running with dbt=1.1.0
+00:58:45.506665 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+00:58:45.506881 [debug] [MainThread]: Tracking: do not track
+00:58:45.532496 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+00:58:45.556782 [debug] [MainThread]: Parsing macros/match_details.sql
+00:58:45.557137 [debug] [MainThread]: Parsing macros/adapters.sql
+00:58:45.600609 [debug] [MainThread]: Parsing macros/catalog.sql
+00:58:45.602778 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+00:58:45.604107 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+00:58:45.609629 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+00:58:45.620108 [debug] [MainThread]: Parsing macros/materializations/table.sql
+00:58:45.624194 [debug] [MainThread]: Parsing macros/materializations/view.sql
+00:58:45.626163 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+00:58:45.632223 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+00:58:45.643426 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+00:58:45.653833 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+00:58:45.658869 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+00:58:45.662307 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+00:58:45.665343 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+00:58:45.668077 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+00:58:45.675828 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+00:58:45.678773 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+00:58:45.680678 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+00:58:45.682377 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+00:58:45.692315 [debug] [MainThread]: Parsing macros/etc/statement.sql
+00:58:45.697467 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+00:58:45.698434 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+00:58:45.699736 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+00:58:45.700999 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+00:58:45.702671 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+00:58:45.705266 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+00:58:45.709476 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+00:58:45.711552 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+00:58:45.713553 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+00:58:45.718885 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+00:58:45.737418 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+00:58:45.744370 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+00:58:45.746381 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+00:58:45.757718 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+00:58:45.780371 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+00:58:45.792914 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+00:58:45.808392 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+00:58:45.824664 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+00:58:45.836428 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+00:58:45.838490 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+00:58:45.844169 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+00:58:45.847290 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+00:58:45.848921 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+00:58:45.856527 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+00:58:45.859533 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+00:58:45.863133 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+00:58:45.871125 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+00:58:45.874810 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+00:58:45.884023 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+00:58:45.891955 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+00:58:45.893282 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+00:58:45.903218 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+00:58:45.905527 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+00:58:45.907281 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+00:58:45.908669 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+00:58:45.910450 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+00:58:45.913475 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+00:58:45.915532 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+00:58:45.919427 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+00:58:45.920853 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+00:58:45.922811 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+00:58:45.923995 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+00:58:45.932148 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+00:58:45.936134 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+00:58:45.938870 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+00:58:45.941550 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+00:58:45.943094 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+00:58:45.945346 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+00:58:45.948154 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+00:58:45.950205 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+00:58:45.951633 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+00:58:45.958397 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+00:58:45.959677 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+00:58:45.961181 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+00:58:45.963410 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+00:58:45.966131 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+00:58:45.967842 [debug] [MainThread]: Parsing macros/sql/star.sql
+00:58:45.971652 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+00:58:45.973521 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+00:58:45.978065 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+00:58:45.979954 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+00:58:45.983017 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+00:58:45.991820 [debug] [MainThread]: Parsing macros/sql/union.sql
+00:58:46.003958 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+00:58:46.006064 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+00:58:46.012455 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+00:58:46.017324 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+00:58:46.021446 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+00:58:46.025417 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+00:58:46.033224 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+00:58:46.038020 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+00:58:46.046484 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+00:58:46.055022 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+00:58:46.056604 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+00:58:46.058397 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+00:58:46.060889 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+00:58:46.062630 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+00:58:46.067766 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+00:58:46.069230 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+00:58:46.070635 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+00:58:46.072078 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+00:58:46.073428 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+00:58:46.099437 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+00:58:46.101715 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+00:58:46.104199 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+00:58:46.106619 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+00:58:46.108335 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+00:58:46.111962 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+00:58:46.115283 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+00:58:46.117276 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+00:58:46.119857 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+00:58:46.129890 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+00:58:46.133863 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+00:58:46.136430 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+00:58:46.137849 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+00:58:46.139687 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+00:58:46.141407 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+00:58:46.144808 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+00:58:46.146642 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+00:58:46.732468 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+00:58:46.750258 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+00:58:46.753763 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+00:58:46.758506 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+00:58:46.765423 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+00:58:46.770455 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+00:58:46.776827 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql
+
+
+============================== 2022-06-10 01:07:08.945256 | f48369da-8da4-4b78-9d5e-06675853b8ad ==============================
+01:07:08.945272 [info ] [MainThread]: Running with dbt=1.1.0
+01:07:08.945755 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+01:07:08.945934 [debug] [MainThread]: Tracking: tracking
+01:07:08.947025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b168b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b16970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b16ac0>]}
+01:07:08.947765 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-cg5leabs'
+01:07:08.948161 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+01:07:09.337705 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+01:07:09.338408 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+01:07:09.648614 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+01:07:09.700745 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+01:07:10.370672 [info ] [MainThread]:   Installed from version 0.8.5
+01:07:10.371097 [info ] [MainThread]:   Up to date!
+01:07:10.371532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f48369da-8da4-4b78-9d5e-06675853b8ad', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b0a910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2a806a0>]}
+01:07:10.372068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e5376eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b827c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f24e2b82670>]}
+
+
+============================== 2022-06-10 01:07:14.731008 | 406aa597-0d20-4c07-9352-fcec81b29e8c ==============================
+01:07:14.731038 [info ] [MainThread]: Running with dbt=1.1.0
+01:07:14.731953 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/opt/airflow/dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_dir': '/opt/airflow/dbt', 'target': 'dev', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+01:07:14.732297 [debug] [MainThread]: Tracking: do not track
+01:07:14.759581 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+01:07:14.786387 [debug] [MainThread]: Parsing macros/match_details.sql
+01:07:14.786888 [debug] [MainThread]: Parsing macros/adapters.sql
+01:07:14.835565 [debug] [MainThread]: Parsing macros/catalog.sql
+01:07:14.837822 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+01:07:14.839294 [debug] [MainThread]: Parsing macros/materializations/merge.sql
+01:07:14.845144 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+01:07:14.859857 [debug] [MainThread]: Parsing macros/materializations/table.sql
+01:07:14.864804 [debug] [MainThread]: Parsing macros/materializations/view.sql
+01:07:14.866457 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+01:07:14.873236 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+01:07:14.885186 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+01:07:14.897721 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+01:07:14.903665 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+01:07:14.909171 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+01:07:14.913831 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+01:07:14.917901 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+01:07:14.928139 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+01:07:14.930873 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+01:07:14.932737 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+01:07:14.934382 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+01:07:14.945418 [debug] [MainThread]: Parsing macros/etc/statement.sql
+01:07:14.953275 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+01:07:14.954617 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+01:07:14.956208 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+01:07:14.957786 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+01:07:14.960312 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+01:07:14.964077 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+01:07:14.970623 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+01:07:14.973285 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+01:07:14.975282 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+01:07:14.980115 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+01:07:14.995598 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+01:07:15.001882 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+01:07:15.004426 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+01:07:15.015595 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+01:07:15.041231 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+01:07:15.055365 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+01:07:15.074708 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+01:07:15.091490 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+01:07:15.102876 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+01:07:15.104803 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+01:07:15.110362 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+01:07:15.113636 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+01:07:15.115413 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+01:07:15.122943 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+01:07:15.125752 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+01:07:15.129911 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+01:07:15.141255 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+01:07:15.144918 [debug] [MainThread]: Parsing macros/cross_db_utils/listagg.sql
+01:07:15.154284 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+01:07:15.161465 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+01:07:15.163160 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+01:07:15.174081 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+01:07:15.176626 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+01:07:15.178561 [debug] [MainThread]: Parsing macros/cross_db_utils/any_value.sql
+01:07:15.180421 [debug] [MainThread]: Parsing macros/cross_db_utils/bool_or.sql
+01:07:15.182553 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+01:07:15.185962 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+01:07:15.188673 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+01:07:15.193629 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+01:07:15.195638 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+01:07:15.197928 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+01:07:15.199661 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+01:07:15.207752 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+01:07:15.212687 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+01:07:15.215544 [debug] [MainThread]: Parsing macros/cross_db_utils/escape_single_quotes.sql
+01:07:15.218373 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+01:07:15.220088 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+01:07:15.222230 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+01:07:15.224394 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+01:07:15.226754 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+01:07:15.228269 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+01:07:15.234118 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+01:07:15.235496 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+01:07:15.237479 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+01:07:15.240852 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+01:07:15.244281 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+01:07:15.246450 [debug] [MainThread]: Parsing macros/sql/star.sql
+01:07:15.250873 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+01:07:15.253158 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+01:07:15.259029 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+01:07:15.261353 [debug] [MainThread]: Parsing macros/sql/get_filtered_columns_in_relation.sql
+01:07:15.265090 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+01:07:15.276162 [debug] [MainThread]: Parsing macros/sql/union.sql
+01:07:15.289666 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+01:07:15.291935 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+01:07:15.299095 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+01:07:15.304547 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+01:07:15.308611 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+01:07:15.312853 [debug] [MainThread]: Parsing macros/sql/deduplicate.sql
+01:07:15.321934 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+01:07:15.329175 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+01:07:15.335512 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+01:07:15.341732 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+01:07:15.343237 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+01:07:15.345013 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+01:07:15.347488 [debug] [MainThread]: Parsing macros/sql/get_table_types_sql.sql
+01:07:15.349236 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+01:07:15.352987 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+01:07:15.354753 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+01:07:15.356827 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+01:07:15.358431 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+01:07:15.360041 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+01:07:15.388479 [debug] [MainThread]: Parsing macros/generic_tests/expression_is_true.sql
+01:07:15.391652 [debug] [MainThread]: Parsing macros/generic_tests/not_accepted_values.sql
+01:07:15.395069 [debug] [MainThread]: Parsing macros/generic_tests/cardinality_equality.sql
+01:07:15.398081 [debug] [MainThread]: Parsing macros/generic_tests/test_not_null_where.sql
+01:07:15.400791 [debug] [MainThread]: Parsing macros/generic_tests/sequential_values.sql
+01:07:15.405210 [debug] [MainThread]: Parsing macros/generic_tests/not_null_proportion.sql
+01:07:15.408442 [debug] [MainThread]: Parsing macros/generic_tests/recency.sql
+01:07:15.410859 [debug] [MainThread]: Parsing macros/generic_tests/accepted_range.sql
+01:07:15.415773 [debug] [MainThread]: Parsing macros/generic_tests/mutually_exclusive_ranges.sql
+01:07:15.425611 [debug] [MainThread]: Parsing macros/generic_tests/equality.sql
+01:07:15.429882 [debug] [MainThread]: Parsing macros/generic_tests/relationships_where.sql
+01:07:15.433750 [debug] [MainThread]: Parsing macros/generic_tests/not_constant.sql
+01:07:15.435416 [debug] [MainThread]: Parsing macros/generic_tests/at_least_one.sql
+01:07:15.437074 [debug] [MainThread]: Parsing macros/generic_tests/test_unique_where.sql
+01:07:15.439984 [debug] [MainThread]: Parsing macros/generic_tests/unique_combination_of_columns.sql
+01:07:15.443378 [debug] [MainThread]: Parsing macros/generic_tests/fewer_rows_than.sql
+01:07:15.445574 [debug] [MainThread]: Parsing macros/generic_tests/equal_rowcount.sql
+01:07:15.989415 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_maps.sql
+01:07:16.006425 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_items.sql
+01:07:16.011319 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_runes_reforged.sql
+01:07:16.014981 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_champions.sql
+01:07:16.019356 [debug] [MainThread]: 1699: static parser successfully parsed staging_datadragon/stg_summonerspells.sql
+01:07:16.024491 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_details.sql
+01:07:16.029516 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_match_info.sql

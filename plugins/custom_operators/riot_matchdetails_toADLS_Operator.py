@@ -3,6 +3,7 @@ import logging
 from os import path 
 import tempfile
 import pandas as pd
+import json
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.microsoft.azure.hooks.wasb import WasbHook
 from airflow.models import BaseOperator
@@ -20,14 +21,14 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
     :type start_epoch:                  string
     :param end_epoch:                   end_time of the query.
     :type end_epoch:                    string
-    :type limit:                        string
     """
     @apply_defaults
     def __init__(self,
                  riot_conn_id: str,
                  azure_conn_id: str,
                  region: str,
-                 queue: str,
+                 match_queue: str,
+                 summoner_name: str,
                  count: int = None,
                  start_epoch: int = None,
                  end_epoch: int = None,
@@ -39,10 +40,11 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         self.riot_conn_id = riot_conn_id
         self.azure_conn_id = azure_conn_id
         self.region = region
-        self.queue = queue
+        self.match_queue= match_queue
         self.count = count
         self.start_epoch = start_epoch
         self.end_epoch = end_epoch
+        self.summoner_name = summoner_name
 
         
 
@@ -60,69 +62,85 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         self.log.info("Created Azure Connection")
 
         riot_hook = riotHook(self.riot_conn_id)
-
-        #Fetch top 10 Challenger players
-        challengers = riot_hook.get_challenger_players(self.region, self.queue)
-        players = challengers.pop('entries')
-        players.sort(key=lambda x: x['leaguePoints'], reverse=True)
-        top10_players = players[:10]
+        self.log.info("Created Riot Connection")
+        # Fetch top 10 Challenger players
+        # challengers = riot_hook.get_challenger_players(self.region, self.match_queue)
+        # players = challengers.pop('entries')
+        # players.sort(key=lambda x: x['leaguePoints'], reverse=True)
+        # top10_players = players[:10]
 
         #Create Empty dfs
         sub_df = pd.DataFrame()
         match_info_df = pd.DataFrame()
 
-        for player in top10_players:
-            summoner = riot_hook.summoner.by_id(my_region, player['summonerId'])
-            matches = riot_hoook.get_matchlist_by_puuid(my_region, summoner['puuid'], count=1)
+        # for player in top10_players:
+        # summoner = riot_hook.get_summoner_byid(self.region, player['summonerId'])
+        summoner0 = riot_hook.get_summoner_byname(self.region, self.summoner_name)
+        summoner = riot_hook.get_summoner_byid(self.region, summoner0['id'])
+        matches = riot_hook.get_matchlist_by_puuid(self.region, summoner['puuid'], count=1)
 
-            for match in matches:
-                match = riot_hook.get_match_byid(my_region, match)
+        for match in matches:
+            match = riot_hook.get_match_byid(self.region, match)
+            
+            # sub_df = pd.concat([sub_df, match_details_df], ignore_index = True, axis = 0)
+            match_details = match['info']['participants']
+
+            match_info = match['info']
+            match_participants = match_info.pop('participants')
+            match_team_info = match_info.pop('teams')
+            match_details_df = pd.DataFrame({'matchId': [match['metadata']['matchId']]})
+
+            match_info_df_sub = pd.DataFrame([match_info])
+            match_info_df_1 = pd.concat([match_details_df, match_info_df_sub], axis = 1)
+            match_info_df = pd.concat([match_info_df, match_info_df_1], axis = 0)
+            
+            
+            for dets in match_details:
+                challenges = dets.pop('challenges', None)
+                perks = dets.pop('perks', None)
                 
-                # sub_df = pd.concat([sub_df, match_details_df], ignore_index = True, axis = 0)
-                match_details = match['info']['participants']
-
-                match_info = match['info']
-                match_participants = match_info.pop('participants')
-                match_team_info = match_info.pop('teams')
                 match_details_df = pd.DataFrame({'matchId': [match['metadata']['matchId']]})
 
-                match_info_df_sub = pd.DataFrame([match_info])
-                match_info_df_1 = pd.concat([match_details_df, match_info_df_sub], axis = 1)
-                match_info_df = pd.concat([match_info_df, match_info_df_1], axis = 0)
-                
-                print(match_info_df)
-                for dets in match_details:
-                    challenges = dets.pop('challenges', None)
-                    perks = dets.pop('perks', None)
-                    
-                    match_details_df = pd.DataFrame({'matchId': [match['metadata']['matchId']]})
+                sub_df2 = pd.DataFrame([dets])
+                # print(sub_df2)
+                # print(match_details_df)
+                sub_df1 = pd.concat([match_details_df, sub_df2], axis = 1)
+                sub_df = pd.concat([sub_df, sub_df1], axis = 0)
+                # sub_df['matchId'] = match['metadata']['matchId']
 
-                    sub_df2 = pd.DataFrame([dets])
-                    # print(sub_df2)
-                    # print(match_details_df)
-                    sub_df1 = pd.concat([match_details_df, sub_df2], axis = 1)
-                    sub_df = pd.concat([sub_df, sub_df1], axis = 0)
-                    # sub_df['matchId'] = match['metadata']['matchId']
-        
+        print(match_info_df)
         # Write tweet data to temp file.
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_path = path.join(tmp_dir, "match_details.csv")
             tmp_path2 = path.join(tmp_dir, "match_info.csv")
-            tmp_path3 = path.join(tmp_dir, "reponse_data.json")
+            # tmp_path3 = path.join(tmp_dir, "reponse_data.json")
             sub_df.to_csv(tmp_path, header=True, index=False, columns=list(sub_df.axes[1]))
             match_info_df.to_csv(tmp_path2, header=True, index=False, columns=list(match_info_df.axes[1]))
-            json.dump(top10_players, tmp_path3)
 
-            # Upload file to Azure Blob.
+            # with open(tmp_path3, 'w') as fp:
+            #     json.dump(top10_players, fp)
+
+            #     wasb_hook.load_file(
+            #         tmp_path3,
+            #         container_name="players",
+            #         blob_name="{year}/{month}/{day}/{hour}.json".format(
+            #             year=self.end_epoch.year,
+            #             month=self.end_epoch.month,
+            #             day=self.end_epoch.day,
+            #             hour=self.end_epoch.hour)
+            #         )
+            #     self.log.info("players loaded")
+
             wasb_hook.load_file(
                 tmp_path,
-                container_name="match-detalis",
+                container_name="match-details",
                 blob_name="{year}/{month}/{day}/{hour}.csv".format(
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
                     day=self.end_epoch.day,
                     hour=self.end_epoch.hour)
                 )
+            self.log.info("match-details loaded")
 
             wasb_hook.load_file(
                 tmp_path2,
@@ -133,15 +151,8 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
                     day=self.end_epoch.day,
                     hour=self.end_epoch.hour)
                 )
+            self.log.info("match-info loaded")
 
-            wasb_hook.load_file(
-                tmp_path3,
-                container_name="players",
-                blob_name="{year}/{month}/{day}/{hour}.json".format(
-                    year=self.end_epoch.year,
-                    month=self.end_epoch.month,
-                    day=self.end_epoch.day,
-                    hour=self.end_epoch.hour)
-                )
+
 
 

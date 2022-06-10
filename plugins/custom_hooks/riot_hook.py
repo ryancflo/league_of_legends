@@ -62,10 +62,15 @@ class riotHook(BaseHook):
 
     def get_challenger_players(self, my_region: str, mode: str):
 
-        challengers = lol_watcher.league.challenger_by_queue(my_region, mode)
+        challengers = self.lol_watcher.league.challenger_by_queue(my_region, mode)
         return challengers
 
     def get_summoner_byid(self, my_region: str, summoner_id: str):
 
-        summoner = lol_watcher.summoner.by_id(my_region,summoner_id)
+        summoner = self.lol_watcher.summoner.by_id(my_region,summoner_id)
+        return summoner
+
+    def get_summoner_byname(self, my_region: str, summoner_id: str):
+
+        summoner = self.lol_watcher.summoner.by_name(my_region,'dild0wacker')
         return summoner

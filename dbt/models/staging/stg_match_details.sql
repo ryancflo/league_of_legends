@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('league_of_legends_data', 'staging_match_details_stage') }}
+    FROM {{ source('league_of_legends_data', 'staging_match_details') }}
 ),
 
 

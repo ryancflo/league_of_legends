@@ -1,0 +1,78 @@
+[2022-06-10 00:34:32,072] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [None]>
+[2022-06-10 00:34:32,086] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [None]>
+[2022-06-10 00:34:32,087] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 00:34:32,087] {taskinstance.py:1244} INFO - Starting attempt 8 of 9
+[2022-06-10 00:34:32,087] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-10 00:34:32,101] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): daily_transform> on 2022-05-23 00:00:00+00:00
+[2022-06-10 00:34:32,108] {standard_task_runner.py:52} INFO - Started process 144 to run task
+[2022-06-10 00:34:32,112] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'daily_transform', 'scheduled__2022-05-23T00:00:00+00:00', '--job-id', '17', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpgr0dlnfl', '--error-file', '/tmp/tmplvlr5v8b']
+[2022-06-10 00:34:32,114] {standard_task_runner.py:77} INFO - Job 17: Subtask daily_transform
+[2022-06-10 00:34:32,177] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [running]> on host 3a2d88aef85a
+[2022-06-10 00:34:32,236] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=daily_transform
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-23T00:00:00+00:00
+[2022-06-10 00:34:32,238] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-10 00:34:32,239] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run --project-dir /opt/***/dbt --profiles-dir /opt/***/dbt --target dev']
+[2022-06-10 00:34:32,250] {subprocess.py:85} INFO - Output:
+[2022-06-10 00:34:36,696] {subprocess.py:89} INFO - 00:34:36  Running with dbt=1.1.0
+[2022-06-10 00:34:37,187] {subprocess.py:89} INFO - 00:34:37  Installing dbt-labs/dbt_utils
+[2022-06-10 00:34:37,770] {subprocess.py:89} INFO - 00:34:37    Installed from version 0.8.5
+[2022-06-10 00:34:37,771] {subprocess.py:89} INFO - 00:34:37    Up to date!
+[2022-06-10 00:34:43,138] {subprocess.py:89} INFO - 00:34:43  Running with dbt=1.1.0
+[2022-06-10 00:34:43,172] {subprocess.py:89} INFO - 00:34:43  Partial parse save file not found. Starting full parse.
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO - 00:34:44  Encountered an error:
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO - Compilation Error
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO -   dbt found two sources with the name "league_of_legends_data_staging_match_details_stage".
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO - 
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO -   Since these resources have the same name, dbt will be unable to find the correct resource
+[2022-06-10 00:34:44,761] {subprocess.py:89} INFO -   when looking for source("league_of_legends_data", "staging_match_details_stage").
+[2022-06-10 00:34:44,762] {subprocess.py:89} INFO - 
+[2022-06-10 00:34:44,762] {subprocess.py:89} INFO -   To fix this, change the name of one of these resources:
+[2022-06-10 00:34:44,762] {subprocess.py:89} INFO -   - source.leagueoflegendsdbt.league_of_legends_data.staging_match_details_stage (models/staging/schema.yml)
+[2022-06-10 00:34:44,762] {subprocess.py:89} INFO -   - source.leagueoflegendsdbt.league_of_legends_data.staging_match_details_stage (models/staging_datadragon/schema.yml)
+[2022-06-10 00:34:45,311] {subprocess.py:93} INFO - Command exited with return code 2
+[2022-06-10 00:34:45,326] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-06-10 00:34:45,333] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=daily_transform, execution_date=20220523T000000, start_date=20220610T003432, end_date=20220610T003445
+[2022-06-10 00:34:45,349] {standard_task_runner.py:89} ERROR - Failed to execute job 17 for task daily_transform
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-06-10 00:34:45,392] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-10 00:34:45,433] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

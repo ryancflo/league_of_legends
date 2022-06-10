@@ -5,7 +5,7 @@ class sqlQueries:
         )
 
     CREATE_MATCHDETAILS_STAGING_TABLE_SQL_STRING = (
-        """CREATE OR REPLACE TABLE STAGING_MATCH_DETAILS_STAGE
+        """CREATE OR REPLACE TABLE STAGING_MATCHDETAILS
         (
             matchId varchar(25),
             assists integer,
@@ -117,18 +117,18 @@ class sqlQueries:
     )
 
     CREATE_MATCHINFO_STAGING_TABLE_SQL_STRING = (
-        """CREATE OR REPLACE TABLE STAGING_MATCH_INFO_STAGE
+        """CREATE OR REPLACE TABLE STAGING_MATCHINFO
         (
             matchId varchar,
             gameCreation integer,
             gameDuration integer,
-            gameEndTimestamp interger,
+            gameEndTimestamp integer,
             gameId varchar,
             gameMode string,
             gameName varchar,
             gameStartTimestamp integer,
             gameType varchar(25),
-            gameVersion integer,
+            gameVersion varchar,
             mapId integer,
             platformId varchar(3),
             queueId integer,

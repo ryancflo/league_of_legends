@@ -1,10 +1,10 @@
-dbt:
+leagueoflegendsdbt:
   outputs:
     dev:
       account: yb06886.west-us-2.azure
       database: LEAGUE_OF_LEGENDSDB
       password: Yodude123+
-      role: admin
+      role: accountadmin
       schema: PUBLIC
       threads: 10
       type: snowflake

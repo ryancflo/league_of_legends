@@ -1,0 +1,48 @@
+
+version: 2
+
+sources:
+    - name: league_of_legends_data
+      description: 'League of legends database'
+      schema: PUBLIC
+      database: LEAGUE_OF_LEGENDSDB
+      tables:
+        - name: staging_datadragon_champions
+        - name: staging_datadragon_maps
+        - name: staging_datadragon_items
+        - name: staging_datadragon_runes_reforged
+        - name: staging_datadragon_summonerspells
+        - name: staging_match_details
+        - name: staging_match_info
+
+models:
+  - name: stg_champions
+    columns:
+      - name: champion_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_items
+    columns:
+      - name: item_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_maps
+    columns:
+      - name: map_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_runes_reforged
+    columns:
+      - name: rune_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_summonerspells
+    columns:
+      - name: summonerspell_id
+        tests:
+          - not_null
+          - unique

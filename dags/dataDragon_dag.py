@@ -4,6 +4,7 @@ from airflow import DAG
 from airflow.utils.task_group import TaskGroup
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.bash import BashOperator
 from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 from custom_operators.riot_datadragon_toADLS_Operator import riot_dataDragonToADLSOperator
 from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOperator
@@ -80,9 +81,14 @@ with dag as dag:
 
                 staging_dataDragon >> create_staging_tables >> copy_toSnowflake
     
+dbt_run = BashOperator(
+    task_id='hourly_transform',
+    bash_command='cd /dbt && dbt run --models staging_datadragon --profiles-dir .',
+    dag=dag
+)
 
 
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> paths >> end_operator
+start_operator >> paths >> dbt_run >> end_operator
