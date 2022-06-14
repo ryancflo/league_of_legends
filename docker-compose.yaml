@@ -45,7 +45,7 @@ version: '3'
 x-airflow-common:
   &airflow-common
   build: .
-  # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}
+# image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}
   environment:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
@@ -63,10 +63,10 @@ x-airflow-common:
     - ./logs:/opt/airflow/logs
     - ./config/airflow.cfg:/opt/airflow/airflow.cfg
     - ./dbt:/opt/airflow/dbt
-    - ./dbt_packages:/opt/airflow/dbt_packages
+    # - ./dbt/.dbt:/opt/airflow/dbt/.dbt
     - ~/.dbt:/home/airflow/.dbt:ro
-    - ./dags:/dags
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
+
   # depends_on:
   #   redis:
   #     condition: service_healthy

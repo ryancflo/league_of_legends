@@ -1,13 +1,10 @@
--- CREATE OR REPLACE TABLE STAGING_DATADRAGON_RUNES_REFORGED
--- (
---     json_data variant
--- );
+WITH source AS(
+    SELECT *
+    FROM {{ source('datadragon_stage_data', 'staging_datadragon_runes_reforged') }},
+    LATERAL FLATTEN(input => json_data)
+),
 
--- COPY INTO "STAGING_DATADRAGON_RUNES_REFORGED"
--- FROM @MY_AZURE_DATADRAGON_RUNESREFORGED_STAGE
--- file_format = datadragon_fileformat;
-
-WITH tbl_runes AS
+tbl_runes AS
 (
 SELECT 
     *

@@ -1,0 +1,32 @@
+
+version: 2
+
+sources:
+    - name: stage_data
+      description: 'League of legends database'
+      schema: PUBLIC
+      database: LEAGUE_OF_LEGENDSDB
+      tables:
+        - name: staging_matchdetails
+        - name: staging_matchinfo
+        - name: staging_datadragon_champions
+        - name: staging_datadragon_maps
+        - name: staging_datadragon_items
+        - name: staging_datadragon_runes_reforged
+        - name: staging_datadragon_summonerspells
+
+
+models:
++incremental_strategy: "merge"
+  - name: final_match_details
+    columns:
+      - name: match_id
+        tests:
+          - not_null
+          - unique
+  - name: final_match_info
+    columns:
+      - name: match_id
+        tests:
+          - not_null
+          - unique

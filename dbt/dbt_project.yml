@@ -19,7 +19,8 @@ test-paths: ["tests"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 log-path: /opt/airflow/logs
-packages-install-path: /opt/airflow/dbt_packages
+# packages-install-path: /opt/airflow/dbt_packages
+# target-path: /opt/airflow/target
 
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
@@ -36,11 +37,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   leagueoflegendsdbt:
-    warehouse:
-      materialized: table
+    # warehouse:
+    #   materialized: table
     # Applies to all files under models/staging/
+    staging:
+      materialized: view
     staging_datadragon:
       materialized: view
     # Applies to all files under models/view/
-    view:
-      materialized: view
+    # view:
+    #   materialized: view

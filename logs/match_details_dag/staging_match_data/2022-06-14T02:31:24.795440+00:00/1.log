@@ -1,0 +1,63 @@
+[2022-06-14 02:31:27,929] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-14T02:31:24.795440+00:00 [queued]>
+[2022-06-14 02:31:27,937] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-14T02:31:24.795440+00:00 [queued]>
+[2022-06-14 02:31:27,938] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 02:31:27,938] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-14 02:31:27,938] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 02:31:27,948] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-14 02:31:24.795440+00:00
+[2022-06-14 02:31:27,951] {standard_task_runner.py:52} INFO - Started process 70 to run task
+[2022-06-14 02:31:27,955] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'manual__2022-06-14T02:31:24.795440+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpy3akoci1', '--error-file', '/tmp/tmpm3uoqns_']
+[2022-06-14 02:31:27,956] {standard_task_runner.py:77} INFO - Job 67: Subtask staging_match_data
+[2022-06-14 02:31:27,997] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data manual__2022-06-14T02:31:24.795440+00:00 [running]> on host a1cebf1185bf
+[2022-06-14 02:31:28,041] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-14T02:31:24.795440+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-14T02:31:24.795440+00:00
+[2022-06-14 02:31:28,041] {riot_matchdetails_toADLS_Operator.py:52} INFO - StageToAzureLake not implemented yet
+[2022-06-14 02:31:28,052] {riot_matchdetails_toADLS_Operator.py:61} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f45c95c54f0>>
+[2022-06-14 02:31:28,052] {riot_matchdetails_toADLS_Operator.py:62} INFO - Created Azure Connection
+[2022-06-14 02:31:28,060] {riot_matchdetails_toADLS_Operator.py:65} INFO - Created Riot Connection
+[2022-06-14 02:31:28,337] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-14 02:31:28,337] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-14 02:31:28,337] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-14 02:31:28,454] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-14 02:31:28,757] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-14 02:31:28,757] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-14 02:31:28,757] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-14 02:31:28,949] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-14 02:31:35,291] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4341606144  1655163088000  ...      900                
+0  NA1_4341553785  1655158451000  ...      900                
+0  NA1_4341519765  1655152545000  ...      900                
+0  NA1_4341466207  1655150874000  ...      900                
+0  NA1_4338671659  1654967722000  ...      900                
+0  NA1_4338638853  1654966579000  ...      900                
+0  NA1_4338308986  1654928150000  ...      900                
+0  NA1_4338305936  1654927114000  ...      900                
+0  NA1_4338154912  1654920891000  ...      900                
+0  NA1_4338129137  1654919464000  ...      900                
+0  NA1_4337611379  1654888682000  ...      900                
+0  NA1_4337494378  1654885489000  ...      900                
+0  NA1_4337471391  1654883852000  ...      900                
+0  NA1_4337298617  1654882575000  ...      900                
+0  NA1_4336913058  1654843947000  ...      900                
+0  NA1_4336889747  1654842540000  ...      900                
+0  NA1_4336864520  1654840846000  ...      900                
+0  NA1_4336689188  1654833467000  ...      900                
+0  NA1_4336432490  1654821367000  ...      900                
+0  NA1_4336284751  1654812275000  ...      900                
+
+[20 rows x 14 columns]
+[2022-06-14 02:31:35,303] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/14/2.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '106689'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '1c3714fc-eb8a-11ec-8339-0242ac120005'/nA body is sent with the request
+[2022-06-14 02:31:35,812] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Tue, 14 Jun 2022 02:31:37 GMT'/n    'ETag': '"0x8DA4DAE01CEFB2D"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '5b1c2639-f01e-00f1-7296-7f30b8000000'/n    'x-ms-client-request-id': '1c3714fc-eb8a-11ec-8339-0242ac120005'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Tue, 14 Jun 2022 02:31:36 GMT'
+[2022-06-14 02:31:35,812] {riot_matchdetails_toADLS_Operator.py:143} INFO - match-details loaded
+[2022-06-14 02:31:35,814] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-info/2022/6/14/2.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '3073'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '1c8516d4-eb8a-11ec-8339-0242ac120005'/nA body is sent with the request
+[2022-06-14 02:31:36,030] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Tue, 14 Jun 2022 02:31:37 GMT'/n    'ETag': '"0x8DA4DAE01F052D8"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '5b1c26e4-f01e-00f1-1196-7f30b8000000'/n    'x-ms-client-request-id': '1c8516d4-eb8a-11ec-8339-0242ac120005'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Tue, 14 Jun 2022 02:31:37 GMT'
+[2022-06-14 02:31:36,031] {riot_matchdetails_toADLS_Operator.py:154} INFO - match-info loaded
+[2022-06-14 02:31:36,035] {riot_matchdetails_toADLS_Operator.py:54} INFO - Upload twitter data to Azure!
+[2022-06-14 02:31:36,046] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220614T023124, start_date=20220614T023127, end_date=20220614T023136
+[2022-06-14 02:31:36,083] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-14 02:31:36,122] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check

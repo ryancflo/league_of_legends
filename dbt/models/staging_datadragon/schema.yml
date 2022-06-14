@@ -2,7 +2,7 @@
 version: 2
 
 sources:
-    - name: league_of_legends_data
+    - name: datadragon_stage_data
       description: 'League of legends database'
       schema: PUBLIC
       database: LEAGUE_OF_LEGENDSDB
@@ -12,8 +12,7 @@ sources:
         - name: staging_datadragon_items
         - name: staging_datadragon_runes_reforged
         - name: staging_datadragon_summonerspells
-        - name: staging_match_details
-        - name: staging_match_info
+
 
 models:
   - name: stg_champions

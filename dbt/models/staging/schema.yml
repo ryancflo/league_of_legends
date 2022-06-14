@@ -2,13 +2,13 @@
 version: 2
 
 sources:
-    - name: league_of_legends_data
+    - name: match_stage_data
       description: 'League of legends database'
       schema: PUBLIC
       database: LEAGUE_OF_LEGENDSDB
       tables:
-        - name: staging_match_details_stage
-        - name: staging_match_info_stage
+        - name: staging_matchdetails
+        - name: staging_matchinfo
         # - name: staging_players_stage
 
 models:

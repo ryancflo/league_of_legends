@@ -9,7 +9,7 @@
 
 WITH source AS(
     SELECT *
-    FROM {{ source('league_of_legends_data', 'staging_datadragon_summonerspells') }},
+    FROM {{ source('datadragon_stage_data', 'staging_datadragon_summonerspells') }},
     LATERAL FLATTEN(input => json_data)
 ),
 
@@ -18,7 +18,7 @@ SELECT
     key as summonerspell_id,
     value:cooldown[0] as cooldown,
     value:range[0] as range,
-    value:summonerLevel as cooldown
+    value:summonerLevel as summoner_level
 FROM source
 )
 

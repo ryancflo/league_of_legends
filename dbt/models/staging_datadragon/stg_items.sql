@@ -2,7 +2,7 @@
 WITH tbl_items AS
 (
 SELECT *
-  FROM {{ source('league_of_legends_data', 'staging_datadragon_items') }},
+  FROM {{ source('datadragon_stage_data', 'staging_datadragon_items') }},
   LATERAL FLATTEN(input => json_data)
 WHERE key = 'data'
 ),

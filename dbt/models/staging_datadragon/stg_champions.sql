@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('league_of_legends_data', 'staging_datadragon_champions') }},
+    FROM {{ source('datadragon_stage_data', 'staging_datadragon_champions') }},
     LATERAL FLATTEN(input => json_data)
 ),
 

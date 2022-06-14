@@ -99,7 +99,7 @@ test_task = BashOperator(
 
 task_1 = BashOperator(
     task_id='daily_transform',
-    bash_command='cd /opt/airflow/dbt && dbt deps && dbt run --project-dir /opt/airflow/dbt --profiles-dir /opt/airflow/dbt --target dev',
+    bash_command='cd /opt/airflow/dbt && dbt deps && dbt run --target dev',
     dag=dag
 )
 

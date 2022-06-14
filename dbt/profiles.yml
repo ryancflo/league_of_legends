@@ -1,4 +1,5 @@
 leagueoflegendsdbt:
+  target: dev
   outputs:
     dev:
       account: yb06886.west-us-2.azure
@@ -10,4 +11,4 @@ leagueoflegendsdbt:
       type: snowflake
       user: ryancflo
       warehouse: COMPUTE_WH
-  target: dev
+  

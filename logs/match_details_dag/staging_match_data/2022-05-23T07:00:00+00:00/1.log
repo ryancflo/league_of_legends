@@ -1,0 +1,180 @@
+[2022-06-11 06:21:46,995] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-05-23T07:00:00+00:00 [queued]>
+[2022-06-11 06:21:47,006] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-05-23T07:00:00+00:00 [queued]>
+[2022-06-11 06:21:47,006] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-11 06:21:47,006] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-11 06:21:47,006] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-11 06:21:47,019] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-05-23 07:00:00+00:00
+[2022-06-11 06:21:47,024] {standard_task_runner.py:52} INFO - Started process 213 to run task
+[2022-06-11 06:21:47,027] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-05-23T07:00:00+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpa2c49znf', '--error-file', '/tmp/tmplqfybl0_']
+[2022-06-11 06:21:47,028] {standard_task_runner.py:77} INFO - Job 41: Subtask staging_match_data
+[2022-06-11 06:21:47,081] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-05-23T07:00:00+00:00 [running]> on host a1cebf1185bf
+[2022-06-11 06:21:47,133] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-23T07:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-23T07:00:00+00:00
+[2022-06-11 06:21:47,134] {riot_matchdetails_toADLS_Operator.py:52} INFO - StageToAzureLake not implemented yet
+[2022-06-11 06:21:47,148] {riot_matchdetails_toADLS_Operator.py:61} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f6d6d4cb880>>
+[2022-06-11 06:21:47,148] {riot_matchdetails_toADLS_Operator.py:62} INFO - Created Azure Connection
+[2022-06-11 06:21:47,159] {riot_matchdetails_toADLS_Operator.py:65} INFO - Created Riot Connection
+[2022-06-11 06:21:47,388] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-11 06:21:47,389] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-11 06:21:47,389] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-11 06:21:47,514] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-11 06:21:47,826] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-11 06:21:47,826] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-11 06:21:47,827] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-11 06:21:48,001] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-11 06:21:53,755] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4338154912  1654920891000  ...      900                
+0  NA1_4338129137  1654919464000  ...      900                
+0  NA1_4337611379  1654888682000  ...      900                
+0  NA1_4337494378  1654885489000  ...      900                
+0  NA1_4337471391  1654883852000  ...      900                
+0  NA1_4337298617  1654882575000  ...      900                
+0  NA1_4336913058  1654843947000  ...      900                
+0  NA1_4336889747  1654842540000  ...      900                
+0  NA1_4336864520  1654840846000  ...      900                
+0  NA1_4336689188  1654833467000  ...      900                
+0  NA1_4336432490  1654821367000  ...      900                
+0  NA1_4336284751  1654812275000  ...      900                
+0  NA1_4336200749  1654806458000  ...      900                
+0  NA1_4336096734  1654799677000  ...      900                
+0  NA1_4336103673  1654798370000  ...      900                
+0  NA1_4336023730  1654792521000  ...      900                
+0  NA1_4335804807  1654762365000  ...      900                
+0  NA1_4335190089  1654728840000  ...      900                
+0  NA1_4335112447  1654725908000  ...      900                
+0  NA1_4334971343  1654717082000  ...      900                
+
+[20 rows x 14 columns]
+[2022-06-11 06:21:53,771] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/11/6.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '106699'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': 'c96cc506-e94e-11ec-98dd-0242ac120007'/nA body is sent with the request
+[2022-06-11 06:21:53,933] {_universal.py:503} INFO - Response status: 409/nResponse headers:/n    'Content-Length': '220'/n    'Content-Type': 'application/xml'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '44106c3b-c01e-00db-6e5b-7d45fd000000'/n    'x-ms-client-request-id': 'c96cc506-e94e-11ec-98dd-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-error-code': 'REDACTED'/n    'Date': 'Sat, 11 Jun 2022 06:21:55 GMT'
+[2022-06-11 06:21:53,936] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 53, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 134, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z</Message></Error>
+[2022-06-11 06:21:53,952] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220523T070000, start_date=20220611T062146, end_date=20220611T062153
+[2022-06-11 06:21:53,977] {standard_task_runner.py:89} ERROR - Failed to execute job 41 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 53, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 134, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:44106c3b-c01e-00db-6e5b-7d45fd000000
+Time:2022-06-11T06:21:55.5224781Z</Message></Error>
+[2022-06-11 06:21:53,991] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-11 06:21:54,033] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

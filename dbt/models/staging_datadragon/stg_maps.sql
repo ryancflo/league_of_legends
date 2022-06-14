@@ -9,7 +9,7 @@
 
 WITH source AS(
     SELECT *
-    FROM {{ source('league_of_legends_data', 'staging_datadragon_maps') }},
+    FROM {{ source('datadragon_stage_data', 'staging_datadragon_maps') }},
     LATERAL FLATTEN(input => json_data)
 ),
 
