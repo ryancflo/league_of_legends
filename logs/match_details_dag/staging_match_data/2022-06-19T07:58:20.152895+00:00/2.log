@@ -1,0 +1,44 @@
+[2022-06-19 08:06:52,051] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-19T07:58:20.152895+00:00 [None]>
+[2022-06-19 08:06:52,060] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-19T07:58:20.152895+00:00 [None]>
+[2022-06-19 08:06:52,060] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 08:06:52,060] {taskinstance.py:1244} INFO - Starting attempt 2 of 3
+[2022-06-19 08:06:52,060] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 08:06:52,071] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-19 07:58:20.152895+00:00
+[2022-06-19 08:06:52,075] {standard_task_runner.py:52} INFO - Started process 77 to run task
+[2022-06-19 08:06:52,078] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'manual__2022-06-19T07:58:20.152895+00:00', '--job-id', '143', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpam1w6_c7', '--error-file', '/tmp/tmptq91twz9']
+[2022-06-19 08:06:52,078] {standard_task_runner.py:77} INFO - Job 143: Subtask staging_match_data
+[2022-06-19 08:06:52,123] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data manual__2022-06-19T07:58:20.152895+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-19 08:06:52,164] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-19T07:58:20.152895+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-19T07:58:20.152895+00:00
+[2022-06-19 08:06:52,164] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-19 08:06:52,177] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f47489808e0>>
+[2022-06-19 08:06:52,177] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-19 08:06:52,185] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-19 08:06:52,627] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 08:06:52,628] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 08:06:52,628] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-19 08:06:52,712] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-19 08:06:53,001] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 08:06:53,001] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 08:06:53,001] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-19 08:06:53,232] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-19 08:07:22,421] {RateLimiterAdapter.py:41} INFO - waiting for 90.579784 seconds...
+[2022-06-19 08:08:56,099] {_universal.py:475} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/players/2022/6/19/8.json?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '0'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '10bc33b6-efa7-11ec-be05-0242ac120004'/nNo body was attached to the request
+[2022-06-19 08:08:56,330] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 08:08:56 GMT'/n    'ETag': '"0x8DA51CAF51E175B"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '4a191e3c-d01e-002a-4eb3-83946e000000'/n    'x-ms-client-request-id': '10bc33b6-efa7-11ec-be05-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 08:08:56 GMT'
+[2022-06-19 08:08:56,331] {riot_matchdetails_toADLS_Operator.py:140} INFO - players loaded
+[2022-06-19 08:08:56,332] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/19/8.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '527085'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '10dfdbe0-efa7-11ec-be05-0242ac120004'/nA body is sent with the request
+[2022-06-19 08:08:56,673] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 08:08:56 GMT'/n    'ETag': '"0x8DA51CAF5532763"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '4a191e6d-d01e-002a-5db3-83946e000000'/n    'x-ms-client-request-id': '10dfdbe0-efa7-11ec-be05-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 08:08:56 GMT'
+[2022-06-19 08:08:56,674] {riot_matchdetails_toADLS_Operator.py:151} INFO - match-details loaded
+[2022-06-19 08:08:56,675] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-info/2022/6/19/8.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '15081'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '11141a0e-efa7-11ec-be05-0242ac120004'/nA body is sent with the request
+[2022-06-19 08:08:56,725] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 08:08:56 GMT'/n    'ETag': '"0x8DA51CAF55A990A"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '4a191edc-d01e-002a-38b3-83946e000000'/n    'x-ms-client-request-id': '11141a0e-efa7-11ec-be05-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 08:08:56 GMT'
+[2022-06-19 08:08:56,725] {riot_matchdetails_toADLS_Operator.py:162} INFO - match-info loaded
+[2022-06-19 08:08:56,732] {riot_matchdetails_toADLS_Operator.py:63} INFO - Upload match data to Azure!
+[2022-06-19 08:08:56,741] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220619T075820, start_date=20220619T080652, end_date=20220619T080856
+[2022-06-19 08:08:56,793] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-19 08:08:56,830] {local_task_job.py:264} INFO - 3 downstream tasks scheduled from follow-on schedule check

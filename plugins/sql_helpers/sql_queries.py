@@ -1,7 +1,7 @@
 class sqlQueries:
 
     CREATE_PLAYERS_STAGING_TABLE_SQL_STRING = (
-        """CREATE OR REPLACE TABLE STAGING_PLAYERS_STAGE (json_data variant);"""
+        """CREATE OR REPLACE TABLE STAGING_PLAYERS (json_data variant);"""
         )
 
     CREATE_MATCHDETAILS_STAGING_TABLE_SQL_STRING = (
@@ -87,7 +87,7 @@ class sqlQueries:
             summonerName varchar(50),
             teamEarlySurrendered boolean,
             teamId integer,
-            teamPosition integer,
+            teamPosition varchar(25),
             timeCCingOthers integer,
             timePlayed integer,
             totalDamageDealt integer,

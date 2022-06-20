@@ -1,0 +1,272 @@
+[2022-06-18 20:34:18,215] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-18T20:29:30.796668+00:00 [None]>
+[2022-06-18 20:34:18,223] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data manual__2022-06-18T20:29:30.796668+00:00 [None]>
+[2022-06-18 20:34:18,224] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:34:18,224] {taskinstance.py:1244} INFO - Starting attempt 3 of 4
+[2022-06-18 20:34:18,224] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:34:18,233] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 20:29:30.796668+00:00
+[2022-06-18 20:34:18,238] {standard_task_runner.py:52} INFO - Started process 81 to run task
+[2022-06-18 20:34:18,240] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'manual__2022-06-18T20:29:30.796668+00:00', '--job-id', '137', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp0c85lt3b', '--error-file', '/tmp/tmpfo97v0kl']
+[2022-06-18 20:34:18,241] {standard_task_runner.py:77} INFO - Job 137: Subtask staging_match_data
+[2022-06-18 20:34:18,279] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data manual__2022-06-18T20:29:30.796668+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-18 20:34:18,317] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T20:29:30.796668+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-18T20:29:30.796668+00:00
+[2022-06-18 20:34:18,317] {riot_matchdetails_toADLS_Operator.py:59} INFO - StageToAzureLake not implemented yet
+[2022-06-18 20:34:18,329] {riot_matchdetails_toADLS_Operator.py:68} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7fc6c9aee790>>
+[2022-06-18 20:34:18,329] {riot_matchdetails_toADLS_Operator.py:69} INFO - Created Azure Connection
+[2022-06-18 20:34:18,337] {riot_matchdetails_toADLS_Operator.py:72} INFO - Created Riot Connection
+[2022-06-18 20:34:18,690] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-18 20:34:18,690] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-18 20:34:18,690] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-18 20:34:18,776] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-18 20:34:19,067] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-18 20:34:19,067] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-18 20:34:19,067] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-18 20:34:19,267] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-18 20:34:25,253] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4345141908  1655437072000  ...      420                
+0  NA1_4344692236  1655408687000  ...      420                
+0  NA1_4344656319  1655405966000  ...      420                
+0  NA1_4344672193  1655403671000  ...      420                
+0  NA1_4344618083  1655401111000  ...      420                
+0  NA1_4344585360  1655398868000  ...      420                
+0  NA1_4344582472  1655396881000  ...      420                
+0  NA1_4344345255  1655362293000  ...      420                
+0  NA1_4344329035  1655360148000  ...      420                
+0  NA1_4344285156  1655357678000  ...      420                
+0  NA1_4344238718  1655355520000  ...      420                
+0  NA1_4344224378  1655353737000  ...      420                
+0  NA1_4339454414  1655013393000  ...      420                
+0  NA1_4339444683  1655010929000  ...      420                
+0  NA1_4336734066  1654834811000  ...      420                
+0  NA1_4336322514  1654814954000  ...      420                
+0  NA1_4336277309  1654813111000  ...      420                
+0  NA1_4336179189  1654809929000  ...      420                
+0  NA1_4336202933  1654807479000  ...      420                
+0  NA1_4336159002  1654805864000  ...      420                
+
+[20 rows x 14 columns]
+[2022-06-18 20:34:31,538] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4345141908  1655437072000  ...      420                
+0  NA1_4344692236  1655408687000  ...      420                
+0  NA1_4344656319  1655405966000  ...      420                
+0  NA1_4344672193  1655403671000  ...      420                
+0  NA1_4344618083  1655401111000  ...      420                
+0  NA1_4344585360  1655398868000  ...      420                
+0  NA1_4344582472  1655396881000  ...      420                
+0  NA1_4344345255  1655362293000  ...      420                
+0  NA1_4344329035  1655360148000  ...      420                
+0  NA1_4344285156  1655357678000  ...      420                
+0  NA1_4344238718  1655355520000  ...      420                
+0  NA1_4344224378  1655353737000  ...      420                
+0  NA1_4339454414  1655013393000  ...      420                
+0  NA1_4339444683  1655010929000  ...      420                
+0  NA1_4336734066  1654834811000  ...      420                
+0  NA1_4336322514  1654814954000  ...      420                
+0  NA1_4336277309  1654813111000  ...      420                
+0  NA1_4336179189  1654809929000  ...      420                
+0  NA1_4336202933  1654807479000  ...      420                
+0  NA1_4336159002  1654805864000  ...      420                
+0  NA1_4183260479  1642551118000  ...      420                
+0  NA1_4176706904  1642131191000  ...      420                
+0  NA1_4176644279  1642127977000  ...      420                
+0  NA1_4175653424  1642047183000  ...      420                
+0  NA1_4175616672  1642045515000  ...      420                
+0  NA1_4173236114  1641894848000  ...      420                
+0  NA1_4173192626  1641891263000  ...      420                
+0  NA1_4172795809  1641870085000  ...      420                
+0  NA1_4172716357  1641867754000  ...      420                
+0  NA1_4170168156  1641704148000  ...      420                
+0  NA1_4170079985  1641699993000  ...      420                
+0  NA1_4088774961  1635835372000  ...      450                
+0  NA1_4088725286  1635834184000  ...      450                
+0  NA1_4088741820  1635832827000  ...      450                
+0  NA1_4079357695  1634975201000  ...      400                
+0  NA1_4079404968  1634973809000  ...      440                
+0  NA1_4078046818  1634871929000  ...      420                
+0  NA1_4077565770  1634822964000  ...      420                
+0  NA1_4077524905  1634821014000  ...      420                
+0  NA1_4075282116  1634614503000  ...      420                
+
+[40 rows x 14 columns]
+[2022-06-18 20:34:38,358] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4345141908  1655437072000  ...      420                
+0  NA1_4344692236  1655408687000  ...      420                
+0  NA1_4344656319  1655405966000  ...      420                
+0  NA1_4344672193  1655403671000  ...      420                
+0  NA1_4344618083  1655401111000  ...      420                
+0  NA1_4344585360  1655398868000  ...      420                
+0  NA1_4344582472  1655396881000  ...      420                
+0  NA1_4344345255  1655362293000  ...      420                
+0  NA1_4344329035  1655360148000  ...      420                
+0  NA1_4344285156  1655357678000  ...      420                
+0  NA1_4344238718  1655355520000  ...      420                
+0  NA1_4344224378  1655353737000  ...      420                
+0  NA1_4339454414  1655013393000  ...      420                
+0  NA1_4339444683  1655010929000  ...      420                
+0  NA1_4336734066  1654834811000  ...      420                
+0  NA1_4336322514  1654814954000  ...      420                
+0  NA1_4336277309  1654813111000  ...      420                
+0  NA1_4336179189  1654809929000  ...      420                
+0  NA1_4336202933  1654807479000  ...      420                
+0  NA1_4336159002  1654805864000  ...      420                
+0  NA1_4183260479  1642551118000  ...      420                
+0  NA1_4176706904  1642131191000  ...      420                
+0  NA1_4176644279  1642127977000  ...      420                
+0  NA1_4175653424  1642047183000  ...      420                
+0  NA1_4175616672  1642045515000  ...      420                
+0  NA1_4173236114  1641894848000  ...      420                
+0  NA1_4173192626  1641891263000  ...      420                
+0  NA1_4172795809  1641870085000  ...      420                
+0  NA1_4172716357  1641867754000  ...      420                
+0  NA1_4170168156  1641704148000  ...      420                
+0  NA1_4170079985  1641699993000  ...      420                
+0  NA1_4088774961  1635835372000  ...      450                
+0  NA1_4088725286  1635834184000  ...      450                
+0  NA1_4088741820  1635832827000  ...      450                
+0  NA1_4079357695  1634975201000  ...      400                
+0  NA1_4079404968  1634973809000  ...      440                
+0  NA1_4078046818  1634871929000  ...      420                
+0  NA1_4077565770  1634822964000  ...      420                
+0  NA1_4077524905  1634821014000  ...      420                
+0  NA1_4075282116  1634614503000  ...      420                
+0  NA1_4334322822  1654665999000  ...      420                
+0  NA1_4333157694  1654590131000  ...      420                
+0  NA1_4333165214  1654588184000  ...      420                
+0  NA1_4333171105  1654585745000  ...      420                
+0  NA1_4333136919  1654583594000  ...      420                
+0  NA1_4333112111  1654581116000  ...      420                
+0  NA1_4333080071  1654576490000  ...      400                
+0  NA1_4332660341  1654551300000  ...      420                
+0  NA1_4331672992  1654463077000  ...      420                
+0  NA1_4331647364  1654460792000  ...      420                
+0  NA1_4331632464  1654458506000  ...      420                
+0  NA1_4329968580  1654325441000  ...      420                
+0  NA1_4329934659  1654323345000  ...      420                
+0  NA1_4329929440  1654321694000  ...      420                
+0  NA1_4329903111  1654319287000  ...      420                
+0  NA1_4329854750  1654316526000  ...      420                
+0  NA1_4326785530  1654057178000  ...      420                
+0  NA1_4326748709  1654055003000  ...      420                
+0  NA1_4326731561  1654052701000  ...      420                
+0  NA1_4320574866  1653565635000  ...      400                
+
+[60 rows x 14 columns]
+[2022-06-18 20:34:44,375] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4330786084  1654384867000  ...      430                
+0   NA1_4329761787  1654312376000  ...      400                
+0   NA1_4329704293  1654309936000  ...      420                
+0   NA1_4329678686  1654308142000  ...      420                
+0   NA1_4329682559  1654306110000  ...      420                
+
+[80 rows x 14 columns]
+[2022-06-18 20:34:49,136] {RateLimiterAdapter.py:41} INFO - waiting for 89.930716 seconds...
+[2022-06-18 20:36:20,753] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4255073409  1648020810000  ...      420                
+0   NA1_4255051166  1648017870000  ...      420                
+0   NA1_4254736676  1648003351000  ...      420                
+0   NA1_4254626814  1647999807000  ...      420                
+0   NA1_4254548726  1647997009000  ...      420                
+
+[100 rows x 14 columns]
+[2022-06-18 20:36:27,005] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4329537107  1654299693000  ...      400                
+0   NA1_4329287707  1654277928000  ...      400                
+0   NA1_4329068150  1654239906000  ...      900                
+0   NA1_4329045978  1654238553000  ...      900                
+0   NA1_4328879998  1654225275000  ...      400                
+
+[120 rows x 14 columns]
+[2022-06-18 20:36:32,894] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4325892007  1653971205000  ...      900                
+0   NA1_4325825095  1653969172000  ...      420                
+0   NA1_4325789822  1653967373000  ...      420                
+0   NA1_4325652074  1653965111000  ...      440                
+0   NA1_4325517709  1653963708000  ...      440                
+
+[140 rows x 14 columns]
+[2022-06-18 20:36:38,942] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4278399053  1650253216000  ...        0                
+0   NA1_4278399032  1650252879000  ...        0                
+0   NA1_4279747904  1650174836000  ...      420                
+0   NA1_4276026944  1650012387000  ...        0                
+0   NA1_4269586560  1649301864000  ...      420                
+
+[160 rows x 14 columns]
+[2022-06-18 20:36:44,879] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4259293060  1648431121000  ...      450                
+0   NA1_4259226703  1648428718000  ...      450                
+0   NA1_4258409514  1648348790000  ...      420                
+0   NA1_4257154147  1648250055000  ...      450                
+0   NA1_4256451975  1648174080000  ...      450                
+
+[180 rows x 14 columns]
+[2022-06-18 20:36:47,845] {RateLimiterAdapter.py:41} INFO - waiting for 91.667434 seconds...
+[2022-06-18 20:38:22,846] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4345141908  1655437072000  ...      420                
+0   NA1_4344692236  1655408687000  ...      420                
+0   NA1_4344656319  1655405966000  ...      420                
+0   NA1_4344672193  1655403671000  ...      420                
+0   NA1_4344618083  1655401111000  ...      420                
+..             ...            ...  ...      ...             ...
+0   NA1_4315601597  1653176953000  ...      900                
+0   NA1_4315590010  1653176159000  ...      900                
+0   NA1_4315517504  1653174694000  ...      900                
+0   NA1_4315515225  1653173707000  ...      900                
+0   NA1_4315541309  1653172464000  ...      900                
+
+[200 rows x 14 columns]
+[2022-06-18 20:38:22,897] {_universal.py:475} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/players/2022/6/18/20.json?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '0'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '989f699e-ef46-11ec-8327-0242ac120006'/nNo body was attached to the request
+[2022-06-18 20:38:23,355] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sat, 18 Jun 2022 20:38:23 GMT'/n    'ETag': '"0x8DA516A7D096596"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '9c1ce7cf-401e-0049-3f53-83d24b000000'/n    'x-ms-client-request-id': '989f699e-ef46-11ec-8327-0242ac120006'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sat, 18 Jun 2022 20:38:23 GMT'
+[2022-06-18 20:38:23,355] {riot_matchdetails_toADLS_Operator.py:138} INFO - players loaded
+[2022-06-18 20:38:23,357] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/18/20.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '1032192'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '98e58168-ef46-11ec-8327-0242ac120006'/nA body is sent with the request
+[2022-06-18 20:38:24,474] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sat, 18 Jun 2022 20:38:24 GMT'/n    'ETag': '"0x8DA516A7DB2D41D"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '9c1ce816-401e-0049-7953-83d24b000000'/n    'x-ms-client-request-id': '98e58168-ef46-11ec-8327-0242ac120006'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sat, 18 Jun 2022 20:38:24 GMT'
+[2022-06-18 20:38:24,474] {riot_matchdetails_toADLS_Operator.py:149} INFO - match-details loaded
+[2022-06-18 20:38:24,475] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-info/2022/6/18/20.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '29830'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '99902f28-ef46-11ec-8327-0242ac120006'/nA body is sent with the request
+[2022-06-18 20:38:24,621] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sat, 18 Jun 2022 20:38:24 GMT'/n    'ETag': '"0x8DA516A7DCB10D5"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '9c1ce941-401e-0049-0953-83d24b000000'/n    'x-ms-client-request-id': '99902f28-ef46-11ec-8327-0242ac120006'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sat, 18 Jun 2022 20:38:24 GMT'
+[2022-06-18 20:38:24,621] {riot_matchdetails_toADLS_Operator.py:160} INFO - match-info loaded
+[2022-06-18 20:38:24,626] {riot_matchdetails_toADLS_Operator.py:61} INFO - Upload match data to Azure!
+[2022-06-18 20:38:24,636] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T202930, start_date=20220618T203418, end_date=20220618T203824
+[2022-06-18 20:38:24,675] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-18 20:38:24,708] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check

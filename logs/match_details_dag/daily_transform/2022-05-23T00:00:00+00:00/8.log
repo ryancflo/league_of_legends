@@ -76,3 +76,36 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
 [2022-06-10 00:34:45,392] {local_task_job.py:154} INFO - Task exited with return code 1
 [2022-06-10 00:34:45,433] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-14 23:45:35,456] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [None]>
+[2022-06-14 23:45:35,467] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [None]>
+[2022-06-14 23:45:35,467] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 23:45:35,467] {taskinstance.py:1244} INFO - Starting attempt 8 of 9
+[2022-06-14 23:45:35,467] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 23:45:35,477] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): daily_transform> on 2022-05-23 00:00:00+00:00
+[2022-06-14 23:45:35,482] {standard_task_runner.py:52} INFO - Started process 123 to run task
+[2022-06-14 23:45:35,485] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'daily_transform', 'scheduled__2022-05-23T00:00:00+00:00', '--job-id', '102', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp04stqdn1', '--error-file', '/tmp/tmp9anvl84d']
+[2022-06-14 23:45:35,486] {standard_task_runner.py:77} INFO - Job 102: Subtask daily_transform
+[2022-06-14 23:45:35,529] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.daily_transform scheduled__2022-05-23T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-14 23:45:35,575] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=daily_transform
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-23T00:00:00+00:00
+[2022-06-14 23:45:35,576] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-14 23:45:35,576] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps']
+[2022-06-14 23:45:35,586] {subprocess.py:85} INFO - Output:
+[2022-06-14 23:45:38,563] {subprocess.py:89} INFO - 23:45:38  Running with dbt=1.1.0
+[2022-06-14 23:45:38,921] {subprocess.py:89} INFO - 23:45:38  Installing dbt-labs/dbt_utils
+[2022-06-14 23:45:39,502] {subprocess.py:89} INFO - 23:45:39    Installed from version 0.8.5
+[2022-06-14 23:45:39,503] {subprocess.py:89} INFO - 23:45:39    Up to date!
+[2022-06-14 23:45:40,044] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-06-14 23:45:40,065] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=daily_transform, execution_date=20220523T000000, start_date=20220614T234535, end_date=20220614T234540
+[2022-06-14 23:45:40,117] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-14 23:45:40,149] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-14 23:45:40,165] {dagrun.py:545} INFO - Marking run <DagRun match_details_dag @ 2022-05-23 00:00:00+00:00: scheduled__2022-05-23T00:00:00+00:00, externally triggered: False> successful
+[2022-06-14 23:45:40,166] {dagrun.py:590} INFO - DagRun Finished: dag_id=match_details_dag, execution_date=2022-05-23 00:00:00+00:00, run_id=scheduled__2022-05-23T00:00:00+00:00, run_start_date=None, run_end_date=2022-06-14 23:45:40.166123+00:00, run_duration=None, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2022-05-23 00:00:00+00:00, data_interval_end=2022-05-23 01:00:00+00:00, dag_hash=84da3ab72fdb27df376ee0b1e7ae6baa
+[2022-06-14 23:45:40,166] {dagrun.py:749} WARNING - Failed to record duration of <DagRun match_details_dag @ 2022-05-23 00:00:00+00:00: scheduled__2022-05-23T00:00:00+00:00, externally triggered: False>: start_date is not set.

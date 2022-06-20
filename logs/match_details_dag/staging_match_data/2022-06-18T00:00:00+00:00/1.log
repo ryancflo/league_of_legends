@@ -1,0 +1,1029 @@
+[2022-06-18 20:17:21,934] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-18 20:17:21,942] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-18 20:17:21,942] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:17:21,942] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-18 20:17:21,942] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:17:21,952] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-18 20:17:21,956] {standard_task_runner.py:52} INFO - Started process 66 to run task
+[2022-06-18 20:17:21,959] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '132', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmptwciyaoe', '--error-file', '/tmp/tmp6g8dmhpt']
+[2022-06-18 20:17:21,959] {standard_task_runner.py:77} INFO - Job 132: Subtask staging_match_data
+[2022-06-18 20:17:21,999] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-18 20:17:22,044] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-18 20:17:22,044] {riot_matchdetails_toADLS_Operator.py:52} INFO - StageToAzureLake not implemented yet
+[2022-06-18 20:17:22,054] {riot_matchdetails_toADLS_Operator.py:61} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7fc6e8d57a30>>
+[2022-06-18 20:17:22,054] {riot_matchdetails_toADLS_Operator.py:62} INFO - Created Azure Connection
+[2022-06-18 20:17:22,062] {riot_matchdetails_toADLS_Operator.py:65} INFO - Created Riot Connection
+[2022-06-18 20:17:22,481] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-18 20:17:22,481] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-18 20:17:22,481] {Limits.py:87} INFO - rate limit changed from 0/0s to 30/10s
+[2022-06-18 20:17:22,481] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/600s
+[2022-06-18 20:17:22,482] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 53, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 68, in upload_to_azureLake
+    top10_players = players[:10]
+TypeError: unhashable type: 'slice'
+[2022-06-18 20:17:22,492] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220618T201721, end_date=20220618T201722
+[2022-06-18 20:17:22,511] {standard_task_runner.py:89} ERROR - Failed to execute job 132 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 53, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 68, in upload_to_azureLake
+    top10_players = players[:10]
+TypeError: unhashable type: 'slice'
+[2022-06-18 20:17:22,534] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-18 20:17:22,565] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-18 20:26:53,975] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-18 20:26:53,983] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-18 20:26:53,983] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:26:53,983] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-18 20:26:53,983] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 20:26:53,992] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-18 20:26:53,996] {standard_task_runner.py:52} INFO - Started process 72 to run task
+[2022-06-18 20:26:53,998] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '134', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp0zhqnx3s', '--error-file', '/tmp/tmpt4es7yx_']
+[2022-06-18 20:26:53,999] {standard_task_runner.py:77} INFO - Job 134: Subtask staging_match_data
+[2022-06-18 20:26:54,036] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-18 20:26:54,077] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-18 20:26:54,078] {riot_matchdetails_toADLS_Operator.py:59} INFO - StageToAzureLake not implemented yet
+[2022-06-18 20:26:54,086] {riot_matchdetails_toADLS_Operator.py:68} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7fc6e28f0d60>>
+[2022-06-18 20:26:54,086] {riot_matchdetails_toADLS_Operator.py:69} INFO - Created Azure Connection
+[2022-06-18 20:26:54,095] {riot_matchdetails_toADLS_Operator.py:72} INFO - Created Riot Connection
+[2022-06-18 20:26:54,324] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-18 20:26:54,324] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-18 20:26:54,324] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-18 20:26:54,325] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/RANKED_SOLO_5x5/PLATINUM?page=I
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 60, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 74, in upload_to_azureLake
+    players = riot_hook.get_leagues(self.region, self.match_queue, self.tier, self.division, self.page)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 35, in get_leagues
+    summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/LeagueApiV4.py", line 110, in entries
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/RANKED_SOLO_5x5/PLATINUM?page=I
+[2022-06-18 20:26:54,337] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220618T202653, end_date=20220618T202654
+[2022-06-18 20:26:54,349] {standard_task_runner.py:89} ERROR - Failed to execute job 134 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/RANKED_SOLO_5x5/PLATINUM?page=I
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 60, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 74, in upload_to_azureLake
+    players = riot_hook.get_leagues(self.region, self.match_queue, self.tier, self.division, self.page)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 35, in get_leagues
+    summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/LeagueApiV4.py", line 110, in entries
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/RANKED_SOLO_5x5/PLATINUM?page=I
+[2022-06-18 20:26:54,372] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-18 20:26:54,405] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-19 06:12:02,064] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-19 06:12:02,077] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-19 06:12:02,077] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 06:12:02,078] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-19 06:12:02,078] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 06:12:02,097] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-19 06:12:02,107] {standard_task_runner.py:52} INFO - Started process 63 to run task
+[2022-06-19 06:12:02,111] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpgtfd34_d', '--error-file', '/tmp/tmp2au268c_']
+[2022-06-19 06:12:02,112] {standard_task_runner.py:77} INFO - Job 139: Subtask staging_match_data
+[2022-06-19 06:12:02,166] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-19 06:12:02,220] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-19 06:12:02,221] {riot_matchdetails_toADLS_Operator.py:59} INFO - StageToAzureLake not implemented yet
+[2022-06-19 06:12:02,235] {riot_matchdetails_toADLS_Operator.py:68} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f4761f4cdc0>>
+[2022-06-19 06:12:02,235] {riot_matchdetails_toADLS_Operator.py:69} INFO - Created Azure Connection
+[2022-06-19 06:12:02,244] {riot_matchdetails_toADLS_Operator.py:72} INFO - Created Riot Connection
+[2022-06-19 06:12:02,758] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 06:12:02,759] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 06:12:02,759] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-19 06:12:02,857] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-19 06:12:03,213] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 06:12:03,213] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 06:12:03,213] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-19 06:12:03,400] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-19 06:12:10,315] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4335556201  1654747815000  ...      400                
+0  NA1_4335458277  1654745591000  ...      400                
+0  NA1_4335306525  1654737220000  ...      440                
+0  NA1_4334085986  1654653871000  ...      400                
+0  NA1_4334029757  1654651606000  ...      400                
+0  NA1_4332814278  1654564897000  ...      400                
+0  NA1_4332745376  1654561793000  ...      400                
+0  NA1_4332122770  1654488639000  ...      400                
+0  NA1_4331878007  1654477309000  ...      440                
+0  NA1_4331869865  1654474360000  ...      400                
+0  NA1_4331210528  1654407704000  ...      900                
+0  NA1_4331117478  1654406460000  ...      900                
+0  NA1_4331113382  1654405037000  ...      450                
+0  NA1_4331068841  1654403560000  ...      450                
+0  NA1_4329608324  1654304421000  ...      400                
+0  NA1_4329602413  1654302086000  ...      400                
+0  NA1_4329537107  1654299693000  ...      400                
+0  NA1_4329287707  1654277928000  ...      400                
+0  NA1_4329068150  1654239906000  ...      900                
+0  NA1_4329045978  1654238553000  ...      900                
+
+[20 rows x 14 columns]
+[2022-06-19 06:12:17,528] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4335556201  1654747815000  ...      400                
+0  NA1_4335458277  1654745591000  ...      400                
+0  NA1_4335306525  1654737220000  ...      440                
+0  NA1_4334085986  1654653871000  ...      400                
+0  NA1_4334029757  1654651606000  ...      400                
+0  NA1_4332814278  1654564897000  ...      400                
+0  NA1_4332745376  1654561793000  ...      400                
+0  NA1_4332122770  1654488639000  ...      400                
+0  NA1_4331878007  1654477309000  ...      440                
+0  NA1_4331869865  1654474360000  ...      400                
+0  NA1_4331210528  1654407704000  ...      900                
+0  NA1_4331117478  1654406460000  ...      900                
+0  NA1_4331113382  1654405037000  ...      450                
+0  NA1_4331068841  1654403560000  ...      450                
+0  NA1_4329608324  1654304421000  ...      400                
+0  NA1_4329602413  1654302086000  ...      400                
+0  NA1_4329537107  1654299693000  ...      400                
+0  NA1_4329287707  1654277928000  ...      400                
+0  NA1_4329068150  1654239906000  ...      900                
+0  NA1_4329045978  1654238553000  ...      900                
+0  NA1_4218694874  1644975398000  ...      420                
+0  NA1_4213291624  1644531064000  ...      420                
+0  NA1_4213247278  1644528952000  ...      420                
+0  NA1_4213232903  1644526357000  ...      420                
+0  NA1_4213166542  1644522422000  ...      420                
+0  NA1_4213191834  1644519758000  ...      420                
+0  NA1_4213119078  1644517627000  ...      420                
+0  NA1_4213135756  1644515400000  ...      420                
+0  NA1_4213150643  1644511766000  ...      420                
+0  NA1_4213097240  1644508804000  ...      420                
+0  NA1_4212296278  1644441545000  ...      420                
+0  NA1_4212292956  1644439720000  ...      420                
+0  NA1_4212189338  1644437314000  ...      420                
+0  NA1_4212195706  1644435194000  ...      420                
+0  NA1_4212052950  1644425972000  ...      420                
+0  NA1_4212052278  1644425392000  ...      420                
+0  NA1_4211987631  1644422157000  ...      420                
+0  NA1_4211962494  1644416851000  ...      420                
+0  NA1_4211070341  1644353739000  ...      420                
+0  NA1_4211006677  1644351598000  ...      420                
+
+[40 rows x 14 columns]
+[2022-06-19 06:12:24,263] {logging_mixin.py:109} INFO -           matchId   gameCreation  ...  queueId  tournamentCode
+0  NA1_4335556201  1654747815000  ...      400                
+0  NA1_4335458277  1654745591000  ...      400                
+0  NA1_4335306525  1654737220000  ...      440                
+0  NA1_4334085986  1654653871000  ...      400                
+0  NA1_4334029757  1654651606000  ...      400                
+0  NA1_4332814278  1654564897000  ...      400                
+0  NA1_4332745376  1654561793000  ...      400                
+0  NA1_4332122770  1654488639000  ...      400                
+0  NA1_4331878007  1654477309000  ...      440                
+0  NA1_4331869865  1654474360000  ...      400                
+0  NA1_4331210528  1654407704000  ...      900                
+0  NA1_4331117478  1654406460000  ...      900                
+0  NA1_4331113382  1654405037000  ...      450                
+0  NA1_4331068841  1654403560000  ...      450                
+0  NA1_4329608324  1654304421000  ...      400                
+0  NA1_4329602413  1654302086000  ...      400                
+0  NA1_4329537107  1654299693000  ...      400                
+0  NA1_4329287707  1654277928000  ...      400                
+0  NA1_4329068150  1654239906000  ...      900                
+0  NA1_4329045978  1654238553000  ...      900                
+0  NA1_4218694874  1644975398000  ...      420                
+0  NA1_4213291624  1644531064000  ...      420                
+0  NA1_4213247278  1644528952000  ...      420                
+0  NA1_4213232903  1644526357000  ...      420                
+0  NA1_4213166542  1644522422000  ...      420                
+0  NA1_4213191834  1644519758000  ...      420                
+0  NA1_4213119078  1644517627000  ...      420                
+0  NA1_4213135756  1644515400000  ...      420                
+0  NA1_4213150643  1644511766000  ...      420                
+0  NA1_4213097240  1644508804000  ...      420                
+0  NA1_4212296278  1644441545000  ...      420                
+0  NA1_4212292956  1644439720000  ...      420                
+0  NA1_4212189338  1644437314000  ...      420                
+0  NA1_4212195706  1644435194000  ...      420                
+0  NA1_4212052950  1644425972000  ...      420                
+0  NA1_4212052278  1644425392000  ...      420                
+0  NA1_4211987631  1644422157000  ...      420                
+0  NA1_4211962494  1644416851000  ...      420                
+0  NA1_4211070341  1644353739000  ...      420                
+0  NA1_4211006677  1644351598000  ...      420                
+0  NA1_4336168736  1654806007000  ...      400                
+0  NA1_4336133970  1654803393000  ...      900                
+0  NA1_4336161011  1654802251000  ...      900                
+0  NA1_4335998872  1654795290000  ...      900                
+0  NA1_4335259415  1654735054000  ...      900                
+0  NA1_4334984164  1654718372000  ...      900                
+0  NA1_4335011003  1654717018000  ...      900                
+0  NA1_4334899787  1654705927000  ...      900                
+0  NA1_4334847382  1654704362000  ...      900                
+0  NA1_4334129558  1654657807000  ...      900                
+0  NA1_4334103620  1654655845000  ...      900                
+0  NA1_4333999353  1654651540000  ...      900                
+0  NA1_4333616426  1654632838000  ...      900                
+0  NA1_4333614230  1654631646000  ...      900                
+0  NA1_4332858583  1654569238000  ...      900                
+0  NA1_4332731829  1654560314000  ...      900                
+0  NA1_4332650030  1654551050000  ...      400                
+0  NA1_4332605961  1654549189000  ...      400                
+0  NA1_4332593171  1654547493000  ...      900                
+0  NA1_4332460843  1654533077000  ...      900                
+
+[60 rows x 14 columns]
+[2022-06-19 06:12:31,575] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4255586218  1648087298000  ...      420                
+0   NA1_4255556221  1648084401000  ...      420                
+0   NA1_4255424620  1648074453000  ...      420                
+0   NA1_4255402263  1648072845000  ...      420                
+0   NA1_4255356900  1648070004000  ...      420                
+
+[80 rows x 14 columns]
+[2022-06-19 06:12:36,622] {RateLimiterAdapter.py:41} INFO - waiting for 86.591533 seconds...
+[2022-06-19 06:14:05,538] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4252564537  1647805878000  ...      420                
+0   NA1_4252522528  1647803947000  ...      420                
+0   NA1_4252497479  1647801486000  ...      420                
+0   NA1_4252465543  1647800072000  ...      420                
+0   NA1_4252481354  1647798005000  ...      420                
+
+[100 rows x 14 columns]
+[2022-06-19 06:14:13,843] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4322219567  1653710217000  ...      440                
+0   NA1_4322233004  1653708237000  ...      440                
+0   NA1_4321225303  1653619733000  ...      400                
+0   NA1_4321127412  1653617388000  ...      400                
+0   NA1_4320215959  1653533429000  ...      440                
+
+[120 rows x 14 columns]
+[2022-06-19 06:14:22,414] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4191129637  1643014482000  ...      420                
+0   NA1_4191110820  1643009348000  ...      420                
+0   NA1_4190905598  1643006787000  ...      420                
+0   NA1_4190900605  1643004908000  ...      420                
+0   NA1_4190842648  1643002503000  ...      420                
+
+[140 rows x 14 columns]
+[2022-06-19 06:14:29,615] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4235247085  1646429556000  ...        0                
+0   NA1_4236708136  1646364528000  ...      420                
+0   NA1_4236711422  1646362385000  ...      420                
+0   NA1_4236442568  1646344000000  ...      450                
+0   NA1_4236348867  1646334834000  ...      420                
+
+[160 rows x 14 columns]
+[2022-06-19 06:14:37,528] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4266219475  1649031519000  ...      420                
+0   NA1_4266176683  1649026767000  ...      420                
+0   NA1_4266162565  1649024938000  ...      420                
+0   NA1_4266110407  1649019932000  ...      420                
+0   NA1_4266034381  1649017181000  ...      420                
+
+[180 rows x 14 columns]
+[2022-06-19 06:14:41,671] {RateLimiterAdapter.py:41} INFO - waiting for 82.036726 seconds...
+[2022-06-19 06:16:07,647] {logging_mixin.py:109} INFO -            matchId   gameCreation  ...  queueId  tournamentCode
+0   NA1_4335556201  1654747815000  ...      400                
+0   NA1_4335458277  1654745591000  ...      400                
+0   NA1_4335306525  1654737220000  ...      440                
+0   NA1_4334085986  1654653871000  ...      400                
+0   NA1_4334029757  1654651606000  ...      400                
+..             ...            ...  ...      ...             ...
+0   NA1_4258313162  1648341870000  ...      440                
+0   NA1_4258267206  1648339402000  ...      440                
+0   NA1_4258254116  1648337648000  ...      440                
+0   NA1_4258217018  1648334715000  ...      440                
+0   NA1_4257378067  1648261204000  ...      440                
+
+[200 rows x 14 columns]
+[2022-06-19 06:16:07,765] {_universal.py:475} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/players/2022/6/19/6.json?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '0'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '4e7e629c-ef97-11ec-b144-0242ac120004'/nNo body was attached to the request
+[2022-06-19 06:16:08,080] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 06:16:08 GMT'/n    'ETag': '"0x8DA51BB32FAA5DE"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': 'fe034764-701e-00af-1aa4-83c3bb000000'/n    'x-ms-client-request-id': '4e7e629c-ef97-11ec-b144-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 06:16:07 GMT'
+[2022-06-19 06:16:08,081] {riot_matchdetails_toADLS_Operator.py:138} INFO - players loaded
+[2022-06-19 06:16:08,082] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/19/6.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '1047801'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '4eaee1ec-ef97-11ec-b144-0242ac120004'/nA body is sent with the request
+[2022-06-19 06:16:08,777] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 06:16:08 GMT'/n    'ETag': '"0x8DA51BB33655F82"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': 'fe034784-701e-00af-36a4-83c3bb000000'/n    'x-ms-client-request-id': '4eaee1ec-ef97-11ec-b144-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 06:16:08 GMT'
+[2022-06-19 06:16:08,778] {riot_matchdetails_toADLS_Operator.py:149} INFO - match-details loaded
+[2022-06-19 06:16:08,779] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-info/2022/6/19/6.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '29863'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '4f19313c-ef97-11ec-b144-0242ac120004'/nA body is sent with the request
+[2022-06-19 06:16:08,920] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Sun, 19 Jun 2022 06:16:09 GMT'/n    'ETag': '"0x8DA51BB337AB9DF"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': 'fe03487d-701e-00af-19a4-83c3bb000000'/n    'x-ms-client-request-id': '4f19313c-ef97-11ec-b144-0242ac120004'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Sun, 19 Jun 2022 06:16:08 GMT'
+[2022-06-19 06:16:08,920] {riot_matchdetails_toADLS_Operator.py:160} INFO - match-info loaded
+[2022-06-19 06:16:08,930] {riot_matchdetails_toADLS_Operator.py:61} INFO - Upload match data to Azure!
+[2022-06-19 06:16:08,941] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220619T061202, end_date=20220619T061608
+[2022-06-19 06:16:08,966] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-19 06:16:09,004] {local_task_job.py:264} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2022-06-19 07:58:23,794] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-19 07:58:23,805] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-19 07:58:23,805] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 07:58:23,805] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-19 07:58:23,805] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 07:58:23,819] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-19 07:58:23,826] {standard_task_runner.py:52} INFO - Started process 71 to run task
+[2022-06-19 07:58:23,829] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpc2i5zk70', '--error-file', '/tmp/tmp32epsm7c']
+[2022-06-19 07:58:23,830] {standard_task_runner.py:77} INFO - Job 141: Subtask staging_match_data
+[2022-06-19 07:58:23,888] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-19 07:58:23,944] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-19 07:58:23,945] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-19 07:58:23,958] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f4761f4cdc0>>
+[2022-06-19 07:58:23,958] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-19 07:58:23,969] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-19 07:58:24,424] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 07:58:24,425] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 07:58:24,425] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-19 07:58:24,515] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-19 07:58:24,734] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-19 07:58:24,734] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-19 07:58:24,734] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-19 07:58:24,735] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/lFMaiG2SEG_nHgpTJpZzWPjV3j4yx5sn5-YSlurgy1McU0HtgfEmH4AjdBcDP_64GYIMS27PgcSwQQ/ids?start=10&count=ranked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 87, in upload_to_azureLake
+    matches = riot_hook.get_matchlist_by_puuid(self.region, summoner['puuid'], count=self.count, queue_type=self.queue_type)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 25, in get_matchlist_by_puuid
+    match_history_list = self.lol_watcher.match.matchlist_by_puuid(my_region, puuid, count, queue_type, start_epoch, end_epoch)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/helpers.py", line 32, in remapper
+    return api_call(*nargs, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/MatchApiV5.py", line 73, in matchlist_by_puuid
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/lFMaiG2SEG_nHgpTJpZzWPjV3j4yx5sn5-YSlurgy1McU0HtgfEmH4AjdBcDP_64GYIMS27PgcSwQQ/ids?start=10&count=ranked
+[2022-06-19 07:58:24,757] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220619T075823, end_date=20220619T075824
+[2022-06-19 07:58:24,778] {standard_task_runner.py:89} ERROR - Failed to execute job 141 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/lFMaiG2SEG_nHgpTJpZzWPjV3j4yx5sn5-YSlurgy1McU0HtgfEmH4AjdBcDP_64GYIMS27PgcSwQQ/ids?start=10&count=ranked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 87, in upload_to_azureLake
+    matches = riot_hook.get_matchlist_by_puuid(self.region, summoner['puuid'], count=self.count, queue_type=self.queue_type)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 25, in get_matchlist_by_puuid
+    match_history_list = self.lol_watcher.match.matchlist_by_puuid(my_region, puuid, count, queue_type, start_epoch, end_epoch)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/helpers.py", line 32, in remapper
+    return api_call(*nargs, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/MatchApiV5.py", line 73, in matchlist_by_puuid
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/lFMaiG2SEG_nHgpTJpZzWPjV3j4yx5sn5-YSlurgy1McU0HtgfEmH4AjdBcDP_64GYIMS27PgcSwQQ/ids?start=10&count=ranked
+[2022-06-19 07:58:24,806] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-19 07:58:24,848] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-20 05:18:49,496] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:18:49,504] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:18:49,505] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:18:49,505] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-20 05:18:49,505] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:18:49,515] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-20 05:18:49,519] {standard_task_runner.py:52} INFO - Started process 63 to run task
+[2022-06-20 05:18:49,521] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpvnm5ud6a', '--error-file', '/tmp/tmp277ir0t8']
+[2022-06-20 05:18:49,522] {standard_task_runner.py:77} INFO - Job 145: Subtask staging_match_data
+[2022-06-20 05:18:49,562] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-20 05:18:49,602] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-20 05:18:49,602] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-20 05:18:49,611] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f995e1c4e50>>
+[2022-06-20 05:18:49,611] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-20 05:18:49,617] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-20 05:18:49,885] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/PLATINUM/I?page=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 76, in upload_to_azureLake
+    players = riot_hook.get_leagues(self.region, self.match_queue, self.tier, self.division, self.page)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 35, in get_leagues
+    summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/LeagueApiV4.py", line 110, in entries
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/PLATINUM/I?page=1
+[2022-06-20 05:18:49,900] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220620T051849, end_date=20220620T051849
+[2022-06-20 05:18:49,914] {standard_task_runner.py:89} ERROR - Failed to execute job 145 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 18, in after_request
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/PLATINUM/I?page=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 76, in upload_to_azureLake
+    players = riot_hook.get_leagues(self.region, self.match_queue, self.tier, self.division, self.page)
+  File "/opt/airflow/plugins/custom_hooks/riot_hook.py", line 35, in get_leagues
+    summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/league_of_legends/LeagueApiV4.py", line 110, in entries
+    return self._request_endpoint(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/NamedEndpoint.py", line 36, in _request_endpoint
+    return self._base_api.raw_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/_apis/BaseApi.py", line 51, in raw_request
+    mod = handler.after_request(
+  File "/home/airflow/.local/lib/python3.8/site-packages/riotwatcher/Handlers/ThrowOnErrorHandler.py", line 20, in after_request
+    raise ApiError(*err.args, request=err.request, response=err.response)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://na1.api.riotgames.com/lol/league/v4/entries/RANKED_SOLO_5x5/PLATINUM/I?page=1
+[2022-06-20 05:18:49,934] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-20 05:18:49,968] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-20 05:37:37,786] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:37:37,794] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:37:37,794] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:37:37,794] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-20 05:37:37,794] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:37:37,803] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-20 05:37:37,807] {standard_task_runner.py:52} INFO - Started process 142 to run task
+[2022-06-20 05:37:37,810] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpl0eo8d2b', '--error-file', '/tmp/tmpf_z64sfk']
+[2022-06-20 05:37:37,810] {standard_task_runner.py:77} INFO - Job 162: Subtask staging_match_data
+[2022-06-20 05:37:37,850] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-20 05:37:37,891] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-20 05:37:37,891] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-20 05:37:37,902] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f995e1c4e50>>
+[2022-06-20 05:37:37,902] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-20 05:37:37,909] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-20 05:37:38,265] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 05:37:38,265] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 05:37:38,265] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-20 05:37:38,266] {logging_mixin.py:109} INFO - [{'leagueId': '49ecb9ed-5b83-4b8f-9d0b-82c1a483ae0f', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'HdxS18ksOdstUGgfPIsfM4XNFuLAURXzpd91aMErixXM-E3J', 'summonerName': 'SmiteIsDeadGame', 'leaguePoints': 100, 'wins': 19, 'losses': 20, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 0, 'progress': 'NNNNN'}}, {'leagueId': '3077d668-5344-4f97-970b-4965e1d76f5a', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'etzoRcqNcxdfPl4zkLea-wPSMWpJBDkotzkQ8HQtsvBOuT2L', 'summonerName': 'tuotA', 'leaguePoints': 100, 'wins': 66, 'losses': 58, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 1, 'progress': 'LNNNN'}}]
+[2022-06-20 05:37:38,350] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-20 05:37:38,670] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 05:37:38,670] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 05:37:38,670] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-20 05:37:38,860] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-20 05:37:39,417] {riot_matchdetails_toADLS_Operator.py:128} INFO - /tmp/tmpsl03df67/match_details.csv
+[2022-06-20 05:37:39,418] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/20/5.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '12182'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '19066514-f05b-11ec-9b18-0242ac120007'/nA body is sent with the request
+[2022-06-20 05:37:39,627] {_universal.py:503} INFO - Response status: 409/nResponse headers:/n    'Content-Length': '220'/n    'Content-Type': 'application/xml'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': 'f58aa24f-001e-00ab-5067-843639000000'/n    'x-ms-client-request-id': '19066514-f05b-11ec-9b18-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-error-code': 'REDACTED'/n    'Date': 'Mon, 20 Jun 2022 05:37:40 GMT'
+[2022-06-20 05:37:39,629] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 129, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z</Message></Error>
+[2022-06-20 05:37:39,648] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220620T053737, end_date=20220620T053739
+[2022-06-20 05:37:39,660] {standard_task_runner.py:89} ERROR - Failed to execute job 162 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 129, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:f58aa24f-001e-00ab-5067-843639000000
+Time:2022-06-20T05:37:40.7554415Z</Message></Error>
+[2022-06-20 05:37:39,671] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-20 05:37:39,706] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-20 05:57:00,778] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:57:00,792] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 05:57:00,792] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:57:00,792] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-20 05:57:00,792] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 05:57:00,806] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-20 05:57:00,810] {standard_task_runner.py:52} INFO - Started process 163 to run task
+[2022-06-20 05:57:00,813] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp1bt29aki', '--error-file', '/tmp/tmp42c7ojgm']
+[2022-06-20 05:57:00,815] {standard_task_runner.py:77} INFO - Job 169: Subtask staging_match_data
+[2022-06-20 05:57:00,867] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-20 05:57:00,915] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-20 05:57:00,916] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-20 05:57:00,926] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f995e1c4e50>>
+[2022-06-20 05:57:00,926] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-20 05:57:00,936] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-20 05:57:01,374] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 05:57:01,375] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 05:57:01,375] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-20 05:57:01,376] {logging_mixin.py:109} INFO - [{'leagueId': '49ecb9ed-5b83-4b8f-9d0b-82c1a483ae0f', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'HdxS18ksOdstUGgfPIsfM4XNFuLAURXzpd91aMErixXM-E3J', 'summonerName': 'SmiteIsDeadGame', 'leaguePoints': 100, 'wins': 19, 'losses': 20, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 0, 'progress': 'NNNNN'}}, {'leagueId': '3077d668-5344-4f97-970b-4965e1d76f5a', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'etzoRcqNcxdfPl4zkLea-wPSMWpJBDkotzkQ8HQtsvBOuT2L', 'summonerName': 'tuotA', 'leaguePoints': 100, 'wins': 66, 'losses': 58, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 1, 'progress': 'LNNNN'}}]
+[2022-06-20 05:57:01,459] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-20 05:57:01,776] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 05:57:01,777] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 05:57:01,777] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-20 05:57:01,977] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-20 05:57:02,543] {riot_matchdetails_toADLS_Operator.py:128} INFO - /tmp/tmp51ayps6y/match_details.csv
+[2022-06-20 05:57:02,545] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/20/5.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '12182'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': 'ce4d74a6-f05d-11ec-9e7c-0242ac120007'/nA body is sent with the request
+[2022-06-20 05:57:02,873] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Mon, 20 Jun 2022 05:57:03 GMT'/n    'ETag': '"0x8DA5281B35DD6F4"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '5b58bff5-501e-00de-416a-84b182000000'/n    'x-ms-client-request-id': 'ce4d74a6-f05d-11ec-9e7c-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Mon, 20 Jun 2022 05:57:03 GMT'
+[2022-06-20 05:57:02,873] {riot_matchdetails_toADLS_Operator.py:138} INFO - match-details loaded
+[2022-06-20 05:57:02,873] {riot_matchdetails_toADLS_Operator.py:140} INFO - /tmp/tmp51ayps6y/match_info.csv
+[2022-06-20 05:57:02,874] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-info/2022/6/20/5.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '455'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': 'ce7fbc7c-f05d-11ec-9e7c-0242ac120007'/nA body is sent with the request
+[2022-06-20 05:57:03,095] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Mon, 20 Jun 2022 05:57:04 GMT'/n    'ETag': '"0x8DA5281B380160F"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '5b58c013-501e-00de-546a-84b182000000'/n    'x-ms-client-request-id': 'ce7fbc7c-f05d-11ec-9e7c-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Mon, 20 Jun 2022 05:57:03 GMT'
+[2022-06-20 05:57:03,095] {riot_matchdetails_toADLS_Operator.py:150} INFO - match-info loaded
+[2022-06-20 05:57:03,096] {logging_mixin.py:109} INFO - [{"leagueId": "49ecb9ed-5b83-4b8f-9d0b-82c1a483ae0f", "queueType": "RANKED_SOLO_5x5", "tier": "PLATINUM", "rank": "I", "summonerId": "HdxS18ksOdstUGgfPIsfM4XNFuLAURXzpd91aMErixXM-E3J", "summonerName": "SmiteIsDeadGame", "leaguePoints": 100, "wins": 19, "losses": 20, "veteran": false, "inactive": false, "freshBlood": false, "hotStreak": false, "miniSeries": {"target": 3, "wins": 0, "losses": 0, "progress": "NNNNN"}}, {"leagueId": "3077d668-5344-4f97-970b-4965e1d76f5a", "queueType": "RANKED_SOLO_5x5", "tier": "PLATINUM", "rank": "I", "summonerId": "etzoRcqNcxdfPl4zkLea-wPSMWpJBDkotzkQ8HQtsvBOuT2L", "summonerName": "tuotA", "leaguePoints": 100, "wins": 66, "losses": 58, "veteran": false, "inactive": false, "freshBlood": false, "hotStreak": false, "miniSeries": {"target": 3, "wins": 0, "losses": 1, "progress": "LNNNN"}}]
+[2022-06-20 05:57:03,098] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/players/2022/6/20/5.json?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '828'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': 'cea1cd26-f05d-11ec-9e7c-0242ac120007'/nA body is sent with the request
+[2022-06-20 05:57:03,278] {_universal.py:503} INFO - Response status: 201/nResponse headers:/n    'Content-Length': '0'/n    'Content-MD5': 'REDACTED'/n    'Last-Modified': 'Mon, 20 Jun 2022 05:57:04 GMT'/n    'ETag': '"0x8DA5281B39BFBEF"'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '5b58c028-501e-00de-636a-84b182000000'/n    'x-ms-client-request-id': 'cea1cd26-f05d-11ec-9e7c-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-content-crc64': 'REDACTED'/n    'x-ms-request-server-encrypted': 'REDACTED'/n    'Date': 'Mon, 20 Jun 2022 05:57:03 GMT'
+[2022-06-20 05:57:03,278] {riot_matchdetails_toADLS_Operator.py:171} INFO - players loaded
+[2022-06-20 05:57:03,281] {riot_matchdetails_toADLS_Operator.py:63} INFO - Upload match data to Azure!
+[2022-06-20 05:57:03,291] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220620T055700, end_date=20220620T055703
+[2022-06-20 05:57:03,318] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-20 05:57:03,351] {local_task_job.py:264} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2022-06-20 06:49:06,679] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 06:49:06,689] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [queued]>
+[2022-06-20 06:49:06,689] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 06:49:06,689] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-20 06:49:06,689] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 06:49:06,702] {taskinstance.py:1264} INFO - Executing <Task(riot_matchDetailsToADLSOperator): staging_match_data> on 2022-06-18 00:00:00+00:00
+[2022-06-20 06:49:06,706] {standard_task_runner.py:52} INFO - Started process 241 to run task
+[2022-06-20 06:49:06,708] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'staging_match_data', 'scheduled__2022-06-18T00:00:00+00:00', '--job-id', '185', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpq_h8_e_e', '--error-file', '/tmp/tmp96o64gii']
+[2022-06-20 06:49:06,709] {standard_task_runner.py:77} INFO - Job 185: Subtask staging_match_data
+[2022-06-20 06:49:06,755] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.staging_match_data scheduled__2022-06-18T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-20 06:49:06,800] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=staging_match_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-18T00:00:00+00:00
+[2022-06-20 06:49:06,800] {riot_matchdetails_toADLS_Operator.py:61} INFO - StageToAzureLake not implemented yet
+[2022-06-20 06:49:06,811] {riot_matchdetails_toADLS_Operator.py:70} INFO - <bound method WasbHook.get_conn of <airflow.providers.microsoft.azure.hooks.wasb.WasbHook object at 0x7f995e1c4e50>>
+[2022-06-20 06:49:06,811] {riot_matchdetails_toADLS_Operator.py:71} INFO - Created Azure Connection
+[2022-06-20 06:49:06,819] {riot_matchdetails_toADLS_Operator.py:74} INFO - Created Riot Connection
+[2022-06-20 06:49:07,221] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 06:49:07,221] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 06:49:07,221] {Limits.py:87} INFO - rate limit changed from 0/0s to 50/10s
+[2022-06-20 06:49:07,222] {logging_mixin.py:109} INFO - [{'leagueId': '49ecb9ed-5b83-4b8f-9d0b-82c1a483ae0f', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'HdxS18ksOdstUGgfPIsfM4XNFuLAURXzpd91aMErixXM-E3J', 'summonerName': 'SmiteIsDeadGame', 'leaguePoints': 100, 'wins': 19, 'losses': 20, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 0, 'progress': 'NNNNN'}}, {'leagueId': '3077d668-5344-4f97-970b-4965e1d76f5a', 'queueType': 'RANKED_SOLO_5x5', 'tier': 'PLATINUM', 'rank': 'I', 'summonerId': 'etzoRcqNcxdfPl4zkLea-wPSMWpJBDkotzkQ8HQtsvBOuT2L', 'summonerName': 'tuotA', 'leaguePoints': 100, 'wins': 66, 'losses': 58, 'veteran': False, 'inactive': False, 'freshBlood': False, 'hotStreak': False, 'miniSeries': {'target': 3, 'wins': 0, 'losses': 1, 'progress': 'LNNNN'}}]
+[2022-06-20 06:49:07,308] {Limits.py:87} INFO - rate limit changed from 0/0s to 2000/60s
+[2022-06-20 06:49:07,607] {Limits.py:87} INFO - rate limit changed from 0/0s to 20/1s
+[2022-06-20 06:49:07,608] {Limits.py:87} INFO - rate limit changed from 0/0s to 100/120s
+[2022-06-20 06:49:07,608] {Limits.py:87} INFO - rate limit changed from 0/0s to 500/10s
+[2022-06-20 06:49:07,868] {Limits.py:87} INFO - rate limit changed from 0/0s to 250/10s
+[2022-06-20 06:49:08,447] {riot_matchdetails_toADLS_Operator.py:128} INFO - /tmp/tmp8iuopjln/match_details.csv
+[2022-06-20 06:49:08,449] {_universal.py:472} INFO - Request URL: 'https://leagueoflegends.blob.core.windows.net/match-details/2022/6/20/6.csv?sv=REDACTED&ss=REDACTED&srt=REDACTED&sp=REDACTED&se=REDACTED&st=REDACTED&spr=REDACTED&sig=REDACTED'/nRequest method: 'PUT'/nRequest headers:/n    'x-ms-blob-type': 'REDACTED'/n    'Content-Length': '12182'/n    'If-None-Match': '*'/n    'x-ms-version': 'REDACTED'/n    'Content-Type': 'application/octet-stream'/n    'Accept': 'application/xml'/n    'User-Agent': 'azsdk-python-storage-blob/12.8.1 Python/3.8.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5)'/n    'x-ms-date': 'REDACTED'/n    'x-ms-client-request-id': '157c81b2-f065-11ec-ae53-0242ac120007'/nA body is sent with the request
+[2022-06-20 06:49:08,668] {_universal.py:503} INFO - Response status: 409/nResponse headers:/n    'Content-Length': '220'/n    'Content-Type': 'application/xml'/n    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'/n    'x-ms-request-id': '95baad34-701e-0027-7871-847b62000000'/n    'x-ms-client-request-id': '157c81b2-f065-11ec-ae53-0242ac120007'/n    'x-ms-version': 'REDACTED'/n    'x-ms-error-code': 'REDACTED'/n    'Date': 'Mon, 20 Jun 2022 06:49:09 GMT'
+[2022-06-20 06:49:08,672] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 129, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z</Message></Error>
+[2022-06-20 06:49:08,687] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=staging_match_data, execution_date=20220618T000000, start_date=20220620T064906, end_date=20220620T064908
+[2022-06-20 06:49:08,703] {standard_task_runner.py:89} ERROR - Failed to execute job 185 for task staging_match_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: Operation returned an invalid status 'The specified blob already exists.'
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z</Message></Error>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 62, in execute
+    self.upload_to_azureLake()
+  File "/opt/airflow/plugins/custom_operators/riot_matchdetails_toADLS_Operator.py", line 129, in upload_to_azureLake
+    wasb_hook.load_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 254, in load_file
+    self.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/microsoft/azure/hooks/wasb.py", line 339, in upload
+    return blob_client.upload_blob(data, blob_type, length=length, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/tracing/decorator.py", line 83, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 693, in upload_blob
+    return upload_block_blob(**options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 157, in upload_block_blob
+    process_storage_error(error)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/response_handlers.py", line 150, in process_storage_error
+    error.raise_with_traceback()
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 247, in raise_with_traceback
+    raise super(AzureError, self).with_traceback(self.exc_traceback)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_upload_helpers.py", line 94, in upload_block_blob
+    return client.upload(
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/operations/_block_blob_operations.py", line 228, in upload
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/exceptions.py", line 105, in map_error
+    raise error
+azure.core.exceptions.ResourceExistsError: The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z
+ErrorCode:BlobAlreadyExists
+Error:None
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>BlobAlreadyExists</Code><Message>The specified blob already exists.
+RequestId:95baad34-701e-0027-7871-847b62000000
+Time:2022-06-20T06:49:09.7637635Z</Message></Error>
+[2022-06-20 06:49:08,729] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-20 06:49:08,766] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

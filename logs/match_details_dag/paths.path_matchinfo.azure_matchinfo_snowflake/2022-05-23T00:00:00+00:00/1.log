@@ -116,3 +116,42 @@ file_format=MATCH_INFO_FILEFORMAT, parameters: None
 [2022-06-11 07:12:11,086] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=paths.path_matchinfo.azure_matchinfo_snowflake, execution_date=20220523T000000, start_date=20220611T071209, end_date=20220611T071211
 [2022-06-11 07:12:11,116] {local_task_job.py:154} INFO - Task exited with return code 0
 [2022-06-11 07:12:11,178] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-14 17:44:02,661] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.paths.path_matchinfo.azure_matchinfo_snowflake scheduled__2022-05-23T00:00:00+00:00 [queued]>
+[2022-06-14 17:44:02,670] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.paths.path_matchinfo.azure_matchinfo_snowflake scheduled__2022-05-23T00:00:00+00:00 [queued]>
+[2022-06-14 17:44:02,670] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 17:44:02,670] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-14 17:44:02,670] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-14 17:44:02,680] {taskinstance.py:1264} INFO - Executing <Task(AzureDataLakeToSnowflakeTransferOperator): paths.path_matchinfo.azure_matchinfo_snowflake> on 2022-05-23 00:00:00+00:00
+[2022-06-14 17:44:02,685] {standard_task_runner.py:52} INFO - Started process 86 to run task
+[2022-06-14 17:44:02,687] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'paths.path_matchinfo.azure_matchinfo_snowflake', 'scheduled__2022-05-23T00:00:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpwizxu837', '--error-file', '/tmp/tmpd54vlwyp']
+[2022-06-14 17:44:02,688] {standard_task_runner.py:77} INFO - Job 86: Subtask paths.path_matchinfo.azure_matchinfo_snowflake
+[2022-06-14 17:44:02,731] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.paths.path_matchinfo.azure_matchinfo_snowflake scheduled__2022-05-23T00:00:00+00:00 [running]> on host 9ccbaa06f6ac
+[2022-06-14 17:44:02,775] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=paths.path_matchinfo.azure_matchinfo_snowflake
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-23T00:00:00+00:00
+[2022-06-14 17:44:02,775] {azureToSnowflake.py:73} INFO - Executing COPY command...
+[2022-06-14 17:44:02,784] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-14 17:44:02,785] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-14 17:44:02,785] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-14 17:44:03,461] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-14 17:44:03,587] {cursor.py:734} INFO - query execution done
+[2022-06-14 17:44:03,588] {snowflake.py:324} INFO - Running statement: COPY INTO STAGING_MATCHINFO
+FROM @MY_AZURE_MATCH_INFO_STAGE/
+files=('2022/6/14/17.csv')
+file_format=MATCH_INFO_FILEFORMAT, parameters: None
+[2022-06-14 17:44:03,588] {cursor.py:710} INFO - query: [COPY INTO STAGING_MATCHINFO FROM @MY_AZURE_MATCH_INFO_STAGE/ files=('2022/6/14/1...]
+[2022-06-14 17:44:05,291] {cursor.py:734} INFO - query execution done
+[2022-06-14 17:44:05,291] {snowflake.py:334} INFO - Statement execution info - {'file': 'azure://leagueoflegends.blob.core.windows.net/match-info/2022/6/14/17.csv', 'status': 'LOADED', 'rows_parsed': 20, 'rows_loaded': 20, 'error_limit': 1, 'errors_seen': 0, 'first_error': None, 'first_error_line': None, 'first_error_character': None, 'first_error_column_name': None}
+[2022-06-14 17:44:05,291] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-14 17:44:05,292] {snowflake.py:339} INFO - Snowflake query id: 01a4f248-0000-f843-0000-d9690005109a
+[2022-06-14 17:44:05,292] {connection.py:507} INFO - closed
+[2022-06-14 17:44:05,326] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-14 17:44:05,408] {azureToSnowflake.py:75} INFO - COPY command completed
+[2022-06-14 17:44:05,420] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=paths.path_matchinfo.azure_matchinfo_snowflake, execution_date=20220523T000000, start_date=20220614T174402, end_date=20220614T174405
+[2022-06-14 17:44:05,473] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-14 17:44:05,504] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

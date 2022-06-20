@@ -17,18 +17,23 @@ class riotHook(BaseHook):
         start: int = None,
         count: int = None,
         queue: int = None,
-        type: str = None,
+        queue_type: str = None,
         start_epoch: int = None,
         end_epoch: int = None
     ):
-
-        match_history_list = self.lol_watcher.match.matchlist_by_puuid(my_region, puuid, count, start_epoch, end_epoch)
+        #/lol/match/v5/matches/by-puuid/{puuid}/ids
+        match_history_list = self.lol_watcher.match.matchlist_by_puuid(region=my_region, puuid=puuid, count=count, type=queue_type, start_time=start_epoch, end_time=end_epoch)
         return match_history_list
 
     def get_match_byid(self, my_region: str, match_id: str):
-
+        #/lol/match/v5/matches/{matchId}
         match_details = self.lol_watcher.match.by_id(my_region, match_id)
         return match_details
+
+    def get_leagues(self, my_region: str, queue: str, tier: str, division: str, page: int):
+
+        summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
+        return summoners_league
 
     #DataDragonAPI-champions
     def get_champions(self, league_version: str):
@@ -59,7 +64,7 @@ class riotHook(BaseHook):
 
         summoner_spells = self.lol_watcher.data_dragon.summoner_spells(league_version)
         return summoner_spells['data']
-
+    
     def get_challenger_players(self, my_region: str, mode: str):
 
         challengers = self.lol_watcher.league.challenger_by_queue(my_region, mode)
