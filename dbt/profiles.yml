@@ -7,7 +7,7 @@ leagueoflegendsdbt:
       password: Yodude123+
       role: accountadmin
       schema: PUBLIC
-      threads: 10
+      threads: 12
       type: snowflake
       user: ryancflo
       warehouse: COMPUTE_WH

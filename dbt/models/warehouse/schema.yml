@@ -7,26 +7,62 @@ sources:
       schema: PUBLIC
       database: LEAGUE_OF_LEGENDSDB
       tables:
-        - name: staging_matchdetails
-        - name: staging_matchinfo
-        - name: staging_datadragon_champions
-        - name: staging_datadragon_maps
-        - name: staging_datadragon_items
-        - name: staging_datadragon_runes_reforged
-        - name: staging_datadragon_summonerspells
+        - name: stg_match_details
+        - name: stg_match_info
+        - name: stg_players
+        - name: stg_champions
+        - name: stg_maps
+        - name: stg_items
+        - name: stg_runes_reforged
+        - name: stg_summonerspells
 
 
 models:
-+incremental_strategy: "merge"
   - name: final_match_details
     columns:
-      - name: match_id
+      - name: matchId
         tests:
           - not_null
           - unique
   - name: final_match_info
     columns:
-      - name: match_id
+      - name: matchId
+        tests:
+          - not_null
+          - unique
+  - name: final_players
+    columns:
+      - name: summonerId
+        tests:
+          - not_null
+          - unique
+  - name: final_champions
+    columns:
+      - name: champion_id
+        tests:
+          - not_null
+          - unique
+  - name: final_items
+    columns:
+      - name: item_id
+        tests:
+          - not_null
+          - unique
+  - name: final_maps
+    columns:
+      - name: map_id
+        tests:
+          - not_null
+          - unique
+  - name: final_summonerspells
+    columns:
+      - name: summonerspell_id
+        tests:
+          - not_null
+          - unique
+  - name: final_runes_reforged
+    columns:
+      - name: rune_id
         tests:
           - not_null
           - unique

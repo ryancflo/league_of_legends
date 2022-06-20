@@ -9,7 +9,7 @@ sources:
       tables:
         - name: staging_matchdetails
         - name: staging_matchinfo
-        # - name: staging_players_stage
+        - name: staging_players
 
 models:
   - name: stg_match_details
@@ -21,6 +21,12 @@ models:
   - name: stg_match_info
     columns:
       - name: matchId
+        tests:
+          - not_null
+          - unique
+  - name: stg_players
+    columns:
+      - name: summonerId
         tests:
           - not_null
           - unique

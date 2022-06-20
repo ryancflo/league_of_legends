@@ -32,7 +32,7 @@ FROM
 
 pivot_source AS(
 SELECT
-  tbl1.key as id,
+  tbl1.key as item_id,
   name,
   gold_description,
   gold_base,
@@ -49,11 +49,11 @@ FROM transform_2 as tbl1,
 ),
 
 pivoted_items AS(
-SELECT
-  *
-FROM pivot_source
-pivot(max(map_exists) for map_id in ('11','12','21','22'))
-pivot(max(stat_value) for stat_name in (      
+  SELECT
+    *
+  FROM pivot_source
+  pivot(max(map_exists) for map_id in ('11','12','21','22'))
+  pivot(max(stat_value) for stat_name in (      
     'FlatHPPoolMod',
     'rFlatHPModPerLevel',
     'FlatMPPoolMod',
@@ -119,8 +119,84 @@ pivot(max(stat_value) for stat_name in (
     'rFlatEnergyModPerLevel',
     'PercentLifeStealMod',
     'PercentSpellVampMod'
-))
-ORDER BY id
+)) as node2 (
+    item_id,
+    name,
+    gold_description,
+    gold_base,
+    gold_purchasable,
+    gold_total,
+    gold_sell,
+    SummonersRift,
+    HowlingAbyss,
+    NexusBlitz,
+    TeamfightTactics,
+    FlatHPPoolMod,
+    rFlatHPModPerLevel,
+    FlatMPPoolMod,
+    rFlatMPModPerLevel,
+    PercentHPPoolMod,
+    PercentMPPoolMod,
+    FlatHPRegenMod,
+    rFlatHPRegenModPerLevel,
+    PercentHPRegenMod,
+    FlatMPRegenMod,
+    rFlatMPRegenModPerLevel,
+    PercentMPRegenMod,
+    FlatArmorMod,
+    rFlatArmorModPerLevel,
+    PercentArmorMod,
+    rFlatArmorPenetrationMod,
+    rFlatArmorPenetrationModPerLevel,
+    rPercentArmorPenetrationMod,
+    rPercentArmorPenetrationModPerLevel,
+    FlatPhysicalDamageMod,
+    rFlatPhysicalDamageModPerLevel,
+    PercentPhysicalDamageMod,
+    FlatMagicDamageMod,
+    rFlatMagicDamageModPerLevel,
+    PercentMagicDamageMod,
+    FlatMovementSpeedMod,
+    rFlatMovementSpeedModPerLevel,
+    PercentMovementSpeedMod,
+    rPercentMovementSpeedModPerLevel,
+    FlatAttackSpeedMod,
+    PercentAttackSpeedMod,
+    rPercentAttackSpeedModPerLevel,
+    rFlatDodgeMod,
+    rFlatDodgeModPerLevel,
+    PercentDodgeMod,
+    FlatCritChanceMod,
+    rFlatCritChanceModPerLevel,
+    PercentCritChanceMod,
+    FlatCritDamageMod,
+    rFlatCritDamageModPerLevel,
+    PercentCritDamageMod,
+    FlatBlockMod,
+    PercentBlockMod,
+    FlatSpellBlockMod,
+    rFlatSpellBlockModPerLevel,
+    PercentSpellBlockMod,
+    FlatEXPBonus,
+    PercentEXPBonus,
+    rPercentCooldownMod,
+    rPercentCooldownModPerLevel,
+    rFlatTimeDeadMod,
+    rFlatTimeDeadModPerLevel,
+    rPercentTimeDeadMod,
+    rPercentTimeDeadModPerLevel,
+    rFlatGoldPer10Mod,
+    rFlatMagicPenetrationMod,
+    rFlatMagicPenetrationModPerLevel,
+    rPercentMagicPenetrationMod,
+    rPercentMagicPenetrationModPerLevel,
+    FlatEnergyRegenMod,
+    rFlatEnergyRegenModPerLevel,
+    FlatEnergyPoolMod,
+    rFlatEnergyModPerLevel,
+    PercentLifeStealMod,
+    PercentSpellVampMod
+)
 )
 
 SELECT * FROM pivoted_items

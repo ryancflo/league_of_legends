@@ -37,13 +37,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   leagueoflegendsdbt:
-    # warehouse:
-    #   materialized: table
+    # Applies to all files under models/warehouse/
+    warehouse:
+      materialized: table
     # Applies to all files under models/staging/
     staging:
       materialized: view
+    # Applies to all files under models/view/
     staging_datadragon:
       materialized: view
-    # Applies to all files under models/view/
-    # view:
-    #   materialized: view
+    
