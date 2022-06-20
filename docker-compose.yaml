@@ -65,6 +65,7 @@ x-airflow-common:
     - ./dbt:/opt/airflow/dbt
     # - ./dbt/.dbt:/opt/airflow/dbt/.dbt
     - ~/.dbt:/home/airflow/.dbt:ro
+    - ./dags:/dags
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
 
   # depends_on:
