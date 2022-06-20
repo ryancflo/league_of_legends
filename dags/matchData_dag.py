@@ -17,14 +17,14 @@ start_epoch = int(start_epoch.timestamp())
 CURRENT_TIME = datetime.now()
 
 static_data = {
-    'matchdetails' : ['STAGING_MATCHDETAILS', 'MY_AZURE_MATCH_DETAILS_STAGE', 'MATCH_DETAILS_FILEFORMAT', sqlQueries.CREATE_MATCHDETAILS_STAGING_TABLE_SQL_STRING], 
-    'matchinfo' : ['STAGING_MATCHINFO', 'MY_AZURE_MATCH_INFO_STAGE', 'MATCH_INFO_FILEFORMAT', sqlQueries.CREATE_MATCHINFO_STAGING_TABLE_SQL_STRING],
-    # 'players' : ['STAGING__PLAYERS', 'MY_AZURE_PLAYERS_STAGE', 'PLAYERS_FILEFORMAT', sqlQueries.CREATE_PLAYERS_STAGING_TABLE_SQL_STRING]
+    'matchdetails' : ['STAGING_MATCHDETAILS', 'MY_AZURE_MATCH_DETAILS_STAGE', 'MATCH_DETAILS_FILEFORMAT', sqlQueries.CREATE_MATCHDETAILS_STAGING_TABLE_SQL_STRING, 'csv'], 
+    'matchinfo' : ['STAGING_MATCHINFO', 'MY_AZURE_MATCH_INFO_STAGE', 'MATCH_INFO_FILEFORMAT', sqlQueries.CREATE_MATCHINFO_STAGING_TABLE_SQL_STRING, 'csv'],
+    'players' : ['STAGING_PLAYERS', 'MY_AZURE_PLAYERS_STAGE', 'PLAYERS_FILEFORMAT', sqlQueries.CREATE_PLAYERS_STAGING_TABLE_SQL_STRING, 'json']
 }
 
 default_args = {
     'owner': 'admin',
-    'start_date': datetime(2022, 5, 23),
+    'start_date': datetime(2022, 6, 18),
     'depends_on_past': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
@@ -34,23 +34,11 @@ default_args = {
 
 dag = DAG(dag_id = 'match_details_dag',
           default_args=default_args,
-          concurrency=10,
+        #   concurrency=10,
           max_active_runs=1,
           description='Load and transform data in Azure with Airflow',
           schedule_interval='0 * * * *'
         )
-
-# staging_matchData = riot_matchDetailsToADLSOperator(
-#     task_id='staging',
-#     dag=dag,
-#     riot_conn_id = 'riot_conn_id',
-#     azure_conn_id = 'azure_conn_id',
-#     region = 'na1',
-#     queue = "RANKED_SOLO_5x5",
-#     count = 3,
-#     end_epoch = CURRENT_TIME,
-#     ignore_headers=1
-# )
 
 staging_match_data = riot_matchDetailsToADLSOperator(
     task_id='staging_match_data',
@@ -61,7 +49,11 @@ staging_match_data = riot_matchDetailsToADLSOperator(
     region = 'na1',
     match_queue = "RANKED_SOLO_5x5",
     summoner_name = 'dild0wacker',
-    count = 5,
+    tier = 'PLATINUM',
+    division = 'I',
+    page = 1,
+    count = 1,
+    queue_type = 'ranked',
     end_epoch = CURRENT_TIME,
     ignore_headers=1
 )
@@ -82,7 +74,7 @@ with dag as dag:
                 copy_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
                     task_id='azure_{}_snowflake'.format(data),
                     dag=dag,
-                    azure_keys=['{0}/{1}/{2}/{3}.csv'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour)],
+                    azure_keys=['{0}/{1}/{2}/{3}.{4}'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour, static_data[data][4])],
                     stage=static_data[data][1],
                     table=static_data[data][0],
                     file_format=static_data[data][2],
@@ -92,30 +84,19 @@ with dag as dag:
                 create_stage >> copy_toSnowflake
 
 test_task = BashOperator(
-    task_id='chck',
+    task_id='check',
     bash_command='cd /opt/airflow/dbt && ls',
     dag=dag
 )
 
-task_1 = BashOperator(
-    task_id='daily_transform',
-    bash_command='cd /opt/airflow/dbt && dbt deps && dbt run --target dev',
+dbt_run = BashOperator(
+    task_id='dbt_run',
+    bash_command='cd /opt/airflow/dbt && dbt deps && dbt run',
     dag=dag
 )
-
-# task_2 = BashOperator(
-#     task_id='daily_analysis',
-#     bash_command='cd /dbt && dbt run --models analysis --profiles-dir .',
-#     env={
-#         'dbt_user': '{{ var.value.dbt_user }}',
-#         'dbt_password': '{{ var.value.dbt_password }}',
-#         **os.environ
-#     },
-#     dag=dag
-# )
 
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 test_operator = DummyOperator(task_id='test_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> test_operator >> staging_match_data >> paths >> test_task >> task_1 >> end_operator
+start_operator >> test_operator >> staging_match_data >> paths >> test_task >> dbt_run >> end_operator
