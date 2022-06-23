@@ -28,7 +28,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture diagram
 
-![Pipeline Architecture](https://github.com/ryancflo/crypto_sentiment_pipeline/tree/master/images/LOL_arch.png)
+![Pipeline Architecture](https://github.com/ryancflo/league_of_legends/blob/master/images/LOL_arch.png)
 
 <!-- HOW IT WORKS -->
 ## How it works
@@ -46,7 +46,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 `dbt_run`: Runs 2 bash commands. dbt deps: Pulls the most recent version of the dependencies listed in your packages.yml and dbt run: executes compiled sql model files against the current target database).\
 `dbt_test`: A simple data quality check for nulls and emptiness.\
 
-![matchData DAG](https://github.com/ryancflo/league_of_legends/tree/master/images/match_dag.PNG)
+![matchData DAG](https://github.com/ryancflo/league_of_legends/blob/master/images/match_dag.PNG)
 
 ##### Data Dragon DAG
  - Id: `dataDragon_dag`
@@ -58,7 +58,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 `azure_toSnowflake_paths-create_stage`: Creates staging tables for the respective static data it's map to in Snowflake.\
 `azure_toSnowflake_paths-azure_stage_snowflake`: Copy data from Azure Blob storage to raw staging tables.\
 
-![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/tree/master/images/datadragondag.PNG)
+![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/blob/master/images/datadragondag.PNG)
 
 
 ## Dashboards
