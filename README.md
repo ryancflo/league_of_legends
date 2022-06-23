@@ -2,7 +2,7 @@
 
 
 ## Objective
-The project consumes league of legends match data from Riot Games API of hundreds of players within a rank division. Match data consists of the details of a match such as its players, champions played, number of kills, and amount of damage a players did. The data is pulled periodically in a batch format hence this pipeline emulates a batch style job that applies, extracts,transforms, creating tables on a schedule. The goal is to accumulate a big dataset for players to identify smurfs within their league queue, generate player metrics, and overall rank division metrics. The pipeline infrastructure is built using a modern data stack.
+The project consumes league of legends match data from Riot Games API of hundreds of players within a rank division. Match data consists of the details of a match such as its players, champions played, number of kills, and amount of damage a player did. The data is pulled periodically in a batch format hence this pipeline emulates a batch style job that applie extracts, transforms, creates tables on a schedule. The goal is to accumulate a big dataset for players to identify smurfs within their league division, generate player metrics and overall rank division metrics. The pipeline infrastructure is built using a modern data stack.
 
 ## Tools & Technologies
 
@@ -28,7 +28,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture diagram
 
-![Pipeline Architecture](https://github.com/ryancflo/crypto_sentiment_pipeline/blob/main/images/LOL_arch.png)
+![Pipeline Architecture](https://github.com/ryancflo/crypto_sentiment_pipeline/tree/master/imagesLOL_arch.png)
 
 <!-- HOW IT WORKS -->
 ## How it works
@@ -46,7 +46,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 `dbt_run`: Runs 2 bash commands. dbt deps: Pulls the most recent version of the dependencies listed in your packages.yml and dbt run: executes compiled sql model files against the current target database).\
 `dbt_test`: A simple data quality check for nulls and emptiness.\
 
-![matchData DAG](https://github.com/ryancflo/league_of_legends/blob/main/images/match_dag.PNG)
+![matchData DAG](https://github.com/ryancflo/league_of_legends/tree/master/imagesmatch_dag.PNG)
 
 ##### Data Dragon DAG
  - Id: `dataDragon_dag`
@@ -58,7 +58,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 `azure_toSnowflake_paths-create_stage`: Creates staging tables for the respective static data it's map to in Snowflake.\
 `azure_toSnowflake_paths-azure_stage_snowflake`: Copy data from Azure Blob storage to raw staging tables.\
 
-![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/blob/main/images/datadragondag.PNG)
+![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/tree/master/images/datadragondag.PNG)
 
 
 ## Dashboards
