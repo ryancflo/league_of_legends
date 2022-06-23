@@ -22,18 +22,27 @@ class riotHook(BaseHook):
         end_epoch: int = None
     ):
         #/lol/match/v5/matches/by-puuid/{puuid}/ids
+        #500 requests every 10 seconds
         match_history_list = self.lol_watcher.match.matchlist_by_puuid(region=my_region, puuid=puuid, count=count, type=queue_type, start_time=start_epoch, end_time=end_epoch)
         return match_history_list
 
     def get_match_byid(self, my_region: str, match_id: str):
         #/lol/match/v5/matches/{matchId}
+        #250 requests every 10 seconds
         match_details = self.lol_watcher.match.by_id(my_region, match_id)
         return match_details
 
     def get_leagues(self, my_region: str, queue: str, tier: str, division: str, page: int):
-
+        #/lol/league-exp/v4/entries/{queue}/{tier}/{division}
+        #50 requests every 10 seconds
         summoners_league = self.lol_watcher.league.entries(my_region, queue, tier, division, page)
         return summoners_league
+
+    def get_summoner_byid(self, my_region: str, summoner_id: str):
+        #/lol/summoner/v4/summoners/{encryptedSummonerId}
+        #1600 requests every 1 minutes
+        summoner = self.lol_watcher.summoner.by_id(my_region,summoner_id)
+        return summoner
 
     #DataDragonAPI-champions
     def get_champions(self, league_version: str):
@@ -69,11 +78,6 @@ class riotHook(BaseHook):
 
         challengers = self.lol_watcher.league.challenger_by_queue(my_region, mode)
         return challengers
-
-    def get_summoner_byid(self, my_region: str, summoner_id: str):
-
-        summoner = self.lol_watcher.summoner.by_id(my_region,summoner_id)
-        return summoner
 
     def get_summoner_byname(self, my_region: str, summoner_id: str):
 

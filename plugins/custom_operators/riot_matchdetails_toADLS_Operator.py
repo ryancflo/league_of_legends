@@ -33,6 +33,7 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
                  division: str = None,
                  page: int = None,
                  count: int = None,
+                 player_count: int = None,
                  queue_type: str = None,
                  start_epoch: int = None,
                  end_epoch: int = None,
@@ -50,6 +51,7 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         self.division = division
         self.page = page
         self.count = count
+        self.player_count = player_count
         self.queue_type = queue_type
         self.start_epoch = start_epoch
         self.end_epoch = end_epoch
@@ -75,7 +77,7 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
         # Fetch top 10 Challenger players
         players = riot_hook.get_leagues(self.region, self.match_queue, self.tier, self.division, self.page)
         players.sort(key=lambda x: x['leaguePoints'], reverse=True)
-        top10_players = players[:2]
+        top10_players = players[:self.player_count]
         print(top10_players)
 
         #Create Empty dfs
@@ -116,7 +118,7 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
                     # sub_df['matchId'] = match['metadata']['matchId']
 
             # print(match_info_df)
-        # Write tweet data to temp file.
+        # Write Riot data to temp file.
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp_path = path.join(tmp_dir, "match_details.csv")
             tmp_path2 = path.join(tmp_dir, "match_info.csv")

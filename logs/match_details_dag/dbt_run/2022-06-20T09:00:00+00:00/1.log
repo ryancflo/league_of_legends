@@ -1,0 +1,76 @@
+[2022-06-21 04:02:58,352] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T09:00:00+00:00 [queued]>
+[2022-06-21 04:02:58,362] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T09:00:00+00:00 [queued]>
+[2022-06-21 04:02:58,363] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 04:02:58,363] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-21 04:02:58,363] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 04:02:58,377] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_run> on 2022-06-20 09:00:00+00:00
+[2022-06-21 04:02:58,382] {standard_task_runner.py:52} INFO - Started process 197 to run task
+[2022-06-21 04:02:58,384] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_run', 'scheduled__2022-06-20T09:00:00+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmppf_ihua7', '--error-file', '/tmp/tmpipux8_lq']
+[2022-06-21 04:02:58,385] {standard_task_runner.py:77} INFO - Job 258: Subtask dbt_run
+[2022-06-21 04:02:58,432] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T09:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-21 04:02:58,482] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T09:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T09:00:00+00:00
+[2022-06-21 04:02:58,483] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-21 04:02:58,483] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run']
+[2022-06-21 04:02:58,494] {subprocess.py:85} INFO - Output:
+[2022-06-21 04:03:01,773] {subprocess.py:89} INFO - 04:03:01  Running with dbt=1.1.0
+[2022-06-21 04:03:02,546] {subprocess.py:89} INFO - 04:03:02  Installing dbt-labs/dbt_utils
+[2022-06-21 04:03:03,121] {subprocess.py:89} INFO - 04:03:03    Installed from version 0.8.5
+[2022-06-21 04:03:03,122] {subprocess.py:89} INFO - 04:03:03    Updated version available: 0.8.6
+[2022-06-21 04:03:03,122] {subprocess.py:89} INFO - 04:03:03
+[2022-06-21 04:03:03,123] {subprocess.py:89} INFO - 04:03:03  Updates available for packages: ['dbt-labs/dbt_utils']
+[2022-06-21 04:03:03,123] {subprocess.py:89} INFO - Update your versions in packages.yml, then run dbt deps
+[2022-06-21 04:03:08,455] {subprocess.py:89} INFO - 04:03:08  Running with dbt=1.1.0
+[2022-06-21 04:03:08,601] {subprocess.py:89} INFO - 04:03:08  Found 17 models, 32 tests, 0 snapshots, 0 analyses, 400 macros, 0 operations, 0 seed files, 24 sources, 0 exposures, 0 metrics
+[2022-06-21 04:03:08,609] {subprocess.py:89} INFO - 04:03:08
+[2022-06-21 04:03:10,411] {subprocess.py:89} INFO - 04:03:10  Concurrency: 10 threads (target='dev')
+[2022-06-21 04:03:10,411] {subprocess.py:89} INFO - 04:03:10
+[2022-06-21 04:03:10,434] {subprocess.py:89} INFO - 04:03:10  1 of 16 START table model PUBLIC.final_champions ............................... [RUN]
+[2022-06-21 04:03:10,438] {subprocess.py:89} INFO - 04:03:10  2 of 16 START table model PUBLIC.final_items ................................... [RUN]
+[2022-06-21 04:03:10,443] {subprocess.py:89} INFO - 04:03:10  3 of 16 START table model PUBLIC.final_maps .................................... [RUN]
+[2022-06-21 04:03:10,445] {subprocess.py:89} INFO - 04:03:10  4 of 16 START incremental model PUBLIC.final_match_details ..................... [RUN]
+[2022-06-21 04:03:10,447] {subprocess.py:89} INFO - 04:03:10  5 of 16 START incremental model PUBLIC.final_match_info ........................ [RUN]
+[2022-06-21 04:03:10,447] {subprocess.py:89} INFO - 04:03:10  6 of 16 START incremental model PUBLIC.final_players ........................... [RUN]
+[2022-06-21 04:03:10,448] {subprocess.py:89} INFO - 04:03:10  7 of 16 START table model PUBLIC.final_runes_reforged .......................... [RUN]
+[2022-06-21 04:03:10,449] {subprocess.py:89} INFO - 04:03:10  8 of 16 START table model PUBLIC.final_summonerspells .......................... [RUN]
+[2022-06-21 04:03:10,451] {subprocess.py:89} INFO - 04:03:10  9 of 16 START view model PUBLIC.stg_champions .................................. [RUN]
+[2022-06-21 04:03:10,452] {subprocess.py:89} INFO - 04:03:10  10 of 16 START view model PUBLIC.stg_items ..................................... [RUN]
+[2022-06-21 04:03:15,082] {subprocess.py:89} INFO - 04:03:15  9 of 16 OK created view model PUBLIC.stg_champions ............................. [[32mSUCCESS 1[0m in 4.63s]
+[2022-06-21 04:03:15,088] {subprocess.py:89} INFO - 04:03:15  11 of 16 START view model PUBLIC.stg_maps ...................................... [RUN]
+[2022-06-21 04:03:15,202] {subprocess.py:89} INFO - 04:03:15  10 of 16 OK created view model PUBLIC.stg_items ................................ [[32mSUCCESS 1[0m in 4.75s]
+[2022-06-21 04:03:15,204] {subprocess.py:89} INFO - 04:03:15  12 of 16 START view model PUBLIC.stg_match_details ............................. [RUN]
+[2022-06-21 04:03:15,795] {subprocess.py:89} INFO - 04:03:15  8 of 16 OK created table model PUBLIC.final_summonerspells ..................... [[32mSUCCESS 1[0m in 5.34s]
+[2022-06-21 04:03:15,797] {subprocess.py:89} INFO - 04:03:15  13 of 16 START view model PUBLIC.stg_match_info ................................ [RUN]
+[2022-06-21 04:03:16,189] {subprocess.py:89} INFO - 04:03:16  7 of 16 OK created table model PUBLIC.final_runes_reforged ..................... [[32mSUCCESS 1[0m in 5.72s]
+[2022-06-21 04:03:16,201] {subprocess.py:89} INFO - 04:03:16  3 of 16 OK created table model PUBLIC.final_maps ............................... [[32mSUCCESS 1[0m in 5.74s]
+[2022-06-21 04:03:16,215] {subprocess.py:89} INFO - 04:03:16  14 of 16 START view model PUBLIC.stg_players ................................... [RUN]
+[2022-06-21 04:03:16,223] {subprocess.py:89} INFO - 04:03:16  15 of 16 START view model PUBLIC.stg_runes_reforged ............................ [RUN]
+[2022-06-21 04:03:16,252] {subprocess.py:89} INFO - 04:03:16  1 of 16 OK created table model PUBLIC.final_champions .......................... [[32mSUCCESS 1[0m in 5.80s]
+[2022-06-21 04:03:16,293] {subprocess.py:89} INFO - 04:03:16  16 of 16 START view model PUBLIC.stg_summonerspells ............................ [RUN]
+[2022-06-21 04:03:16,336] {subprocess.py:89} INFO - 04:03:16  11 of 16 OK created view model PUBLIC.stg_maps ................................. [[32mSUCCESS 1[0m in 1.24s]
+[2022-06-21 04:03:16,359] {subprocess.py:89} INFO - 04:03:16  12 of 16 OK created view model PUBLIC.stg_match_details ........................ [[32mSUCCESS 1[0m in 1.15s]
+[2022-06-21 04:03:16,372] {subprocess.py:89} INFO - 04:03:16  2 of 16 OK created table model PUBLIC.final_items .............................. [[32mSUCCESS 1[0m in 5.93s]
+[2022-06-21 04:03:16,582] {subprocess.py:89} INFO - 04:03:16  5 of 16 OK created incremental model PUBLIC.final_match_info ................... [[32mSUCCESS 1[0m in 6.10s]
+[2022-06-21 04:03:17,106] {subprocess.py:89} INFO - 04:03:17  13 of 16 OK created view model PUBLIC.stg_match_info ........................... [[32mSUCCESS 1[0m in 1.30s]
+[2022-06-21 04:03:17,396] {subprocess.py:89} INFO - 04:03:17  4 of 16 OK created incremental model PUBLIC.final_match_details ................ [[32mSUCCESS 1[0m in 6.95s]
+[2022-06-21 04:03:17,416] {subprocess.py:89} INFO - 04:03:17  6 of 16 OK created incremental model PUBLIC.final_players ...................... [[32mSUCCESS 1[0m in 6.97s]
+[2022-06-21 04:03:17,750] {subprocess.py:89} INFO - 04:03:17  16 of 16 OK created view model PUBLIC.stg_summonerspells ....................... [[32mSUCCESS 1[0m in 1.46s]
+[2022-06-21 04:03:17,768] {subprocess.py:89} INFO - 04:03:17  14 of 16 OK created view model PUBLIC.stg_players .............................. [[32mSUCCESS 1[0m in 1.55s]
+[2022-06-21 04:03:17,892] {subprocess.py:89} INFO - 04:03:17  15 of 16 OK created view model PUBLIC.stg_runes_reforged ....................... [[32mSUCCESS 1[0m in 1.67s]
+[2022-06-21 04:03:17,897] {subprocess.py:89} INFO - 04:03:17
+[2022-06-21 04:03:17,897] {subprocess.py:89} INFO - 04:03:17  Finished running 8 view models, 5 table models, 3 incremental models in 9.29s.
+[2022-06-21 04:03:17,918] {subprocess.py:89} INFO - 04:03:17
+[2022-06-21 04:03:17,919] {subprocess.py:89} INFO - 04:03:17  [32mCompleted successfully[0m
+[2022-06-21 04:03:17,919] {subprocess.py:89} INFO - 04:03:17
+[2022-06-21 04:03:17,920] {subprocess.py:89} INFO - 04:03:17  Done. PASS=16 WARN=0 ERROR=0 SKIP=0 TOTAL=16
+[2022-06-21 04:03:18,676] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-06-21 04:03:18,700] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T090000, start_date=20220621T040258, end_date=20220621T040318
+[2022-06-21 04:03:18,740] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-21 04:03:18,769] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
