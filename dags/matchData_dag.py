@@ -24,12 +24,13 @@ static_data = {
 
 default_args = {
     'owner': 'admin',
-    'start_date': datetime(2022, 6, 18),
+    'start_date': datetime(2022, 6, 20),
     'depends_on_past': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
     'catchup': False,
-    'email_on_retry': False
+    'email_on_retry': False,
+    'schedule_interval': '@daily'
 }
 
 dag = DAG(dag_id = 'match_details_dag',
@@ -37,7 +38,7 @@ dag = DAG(dag_id = 'match_details_dag',
         #   concurrency=10,
           max_active_runs=1,
           description='Load and transform data in Azure with Airflow',
-          schedule_interval='0 * * * *'
+        #   schedule_interval='0 * * * *'
         )
 
 staging_match_data = riot_matchDetailsToADLSOperator(
@@ -52,7 +53,8 @@ staging_match_data = riot_matchDetailsToADLSOperator(
     tier = 'PLATINUM',
     division = 'I',
     page = 1,
-    count = 1,
+    count = 30,
+    player_count = 100,
     queue_type = 'ranked',
     end_epoch = CURRENT_TIME,
     ignore_headers=1
@@ -60,7 +62,7 @@ staging_match_data = riot_matchDetailsToADLSOperator(
 
 
 with dag as dag:
-    with TaskGroup(group_id='paths') as paths:
+    with TaskGroup(group_id='azure_toSnowflake_paths') as azure_toSnowflake_paths:
         for data in static_data:
             with TaskGroup(group_id=f'path_{data}') as path:
 
@@ -83,15 +85,15 @@ with dag as dag:
 
                 create_stage >> copy_toSnowflake
 
-test_task = BashOperator(
-    task_id='check',
-    bash_command='cd /opt/airflow/dbt && ls',
-    dag=dag
-)
-
 dbt_run = BashOperator(
     task_id='dbt_run',
     bash_command='cd /opt/airflow/dbt && dbt deps && dbt run',
+    dag=dag
+)
+
+dbt_test = BashOperator(
+    task_id='dbt_test',
+    bash_command='cd /opt/airflow/dbt && dbt test',
     dag=dag
 )
 
@@ -99,4 +101,4 @@ start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 test_operator = DummyOperator(task_id='test_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> test_operator >> staging_match_data >> paths >> test_task >> dbt_run >> end_operator
+start_operator >> test_operator >> staging_match_data >> azure_toSnowflake_paths >> dbt_run >> dbt_test >> end_operator

@@ -40,7 +40,7 @@ dag = DAG(dag_id = 'league_of_legends_dag',
 
 
 with dag as dag:
-    with TaskGroup(group_id='paths') as paths:
+    with TaskGroup(group_id='azure_toSnowflake_paths') as azure_toSnowflake_paths:
         for data in static_data:
             with TaskGroup(group_id=f'path_{data}') as path:
 
@@ -80,15 +80,9 @@ with dag as dag:
                 )
 
                 staging_dataDragon >> create_staging_tables >> copy_toSnowflake
-    
-dbt_run = BashOperator(
-    task_id='hourly_transform',
-    bash_command='cd /dbt && dbt run --models staging_datadragon --profiles-dir .',
-    dag=dag
-)
 
 
 start_operator = DummyOperator(task_id='start_execution',  dag=dag)
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
-start_operator >> paths >> dbt_run >> end_operator
+start_operator >> azure_toSnowflake_paths >> end_operator
