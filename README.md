@@ -28,7 +28,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 <!-- ARCHITECTURE DIAGRAM -->
 ## Architecture diagram
 
-![Pipeline Architecture](https://github.com/ryancflo/crypto_sentiment_pipeline/tree/master/imagesLOL_arch.png)
+![Pipeline Architecture](https://github.com/ryancflo/crypto_sentiment_pipeline/tree/master/images/LOL_arch.png)
 
 <!-- HOW IT WORKS -->
 ## How it works
@@ -46,7 +46,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 `dbt_run`: Runs 2 bash commands. dbt deps: Pulls the most recent version of the dependencies listed in your packages.yml and dbt run: executes compiled sql model files against the current target database).\
 `dbt_test`: A simple data quality check for nulls and emptiness.\
 
-![matchData DAG](https://github.com/ryancflo/league_of_legends/tree/master/imagesmatch_dag.PNG)
+![matchData DAG](https://github.com/ryancflo/league_of_legends/tree/master/images/match_dag.PNG)
 
 ##### Data Dragon DAG
  - Id: `dataDragon_dag`
