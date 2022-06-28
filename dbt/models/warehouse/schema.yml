@@ -20,7 +20,7 @@ sources:
 models:
   - name: final_match_details
     columns:
-      - name: matchId
+      - name: key
         tests:
           - not_null
           - unique
@@ -62,7 +62,7 @@ models:
           - unique
   - name: final_runes_reforged
     columns:
-      - name: rune_id
+      - name: rune_name
         tests:
           - not_null
           - unique

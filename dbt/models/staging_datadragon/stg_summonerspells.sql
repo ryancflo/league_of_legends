@@ -15,10 +15,10 @@ WITH source AS(
 
 stg_datadragon_summonerspells as (
 SELECT 
-    key as summonerspell_id,
-    value:cooldown[0] as cooldown,
-    value:range[0] as range,
-    value:summonerLevel as summoner_level
+    key::varchar as summonerspell_id,
+    value:cooldown[0]::integer as cooldown,
+    value:range[0]::integer as range,
+    value:summonerLevel::integer as summoner_level
 FROM source
 )
 

@@ -22,8 +22,8 @@ FROM tbl_runes
 )
 
 SELECT
-    ID as rune_id,
-    f1.value:key as rune_name
+    ID::integer as rune_treeid,
+    f1.value:key::varchar as rune_name
 FROM tbl,
     LATERAL FLATTEN(input => value_extract) f,
     LATERAL FLATTEN(input => value:runes) f1

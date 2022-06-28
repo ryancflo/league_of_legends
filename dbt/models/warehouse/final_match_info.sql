@@ -26,10 +26,6 @@ final_match_info as (
         queueId,
         tournamentCode
     FROM source
-    {% if is_incremental() %}
-  -- this filter will only be applied on an incremental run
-      WHERE matchId > (SELECT max(matchId) from {{ this }})
-    {% endif %}
 )
 
 SELECT * FROM final_match_info

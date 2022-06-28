@@ -14,7 +14,7 @@ sources:
 models:
   - name: stg_match_details
     columns:
-      - name: matchId
+      - name: key
         tests:
           - not_null
           - unique

@@ -2,7 +2,7 @@
 version: 2
 
 sources:
-    - name: analysis_views
+    - name: league_final_tables
       description: 'Analysis'
       schema: PUBLIC
       database: LEAGUE_OF_LEGENDSDB
@@ -18,8 +18,22 @@ sources:
 
 models:
   - name: smurf_analysis
-    columns:
-      - name: summonerspell_id
-        tests:
-          - not_null
-          - unique
+    # columns:
+      # - name: summonerspell_id
+      #   tests:
+      #     - not_null
+      #     - unique
+  - name: kda_ratios_all
+  - name: kda_ratios
+    # columns:
+    #   - name: summonerspell_id
+    #     tests:
+    #       - not_null
+    #       - unique
+  - name: ratio_metrics
+  
+    # columns:
+    #   - name: summonerspell_id
+    #     tests:
+    #       - not_null
+    #       - unique

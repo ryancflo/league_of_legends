@@ -1,15 +1,16 @@
-
-
 WITH augment_matches AS (
 SELECT md.matchId,
-       summonerName,
+       md.summonerName,
        mi.gamemode AS map,
-       deaths,
-       kills,
-       win,
-       mi.gameEndTimestamp AS completion_date
-FROM {{ source('final_tables', 'final_match_details') }} md
-JOIN {{ source('final_tables', 'final_match_info') }} mi ON md.matchId = mi.matchId
+       md.deaths,
+       md.kills,
+       md.win,
+       mi.gameEndTimestamp AS completion_date,
+       md.teamId
+FROM {{ source('league_final_tables', 'final_match_details') }} md
+JOIN {{ source('league_final_tables', 'final_match_info') }} mi ON md.matchId = mi.matchId
+JOIN {{ source('league_final_tables', 'final_players') }} mp ON md.summonerName = mp.summonerName
+WHERE mp.veteran = false
 ),
 lagged AS (
     SELECT 
@@ -20,7 +21,6 @@ lagged AS (
 streak_change AS(
   SELECT 
   *,
-  win,
   CASE WHEN win <> did_win THEN 1 else 0 END as streak_changed
   FROM lagged
 ),
@@ -40,5 +40,5 @@ RANK() OVER (PARTITION BY summonerName, map, streak_identifier ORDER BY streak_l
 FROM record_counts
 )
 
-SELECT * FROM ranked 
+SELECT * FROM ranked
 WHERE rank = 1

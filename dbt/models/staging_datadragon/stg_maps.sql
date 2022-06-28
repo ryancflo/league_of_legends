@@ -15,8 +15,8 @@ WITH source AS(
 
 stg_datadragon_maps as (
 SELECT 
-    key as map_id,
-    value:MapName as map_name
+    key::integer as map_id,
+    value:MapName::varchar as map_name
 FROM source
 )
 

@@ -14,7 +14,7 @@ WITH source AS(
 final_players as (
     SELECT
         summonerId,
-        summoner_name,
+        summonerName,
         league_id,
         inactive,
         queue_type,
@@ -27,10 +27,6 @@ final_players as (
         fresh_blood,
         hot_streak
     FROM source
-    {% if is_incremental() %}
-  -- this filter will only be applied on an incremental run
-      WHERE summonerId > (SELECT max(summonerId) from {{ this }})
-    {% endif %}
 )
 
 SELECT *

@@ -2,7 +2,7 @@
     config(
         materialized='incremental',
         sql_where='TRUE',
-        unique_key='matchId'
+        unique_key='key'
     )
 }}
 
@@ -12,7 +12,8 @@ WITH source AS(
 ),
 
 final_match_details as (
-    SELECT 
+    SELECT
+        key,
         matchId,
         assists,
         baronKills,
@@ -120,10 +121,6 @@ final_match_details as (
         wardsPlaced,
         win
     FROM source
-    {% if is_incremental() %}
-      -- this filter will only be applied on an incremental run
-      WHERE matchId > (SELECT max(matchId) from {{ this }})
-    {% endif %}
 )
 
 SELECT * FROM final_match_details

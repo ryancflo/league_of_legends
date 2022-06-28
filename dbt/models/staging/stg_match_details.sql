@@ -5,7 +5,8 @@ WITH source AS(
 
 
 stg_match_details as (
-    SELECT 
+    SELECT
+        {{ dbt_utils.surrogate_key(['matchId', 'puuid']) }} as key,
         matchId as matchId,
         assists as assists,
         baronKills as baronKills,
