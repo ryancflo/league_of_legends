@@ -11,6 +11,7 @@ from custom_transfers.azureToSnowflake import AzureDataLakeToSnowflakeTransferOp
 from sql_helpers.sql_queries import sqlQueries
 
 SNOWFLAKE_CONN_ID = 'snowflake_conn_id'
+division_tier = 'GOLD'
 end_epoch= int(datetime.now().timestamp())
 start_epoch = datetime.now() - timedelta(days=1)
 start_epoch = int(start_epoch.timestamp())
@@ -50,11 +51,11 @@ staging_match_data = riot_matchDetailsToADLSOperator(
     region = 'na1',
     match_queue = "RANKED_SOLO_5x5",
     summoner_name = 'dild0wacker',
-    tier = 'PLATINUM',
+    tier = division_tier,
     division = 'I',
     page = 1,
-    count = 30,
-    player_count = 100,
+    count = 10,
+    player_count = 10,
     queue_type = 'ranked',
     end_epoch = CURRENT_TIME,
     ignore_headers=1
@@ -76,7 +77,7 @@ with dag as dag:
                 copy_toSnowflake = AzureDataLakeToSnowflakeTransferOperator(
                     task_id='azure_{}_snowflake'.format(data),
                     dag=dag,
-                    azure_keys=['{0}/{1}/{2}/{3}.{4}'.format(CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour, static_data[data][4])],
+                    azure_keys=['{0}/{1}/{2}/{3}/{4}.{5}'.format(division_tier, CURRENT_TIME.year, CURRENT_TIME.month, CURRENT_TIME.day, CURRENT_TIME.hour, static_data[data][4])],
                     stage=static_data[data][1],
                     table=static_data[data][0],
                     file_format=static_data[data][2],
