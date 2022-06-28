@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_runes_reforged') }}
+    FROM {{ ref('stg_runes_reforged') }}
 ),
 
 final_datadragon_runes_reforged as (

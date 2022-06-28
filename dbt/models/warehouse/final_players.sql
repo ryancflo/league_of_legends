@@ -8,7 +8,7 @@
 
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_players') }}
+    FROM {{ ref('stg_players') }}
 ),
 
 final_players as (

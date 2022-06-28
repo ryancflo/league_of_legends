@@ -12,7 +12,7 @@ top_5_kda AS (
     mp.wins as wins,
     mp.losses as losses
   FROM top_5 t5
-  LEFT JOIN {{ source('league_final_tables', 'final_players') }} mp ON t5.summonerName = mp.summonerName
+  LEFT JOIN {{ ref('final_players') }} mp ON t5.summonerName = mp.summonerName
 )
 
 SELECT * FROM top_5_kda

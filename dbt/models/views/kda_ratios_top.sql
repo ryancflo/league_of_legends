@@ -15,7 +15,7 @@ top_5_kda AS (
     ROUND(AVG(md.kills)/iff(AVG(md.deaths) = 0, 1, AVG(md.deaths)),2) as kd_ratio,
     ROUND(AVG(md.kills + md.assists)/iff(AVG(md.deaths) = 0, 1, AVG(md.deaths)),2) as kda_ratio
   FROM top_5 t5
-  LEFT JOIN {{ source('league_final_tables', 'final_match_details') }} md ON t5.summonerName = md.summonerName
+  LEFT JOIN {{ ref('final_match_details') }} md ON t5.summonerName = md.summonerName
   GROUP BY md.summonerName
 )
 

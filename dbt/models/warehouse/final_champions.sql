@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_champions') }}
+    FROM {{ ref('stg_champions') }}
 ),
 
 final_datadragon_champions as (

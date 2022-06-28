@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_summonerspells') }}
+    FROM {{ ref('stg_summonerspells') }}
 ),
 
 final_datadragon_summonerspells as (

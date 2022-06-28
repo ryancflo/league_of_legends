@@ -36,8 +36,8 @@ top_5_kda AS (
     md.teamPosition as teamPlayer_role,
     md2.teamPosition player_role
   FROM top_5 t5
-  LEFT JOIN {{ source('league_final_tables', 'final_match_details') }} md ON t5.matchId = md.matchId AND t5.teamId = md.teamId
-  LEFT JOIN {{ source('league_final_tables', 'final_match_details') }} md2 ON t5.matchId = md2.matchId AND t5.summonerName = md2.summonerName
+  LEFT JOIN {{ ref('final_match_details') }} md ON t5.matchId = md.matchId AND t5.teamId = md.teamId
+  LEFT JOIN {{ ref('final_match_details') }} md2 ON t5.matchId = md2.matchId AND t5.summonerName = md2.summonerName
   ORDER BY t5.summonerName
 )
 

@@ -1,20 +1,20 @@
 
 version: 2
 
-sources:
-    - name: league_final_tables
-      description: 'Analysis'
-      schema: PUBLIC
-      database: LEAGUE_OF_LEGENDSDB
-      tables:
-        - name: final_match_details
-        - name: final_match_info
-        - name: final_champions
-        - name: final_maps
-        - name: final_items
-        - name: final_runes_reforged
-        - name: final_summonerspells
-        - name: final_players
+# sources:
+#     - name: league_final_tables
+#       description: 'Analysis'
+#       schema: PUBLIC
+#       database: LEAGUE_OF_LEGENDSDB
+#       tables:
+#         - name: final_match_details
+#         - name: final_match_info
+#         - name: final_champions
+#         - name: final_maps
+#         - name: final_items
+#         - name: final_runes_reforged
+#         - name: final_summonerspells
+#         - name: final_players
 
 models:
   - name: smurf_analysis

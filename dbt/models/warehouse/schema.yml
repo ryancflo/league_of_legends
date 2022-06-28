@@ -1,20 +1,20 @@
 
 version: 2
 
-sources:
-    - name: stage_data
-      description: 'League of legends database'
-      schema: PUBLIC
-      database: LEAGUE_OF_LEGENDSDB
-      tables:
-        - name: stg_match_details
-        - name: stg_match_info
-        - name: stg_players
-        - name: stg_champions
-        - name: stg_maps
-        - name: stg_items
-        - name: stg_runes_reforged
-        - name: stg_summonerspells
+# sources:
+#     - name: stage_data
+#       description: 'League of legends database'
+#       schema: PUBLIC
+#       database: LEAGUE_OF_LEGENDSDB
+#       tables:
+#         - name: stg_match_details
+#         - name: stg_match_info
+#         - name: stg_players
+#         - name: stg_champions
+#         - name: stg_maps
+#         - name: stg_items
+#         - name: stg_runes_reforged
+#         - name: stg_summonerspells
 
 
 models:

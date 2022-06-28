@@ -10,7 +10,7 @@ roles_top AS (
     md.teamPosition as teamPostition,
     COUNT(*) as count_teamPosition
   FROM source t5
-  LEFT JOIN {{ source('league_final_tables', 'final_match_details') }} md ON t5.summonerName = md.summonerName
+  LEFT JOIN {{ ref('final_match_details') }} md ON t5.summonerName = md.summonerName
   GROUP BY md.teamPosition
 )
 -- pop_roles_top AS (

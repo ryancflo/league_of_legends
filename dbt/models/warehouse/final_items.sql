@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_items') }}
+    FROM {{ ref('stg_items') }}
 ),
 
 final_datadragon_items as (

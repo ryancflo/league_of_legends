@@ -1,6 +1,6 @@
 WITH source AS(
     SELECT *
-    FROM {{ source('stage_data', 'stg_maps') }}
+    FROM {{ ref('stg_maps') }}
 ),
 
 final_datadragon_maps as (

@@ -7,9 +7,9 @@ SELECT md.matchId,
        md.win,
        mi.gameEndTimestamp AS completion_date,
        md.teamId
-FROM {{ source('league_final_tables', 'final_match_details') }} md
-JOIN {{ source('league_final_tables', 'final_match_info') }} mi ON md.matchId = mi.matchId
-JOIN {{ source('league_final_tables', 'final_players') }} mp ON md.summonerName = mp.summonerName
+FROM {{ ref('final_match_details') }} md
+JOIN {{ ref('final_match_info') }} mi ON md.matchId = mi.matchId
+JOIN {{ ref('final_players') }} mp ON md.summonerName = mp.summonerName
 WHERE mp.veteran = false
 ),
 lagged AS (
