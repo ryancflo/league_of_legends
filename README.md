@@ -30,6 +30,14 @@ The project consumes league of legends match data from Riot Games API of hundred
 
 ![Pipeline Architecture](https://github.com/ryancflo/league_of_legends/blob/master/images/LOL_arch.png)
 
+
+<!-- DASHBOARD DIAGRAM -->
+## Dashboards
+
+#### Dashboard
+
+![Dashboard](https://github.com/ryancflo/league_of_legends/blob/master/images/LOL_dashboard.PNG)
+
 <!-- HOW IT WORKS -->
 ## How it works
 
@@ -59,11 +67,6 @@ The project consumes league of legends match data from Riot Games API of hundred
 `azure_toSnowflake_paths-azure_stage_snowflake`: Copy data from Azure Blob storage to raw staging tables.\
 
 ![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/blob/master/images/datadragondag.PNG)
-
-
-## Dashboards
-
-#### Dashboard
 
 
 <!-- SETUP -->
