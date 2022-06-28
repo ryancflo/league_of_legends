@@ -1,0 +1,536 @@
+[2022-06-23 18:20:17,633] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:20:17,644] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:20:17,645] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:20:17,645] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 18:20:17,645] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:20:17,658] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-23 18:20:17,663] {standard_task_runner.py:52} INFO - Started process 71 to run task
+[2022-06-23 18:20:17,668] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '268', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp7bnk12zl', '--error-file', '/tmp/tmpbfaqu_d9']
+[2022-06-23 18:20:17,670] {standard_task_runner.py:77} INFO - Job 268: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-23 18:20:17,727] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 18:20:17,819] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 18:20:17,820] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-23 18:20:17,832] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-23 18:20:17,832] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-23 18:20:17,833] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-23 18:20:18,785] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-23 18:20:18,891] {cursor.py:734} INFO - query execution done
+[2022-06-23 18:20:18,892] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-23 18:20:18,892] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-23 18:20:19,150] {cursor.py:734} INFO - query execution done
+[2022-06-23 18:20:19,150] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-23 18:20:19,151] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-23 18:20:19,151] {snowflake.py:339} INFO - Snowflake query id: 01a5250c-0000-fcc5-0000-d969000590be
+[2022-06-23 18:20:19,151] {connection.py:507} INFO - closed
+[2022-06-23 18:20:19,202] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-23 18:20:19,303] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220623T182017, end_date=20220623T182019
+[2022-06-23 18:20:19,327] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 18:20:19,375] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 18:30:18,561] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:30:18,572] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:30:18,572] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:30:18,573] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 18:30:18,573] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:30:18,584] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-23 18:30:18,588] {standard_task_runner.py:52} INFO - Started process 145 to run task
+[2022-06-23 18:30:18,592] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpz19f59gd', '--error-file', '/tmp/tmpe3qn50w2']
+[2022-06-23 18:30:18,592] {standard_task_runner.py:77} INFO - Job 277: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-23 18:30:18,637] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 18:30:18,684] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 18:30:18,685] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-23 18:30:18,695] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-23 18:30:18,696] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-23 18:30:18,696] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-23 18:30:19,412] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-23 18:30:19,601] {cursor.py:734} INFO - query execution done
+[2022-06-23 18:30:19,602] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-23 18:30:19,602] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-23 18:30:19,814] {cursor.py:734} INFO - query execution done
+[2022-06-23 18:30:19,815] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-23 18:30:19,815] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-23 18:30:19,815] {snowflake.py:339} INFO - Snowflake query id: 01a52516-0000-fccb-0000-d9690005a0de
+[2022-06-23 18:30:19,815] {connection.py:507} INFO - closed
+[2022-06-23 18:30:19,854] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-23 18:30:19,957] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220623T183018, end_date=20220623T183019
+[2022-06-23 18:30:20,010] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 18:30:20,044] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 21:20:46,127] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:20:46,139] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:20:46,139] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:20:46,140] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 21:20:46,140] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:20:46,152] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-23 21:20:46,157] {standard_task_runner.py:52} INFO - Started process 1177 to run task
+[2022-06-23 21:20:46,161] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '293', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpuopt6thg', '--error-file', '/tmp/tmpgdwm_kz3']
+[2022-06-23 21:20:46,162] {standard_task_runner.py:77} INFO - Job 293: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-23 21:20:46,218] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 21:20:46,282] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 21:20:46,283] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-23 21:20:46,293] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-23 21:20:46,294] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-23 21:20:46,294] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-23 21:20:46,973] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-23 21:20:47,080] {cursor.py:734} INFO - query execution done
+[2022-06-23 21:20:47,081] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-23 21:20:47,081] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-23 21:20:47,235] {cursor.py:734} INFO - query execution done
+[2022-06-23 21:20:47,236] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-23 21:20:47,236] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-23 21:20:47,237] {snowflake.py:339} INFO - Snowflake query id: 01a525c0-0000-fccb-0000-d9690005a476
+[2022-06-23 21:20:47,237] {connection.py:507} INFO - closed
+[2022-06-23 21:20:47,277] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-23 21:20:47,381] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220623T212046, end_date=20220623T212047
+[2022-06-23 21:20:47,418] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 21:20:47,465] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 21:58:12,502] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:58:12,589] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:58:12,590] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:58:12,590] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 21:58:12,590] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:58:12,660] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-23 21:58:12,676] {standard_task_runner.py:52} INFO - Started process 1438 to run task
+[2022-06-23 21:58:12,692] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '305', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpoi_eiw5s', '--error-file', '/tmp/tmp0wwzzn8m']
+[2022-06-23 21:58:12,694] {standard_task_runner.py:77} INFO - Job 305: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-23 21:58:12,818] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 21:58:12,953] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 21:58:12,953] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-23 21:58:12,970] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-23 21:58:12,972] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-23 21:58:12,972] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-23 21:58:13,893] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-23 21:58:14,016] {cursor.py:734} INFO - query execution done
+[2022-06-23 21:58:14,018] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-23 21:58:14,018] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-23 21:58:14,279] {cursor.py:734} INFO - query execution done
+[2022-06-23 21:58:14,280] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-23 21:58:14,280] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-23 21:58:14,281] {snowflake.py:339} INFO - Snowflake query id: 01a525e6-0000-fcc5-0000-d96900059686
+[2022-06-23 21:58:14,281] {connection.py:507} INFO - closed
+[2022-06-23 21:58:14,317] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-23 21:58:14,416] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220623T215812, end_date=20220623T215814
+[2022-06-23 21:58:14,470] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 21:58:14,515] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 22:42:36,243] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 22:42:36,254] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 22:42:36,255] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 22:42:36,255] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 22:42:36,255] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 22:42:36,268] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-23 22:42:36,274] {standard_task_runner.py:52} INFO - Started process 71 to run task
+[2022-06-23 22:42:36,277] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '321', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpvjcn_4nn', '--error-file', '/tmp/tmpij_tkebp']
+[2022-06-23 22:42:36,278] {standard_task_runner.py:77} INFO - Job 321: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-23 22:42:36,339] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 22:42:36,390] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 22:42:36,390] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-23 22:42:36,400] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-23 22:42:36,400] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-23 22:42:36,401] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-23 22:42:37,216] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-23 22:42:37,308] {cursor.py:734} INFO - query execution done
+[2022-06-23 22:42:37,309] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-23 22:42:37,309] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-23 22:42:37,487] {cursor.py:734} INFO - query execution done
+[2022-06-23 22:42:37,488] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-23 22:42:37,488] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-23 22:42:37,488] {snowflake.py:339} INFO - Snowflake query id: 01a52612-0000-fcc5-0000-d969000597b2
+[2022-06-23 22:42:37,489] {connection.py:507} INFO - closed
+[2022-06-23 22:42:37,526] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-23 22:42:37,619] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220623T224236, end_date=20220623T224237
+[2022-06-23 22:42:37,655] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 22:42:37,685] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-24 00:10:33,651] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-24 00:10:33,661] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-24 00:10:33,661] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 00:10:33,661] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-24 00:10:33,662] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 00:10:33,673] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-24 00:10:33,677] {standard_task_runner.py:52} INFO - Started process 71 to run task
+[2022-06-24 00:10:33,680] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '334', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpxmkgqig8', '--error-file', '/tmp/tmp8bqnl_r6']
+[2022-06-24 00:10:33,681] {standard_task_runner.py:77} INFO - Job 334: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-24 00:10:33,738] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-24 00:10:33,802] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-24 00:10:33,802] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-24 00:10:33,816] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-24 00:10:33,817] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-24 00:10:33,817] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-24 00:10:34,485] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-24 00:10:34,568] {cursor.py:734} INFO - query execution done
+[2022-06-24 00:10:34,570] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-24 00:10:34,570] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-24 00:10:34,745] {cursor.py:734} INFO - query execution done
+[2022-06-24 00:10:34,746] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-24 00:10:34,746] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-24 00:10:34,747] {snowflake.py:339} INFO - Snowflake query id: 01a5266a-0000-fcc5-0000-d9690005981e
+[2022-06-24 00:10:34,747] {connection.py:507} INFO - closed
+[2022-06-24 00:10:34,785] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-24 00:10:34,869] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220624T001033, end_date=20220624T001034
+[2022-06-24 00:10:34,898] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-24 00:10:34,931] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-24 03:55:21,357] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [None]>
+[2022-06-24 03:55:21,374] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [None]>
+[2022-06-24 03:55:21,375] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 03:55:21,375] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-24 03:55:21,375] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 03:55:21,391] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-24 03:55:21,398] {standard_task_runner.py:52} INFO - Started process 72 to run task
+[2022-06-24 03:55:21,401] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '5', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpd9j9o34v', '--error-file', '/tmp/tmpau3bzliy']
+[2022-06-24 03:55:21,403] {standard_task_runner.py:77} INFO - Job 5: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-24 03:55:21,466] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host 0d320c1110d2
+[2022-06-24 03:55:21,538] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-24 03:55:21,539] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-24 03:55:21,554] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-24 03:55:21,555] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-24 03:55:21,556] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-24 03:55:22,719] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-24 03:55:22,842] {cursor.py:734} INFO - query execution done
+[2022-06-24 03:55:22,844] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-24 03:55:22,845] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-24 03:55:23,138] {cursor.py:734} INFO - query execution done
+[2022-06-24 03:55:23,139] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-24 03:55:23,139] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-24 03:55:23,140] {snowflake.py:339} INFO - Snowflake query id: 01a5274b-0000-fccb-0000-d9690005a966
+[2022-06-24 03:55:23,140] {connection.py:507} INFO - closed
+[2022-06-24 03:55:23,182] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-24 03:55:23,292] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220624T035521, end_date=20220624T035523
+[2022-06-24 03:55:23,345] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-24 03:55:23,395] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-28 05:17:25,408] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-28 05:17:25,416] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-28 05:17:25,417] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-28 05:17:25,417] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-28 05:17:25,417] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-28 05:17:25,425] {taskinstance.py:1264} INFO - Executing <Task(SnowflakeOperator): azure_toSnowflake_paths.path_matchinfo.create_matchinfo> on 2022-06-20 00:00:00+00:00
+[2022-06-28 05:17:25,430] {standard_task_runner.py:52} INFO - Started process 73 to run task
+[2022-06-28 05:17:25,433] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'azure_toSnowflake_paths.path_matchinfo.create_matchinfo', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp6o7ykjlj', '--error-file', '/tmp/tmpqa4h4o3o']
+[2022-06-28 05:17:25,434] {standard_task_runner.py:77} INFO - Job 18: Subtask azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+[2022-06-28 05:17:25,479] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.azure_toSnowflake_paths.path_matchinfo.create_matchinfo scheduled__2022-06-20T00:00:00+00:00 [running]> on host 0d320c1110d2
+[2022-06-28 05:17:25,523] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=azure_toSnowflake_paths.path_matchinfo.create_matchinfo
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-28 05:17:25,524] {snowflake.py:118} INFO - Executing: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );
+[2022-06-28 05:17:25,532] {connection.py:257} INFO - Snowflake Connector for Python Version: 2.7.8, Python Version: 3.8.12, Platform: Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.2.5
+[2022-06-28 05:17:25,532] {connection.py:876} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2022-06-28 05:17:25,532] {connection.py:894} INFO - Setting use_openssl_only mode to False
+[2022-06-28 05:17:25,977] {cursor.py:710} INFO - query: [ALTER SESSION SET autocommit=True]
+[2022-06-28 05:17:26,063] {cursor.py:734} INFO - query execution done
+[2022-06-28 05:17:26,064] {snowflake.py:324} INFO - Running statement: CREATE OR REPLACE TABLE STAGING_MATCHINFO
+        (
+            matchId varchar,
+            gameCreation integer,
+            gameDuration integer,
+            gameEndTimestamp integer,
+            gameId varchar,
+            gameMode string,
+            gameName varchar,
+            gameStartTimestamp integer,
+            gameType varchar(25),
+            gameVersion varchar,
+            mapId integer,
+            platformId varchar(3),
+            queueId integer,
+            tournamentCode varchar
+        );, parameters: None
+[2022-06-28 05:17:26,064] {cursor.py:710} INFO - query: [CREATE OR REPLACE TABLE STAGING_MATCHINFO ( matchId varchar, gameCreation intege...]
+[2022-06-28 05:17:26,217] {cursor.py:734} INFO - query execution done
+[2022-06-28 05:17:26,218] {snowflake.py:334} INFO - Statement execution info - {'status': 'Table STAGING_MATCHINFO successfully created.'}
+[2022-06-28 05:17:26,223] {snowflake.py:338} INFO - Rows affected: 1
+[2022-06-28 05:17:26,224] {snowflake.py:339} INFO - Snowflake query id: 01a53e1d-0000-fe3c-0000-d96900060832
+[2022-06-28 05:17:26,224] {connection.py:507} INFO - closed
+[2022-06-28 05:17:26,265] {connection.py:510} INFO - No async queries seem to be running, deleting session
+[2022-06-28 05:17:26,363] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=azure_toSnowflake_paths.path_matchinfo.create_matchinfo, execution_date=20220620T000000, start_date=20220628T051725, end_date=20220628T051726
+[2022-06-28 05:17:26,410] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-28 05:17:26,446] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

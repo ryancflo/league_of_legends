@@ -1,0 +1,157 @@
+[2022-06-23 18:42:42,484] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_test scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:42:42,493] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_test scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:42:42,493] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:42:42,493] {taskinstance.py:1244} INFO - Starting attempt 2 of 2
+[2022-06-23 18:42:42,493] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:42:42,502] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_test> on 2022-06-20 00:00:00+00:00
+[2022-06-23 18:42:42,507] {standard_task_runner.py:52} INFO - Started process 443 to run task
+[2022-06-23 18:42:42,509] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_test', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '286', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpiavwv331', '--error-file', '/tmp/tmpsq2s9tp0']
+[2022-06-23 18:42:42,509] {standard_task_runner.py:77} INFO - Job 286: Subtask dbt_test
+[2022-06-23 18:42:42,548] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_test scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 18:42:42,585] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 18:42:42,586] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-23 18:42:42,587] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt test']
+[2022-06-23 18:42:42,596] {subprocess.py:85} INFO - Output:
+[2022-06-23 18:42:46,292] {subprocess.py:89} INFO - 18:42:46  Running with dbt=1.1.0
+[2022-06-23 18:42:46,385] {subprocess.py:89} INFO - 18:42:46  Found 17 models, 32 tests, 0 snapshots, 0 analyses, 400 macros, 0 operations, 0 seed files, 24 sources, 0 exposures, 0 metrics
+[2022-06-23 18:42:46,390] {subprocess.py:89} INFO - 18:42:46
+[2022-06-23 18:42:47,261] {subprocess.py:89} INFO - 18:42:47  Concurrency: 10 threads (target='dev')
+[2022-06-23 18:42:47,261] {subprocess.py:89} INFO - 18:42:47
+[2022-06-23 18:42:47,282] {subprocess.py:89} INFO - 18:42:47  1 of 32 START test not_null_final_champions_champion_id ........................ [RUN]
+[2022-06-23 18:42:47,285] {subprocess.py:89} INFO - 18:42:47  2 of 32 START test not_null_final_items_item_id ................................ [RUN]
+[2022-06-23 18:42:47,288] {subprocess.py:89} INFO - 18:42:47  3 of 32 START test not_null_final_maps_map_id .................................. [RUN]
+[2022-06-23 18:42:47,290] {subprocess.py:89} INFO - 18:42:47  4 of 32 START test not_null_final_match_details_matchId ........................ [RUN]
+[2022-06-23 18:42:47,291] {subprocess.py:89} INFO - 18:42:47  5 of 32 START test not_null_final_match_info_matchId ........................... [RUN]
+[2022-06-23 18:42:47,292] {subprocess.py:89} INFO - 18:42:47  6 of 32 START test not_null_final_players_summonerId ........................... [RUN]
+[2022-06-23 18:42:47,293] {subprocess.py:89} INFO - 18:42:47  7 of 32 START test not_null_final_runes_reforged_rune_id ....................... [RUN]
+[2022-06-23 18:42:47,294] {subprocess.py:89} INFO - 18:42:47  8 of 32 START test not_null_final_summonerspells_summonerspell_id .............. [RUN]
+[2022-06-23 18:42:47,296] {subprocess.py:89} INFO - 18:42:47  9 of 32 START test not_null_stg_champions_champion_id .......................... [RUN]
+[2022-06-23 18:42:47,296] {subprocess.py:89} INFO - 18:42:47  10 of 32 START test not_null_stg_items_item_id ................................. [RUN]
+[2022-06-23 18:42:49,283] {subprocess.py:89} INFO - 18:42:49  2 of 32 PASS not_null_final_items_item_id ...................................... [[32mPASS[0m in 2.00s]
+[2022-06-23 18:42:49,291] {subprocess.py:89} INFO - 18:42:49  11 of 32 START test not_null_stg_maps_map_id ................................... [RUN]
+[2022-06-23 18:42:50,210] {subprocess.py:89} INFO - 18:42:50  5 of 32 PASS not_null_final_match_info_matchId ................................. [[32mPASS[0m in 2.92s]
+[2022-06-23 18:42:50,220] {subprocess.py:89} INFO - 18:42:50  12 of 32 START test not_null_stg_match_details_matchId ......................... [RUN]
+[2022-06-23 18:42:50,575] {subprocess.py:89} INFO - 18:42:50  4 of 32 PASS not_null_final_match_details_matchId .............................. [[32mPASS[0m in 3.28s]
+[2022-06-23 18:42:50,617] {subprocess.py:89} INFO - 18:42:50  13 of 32 START test not_null_stg_match_info_matchId ............................ [RUN]
+[2022-06-23 18:42:51,501] {subprocess.py:89} INFO - 18:42:51  3 of 32 PASS not_null_final_maps_map_id ........................................ [[32mPASS[0m in 4.21s]
+[2022-06-23 18:42:51,506] {subprocess.py:89} INFO - 18:42:51  14 of 32 START test not_null_stg_players_summonerId ............................ [RUN]
+[2022-06-23 18:42:51,789] {subprocess.py:89} INFO - 18:42:51  1 of 32 PASS not_null_final_champions_champion_id .............................. [[32mPASS[0m in 4.49s]
+[2022-06-23 18:42:51,830] {subprocess.py:89} INFO - 18:42:51  6 of 32 PASS not_null_final_players_summonerId ................................. [[32mPASS[0m in 4.52s]
+[2022-06-23 18:42:51,841] {subprocess.py:89} INFO - 18:42:51  15 of 32 START test not_null_stg_runes_reforged_rune_id ........................ [RUN]
+[2022-06-23 18:42:51,877] {subprocess.py:89} INFO - 18:42:51  16 of 32 START test not_null_stg_summonerspells_summonerspell_id ............... [RUN]
+[2022-06-23 18:42:52,465] {subprocess.py:89} INFO - 18:42:52  11 of 32 PASS not_null_stg_maps_map_id ......................................... [[32mPASS[0m in 3.17s]
+[2022-06-23 18:42:52,466] {subprocess.py:89} INFO - 18:42:52  17 of 32 START test unique_final_champions_champion_id ......................... [RUN]
+[2022-06-23 18:42:52,550] {subprocess.py:89} INFO - 18:42:52  9 of 32 PASS not_null_stg_champions_champion_id ................................ [[32mPASS[0m in 5.25s]
+[2022-06-23 18:42:52,559] {subprocess.py:89} INFO - 18:42:52  18 of 32 START test unique_final_items_item_id ................................. [RUN]
+[2022-06-23 18:42:52,702] {subprocess.py:89} INFO - 18:42:52  7 of 32 PASS not_null_final_runes_reforged_rune_id ............................. [[32mPASS[0m in 5.39s]
+[2022-06-23 18:42:52,741] {subprocess.py:89} INFO - 18:42:52  19 of 32 START test unique_final_maps_map_id ................................... [RUN]
+[2022-06-23 18:42:52,769] {subprocess.py:89} INFO - 18:42:52  13 of 32 PASS not_null_stg_match_info_matchId .................................. [[32mPASS[0m in 2.11s]
+[2022-06-23 18:42:52,780] {subprocess.py:89} INFO - 18:42:52  20 of 32 START test unique_final_match_details_matchId ......................... [RUN]
+[2022-06-23 18:42:53,108] {subprocess.py:89} INFO - 18:42:53  12 of 32 PASS not_null_stg_match_details_matchId ............................... [[32mPASS[0m in 2.89s]
+[2022-06-23 18:42:53,123] {subprocess.py:89} INFO - 18:42:53  21 of 32 START test unique_final_match_info_matchId ............................ [RUN]
+[2022-06-23 18:42:53,153] {subprocess.py:89} INFO - 18:42:53  8 of 32 PASS not_null_final_summonerspells_summonerspell_id .................... [[32mPASS[0m in 5.86s]
+[2022-06-23 18:42:53,157] {subprocess.py:89} INFO - 18:42:53  22 of 32 START test unique_final_players_summonerId ............................ [RUN]
+[2022-06-23 18:42:53,160] {subprocess.py:89} INFO - 18:42:53  10 of 32 PASS not_null_stg_items_item_id ....................................... [[32mPASS[0m in 5.86s]
+[2022-06-23 18:42:53,163] {subprocess.py:89} INFO - 18:42:53  15 of 32 PASS not_null_stg_runes_reforged_rune_id .............................. [[32mPASS[0m in 1.31s]
+[2022-06-23 18:42:53,182] {subprocess.py:89} INFO - 18:42:53  14 of 32 PASS not_null_stg_players_summonerId .................................. [[32mPASS[0m in 1.66s]
+[2022-06-23 18:42:53,185] {subprocess.py:89} INFO - 18:42:53  23 of 32 START test unique_final_runes_reforged_rune_id ........................ [RUN]
+[2022-06-23 18:42:53,188] {subprocess.py:89} INFO - 18:42:53  16 of 32 PASS not_null_stg_summonerspells_summonerspell_id ..................... [[32mPASS[0m in 1.30s]
+[2022-06-23 18:42:53,189] {subprocess.py:89} INFO - 18:42:53  24 of 32 START test unique_final_summonerspells_summonerspell_id ............... [RUN]
+[2022-06-23 18:42:53,202] {subprocess.py:89} INFO - 18:42:53  25 of 32 START test unique_stg_champions_champion_id ........................... [RUN]
+[2022-06-23 18:42:53,216] {subprocess.py:89} INFO - 18:42:53  26 of 32 START test unique_stg_items_item_id ................................... [RUN]
+[2022-06-23 18:42:53,749] {subprocess.py:89} INFO - 18:42:53  17 of 32 PASS unique_final_champions_champion_id ............................... [[32mPASS[0m in 1.24s]
+[2022-06-23 18:42:53,778] {subprocess.py:89} INFO - 18:42:53  27 of 32 START test unique_stg_maps_map_id ..................................... [RUN]
+[2022-06-23 18:42:55,313] {subprocess.py:89} INFO - 18:42:55  18 of 32 PASS unique_final_items_item_id ....................................... [[32mPASS[0m in 2.75s]
+[2022-06-23 18:42:55,320] {subprocess.py:89} INFO - 18:42:55  28 of 32 START test unique_stg_match_details_matchId ........................... [RUN]
+[2022-06-23 18:42:55,597] {subprocess.py:89} INFO - 18:42:55  19 of 32 PASS unique_final_maps_map_id ......................................... [[32mPASS[0m in 2.85s]
+[2022-06-23 18:42:55,602] {subprocess.py:89} INFO - 18:42:55  20 of 32 FAIL 111 unique_final_match_details_matchId ........................... [[31mFAIL 111[0m in 2.82s]
+[2022-06-23 18:42:55,610] {subprocess.py:89} INFO - 18:42:55  29 of 32 START test unique_stg_match_info_matchId .............................. [RUN]
+[2022-06-23 18:42:55,617] {subprocess.py:89} INFO - 18:42:55  30 of 32 START test unique_stg_players_summonerId .............................. [RUN]
+[2022-06-23 18:42:55,869] {subprocess.py:89} INFO - 18:42:55  21 of 32 PASS unique_final_match_info_matchId .................................. [[32mPASS[0m in 2.74s]
+[2022-06-23 18:42:55,874] {subprocess.py:89} INFO - 18:42:55  31 of 32 START test unique_stg_runes_reforged_rune_id .......................... [RUN]
+[2022-06-23 18:42:55,982] {subprocess.py:89} INFO - 18:42:55  22 of 32 PASS unique_final_players_summonerId .................................. [[32mPASS[0m in 2.82s]
+[2022-06-23 18:42:55,986] {subprocess.py:89} INFO - 18:42:55  32 of 32 START test unique_stg_summonerspells_summonerspell_id ................. [RUN]
+[2022-06-23 18:42:56,219] {subprocess.py:89} INFO - 18:42:56  23 of 32 FAIL 5 unique_final_runes_reforged_rune_id ............................ [[31mFAIL 5[0m in 3.03s]
+[2022-06-23 18:42:56,326] {subprocess.py:89} INFO - 18:42:56  26 of 32 PASS unique_stg_items_item_id ......................................... [[32mPASS[0m in 3.10s]
+[2022-06-23 18:42:56,356] {subprocess.py:89} INFO - 18:42:56  24 of 32 PASS unique_final_summonerspells_summonerspell_id ..................... [[32mPASS[0m in 3.16s]
+[2022-06-23 18:42:56,456] {subprocess.py:89} INFO - 18:42:56  27 of 32 PASS unique_stg_maps_map_id ........................................... [[32mPASS[0m in 2.66s]
+[2022-06-23 18:42:56,486] {subprocess.py:89} INFO - 18:42:56  25 of 32 PASS unique_stg_champions_champion_id ................................. [[32mPASS[0m in 3.28s]
+[2022-06-23 18:42:57,021] {subprocess.py:89} INFO - 18:42:57  28 of 32 FAIL 100 unique_stg_match_details_matchId ............................. [[31mFAIL 100[0m in 1.70s]
+[2022-06-23 18:42:57,094] {subprocess.py:89} INFO - 18:42:57  29 of 32 PASS unique_stg_match_info_matchId .................................... [[32mPASS[0m in 1.48s]
+[2022-06-23 18:42:57,104] {subprocess.py:89} INFO - 18:42:57  30 of 32 PASS unique_stg_players_summonerId .................................... [[32mPASS[0m in 1.49s]
+[2022-06-23 18:42:57,176] {subprocess.py:89} INFO - 18:42:57  32 of 32 PASS unique_stg_summonerspells_summonerspell_id ....................... [[32mPASS[0m in 1.19s]
+[2022-06-23 18:42:57,259] {subprocess.py:89} INFO - 18:42:57  31 of 32 FAIL 5 unique_stg_runes_reforged_rune_id .............................. [[31mFAIL 5[0m in 1.38s]
+[2022-06-23 18:42:57,263] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,263] {subprocess.py:89} INFO - 18:42:57  Finished running 32 tests in 10.87s.
+[2022-06-23 18:42:57,278] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,279] {subprocess.py:89} INFO - 18:42:57  [31mCompleted with 4 errors and 0 warnings:[0m
+[2022-06-23 18:42:57,279] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,280] {subprocess.py:89} INFO - 18:42:57  [31mFailure in test unique_final_match_details_matchId (models/warehouse/schema.yml)[0m
+[2022-06-23 18:42:57,280] {subprocess.py:89} INFO - 18:42:57    Got 111 results, configured to fail if != 0
+[2022-06-23 18:42:57,280] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,281] {subprocess.py:89} INFO - 18:42:57    compiled SQL at target/compiled/leagueoflegendsdbt/models/warehouse/schema.yml/unique_final_match_details_matchId.sql
+[2022-06-23 18:42:57,281] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,281] {subprocess.py:89} INFO - 18:42:57  [31mFailure in test unique_final_runes_reforged_rune_id (models/warehouse/schema.yml)[0m
+[2022-06-23 18:42:57,282] {subprocess.py:89} INFO - 18:42:57    Got 5 results, configured to fail if != 0
+[2022-06-23 18:42:57,282] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,283] {subprocess.py:89} INFO - 18:42:57    compiled SQL at target/compiled/leagueoflegendsdbt/models/warehouse/schema.yml/unique_final_runes_reforged_rune_id.sql
+[2022-06-23 18:42:57,283] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,284] {subprocess.py:89} INFO - 18:42:57  [31mFailure in test unique_stg_match_details_matchId (models/staging/schema.yml)[0m
+[2022-06-23 18:42:57,284] {subprocess.py:89} INFO - 18:42:57    Got 100 results, configured to fail if != 0
+[2022-06-23 18:42:57,284] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,285] {subprocess.py:89} INFO - 18:42:57    compiled SQL at target/compiled/leagueoflegendsdbt/models/staging/schema.yml/unique_stg_match_details_matchId.sql
+[2022-06-23 18:42:57,285] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,286] {subprocess.py:89} INFO - 18:42:57  [31mFailure in test unique_stg_runes_reforged_rune_id (models/staging_datadragon/schema.yml)[0m
+[2022-06-23 18:42:57,286] {subprocess.py:89} INFO - 18:42:57    Got 5 results, configured to fail if != 0
+[2022-06-23 18:42:57,286] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,287] {subprocess.py:89} INFO - 18:42:57    compiled SQL at target/compiled/leagueoflegendsdbt/models/staging_datadragon/schema.yml/unique_stg_runes_reforged_rune_id.sql
+[2022-06-23 18:42:57,287] {subprocess.py:89} INFO - 18:42:57
+[2022-06-23 18:42:57,288] {subprocess.py:89} INFO - 18:42:57  Done. PASS=28 WARN=0 ERROR=4 SKIP=0 TOTAL=32
+[2022-06-23 18:42:57,937] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-06-23 18:42:57,949] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-23 18:42:57,954] {taskinstance.py:1272} INFO - Marking task as FAILED. dag_id=match_details_dag, task_id=dbt_test, execution_date=20220620T000000, start_date=20220623T184242, end_date=20220623T184257
+[2022-06-23 18:42:57,966] {standard_task_runner.py:89} ERROR - Failed to execute job 286 for task dbt_test
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-23 18:42:57,976] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-23 18:42:58,004] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

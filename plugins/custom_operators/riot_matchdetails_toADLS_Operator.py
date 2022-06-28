@@ -131,7 +131,8 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
             wasb_hook.load_file(
                 tmp_path,
                 container_name="match-details",
-                blob_name="{year}/{month}/{day}/{hour}.csv".format(
+                blob_name="{tier}/{year}/{month}/{day}/{hour}.csv".format(
+                    tier=self.tier,
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
                     day=self.end_epoch.day,
@@ -143,7 +144,8 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
             wasb_hook.load_file(
                 tmp_path2,
                 container_name="match-info",
-                blob_name="{year}/{month}/{day}/{hour}.csv".format(
+                blob_name="{tier}/{year}/{month}/{day}/{hour}.csv".format(
+                    tier=self.tier,
                     year=self.end_epoch.year,
                     month=self.end_epoch.month,
                     day=self.end_epoch.day,
@@ -164,7 +166,8 @@ class riot_matchDetailsToADLSOperator(BaseOperator):
                 wasb_hook.load_file(
                     tmp_path3,
                     container_name="players",
-                    blob_name="{year}/{month}/{day}/{hour}.json".format(
+                    blob_name="{tier}/{year}/{month}/{day}/{hour}.json".format(
+                        tier=self.tier,
                         year=self.end_epoch.year,
                         month=self.end_epoch.month,
                         day=self.end_epoch.day,

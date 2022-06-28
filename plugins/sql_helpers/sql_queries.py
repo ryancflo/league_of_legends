@@ -25,7 +25,6 @@ class sqlQueries:
             detectorWardsPlaced integer,
             doubleKills integer,
             dragonKills integer,
-            eligibleForProgression boolean,
             firstBloodAssist boolean,
             firstBloodKill boolean,
             firstTowerAssist boolean,
@@ -112,7 +111,8 @@ class sqlQueries:
             visionWardsBoughtInGame integer,
             wardsKilled integer,
             wardsPlaced integer,
-            win boolean
+            win boolean,
+            eligibleForProgression boolean
         );"""
     )
 

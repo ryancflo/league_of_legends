@@ -190,3 +190,407 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
 [2022-06-20 23:21:58,325] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T000000, start_date=20220620T232141, end_date=20220620T232158
 [2022-06-20 23:21:58,371] {local_task_job.py:154} INFO - Task exited with return code 0
 [2022-06-20 23:21:58,408] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 18:20:23,475] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:20:23,485] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:20:23,485] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:20:23,486] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 18:20:23,486] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:20:23,497] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_run> on 2022-06-20 00:00:00+00:00
+[2022-06-23 18:20:23,502] {standard_task_runner.py:52} INFO - Started process 96 to run task
+[2022-06-23 18:20:23,505] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_run', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '273', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmpx45wfoyk', '--error-file', '/tmp/tmpt6djl7zy']
+[2022-06-23 18:20:23,505] {standard_task_runner.py:77} INFO - Job 273: Subtask dbt_run
+[2022-06-23 18:20:23,550] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 18:20:23,594] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 18:20:23,595] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-23 18:20:23,595] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run']
+[2022-06-23 18:20:23,605] {subprocess.py:85} INFO - Output:
+[2022-06-23 18:20:26,935] {subprocess.py:89} INFO - 18:20:26  Running with dbt=1.1.0
+[2022-06-23 18:20:27,425] {subprocess.py:89} INFO - 18:20:27  Installing dbt-labs/dbt_utils
+[2022-06-23 18:20:28,011] {subprocess.py:89} INFO - 18:20:28    Installed from version 0.8.5
+[2022-06-23 18:20:28,012] {subprocess.py:89} INFO - 18:20:28    Updated version available: 0.8.6
+[2022-06-23 18:20:28,012] {subprocess.py:89} INFO - 18:20:28
+[2022-06-23 18:20:28,013] {subprocess.py:89} INFO - 18:20:28  Updates available for packages: ['dbt-labs/dbt_utils']
+[2022-06-23 18:20:28,013] {subprocess.py:89} INFO - Update your versions in packages.yml, then run dbt deps
+[2022-06-23 18:20:32,090] {subprocess.py:89} INFO - 18:20:32  Running with dbt=1.1.0
+[2022-06-23 18:20:32,582] {subprocess.py:89} INFO - 18:20:32  Encountered an error:
+[2022-06-23 18:20:32,582] {subprocess.py:89} INFO - Compilation Error in model smurfs_analysis (models/views/smurfs_analysis.sql)
+[2022-06-23 18:20:32,582] {subprocess.py:89} INFO -   Model 'model.leagueoflegendsdbt.smurfs_analysis' (models/views/smurfs_analysis.sql) depends on a source named 'final_tables.final_match_details' which was not found
+[2022-06-23 18:20:32,843] {subprocess.py:93} INFO - Command exited with return code 2
+[2022-06-23 18:20:32,855] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-06-23 18:20:32,861] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T000000, start_date=20220623T182023, end_date=20220623T182032
+[2022-06-23 18:20:32,877] {standard_task_runner.py:89} ERROR - Failed to execute job 273 for task dbt_run
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2022-06-23 18:20:32,885] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-23 18:20:32,915] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 18:30:24,735] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:30:24,744] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 18:30:24,744] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:30:24,744] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 18:30:24,744] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 18:30:24,753] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_run> on 2022-06-20 00:00:00+00:00
+[2022-06-23 18:30:24,758] {standard_task_runner.py:52} INFO - Started process 169 to run task
+[2022-06-23 18:30:24,763] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_run', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '281', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmphikylgbn', '--error-file', '/tmp/tmp_hbk14bu']
+[2022-06-23 18:30:24,764] {standard_task_runner.py:77} INFO - Job 281: Subtask dbt_run
+[2022-06-23 18:30:24,808] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 18:30:24,855] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 18:30:24,856] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-23 18:30:24,857] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run']
+[2022-06-23 18:30:24,868] {subprocess.py:85} INFO - Output:
+[2022-06-23 18:30:27,600] {subprocess.py:89} INFO - 18:30:27  Running with dbt=1.1.0
+[2022-06-23 18:30:28,350] {subprocess.py:89} INFO - 18:30:28  Installing dbt-labs/dbt_utils
+[2022-06-23 18:30:28,923] {subprocess.py:89} INFO - 18:30:28    Installed from version 0.8.5
+[2022-06-23 18:30:28,923] {subprocess.py:89} INFO - 18:30:28    Updated version available: 0.8.6
+[2022-06-23 18:30:28,925] {subprocess.py:89} INFO - 18:30:28
+[2022-06-23 18:30:28,927] {subprocess.py:89} INFO - 18:30:28  Updates available for packages: ['dbt-labs/dbt_utils']
+[2022-06-23 18:30:28,927] {subprocess.py:89} INFO - Update your versions in packages.yml, then run dbt deps
+[2022-06-23 18:30:33,177] {subprocess.py:89} INFO - 18:30:33  Running with dbt=1.1.0
+[2022-06-23 18:30:33,340] {subprocess.py:89} INFO - 18:30:33  Found 17 models, 32 tests, 0 snapshots, 0 analyses, 400 macros, 0 operations, 0 seed files, 24 sources, 0 exposures, 0 metrics
+[2022-06-23 18:30:33,344] {subprocess.py:89} INFO - 18:30:33
+[2022-06-23 18:30:35,148] {subprocess.py:89} INFO - 18:30:35  Concurrency: 10 threads (target='dev')
+[2022-06-23 18:30:35,148] {subprocess.py:89} INFO - 18:30:35
+[2022-06-23 18:30:35,171] {subprocess.py:89} INFO - 18:30:35  1 of 17 START table model PUBLIC.final_champions ............................... [RUN]
+[2022-06-23 18:30:35,173] {subprocess.py:89} INFO - 18:30:35  2 of 17 START table model PUBLIC.final_items ................................... [RUN]
+[2022-06-23 18:30:35,177] {subprocess.py:89} INFO - 18:30:35  3 of 17 START table model PUBLIC.final_maps .................................... [RUN]
+[2022-06-23 18:30:35,179] {subprocess.py:89} INFO - 18:30:35  4 of 17 START incremental model PUBLIC.final_match_details ..................... [RUN]
+[2022-06-23 18:30:35,180] {subprocess.py:89} INFO - 18:30:35  5 of 17 START incremental model PUBLIC.final_match_info ........................ [RUN]
+[2022-06-23 18:30:35,181] {subprocess.py:89} INFO - 18:30:35  6 of 17 START incremental model PUBLIC.final_players ........................... [RUN]
+[2022-06-23 18:30:35,182] {subprocess.py:89} INFO - 18:30:35  7 of 17 START table model PUBLIC.final_runes_reforged .......................... [RUN]
+[2022-06-23 18:30:35,183] {subprocess.py:89} INFO - 18:30:35  8 of 17 START table model PUBLIC.final_summonerspells .......................... [RUN]
+[2022-06-23 18:30:35,184] {subprocess.py:89} INFO - 18:30:35  9 of 17 START view model PUBLIC.smurfs_analysis ................................ [RUN]
+[2022-06-23 18:30:35,185] {subprocess.py:89} INFO - 18:30:35  10 of 17 START view model PUBLIC.stg_champions ................................. [RUN]
+[2022-06-23 18:30:39,077] {subprocess.py:89} INFO - 18:30:39  1 of 17 OK created table model PUBLIC.final_champions .......................... [[32mSUCCESS 1[0m in 3.90s]
+[2022-06-23 18:30:39,080] {subprocess.py:89} INFO - 18:30:39  11 of 17 START view model PUBLIC.stg_items ..................................... [RUN]
+[2022-06-23 18:30:39,541] {subprocess.py:89} INFO - 18:30:39  10 of 17 OK created view model PUBLIC.stg_champions ............................ [[32mSUCCESS 1[0m in 4.35s]
+[2022-06-23 18:30:39,542] {subprocess.py:89} INFO - 18:30:39  12 of 17 START view model PUBLIC.stg_maps ...................................... [RUN]
+[2022-06-23 18:30:39,572] {subprocess.py:89} INFO - 18:30:39  9 of 17 ERROR creating view model PUBLIC.smurfs_analysis ....................... [[31mERROR[0m in 4.39s]
+[2022-06-23 18:30:39,574] {subprocess.py:89} INFO - 18:30:39  13 of 17 START view model PUBLIC.stg_match_details ............................. [RUN]
+[2022-06-23 18:30:40,207] {subprocess.py:89} INFO - 18:30:40  7 of 17 OK created table model PUBLIC.final_runes_reforged ..................... [[32mSUCCESS 1[0m in 5.02s]
+[2022-06-23 18:30:40,208] {subprocess.py:89} INFO - 18:30:40  8 of 17 OK created table model PUBLIC.final_summonerspells ..................... [[32mSUCCESS 1[0m in 5.02s]
+[2022-06-23 18:30:40,209] {subprocess.py:89} INFO - 18:30:40  3 of 17 OK created table model PUBLIC.final_maps ............................... [[32mSUCCESS 1[0m in 5.03s]
+[2022-06-23 18:30:40,213] {subprocess.py:89} INFO - 18:30:40  14 of 17 START view model PUBLIC.stg_match_info ................................ [RUN]
+[2022-06-23 18:30:40,214] {subprocess.py:89} INFO - 18:30:40  15 of 17 START view model PUBLIC.stg_players ................................... [RUN]
+[2022-06-23 18:30:40,215] {subprocess.py:89} INFO - 18:30:40  16 of 17 START view model PUBLIC.stg_runes_reforged ............................ [RUN]
+[2022-06-23 18:30:40,247] {subprocess.py:89} INFO - 18:30:40  11 of 17 OK created view model PUBLIC.stg_items ................................ [[32mSUCCESS 1[0m in 1.15s]
+[2022-06-23 18:30:40,252] {subprocess.py:89} INFO - 18:30:40  2 of 17 OK created table model PUBLIC.final_items .............................. [[32mSUCCESS 1[0m in 5.07s]
+[2022-06-23 18:30:40,271] {subprocess.py:89} INFO - 18:30:40  17 of 17 START view model PUBLIC.stg_summonerspells ............................ [RUN]
+[2022-06-23 18:30:40,438] {subprocess.py:89} INFO - 18:30:40  6 of 17 OK created incremental model PUBLIC.final_players ...................... [[32mSUCCESS 1[0m in 5.26s]
+[2022-06-23 18:30:40,563] {subprocess.py:89} INFO - 18:30:40  4 of 17 OK created incremental model PUBLIC.final_match_details ................ [[32mSUCCESS 1[0m in 5.38s]
+[2022-06-23 18:30:40,715] {subprocess.py:89} INFO - 18:30:40  12 of 17 OK created view model PUBLIC.stg_maps ................................. [[32mSUCCESS 1[0m in 1.17s]
+[2022-06-23 18:30:40,756] {subprocess.py:89} INFO - 18:30:40  13 of 17 OK created view model PUBLIC.stg_match_details ........................ [[32mSUCCESS 1[0m in 1.17s]
+[2022-06-23 18:30:41,535] {subprocess.py:89} INFO - 18:30:41  14 of 17 OK created view model PUBLIC.stg_match_info ........................... [[32mSUCCESS 1[0m in 1.32s]
+[2022-06-23 18:30:41,653] {subprocess.py:89} INFO - 18:30:41  5 of 17 OK created incremental model PUBLIC.final_match_info ................... [[32mSUCCESS 1[0m in 6.47s]
+[2022-06-23 18:30:41,813] {subprocess.py:89} INFO - 18:30:41  17 of 17 OK created view model PUBLIC.stg_summonerspells ....................... [[32mSUCCESS 1[0m in 1.54s]
+[2022-06-23 18:30:41,825] {subprocess.py:89} INFO - 18:30:41  15 of 17 OK created view model PUBLIC.stg_players .............................. [[32mSUCCESS 1[0m in 1.61s]
+[2022-06-23 18:30:41,845] {subprocess.py:89} INFO - 18:30:41  16 of 17 OK created view model PUBLIC.stg_runes_reforged ....................... [[32mSUCCESS 1[0m in 1.63s]
+[2022-06-23 18:30:41,850] {subprocess.py:89} INFO - 18:30:41
+[2022-06-23 18:30:41,850] {subprocess.py:89} INFO - 18:30:41  Finished running 5 table models, 9 view models, 3 incremental models in 8.51s.
+[2022-06-23 18:30:41,867] {subprocess.py:89} INFO - 18:30:41
+[2022-06-23 18:30:41,867] {subprocess.py:89} INFO - 18:30:41  [31mCompleted with 1 error and 0 warnings:[0m
+[2022-06-23 18:30:41,867] {subprocess.py:89} INFO - 18:30:41
+[2022-06-23 18:30:41,868] {subprocess.py:89} INFO - 18:30:41  [33mDatabase Error in model smurfs_analysis (models/views/smurfs_analysis.sql)[0m
+[2022-06-23 18:30:41,868] {subprocess.py:89} INFO - 18:30:41    002025 (42S21): SQL compilation error:
+[2022-06-23 18:30:41,868] {subprocess.py:89} INFO - 18:30:41    duplicate column name 'WIN'
+[2022-06-23 18:30:41,869] {subprocess.py:89} INFO - 18:30:41    compiled SQL at target/run/leagueoflegendsdbt/models/views/smurfs_analysis.sql
+[2022-06-23 18:30:41,869] {subprocess.py:89} INFO - 18:30:41
+[2022-06-23 18:30:41,869] {subprocess.py:89} INFO - 18:30:41  Done. PASS=16 WARN=0 ERROR=1 SKIP=0 TOTAL=17
+[2022-06-23 18:30:42,604] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-06-23 18:30:42,615] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-23 18:30:42,620] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T000000, start_date=20220623T183024, end_date=20220623T183042
+[2022-06-23 18:30:42,634] {standard_task_runner.py:89} ERROR - Failed to execute job 281 for task dbt_run
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-23 18:30:42,657] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-23 18:30:42,687] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-23 21:20:51,796] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:20:51,807] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [queued]>
+[2022-06-23 21:20:51,807] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:20:51,807] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-23 21:20:51,807] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-23 21:20:51,818] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_run> on 2022-06-20 00:00:00+00:00
+[2022-06-23 21:20:51,824] {standard_task_runner.py:52} INFO - Started process 1199 to run task
+[2022-06-23 21:20:51,827] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_run', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp0uekhc2b', '--error-file', '/tmp/tmpdm7oqd7j']
+[2022-06-23 21:20:51,827] {standard_task_runner.py:77} INFO - Job 297: Subtask dbt_run
+[2022-06-23 21:20:51,876] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [running]> on host ebe3cc7dbee2
+[2022-06-23 21:20:51,921] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-23 21:20:51,922] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-23 21:20:51,922] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run']
+[2022-06-23 21:20:51,934] {subprocess.py:85} INFO - Output:
+[2022-06-23 21:20:55,507] {subprocess.py:89} INFO - 21:20:55  Running with dbt=1.1.0
+[2022-06-23 21:20:56,249] {subprocess.py:89} INFO - 21:20:56  Installing dbt-labs/dbt_utils
+[2022-06-23 21:20:56,875] {subprocess.py:89} INFO - 21:20:56    Installed from version 0.8.5
+[2022-06-23 21:20:56,876] {subprocess.py:89} INFO - 21:20:56    Updated version available: 0.8.6
+[2022-06-23 21:20:56,878] {subprocess.py:89} INFO - 21:20:56
+[2022-06-23 21:20:56,879] {subprocess.py:89} INFO - 21:20:56  Updates available for packages: ['dbt-labs/dbt_utils']
+[2022-06-23 21:20:56,879] {subprocess.py:89} INFO - Update your versions in packages.yml, then run dbt deps
+[2022-06-23 21:21:02,901] {subprocess.py:89} INFO - 21:21:02  Running with dbt=1.1.0
+[2022-06-23 21:21:03,038] {subprocess.py:89} INFO - 21:21:03  Found 17 models, 32 tests, 0 snapshots, 0 analyses, 400 macros, 0 operations, 0 seed files, 24 sources, 0 exposures, 0 metrics
+[2022-06-23 21:21:03,046] {subprocess.py:89} INFO - 21:21:03
+[2022-06-23 21:21:04,785] {subprocess.py:89} INFO - 21:21:04  Concurrency: 10 threads (target='dev')
+[2022-06-23 21:21:04,785] {subprocess.py:89} INFO - 21:21:04
+[2022-06-23 21:21:04,818] {subprocess.py:89} INFO - 21:21:04  1 of 17 START table model PUBLIC.final_champions ............................... [RUN]
+[2022-06-23 21:21:04,822] {subprocess.py:89} INFO - 21:21:04  2 of 17 START table model PUBLIC.final_items ................................... [RUN]
+[2022-06-23 21:21:04,827] {subprocess.py:89} INFO - 21:21:04  3 of 17 START table model PUBLIC.final_maps .................................... [RUN]
+[2022-06-23 21:21:04,829] {subprocess.py:89} INFO - 21:21:04  4 of 17 START incremental model PUBLIC.final_match_details ..................... [RUN]
+[2022-06-23 21:21:04,831] {subprocess.py:89} INFO - 21:21:04  5 of 17 START incremental model PUBLIC.final_match_info ........................ [RUN]
+[2022-06-23 21:21:04,832] {subprocess.py:89} INFO - 21:21:04  6 of 17 START incremental model PUBLIC.final_players ........................... [RUN]
+[2022-06-23 21:21:04,833] {subprocess.py:89} INFO - 21:21:04  7 of 17 START table model PUBLIC.final_runes_reforged .......................... [RUN]
+[2022-06-23 21:21:04,834] {subprocess.py:89} INFO - 21:21:04  8 of 17 START table model PUBLIC.final_summonerspells .......................... [RUN]
+[2022-06-23 21:21:04,836] {subprocess.py:89} INFO - 21:21:04  9 of 17 START view model PUBLIC.smurfs_analysis ................................ [RUN]
+[2022-06-23 21:21:04,838] {subprocess.py:89} INFO - 21:21:04  10 of 17 START view model PUBLIC.stg_champions ................................. [RUN]
+[2022-06-23 21:21:08,676] {subprocess.py:89} INFO - 21:21:08  10 of 17 OK created view model PUBLIC.stg_champions ............................ [[32mSUCCESS 1[0m in 3.83s]
+[2022-06-23 21:21:08,689] {subprocess.py:89} INFO - 21:21:08  11 of 17 START view model PUBLIC.stg_items ..................................... [RUN]
+[2022-06-23 21:21:10,705] {subprocess.py:89} INFO - 21:21:10  4 of 17 OK created incremental model PUBLIC.final_match_details ................ [[32mSUCCESS 1[0m in 5.87s]
+[2022-06-23 21:21:10,710] {subprocess.py:89} INFO - 21:21:10  12 of 17 START view model PUBLIC.stg_maps ...................................... [RUN]
+[2022-06-23 21:21:11,005] {subprocess.py:89} INFO - 21:21:11  9 of 17 OK created view model PUBLIC.smurfs_analysis ........................... [[32mSUCCESS 1[0m in 6.16s]
+[2022-06-23 21:21:11,090] {subprocess.py:89} INFO - 21:21:11  11 of 17 OK created view model PUBLIC.stg_items ................................ [[32mSUCCESS 1[0m in 2.34s]
+[2022-06-23 21:21:11,108] {subprocess.py:89} INFO - 21:21:11  13 of 17 START view model PUBLIC.stg_match_details ............................. [RUN]
+[2022-06-23 21:21:11,130] {subprocess.py:89} INFO - 21:21:11  14 of 17 START view model PUBLIC.stg_match_info ................................ [RUN]
+[2022-06-23 21:21:11,263] {subprocess.py:89} INFO - 21:21:11  8 of 17 OK created table model PUBLIC.final_summonerspells ..................... [[32mSUCCESS 1[0m in 6.43s]
+[2022-06-23 21:21:11,268] {subprocess.py:89} INFO - 21:21:11  15 of 17 START view model PUBLIC.stg_players ................................... [RUN]
+[2022-06-23 21:21:12,152] {subprocess.py:89} INFO - 21:21:12  7 of 17 OK created table model PUBLIC.final_runes_reforged ..................... [[32mSUCCESS 1[0m in 7.32s]
+[2022-06-23 21:21:12,156] {subprocess.py:89} INFO - 21:21:12  16 of 17 START view model PUBLIC.stg_runes_reforged ............................ [RUN]
+[2022-06-23 21:21:12,208] {subprocess.py:89} INFO - 21:21:12  12 of 17 OK created view model PUBLIC.stg_maps ................................. [[32mSUCCESS 1[0m in 1.49s]
+[2022-06-23 21:21:12,238] {subprocess.py:89} INFO - 21:21:12  17 of 17 START view model PUBLIC.stg_summonerspells ............................ [RUN]
+[2022-06-23 21:21:12,242] {subprocess.py:89} INFO - 21:21:12  3 of 17 OK created table model PUBLIC.final_maps ............................... [[32mSUCCESS 1[0m in 7.39s]
+[2022-06-23 21:21:12,280] {subprocess.py:89} INFO - 21:21:12  1 of 17 OK created table model PUBLIC.final_champions .......................... [[32mSUCCESS 1[0m in 7.45s]
+[2022-06-23 21:21:12,282] {subprocess.py:89} INFO - 21:21:12  2 of 17 OK created table model PUBLIC.final_items .............................. [[32mSUCCESS 1[0m in 7.45s]
+[2022-06-23 21:21:13,639] {subprocess.py:89} INFO - 21:21:13  15 of 17 OK created view model PUBLIC.stg_players .............................. [[32mSUCCESS 1[0m in 2.37s]
+[2022-06-23 21:21:13,837] {subprocess.py:89} INFO - 21:21:13  5 of 17 OK created incremental model PUBLIC.final_match_info ................... [[32mSUCCESS 1[0m in 9.00s]
+[2022-06-23 21:21:13,936] {subprocess.py:89} INFO - 21:21:13  17 of 17 OK created view model PUBLIC.stg_summonerspells ....................... [[32mSUCCESS 1[0m in 1.69s]
+[2022-06-23 21:21:13,938] {subprocess.py:89} INFO - 21:21:13  13 of 17 OK created view model PUBLIC.stg_match_details ........................ [[32mSUCCESS 1[0m in 2.82s]
+[2022-06-23 21:21:13,941] {subprocess.py:89} INFO - 21:21:13  14 of 17 OK created view model PUBLIC.stg_match_info ........................... [[32mSUCCESS 1[0m in 2.81s]
+[2022-06-23 21:21:13,966] {subprocess.py:89} INFO - 21:21:13  6 of 17 OK created incremental model PUBLIC.final_players ...................... [[32mSUCCESS 1[0m in 9.13s]
+[2022-06-23 21:21:14,026] {subprocess.py:89} INFO - 21:21:14  16 of 17 OK created view model PUBLIC.stg_runes_reforged ....................... [[32mSUCCESS 1[0m in 1.87s]
+[2022-06-23 21:21:14,034] {subprocess.py:89} INFO - 21:21:14
+[2022-06-23 21:21:14,034] {subprocess.py:89} INFO - 21:21:14  Finished running 9 view models, 3 incremental models, 5 table models in 10.99s.
+[2022-06-23 21:21:14,058] {subprocess.py:89} INFO - 21:21:14
+[2022-06-23 21:21:14,059] {subprocess.py:89} INFO - 21:21:14  [32mCompleted successfully[0m
+[2022-06-23 21:21:14,060] {subprocess.py:89} INFO - 21:21:14
+[2022-06-23 21:21:14,061] {subprocess.py:89} INFO - 21:21:14  Done. PASS=17 WARN=0 ERROR=0 SKIP=0 TOTAL=17
+[2022-06-23 21:21:14,893] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-06-23 21:21:14,920] {taskinstance.py:1272} INFO - Marking task as SUCCESS. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T000000, start_date=20220623T212051, end_date=20220623T212114
+[2022-06-23 21:21:14,965] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-06-23 21:21:15,016] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-28 05:50:10,477] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [None]>
+[2022-06-28 05:50:10,488] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [None]>
+[2022-06-28 05:50:10,488] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-28 05:50:10,488] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-06-28 05:50:10,488] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-28 05:50:10,500] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): dbt_run> on 2022-06-20 00:00:00+00:00
+[2022-06-28 05:50:10,504] {standard_task_runner.py:52} INFO - Started process 116 to run task
+[2022-06-28 05:50:10,507] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'match_details_dag', 'dbt_run', 'scheduled__2022-06-20T00:00:00+00:00', '--job-id', '27', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/matchData_dag.py', '--cfg-path', '/tmp/tmp8y5igvz3', '--error-file', '/tmp/tmp4kr31uf4']
+[2022-06-28 05:50:10,507] {standard_task_runner.py:77} INFO - Job 27: Subtask dbt_run
+[2022-06-28 05:50:10,546] {logging_mixin.py:109} INFO - Running <TaskInstance: match_details_dag.dbt_run scheduled__2022-06-20T00:00:00+00:00 [running]> on host 0d320c1110d2
+[2022-06-28 05:50:10,586] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=admin
+AIRFLOW_CTX_DAG_ID=match_details_dag
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-20T00:00:00+00:00
+[2022-06-28 05:50:10,587] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-28 05:50:10,588] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt && dbt deps && dbt run']
+[2022-06-28 05:50:10,600] {subprocess.py:85} INFO - Output:
+[2022-06-28 05:50:14,347] {subprocess.py:89} INFO - 05:50:14  Running with dbt=1.1.0
+[2022-06-28 05:50:14,826] {subprocess.py:89} INFO - 05:50:14  Installing dbt-labs/dbt_utils
+[2022-06-28 05:50:15,470] {subprocess.py:89} INFO - 05:50:15    Installed from version 0.8.5
+[2022-06-28 05:50:15,470] {subprocess.py:89} INFO - 05:50:15    Updated version available: 0.8.6
+[2022-06-28 05:50:15,471] {subprocess.py:89} INFO - 05:50:15
+[2022-06-28 05:50:15,471] {subprocess.py:89} INFO - 05:50:15  Updates available for packages: ['dbt-labs/dbt_utils']
+[2022-06-28 05:50:15,471] {subprocess.py:89} INFO - Update your versions in packages.yml, then run dbt deps
+[2022-06-28 05:50:20,016] {subprocess.py:89} INFO - 05:50:20  Running with dbt=1.1.0
+[2022-06-28 05:50:20,292] {subprocess.py:89} INFO - 05:50:20  Found 23 models, 32 tests, 0 snapshots, 0 analyses, 400 macros, 0 operations, 0 seed files, 24 sources, 0 exposures, 0 metrics
+[2022-06-28 05:50:20,297] {subprocess.py:89} INFO - 05:50:20
+[2022-06-28 05:50:21,868] {subprocess.py:89} INFO - 05:50:21  Concurrency: 10 threads (target='dev')
+[2022-06-28 05:50:21,868] {subprocess.py:89} INFO - 05:50:21
+[2022-06-28 05:50:21,889] {subprocess.py:89} INFO - 05:50:21  1 of 23 START table model PUBLIC.final_champions ............................... [RUN]
+[2022-06-28 05:50:21,892] {subprocess.py:89} INFO - 05:50:21  2 of 23 START table model PUBLIC.final_items ................................... [RUN]
+[2022-06-28 05:50:21,896] {subprocess.py:89} INFO - 05:50:21  3 of 23 START table model PUBLIC.final_maps .................................... [RUN]
+[2022-06-28 05:50:21,898] {subprocess.py:89} INFO - 05:50:21  4 of 23 START incremental model PUBLIC.final_match_details ..................... [RUN]
+[2022-06-28 05:50:21,899] {subprocess.py:89} INFO - 05:50:21  5 of 23 START incremental model PUBLIC.final_match_info ........................ [RUN]
+[2022-06-28 05:50:21,900] {subprocess.py:89} INFO - 05:50:21  6 of 23 START incremental model PUBLIC.final_players ........................... [RUN]
+[2022-06-28 05:50:21,901] {subprocess.py:89} INFO - 05:50:21  7 of 23 START table model PUBLIC.final_runes_reforged .......................... [RUN]
+[2022-06-28 05:50:21,902] {subprocess.py:89} INFO - 05:50:21  8 of 23 START table model PUBLIC.final_summonerspells .......................... [RUN]
+[2022-06-28 05:50:21,903] {subprocess.py:89} INFO - 05:50:21  9 of 23 START view model PUBLIC.kda_ratios_all ................................. [RUN]
+[2022-06-28 05:50:21,904] {subprocess.py:89} INFO - 05:50:21  10 of 23 START view model PUBLIC.pop_roles_all ................................. [RUN]
+[2022-06-28 05:50:25,085] {subprocess.py:89} INFO - 05:50:25  9 of 23 OK created view model PUBLIC.kda_ratios_all ............................ [[32mSUCCESS 1[0m in 3.18s]
+[2022-06-28 05:50:25,086] {subprocess.py:89} INFO - 05:50:25  10 of 23 OK created view model PUBLIC.pop_roles_all ............................ [[32mSUCCESS 1[0m in 3.18s]
+[2022-06-28 05:50:25,089] {subprocess.py:89} INFO - 05:50:25  11 of 23 START view model PUBLIC.smurfs_analysis ............................... [RUN]
+[2022-06-28 05:50:25,090] {subprocess.py:89} INFO - 05:50:25  12 of 23 START view model PUBLIC.stg_champions ................................. [RUN]
+[2022-06-28 05:50:25,706] {subprocess.py:89} INFO - 05:50:25  8 of 23 OK created table model PUBLIC.final_summonerspells ..................... [[32mSUCCESS 1[0m in 3.80s]
+[2022-06-28 05:50:25,708] {subprocess.py:89} INFO - 05:50:25  13 of 23 START view model PUBLIC.stg_items ..................................... [RUN]
+[2022-06-28 05:50:26,082] {subprocess.py:89} INFO - 05:50:26  12 of 23 OK created view model PUBLIC.stg_champions ............................ [[32mSUCCESS 1[0m in 0.99s]
+[2022-06-28 05:50:26,101] {subprocess.py:89} INFO - 05:50:26  14 of 23 START view model PUBLIC.stg_maps ...................................... [RUN]
+[2022-06-28 05:50:26,127] {subprocess.py:89} INFO - 05:50:26  11 of 23 ERROR creating view model PUBLIC.smurfs_analysis ...................... [[31mERROR[0m in 1.04s]
+[2022-06-28 05:50:26,130] {subprocess.py:89} INFO - 05:50:26  15 of 23 START view model PUBLIC.stg_match_details ............................. [RUN]
+[2022-06-28 05:50:26,736] {subprocess.py:89} INFO - 05:50:26  13 of 23 OK created view model PUBLIC.stg_items ................................ [[32mSUCCESS 1[0m in 1.02s]
+[2022-06-28 05:50:26,752] {subprocess.py:89} INFO - 05:50:26  16 of 23 START view model PUBLIC.stg_match_info ................................ [RUN]
+[2022-06-28 05:50:26,814] {subprocess.py:89} INFO - 05:50:26  3 of 23 OK created table model PUBLIC.final_maps ............................... [[32mSUCCESS 1[0m in 4.91s]
+[2022-06-28 05:50:26,816] {subprocess.py:89} INFO - 05:50:26  1 of 23 OK created table model PUBLIC.final_champions .......................... [[32mSUCCESS 1[0m in 4.92s]
+[2022-06-28 05:50:26,819] {subprocess.py:89} INFO - 05:50:26  17 of 23 START view model PUBLIC.stg_players ................................... [RUN]
+[2022-06-28 05:50:26,820] {subprocess.py:89} INFO - 05:50:26  18 of 23 START view model PUBLIC.stg_runes_reforged ............................ [RUN]
+[2022-06-28 05:50:26,875] {subprocess.py:89} INFO - 05:50:26  7 of 23 OK created table model PUBLIC.final_runes_reforged ..................... [[32mSUCCESS 1[0m in 4.97s]
+[2022-06-28 05:50:26,884] {subprocess.py:89} INFO - 05:50:26  2 of 23 OK created table model PUBLIC.final_items .............................. [[32mSUCCESS 1[0m in 4.98s]
+[2022-06-28 05:50:26,888] {subprocess.py:89} INFO - 05:50:26  19 of 23 START view model PUBLIC.stg_summonerspells ............................ [RUN]
+[2022-06-28 05:50:26,897] {subprocess.py:89} INFO - 05:50:26  20 of 23 SKIP relation PUBLIC.kda_ratios_top ................................... [[33mSKIP[0m]
+[2022-06-28 05:50:26,911] {subprocess.py:89} INFO - 05:50:26  21 of 23 SKIP relation PUBLIC.pop_roles_top .................................... [[33mSKIP[0m]
+[2022-06-28 05:50:26,918] {subprocess.py:89} INFO - 05:50:26  22 of 23 SKIP relation PUBLIC.ratio_metrics .................................... [[33mSKIP[0m]
+[2022-06-28 05:50:26,920] {subprocess.py:89} INFO - 05:50:26  23 of 23 SKIP relation PUBLIC.win_loss ......................................... [[33mSKIP[0m]
+[2022-06-28 05:50:27,066] {subprocess.py:89} INFO - 05:50:27  14 of 23 ERROR creating view model PUBLIC.stg_maps ............................. [[31mERROR[0m in 0.96s]
+[2022-06-28 05:50:27,302] {subprocess.py:89} INFO - 05:50:27  15 of 23 OK created view model PUBLIC.stg_match_details ........................ [[32mSUCCESS 1[0m in 1.17s]
+[2022-06-28 05:50:27,615] {subprocess.py:89} INFO - 05:50:27  16 of 23 OK created view model PUBLIC.stg_match_info ........................... [[32mSUCCESS 1[0m in 0.86s]
+[2022-06-28 05:50:27,744] {subprocess.py:89} INFO - 05:50:27  17 of 23 OK created view model PUBLIC.stg_players .............................. [[32mSUCCESS 1[0m in 0.92s]
+[2022-06-28 05:50:27,749] {subprocess.py:89} INFO - 05:50:27  18 of 23 OK created view model PUBLIC.stg_runes_reforged ....................... [[32mSUCCESS 1[0m in 0.93s]
+[2022-06-28 05:50:27,798] {subprocess.py:89} INFO - 05:50:27  6 of 23 OK created incremental model PUBLIC.final_players ...................... [[32mSUCCESS 1[0m in 5.90s]
+[2022-06-28 05:50:27,800] {subprocess.py:89} INFO - 05:50:27  19 of 23 OK created view model PUBLIC.stg_summonerspells ....................... [[32mSUCCESS 1[0m in 0.91s]
+[2022-06-28 05:50:28,174] {subprocess.py:89} INFO - 05:50:28  5 of 23 OK created incremental model PUBLIC.final_match_info ................... [[32mSUCCESS 1[0m in 6.27s]
+[2022-06-28 05:50:28,342] {subprocess.py:89} INFO - 05:50:28  4 of 23 OK created incremental model PUBLIC.final_match_details ................ [[32mSUCCESS 1[0m in 6.44s]
+[2022-06-28 05:50:28,347] {subprocess.py:89} INFO - 05:50:28
+[2022-06-28 05:50:28,347] {subprocess.py:89} INFO - 05:50:28  Finished running 15 view models, 5 table models, 3 incremental models in 8.05s.
+[2022-06-28 05:50:28,366] {subprocess.py:89} INFO - 05:50:28
+[2022-06-28 05:50:28,366] {subprocess.py:89} INFO - 05:50:28  [31mCompleted with 2 errors and 0 warnings:[0m
+[2022-06-28 05:50:28,367] {subprocess.py:89} INFO - 05:50:28
+[2022-06-28 05:50:28,367] {subprocess.py:89} INFO - 05:50:28  [33mDatabase Error in model smurfs_analysis (models/views/smurfs_analysis.sql)[0m
+[2022-06-28 05:50:28,367] {subprocess.py:89} INFO - 05:50:28    000904 (42000): SQL compilation error: error line 15 at position 52
+[2022-06-28 05:50:28,368] {subprocess.py:89} INFO - 05:50:28    invalid identifier 'MD.SUMMMONERNAME'
+[2022-06-28 05:50:28,368] {subprocess.py:89} INFO - 05:50:28    compiled SQL at target/run/leagueoflegendsdbt/models/views/smurfs_analysis.sql
+[2022-06-28 05:50:28,369] {subprocess.py:89} INFO - 05:50:28
+[2022-06-28 05:50:28,369] {subprocess.py:89} INFO - 05:50:28  [33mDatabase Error in model stg_maps (models/staging_datadragon/stg_maps.sql)[0m
+[2022-06-28 05:50:28,369] {subprocess.py:89} INFO - 05:50:28    001003 (42000): SQL compilation error:
+[2022-06-28 05:50:28,370] {subprocess.py:89} INFO - 05:50:28    syntax error line 21 at position 17 unexpected '::'.
+[2022-06-28 05:50:28,370] {subprocess.py:89} INFO - 05:50:28    syntax error line 22 at position 9 unexpected ':'.
+[2022-06-28 05:50:28,371] {subprocess.py:89} INFO - 05:50:28    syntax error line 26 at position 0 unexpected 'SELECT'.
+[2022-06-28 05:50:28,372] {subprocess.py:89} INFO - 05:50:28    compiled SQL at target/run/leagueoflegendsdbt/models/staging_datadragon/stg_maps.sql
+[2022-06-28 05:50:28,373] {subprocess.py:89} INFO - 05:50:28
+[2022-06-28 05:50:28,373] {subprocess.py:89} INFO - 05:50:28  Done. PASS=17 WARN=0 ERROR=2 SKIP=4 TOTAL=23
+[2022-06-28 05:50:29,169] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-06-28 05:50:29,180] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-28 05:50:29,187] {taskinstance.py:1272} INFO - Marking task as UP_FOR_RETRY. dag_id=match_details_dag, task_id=dbt_run, execution_date=20220620T000000, start_date=20220628T055010, end_date=20220628T055029
+[2022-06-28 05:50:29,198] {standard_task_runner.py:89} ERROR - Failed to execute job 27 for task dbt_run
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 187, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-06-28 05:50:29,207] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-06-28 05:50:29,237] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
