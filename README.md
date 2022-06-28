@@ -18,7 +18,8 @@ The project consumes league of legends match data from Riot Games API of hundred
 * [Architecture diagram](#architecture-diagram)
 * [How it works](#how-it-works)
     * [Data Flow-Airflow Dags](#data-flow)
-* [Dashboards](#dashboards)
+    * [Data Lineage-DBT](#data-lineage)
+* [Dashboard](#dashboard)
     * [Dashboard](dashboard)
 * [Setup](#setup)
     * [Airflow Connections](airflow-connections)
@@ -32,7 +33,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 
 
 <!-- DASHBOARD DIAGRAM -->
-## Dashboards
+## Dashboard
 
 #### Dashboard
 
@@ -41,6 +42,7 @@ The project consumes league of legends match data from Riot Games API of hundred
 <!-- HOW IT WORKS -->
 ## How it works
 
+### Data-Flow
 ##### Match Data DAG
  - Id: `matchData_dag`
  - Source Type: JSON API
@@ -67,6 +69,10 @@ The project consumes league of legends match data from Riot Games API of hundred
 `azure_toSnowflake_paths-azure_stage_snowflake`: Copy data from Azure Blob storage to raw staging tables.\
 
 ![Data Dragon DAG](https://github.com/ryancflo/league_of_legends/blob/master/images/datadragondag.PNG)
+
+
+### Data-Lineage
+![data-lineage](https://github.com/ryancflo/league_of_legends/blob/master/images/lineage_graph.PNG)
 
 
 <!-- SETUP -->
