@@ -1,0 +1,1152 @@
+[2022-06-30 00:00:11,552] {processor.py:163} INFO - Started process (PID=10760) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:11,553] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:00:11,553] {logging_mixin.py:109} INFO - [2022-06-30 00:00:11,553] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:12,396] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:12,637] {logging_mixin.py:109} INFO - [2022-06-30 00:00:12,637] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:00:12,662] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.112 seconds
+[2022-06-30 00:00:42,830] {processor.py:163} INFO - Started process (PID=10826) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:42,831] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:00:42,832] {logging_mixin.py:109} INFO - [2022-06-30 00:00:42,832] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:43,639] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:00:43,649] {logging_mixin.py:109} INFO - [2022-06-30 00:00:43,649] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:00:43,677] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.849 seconds
+[2022-06-30 00:01:14,527] {processor.py:163} INFO - Started process (PID=10897) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:14,534] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:01:14,534] {logging_mixin.py:109} INFO - [2022-06-30 00:01:14,534] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:15,505] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:15,521] {logging_mixin.py:109} INFO - [2022-06-30 00:01:15,520] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:01:15,545] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.020 seconds
+[2022-06-30 00:01:46,422] {processor.py:163} INFO - Started process (PID=10963) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:46,423] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:01:46,423] {logging_mixin.py:109} INFO - [2022-06-30 00:01:46,423] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:47,554] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:01:47,568] {logging_mixin.py:109} INFO - [2022-06-30 00:01:47,568] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:01:47,596] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.178 seconds
+[2022-06-30 00:02:18,027] {processor.py:163} INFO - Started process (PID=11029) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:18,034] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:02:18,034] {logging_mixin.py:109} INFO - [2022-06-30 00:02:18,034] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:18,926] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:18,936] {logging_mixin.py:109} INFO - [2022-06-30 00:02:18,936] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:02:18,960] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.934 seconds
+[2022-06-30 00:02:49,862] {processor.py:163} INFO - Started process (PID=11095) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:49,869] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:02:49,869] {logging_mixin.py:109} INFO - [2022-06-30 00:02:49,869] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:50,849] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:02:50,860] {logging_mixin.py:109} INFO - [2022-06-30 00:02:50,860] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:02:50,883] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.023 seconds
+[2022-06-30 00:03:21,784] {processor.py:163} INFO - Started process (PID=11161) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:21,784] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:03:21,785] {logging_mixin.py:109} INFO - [2022-06-30 00:03:21,785] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:22,782] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:22,794] {logging_mixin.py:109} INFO - [2022-06-30 00:03:22,793] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:03:22,817] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.035 seconds
+[2022-06-30 00:03:53,585] {processor.py:163} INFO - Started process (PID=11227) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:53,587] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:03:53,587] {logging_mixin.py:109} INFO - [2022-06-30 00:03:53,587] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:54,600] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:03:54,615] {logging_mixin.py:109} INFO - [2022-06-30 00:03:54,614] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:03:54,644] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.061 seconds
+[2022-06-30 00:04:25,544] {processor.py:163} INFO - Started process (PID=11310) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:25,545] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:04:25,546] {logging_mixin.py:109} INFO - [2022-06-30 00:04:25,546] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:26,376] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:26,387] {logging_mixin.py:109} INFO - [2022-06-30 00:04:26,386] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:04:26,408] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.867 seconds
+[2022-06-30 00:04:56,720] {processor.py:163} INFO - Started process (PID=11379) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:56,721] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:04:56,721] {logging_mixin.py:109} INFO - [2022-06-30 00:04:56,721] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:57,542] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:04:57,553] {logging_mixin.py:109} INFO - [2022-06-30 00:04:57,553] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:04:57,581] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.863 seconds
+[2022-06-30 00:05:27,647] {processor.py:163} INFO - Started process (PID=11445) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:27,654] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:05:27,655] {logging_mixin.py:109} INFO - [2022-06-30 00:05:27,655] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:28,611] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:28,624] {logging_mixin.py:109} INFO - [2022-06-30 00:05:28,623] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:05:28,656] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.010 seconds
+[2022-06-30 00:05:58,903] {processor.py:163} INFO - Started process (PID=11511) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:58,904] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:05:58,904] {logging_mixin.py:109} INFO - [2022-06-30 00:05:58,904] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:59,689] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:05:59,701] {logging_mixin.py:109} INFO - [2022-06-30 00:05:59,700] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:05:59,729] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.827 seconds
+[2022-06-30 00:06:29,962] {processor.py:163} INFO - Started process (PID=11577) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:06:29,963] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:06:29,963] {logging_mixin.py:109} INFO - [2022-06-30 00:06:29,963] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:06:30,869] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:06:30,879] {logging_mixin.py:109} INFO - [2022-06-30 00:06:30,879] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:06:30,900] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.941 seconds
+[2022-06-30 00:07:01,241] {processor.py:163} INFO - Started process (PID=11643) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:01,241] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:07:01,242] {logging_mixin.py:109} INFO - [2022-06-30 00:07:01,242] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:02,014] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:02,024] {logging_mixin.py:109} INFO - [2022-06-30 00:07:02,024] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:07:02,046] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.807 seconds
+[2022-06-30 00:07:32,146] {processor.py:163} INFO - Started process (PID=11708) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:32,147] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:07:32,147] {logging_mixin.py:109} INFO - [2022-06-30 00:07:32,147] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:32,982] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:07:32,992] {logging_mixin.py:109} INFO - [2022-06-30 00:07:32,992] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:07:33,012] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.869 seconds
+[2022-06-30 00:08:03,044] {processor.py:163} INFO - Started process (PID=11758) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:03,050] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:08:03,051] {logging_mixin.py:109} INFO - [2022-06-30 00:08:03,051] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:04,177] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:04,194] {logging_mixin.py:109} INFO - [2022-06-30 00:08:04,193] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:08:04,233] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.192 seconds
+[2022-06-30 00:08:34,417] {processor.py:163} INFO - Started process (PID=11824) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:34,418] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:08:34,419] {logging_mixin.py:109} INFO - [2022-06-30 00:08:34,419] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:35,695] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:08:35,714] {logging_mixin.py:109} INFO - [2022-06-30 00:08:35,713] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:08:35,751] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.336 seconds
+[2022-06-30 00:09:06,180] {processor.py:163} INFO - Started process (PID=11890) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:06,181] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:09:06,182] {logging_mixin.py:109} INFO - [2022-06-30 00:09:06,182] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:07,323] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:07,339] {logging_mixin.py:109} INFO - [2022-06-30 00:09:07,339] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:09:07,368] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.191 seconds
+[2022-06-30 00:09:38,114] {processor.py:163} INFO - Started process (PID=11956) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:38,119] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:09:38,120] {logging_mixin.py:109} INFO - [2022-06-30 00:09:38,120] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:39,664] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:09:39,685] {logging_mixin.py:109} INFO - [2022-06-30 00:09:39,685] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:09:39,729] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.621 seconds
+[2022-06-30 00:10:09,886] {processor.py:163} INFO - Started process (PID=12022) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:09,888] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:10:09,888] {logging_mixin.py:109} INFO - [2022-06-30 00:10:09,888] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:11,045] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:11,058] {logging_mixin.py:109} INFO - [2022-06-30 00:10:11,057] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:10:11,086] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.203 seconds
+[2022-06-30 00:10:41,251] {processor.py:163} INFO - Started process (PID=12088) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:41,252] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:10:41,253] {logging_mixin.py:109} INFO - [2022-06-30 00:10:41,252] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:42,220] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:10:42,232] {logging_mixin.py:109} INFO - [2022-06-30 00:10:42,231] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:10:42,259] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.011 seconds
+[2022-06-30 00:11:12,686] {processor.py:163} INFO - Started process (PID=12154) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:12,688] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:11:12,689] {logging_mixin.py:109} INFO - [2022-06-30 00:11:12,689] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:13,819] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:13,836] {logging_mixin.py:109} INFO - [2022-06-30 00:11:13,835] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:11:13,872] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.188 seconds
+[2022-06-30 00:11:43,953] {processor.py:163} INFO - Started process (PID=12220) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:43,954] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:11:43,955] {logging_mixin.py:109} INFO - [2022-06-30 00:11:43,955] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:45,207] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:11:45,222] {logging_mixin.py:109} INFO - [2022-06-30 00:11:45,222] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:11:45,253] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.302 seconds
+[2022-06-30 00:12:15,736] {processor.py:163} INFO - Started process (PID=12286) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:15,744] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:12:15,745] {logging_mixin.py:109} INFO - [2022-06-30 00:12:15,745] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:16,981] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:16,994] {logging_mixin.py:109} INFO - [2022-06-30 00:12:16,994] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:12:17,024] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.293 seconds
+[2022-06-30 00:12:47,424] {processor.py:163} INFO - Started process (PID=12352) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:47,426] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:12:47,426] {logging_mixin.py:109} INFO - [2022-06-30 00:12:47,426] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:48,601] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:12:48,619] {logging_mixin.py:109} INFO - [2022-06-30 00:12:48,618] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:12:48,653] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.231 seconds
+[2022-06-30 00:13:19,033] {processor.py:163} INFO - Started process (PID=12418) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:19,034] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:13:19,035] {logging_mixin.py:109} INFO - [2022-06-30 00:13:19,035] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:20,272] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:20,287] {logging_mixin.py:109} INFO - [2022-06-30 00:13:20,287] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:13:20,328] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.298 seconds
+[2022-06-30 00:13:50,559] {processor.py:163} INFO - Started process (PID=12484) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:50,565] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:13:50,566] {logging_mixin.py:109} INFO - [2022-06-30 00:13:50,566] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:51,752] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:13:51,764] {logging_mixin.py:109} INFO - [2022-06-30 00:13:51,764] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:13:51,801] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.246 seconds
+[2022-06-30 00:14:22,263] {processor.py:163} INFO - Started process (PID=12550) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:22,263] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:14:22,264] {logging_mixin.py:109} INFO - [2022-06-30 00:14:22,264] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:23,599] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:23,614] {logging_mixin.py:109} INFO - [2022-06-30 00:14:23,613] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:14:23,651] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.391 seconds
+[2022-06-30 00:14:54,070] {processor.py:163} INFO - Started process (PID=12616) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:54,078] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:14:54,078] {logging_mixin.py:109} INFO - [2022-06-30 00:14:54,078] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:55,241] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:14:55,255] {logging_mixin.py:109} INFO - [2022-06-30 00:14:55,255] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:14:55,307] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.239 seconds
+[2022-06-30 00:15:25,905] {processor.py:163} INFO - Started process (PID=12682) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:25,912] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:15:25,912] {logging_mixin.py:109} INFO - [2022-06-30 00:15:25,912] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:27,256] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:27,273] {logging_mixin.py:109} INFO - [2022-06-30 00:15:27,272] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:15:27,314] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.412 seconds
+[2022-06-30 00:15:57,358] {processor.py:163} INFO - Started process (PID=12748) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:57,359] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:15:57,360] {logging_mixin.py:109} INFO - [2022-06-30 00:15:57,360] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:58,576] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:15:58,594] {logging_mixin.py:109} INFO - [2022-06-30 00:15:58,594] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:15:58,626] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.271 seconds
+[2022-06-30 00:16:29,164] {processor.py:163} INFO - Started process (PID=12814) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:16:29,166] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:16:29,167] {logging_mixin.py:109} INFO - [2022-06-30 00:16:29,167] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:16:30,786] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:16:30,811] {logging_mixin.py:109} INFO - [2022-06-30 00:16:30,810] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:16:30,848] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.688 seconds
+[2022-06-30 00:17:01,069] {processor.py:163} INFO - Started process (PID=12880) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:01,070] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:17:01,070] {logging_mixin.py:109} INFO - [2022-06-30 00:17:01,070] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:02,316] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:02,331] {logging_mixin.py:109} INFO - [2022-06-30 00:17:02,331] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:17:02,372] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.305 seconds
+[2022-06-30 00:17:33,068] {processor.py:163} INFO - Started process (PID=12946) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:33,069] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:17:33,070] {logging_mixin.py:109} INFO - [2022-06-30 00:17:33,070] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:34,382] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:17:34,401] {logging_mixin.py:109} INFO - [2022-06-30 00:17:34,400] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:17:34,432] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.366 seconds
+[2022-06-30 00:18:04,628] {processor.py:163} INFO - Started process (PID=13012) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:04,630] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:18:04,631] {logging_mixin.py:109} INFO - [2022-06-30 00:18:04,631] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:05,933] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:05,950] {logging_mixin.py:109} INFO - [2022-06-30 00:18:05,950] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:18:05,981] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.356 seconds
+[2022-06-30 00:18:36,780] {processor.py:163} INFO - Started process (PID=13078) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:36,781] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:18:36,783] {logging_mixin.py:109} INFO - [2022-06-30 00:18:36,782] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:38,222] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:18:38,244] {logging_mixin.py:109} INFO - [2022-06-30 00:18:38,244] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:18:38,289] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.513 seconds
+[2022-06-30 00:19:08,562] {processor.py:163} INFO - Started process (PID=13144) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:08,563] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:19:08,563] {logging_mixin.py:109} INFO - [2022-06-30 00:19:08,563] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:10,065] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:10,085] {logging_mixin.py:109} INFO - [2022-06-30 00:19:10,084] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:19:10,128] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.569 seconds
+[2022-06-30 00:19:40,550] {processor.py:163} INFO - Started process (PID=13210) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:40,557] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:19:40,557] {logging_mixin.py:109} INFO - [2022-06-30 00:19:40,557] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:41,869] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:19:41,888] {logging_mixin.py:109} INFO - [2022-06-30 00:19:41,887] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:19:41,927] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.379 seconds
+[2022-06-30 00:20:12,333] {processor.py:163} INFO - Started process (PID=13276) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:12,334] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:20:12,335] {logging_mixin.py:109} INFO - [2022-06-30 00:20:12,335] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:13,495] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:13,514] {logging_mixin.py:109} INFO - [2022-06-30 00:20:13,514] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:20:13,547] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.218 seconds
+[2022-06-30 00:20:43,892] {processor.py:163} INFO - Started process (PID=13342) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:43,893] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:20:43,894] {logging_mixin.py:109} INFO - [2022-06-30 00:20:43,894] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:45,079] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:20:45,092] {logging_mixin.py:109} INFO - [2022-06-30 00:20:45,092] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:20:45,123] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.233 seconds
+[2022-06-30 00:21:15,577] {processor.py:163} INFO - Started process (PID=13408) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:15,584] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:21:15,585] {logging_mixin.py:109} INFO - [2022-06-30 00:21:15,584] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:16,750] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:16,772] {logging_mixin.py:109} INFO - [2022-06-30 00:21:16,771] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:21:16,810] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.236 seconds
+[2022-06-30 00:21:47,395] {processor.py:163} INFO - Started process (PID=13474) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:47,396] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:21:47,397] {logging_mixin.py:109} INFO - [2022-06-30 00:21:47,397] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:48,570] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:21:48,584] {logging_mixin.py:109} INFO - [2022-06-30 00:21:48,584] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:21:48,618] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.225 seconds
+[2022-06-30 00:22:18,829] {processor.py:163} INFO - Started process (PID=13540) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:18,836] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:22:18,836] {logging_mixin.py:109} INFO - [2022-06-30 00:22:18,836] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:20,041] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:20,057] {logging_mixin.py:109} INFO - [2022-06-30 00:22:20,057] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:22:20,088] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.263 seconds
+[2022-06-30 00:22:50,651] {processor.py:163} INFO - Started process (PID=13606) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:50,652] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:22:50,652] {logging_mixin.py:109} INFO - [2022-06-30 00:22:50,652] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:51,829] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:22:51,844] {logging_mixin.py:109} INFO - [2022-06-30 00:22:51,843] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:22:51,874] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.226 seconds
+[2022-06-30 00:23:22,668] {processor.py:163} INFO - Started process (PID=13672) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:22,669] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:23:22,670] {logging_mixin.py:109} INFO - [2022-06-30 00:23:22,669] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:23,942] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:23,956] {logging_mixin.py:109} INFO - [2022-06-30 00:23:23,955] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:23:23,989] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.324 seconds
+[2022-06-30 00:23:54,569] {processor.py:163} INFO - Started process (PID=13738) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:54,571] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:23:54,572] {logging_mixin.py:109} INFO - [2022-06-30 00:23:54,572] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:56,551] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:23:56,566] {logging_mixin.py:109} INFO - [2022-06-30 00:23:56,565] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:23:56,596] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 2.030 seconds
+[2022-06-30 00:24:27,102] {processor.py:163} INFO - Started process (PID=13804) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:24:27,107] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:24:27,109] {logging_mixin.py:109} INFO - [2022-06-30 00:24:27,108] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:24:29,945] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:24:29,960] {logging_mixin.py:109} INFO - [2022-06-30 00:24:29,960] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:24:29,997] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 2.900 seconds
+[2022-06-30 00:25:00,509] {processor.py:163} INFO - Started process (PID=13887) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:00,511] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:25:00,512] {logging_mixin.py:109} INFO - [2022-06-30 00:25:00,512] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:01,725] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:01,741] {logging_mixin.py:109} INFO - [2022-06-30 00:25:01,740] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:25:01,774] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.267 seconds
+[2022-06-30 00:25:32,148] {processor.py:163} INFO - Started process (PID=13955) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:32,149] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:25:32,150] {logging_mixin.py:109} INFO - [2022-06-30 00:25:32,150] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:33,478] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:25:33,493] {logging_mixin.py:109} INFO - [2022-06-30 00:25:33,492] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:25:33,526] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.381 seconds
+[2022-06-30 00:26:03,631] {processor.py:163} INFO - Started process (PID=14021) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:03,638] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:26:03,639] {logging_mixin.py:109} INFO - [2022-06-30 00:26:03,639] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:04,848] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:04,864] {logging_mixin.py:109} INFO - [2022-06-30 00:26:04,863] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:26:04,896] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.269 seconds
+[2022-06-30 00:26:34,967] {processor.py:163} INFO - Started process (PID=14070) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:34,968] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:26:34,969] {logging_mixin.py:109} INFO - [2022-06-30 00:26:34,969] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:36,269] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:26:36,285] {logging_mixin.py:109} INFO - [2022-06-30 00:26:36,285] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:26:36,326] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.362 seconds
+[2022-06-30 00:27:07,231] {processor.py:163} INFO - Started process (PID=14136) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:07,232] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:27:07,232] {logging_mixin.py:109} INFO - [2022-06-30 00:27:07,232] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:08,612] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:08,626] {logging_mixin.py:109} INFO - [2022-06-30 00:27:08,625] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:27:08,658] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.432 seconds
+[2022-06-30 00:27:39,576] {processor.py:163} INFO - Started process (PID=14202) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:39,582] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:27:39,583] {logging_mixin.py:109} INFO - [2022-06-30 00:27:39,583] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:40,762] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:27:40,778] {logging_mixin.py:109} INFO - [2022-06-30 00:27:40,777] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:27:40,811] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.238 seconds
+[2022-06-30 00:28:11,188] {processor.py:163} INFO - Started process (PID=14268) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:11,189] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:28:11,190] {logging_mixin.py:109} INFO - [2022-06-30 00:28:11,189] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:12,421] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:12,437] {logging_mixin.py:109} INFO - [2022-06-30 00:28:12,436] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:28:12,475] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.290 seconds
+[2022-06-30 00:28:43,359] {processor.py:163} INFO - Started process (PID=14334) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:43,360] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:28:43,361] {logging_mixin.py:109} INFO - [2022-06-30 00:28:43,361] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:44,562] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:28:44,576] {logging_mixin.py:109} INFO - [2022-06-30 00:28:44,576] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:28:44,608] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.253 seconds
+[2022-06-30 00:29:15,506] {processor.py:163} INFO - Started process (PID=14400) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:15,507] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:29:15,508] {logging_mixin.py:109} INFO - [2022-06-30 00:29:15,508] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:16,729] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:16,743] {logging_mixin.py:109} INFO - [2022-06-30 00:29:16,743] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:29:16,780] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.278 seconds
+[2022-06-30 00:29:47,656] {processor.py:163} INFO - Started process (PID=14466) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:47,657] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:29:47,658] {logging_mixin.py:109} INFO - [2022-06-30 00:29:47,658] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:48,992] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:29:49,008] {logging_mixin.py:109} INFO - [2022-06-30 00:29:49,007] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:29:49,044] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.391 seconds
+[2022-06-30 00:30:19,819] {processor.py:163} INFO - Started process (PID=14532) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:19,825] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:30:19,827] {logging_mixin.py:109} INFO - [2022-06-30 00:30:19,826] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:21,136] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:21,149] {logging_mixin.py:109} INFO - [2022-06-30 00:30:21,149] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:30:21,186] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.370 seconds
+[2022-06-30 00:30:51,230] {processor.py:163} INFO - Started process (PID=14598) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:51,237] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:30:51,237] {logging_mixin.py:109} INFO - [2022-06-30 00:30:51,237] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:52,216] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:30:52,226] {logging_mixin.py:109} INFO - [2022-06-30 00:30:52,226] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:30:52,249] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.022 seconds
+[2022-06-30 00:31:23,100] {processor.py:163} INFO - Started process (PID=14664) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:23,101] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:31:23,101] {logging_mixin.py:109} INFO - [2022-06-30 00:31:23,101] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:24,063] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:24,076] {logging_mixin.py:109} INFO - [2022-06-30 00:31:24,076] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:31:24,105] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.007 seconds
+[2022-06-30 00:31:54,919] {processor.py:163} INFO - Started process (PID=14730) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:54,927] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:31:54,928] {logging_mixin.py:109} INFO - [2022-06-30 00:31:54,928] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:56,022] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:31:56,033] {logging_mixin.py:109} INFO - [2022-06-30 00:31:56,032] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:31:56,055] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.139 seconds
+[2022-06-30 00:32:26,166] {processor.py:163} INFO - Started process (PID=14796) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:26,167] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:32:26,168] {logging_mixin.py:109} INFO - [2022-06-30 00:32:26,168] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:27,218] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:27,230] {logging_mixin.py:109} INFO - [2022-06-30 00:32:27,230] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:32:27,258] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.095 seconds
+[2022-06-30 00:32:57,498] {processor.py:163} INFO - Started process (PID=14862) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:57,499] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:32:57,500] {logging_mixin.py:109} INFO - [2022-06-30 00:32:57,500] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:58,696] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:32:58,714] {logging_mixin.py:109} INFO - [2022-06-30 00:32:58,714] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:32:58,741] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.246 seconds
+[2022-06-30 00:33:28,789] {processor.py:163} INFO - Started process (PID=14928) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:33:28,789] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:33:28,790] {logging_mixin.py:109} INFO - [2022-06-30 00:33:28,790] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:33:29,698] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:33:29,709] {logging_mixin.py:109} INFO - [2022-06-30 00:33:29,709] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:33:29,736] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.949 seconds
+[2022-06-30 00:34:00,706] {processor.py:163} INFO - Started process (PID=14994) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:00,707] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:34:00,708] {logging_mixin.py:109} INFO - [2022-06-30 00:34:00,708] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:01,666] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:01,676] {logging_mixin.py:109} INFO - [2022-06-30 00:34:01,675] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:34:01,698] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.994 seconds
+[2022-06-30 00:34:32,534] {processor.py:163} INFO - Started process (PID=15060) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:32,542] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:34:32,543] {logging_mixin.py:109} INFO - [2022-06-30 00:34:32,542] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:33,504] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:34:33,514] {logging_mixin.py:109} INFO - [2022-06-30 00:34:33,514] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:34:33,534] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.003 seconds
+[2022-06-30 00:35:03,733] {processor.py:163} INFO - Started process (PID=15126) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:03,734] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:35:03,734] {logging_mixin.py:109} INFO - [2022-06-30 00:35:03,734] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:04,703] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:04,722] {logging_mixin.py:109} INFO - [2022-06-30 00:35:04,722] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:35:04,759] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.028 seconds
+[2022-06-30 00:35:35,605] {processor.py:163} INFO - Started process (PID=15209) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:35,606] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:35:35,607] {logging_mixin.py:109} INFO - [2022-06-30 00:35:35,607] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:36,500] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:35:36,514] {logging_mixin.py:109} INFO - [2022-06-30 00:35:36,514] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:35:36,541] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.939 seconds
+[2022-06-30 00:36:06,939] {processor.py:163} INFO - Started process (PID=15280) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:06,939] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:36:06,940] {logging_mixin.py:109} INFO - [2022-06-30 00:36:06,939] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:07,843] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:07,853] {logging_mixin.py:109} INFO - [2022-06-30 00:36:07,853] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:36:07,878] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.942 seconds
+[2022-06-30 00:36:38,125] {processor.py:163} INFO - Started process (PID=15346) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:38,126] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:36:38,126] {logging_mixin.py:109} INFO - [2022-06-30 00:36:38,126] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:38,984] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:36:38,995] {logging_mixin.py:109} INFO - [2022-06-30 00:36:38,995] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:36:39,018] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.896 seconds
+[2022-06-30 00:37:09,307] {processor.py:163} INFO - Started process (PID=15415) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:09,308] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:37:09,309] {logging_mixin.py:109} INFO - [2022-06-30 00:37:09,308] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:10,162] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:10,175] {logging_mixin.py:109} INFO - [2022-06-30 00:37:10,174] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:37:10,195] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.889 seconds
+[2022-06-30 00:37:40,345] {processor.py:163} INFO - Started process (PID=15485) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:40,346] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:37:40,346] {logging_mixin.py:109} INFO - [2022-06-30 00:37:40,346] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:41,139] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:37:41,150] {logging_mixin.py:109} INFO - [2022-06-30 00:37:41,149] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:37:41,171] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.828 seconds
+[2022-06-30 00:38:11,537] {processor.py:163} INFO - Started process (PID=15551) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:11,538] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:38:11,538] {logging_mixin.py:109} INFO - [2022-06-30 00:38:11,538] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:12,309] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:12,323] {logging_mixin.py:109} INFO - [2022-06-30 00:38:12,322] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:38:12,343] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.808 seconds
+[2022-06-30 00:38:42,382] {processor.py:163} INFO - Started process (PID=15620) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:42,383] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:38:42,383] {logging_mixin.py:109} INFO - [2022-06-30 00:38:42,383] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:43,222] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:38:43,232] {logging_mixin.py:109} INFO - [2022-06-30 00:38:43,232] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:38:43,253] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.872 seconds
+[2022-06-30 00:39:13,350] {processor.py:163} INFO - Started process (PID=15685) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:13,351] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:39:13,351] {logging_mixin.py:109} INFO - [2022-06-30 00:39:13,351] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:14,140] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:14,151] {logging_mixin.py:109} INFO - [2022-06-30 00:39:14,150] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:39:14,174] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.826 seconds
+[2022-06-30 00:39:44,738] {processor.py:163} INFO - Started process (PID=15735) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:44,739] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:39:44,742] {logging_mixin.py:109} INFO - [2022-06-30 00:39:44,742] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:45,660] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:39:45,670] {logging_mixin.py:109} INFO - [2022-06-30 00:39:45,669] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:39:45,690] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.954 seconds
+[2022-06-30 00:40:16,360] {processor.py:163} INFO - Started process (PID=15801) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:16,367] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:40:16,368] {logging_mixin.py:109} INFO - [2022-06-30 00:40:16,368] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:17,267] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:17,277] {logging_mixin.py:109} INFO - [2022-06-30 00:40:17,277] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:40:17,297] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.939 seconds
+[2022-06-30 00:40:48,047] {processor.py:163} INFO - Started process (PID=15867) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:48,054] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:40:48,055] {logging_mixin.py:109} INFO - [2022-06-30 00:40:48,054] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:48,921] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:40:48,932] {logging_mixin.py:109} INFO - [2022-06-30 00:40:48,932] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:40:48,961] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.916 seconds
+[2022-06-30 00:41:19,682] {processor.py:163} INFO - Started process (PID=15933) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:19,683] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:41:19,683] {logging_mixin.py:109} INFO - [2022-06-30 00:41:19,683] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:20,570] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:20,583] {logging_mixin.py:109} INFO - [2022-06-30 00:41:20,582] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:41:20,606] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.926 seconds
+[2022-06-30 00:41:50,674] {processor.py:163} INFO - Started process (PID=15999) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:50,687] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:41:50,687] {logging_mixin.py:109} INFO - [2022-06-30 00:41:50,687] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:51,630] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:41:51,640] {logging_mixin.py:109} INFO - [2022-06-30 00:41:51,639] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:41:51,669] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.997 seconds
+[2022-06-30 00:42:21,702] {processor.py:163} INFO - Started process (PID=16065) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:21,703] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:42:21,703] {logging_mixin.py:109} INFO - [2022-06-30 00:42:21,703] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:22,651] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:22,662] {logging_mixin.py:109} INFO - [2022-06-30 00:42:22,661] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:42:22,688] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.989 seconds
+[2022-06-30 00:42:53,590] {processor.py:163} INFO - Started process (PID=16131) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:53,594] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:42:53,595] {logging_mixin.py:109} INFO - [2022-06-30 00:42:53,594] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:54,469] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:42:54,478] {logging_mixin.py:109} INFO - [2022-06-30 00:42:54,478] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:42:54,514] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.926 seconds
+[2022-06-30 00:43:25,289] {processor.py:163} INFO - Started process (PID=16197) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:25,290] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:43:25,291] {logging_mixin.py:109} INFO - [2022-06-30 00:43:25,291] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:26,241] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:26,251] {logging_mixin.py:109} INFO - [2022-06-30 00:43:26,251] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:43:26,274] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.987 seconds
+[2022-06-30 00:43:57,028] {processor.py:163} INFO - Started process (PID=16263) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:57,029] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:43:57,030] {logging_mixin.py:109} INFO - [2022-06-30 00:43:57,030] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:57,964] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:43:57,975] {logging_mixin.py:109} INFO - [2022-06-30 00:43:57,974] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:43:57,998] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.972 seconds
+[2022-06-30 00:44:28,060] {processor.py:163} INFO - Started process (PID=16329) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:44:28,067] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:44:28,067] {logging_mixin.py:109} INFO - [2022-06-30 00:44:28,067] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:44:29,081] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:44:29,093] {logging_mixin.py:109} INFO - [2022-06-30 00:44:29,093] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:44:29,123] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.067 seconds
+[2022-06-30 00:44:59,190] {processor.py:163} INFO - Started process (PID=16395) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:44:59,191] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:44:59,191] {logging_mixin.py:109} INFO - [2022-06-30 00:44:59,191] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:45:00,025] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:45:00,037] {logging_mixin.py:109} INFO - [2022-06-30 00:45:00,037] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:45:00,057] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.869 seconds
+[2022-06-30 00:45:30,127] {processor.py:163} INFO - Started process (PID=16461) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:45:30,129] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:45:30,129] {logging_mixin.py:109} INFO - [2022-06-30 00:45:30,129] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:45:31,161] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:45:31,173] {logging_mixin.py:109} INFO - [2022-06-30 00:45:31,172] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:45:31,198] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.074 seconds
+[2022-06-30 00:46:01,421] {processor.py:163} INFO - Started process (PID=16527) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:01,423] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:46:01,424] {logging_mixin.py:109} INFO - [2022-06-30 00:46:01,424] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:02,411] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:02,424] {logging_mixin.py:109} INFO - [2022-06-30 00:46:02,424] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:46:02,460] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.042 seconds
+[2022-06-30 00:46:33,407] {processor.py:163} INFO - Started process (PID=16593) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:33,408] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:46:33,408] {logging_mixin.py:109} INFO - [2022-06-30 00:46:33,408] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:34,376] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:46:34,387] {logging_mixin.py:109} INFO - [2022-06-30 00:46:34,387] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:46:34,409] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.005 seconds
+[2022-06-30 00:47:04,849] {processor.py:163} INFO - Started process (PID=16659) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:04,857] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:47:04,858] {logging_mixin.py:109} INFO - [2022-06-30 00:47:04,858] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:05,871] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:05,885] {logging_mixin.py:109} INFO - [2022-06-30 00:47:05,885] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:47:05,910] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.063 seconds
+[2022-06-30 00:47:36,912] {processor.py:163} INFO - Started process (PID=16725) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:36,913] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:47:36,914] {logging_mixin.py:109} INFO - [2022-06-30 00:47:36,914] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:37,704] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:47:37,714] {logging_mixin.py:109} INFO - [2022-06-30 00:47:37,713] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:47:37,739] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.829 seconds
+[2022-06-30 00:48:08,334] {processor.py:163} INFO - Started process (PID=16791) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:08,335] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:48:08,337] {logging_mixin.py:109} INFO - [2022-06-30 00:48:08,337] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:09,326] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:09,336] {logging_mixin.py:109} INFO - [2022-06-30 00:48:09,335] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:48:09,365] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.033 seconds
+[2022-06-30 00:48:40,126] {processor.py:163} INFO - Started process (PID=16857) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:40,127] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:48:40,128] {logging_mixin.py:109} INFO - [2022-06-30 00:48:40,128] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:40,984] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:48:40,998] {logging_mixin.py:109} INFO - [2022-06-30 00:48:40,998] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:48:41,029] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.905 seconds
+[2022-06-30 00:49:11,144] {processor.py:163} INFO - Started process (PID=16923) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:11,145] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:49:11,146] {logging_mixin.py:109} INFO - [2022-06-30 00:49:11,146] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:12,079] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:12,088] {logging_mixin.py:109} INFO - [2022-06-30 00:49:12,087] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:49:12,107] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.965 seconds
+[2022-06-30 00:49:42,870] {processor.py:163} INFO - Started process (PID=16989) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:42,871] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:49:42,871] {logging_mixin.py:109} INFO - [2022-06-30 00:49:42,871] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:43,749] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:49:43,761] {logging_mixin.py:109} INFO - [2022-06-30 00:49:43,761] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:49:43,789] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.922 seconds
+[2022-06-30 00:50:14,720] {processor.py:163} INFO - Started process (PID=17055) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:14,726] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:50:14,726] {logging_mixin.py:109} INFO - [2022-06-30 00:50:14,726] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:15,588] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:15,598] {logging_mixin.py:109} INFO - [2022-06-30 00:50:15,598] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:50:15,619] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.901 seconds
+[2022-06-30 00:50:46,558] {processor.py:163} INFO - Started process (PID=17121) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:46,559] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:50:46,559] {logging_mixin.py:109} INFO - [2022-06-30 00:50:46,559] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:47,368] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:50:47,378] {logging_mixin.py:109} INFO - [2022-06-30 00:50:47,378] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:50:47,399] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.843 seconds
+[2022-06-30 00:51:18,061] {processor.py:163} INFO - Started process (PID=17187) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:18,062] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:51:18,062] {logging_mixin.py:109} INFO - [2022-06-30 00:51:18,062] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:19,013] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:19,023] {logging_mixin.py:109} INFO - [2022-06-30 00:51:19,023] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:51:19,045] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.986 seconds
+[2022-06-30 00:51:49,944] {processor.py:163} INFO - Started process (PID=17253) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:49,945] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:51:49,945] {logging_mixin.py:109} INFO - [2022-06-30 00:51:49,945] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:50,817] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:51:50,828] {logging_mixin.py:109} INFO - [2022-06-30 00:51:50,828] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:51:50,855] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.914 seconds
+[2022-06-30 00:52:21,580] {processor.py:163} INFO - Started process (PID=17319) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:21,587] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:52:21,587] {logging_mixin.py:109} INFO - [2022-06-30 00:52:21,587] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:22,503] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:22,513] {logging_mixin.py:109} INFO - [2022-06-30 00:52:22,512] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:52:22,532] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.954 seconds
+[2022-06-30 00:52:53,303] {processor.py:163} INFO - Started process (PID=17385) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:53,304] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:52:53,304] {logging_mixin.py:109} INFO - [2022-06-30 00:52:53,304] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:54,204] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:52:54,217] {logging_mixin.py:109} INFO - [2022-06-30 00:52:54,216] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:52:54,243] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.942 seconds
+[2022-06-30 00:53:25,018] {processor.py:163} INFO - Started process (PID=17451) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:25,021] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:53:25,021] {logging_mixin.py:109} INFO - [2022-06-30 00:53:25,021] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:25,826] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:25,836] {logging_mixin.py:109} INFO - [2022-06-30 00:53:25,836] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:53:25,863] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.847 seconds
+[2022-06-30 00:53:56,712] {processor.py:163} INFO - Started process (PID=17517) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:56,713] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:53:56,713] {logging_mixin.py:109} INFO - [2022-06-30 00:53:56,713] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:57,706] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:53:57,717] {logging_mixin.py:109} INFO - [2022-06-30 00:53:57,717] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:53:57,739] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.029 seconds
+[2022-06-30 00:54:27,901] {processor.py:163} INFO - Started process (PID=17583) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:54:27,903] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:54:27,903] {logging_mixin.py:109} INFO - [2022-06-30 00:54:27,903] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:54:29,195] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:54:29,209] {logging_mixin.py:109} INFO - [2022-06-30 00:54:29,209] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:54:29,257] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.359 seconds
+[2022-06-30 00:54:59,367] {processor.py:163} INFO - Started process (PID=17649) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:54:59,375] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:54:59,376] {logging_mixin.py:109} INFO - [2022-06-30 00:54:59,375] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:55:00,298] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:55:00,314] {logging_mixin.py:109} INFO - [2022-06-30 00:55:00,313] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:55:00,344] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.979 seconds
+[2022-06-30 00:55:31,217] {processor.py:163} INFO - Started process (PID=17715) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:55:31,224] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:55:31,225] {logging_mixin.py:109} INFO - [2022-06-30 00:55:31,225] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:55:32,178] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:55:32,190] {logging_mixin.py:109} INFO - [2022-06-30 00:55:32,189] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:55:32,213] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.999 seconds
+[2022-06-30 00:56:02,633] {processor.py:163} INFO - Started process (PID=17781) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:02,634] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:56:02,635] {logging_mixin.py:109} INFO - [2022-06-30 00:56:02,635] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:03,463] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:03,474] {logging_mixin.py:109} INFO - [2022-06-30 00:56:03,474] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:56:03,498] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.867 seconds
+[2022-06-30 00:56:34,477] {processor.py:163} INFO - Started process (PID=17847) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:34,485] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:56:34,485] {logging_mixin.py:109} INFO - [2022-06-30 00:56:34,485] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:35,468] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:56:35,480] {logging_mixin.py:109} INFO - [2022-06-30 00:56:35,479] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:56:35,502] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.027 seconds
+[2022-06-30 00:57:05,762] {processor.py:163} INFO - Started process (PID=17913) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:05,764] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:57:05,764] {logging_mixin.py:109} INFO - [2022-06-30 00:57:05,764] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:06,602] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:06,613] {logging_mixin.py:109} INFO - [2022-06-30 00:57:06,612] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:57:06,642] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.882 seconds
+[2022-06-30 00:57:37,630] {processor.py:163} INFO - Started process (PID=17979) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:37,631] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:57:37,631] {logging_mixin.py:109} INFO - [2022-06-30 00:57:37,631] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:38,546] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:57:38,556] {logging_mixin.py:109} INFO - [2022-06-30 00:57:38,556] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:57:38,580] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.953 seconds
+[2022-06-30 00:58:08,628] {processor.py:163} INFO - Started process (PID=18045) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:08,634] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:58:08,635] {logging_mixin.py:109} INFO - [2022-06-30 00:58:08,635] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:09,552] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:09,563] {logging_mixin.py:109} INFO - [2022-06-30 00:58:09,563] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:58:09,588] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.962 seconds
+[2022-06-30 00:58:40,430] {processor.py:163} INFO - Started process (PID=18111) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:40,431] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:58:40,431] {logging_mixin.py:109} INFO - [2022-06-30 00:58:40,431] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:41,315] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:58:41,324] {logging_mixin.py:109} INFO - [2022-06-30 00:58:41,324] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:58:41,347] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.919 seconds
+[2022-06-30 00:59:12,103] {processor.py:163} INFO - Started process (PID=18177) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:12,104] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:59:12,104] {logging_mixin.py:109} INFO - [2022-06-30 00:59:12,104] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:13,091] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:13,104] {logging_mixin.py:109} INFO - [2022-06-30 00:59:13,104] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:59:13,126] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.026 seconds
+[2022-06-30 00:59:43,976] {processor.py:163} INFO - Started process (PID=18243) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:43,977] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 00:59:43,978] {logging_mixin.py:109} INFO - [2022-06-30 00:59:43,978] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:44,885] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 00:59:44,899] {logging_mixin.py:109} INFO - [2022-06-30 00:59:44,898] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 00:59:44,922] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.949 seconds
+[2022-06-30 01:00:15,840] {processor.py:163} INFO - Started process (PID=18309) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:15,841] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:00:15,842] {logging_mixin.py:109} INFO - [2022-06-30 01:00:15,841] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:16,897] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:17,087] {logging_mixin.py:109} INFO - [2022-06-30 01:00:17,087] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:00:17,120] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.282 seconds
+[2022-06-30 01:00:47,996] {processor.py:163} INFO - Started process (PID=18375) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:48,003] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:00:48,003] {logging_mixin.py:109} INFO - [2022-06-30 01:00:48,003] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:48,879] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:00:48,890] {logging_mixin.py:109} INFO - [2022-06-30 01:00:48,890] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:00:48,911] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.917 seconds
+[2022-06-30 01:01:19,711] {processor.py:163} INFO - Started process (PID=18441) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:19,712] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:01:19,712] {logging_mixin.py:109} INFO - [2022-06-30 01:01:19,712] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:20,655] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:20,665] {logging_mixin.py:109} INFO - [2022-06-30 01:01:20,665] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:01:20,688] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.979 seconds
+[2022-06-30 01:01:51,473] {processor.py:163} INFO - Started process (PID=18507) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:51,480] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:01:51,480] {logging_mixin.py:109} INFO - [2022-06-30 01:01:51,480] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:52,400] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:01:52,411] {logging_mixin.py:109} INFO - [2022-06-30 01:01:52,410] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:01:52,434] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.964 seconds
+[2022-06-30 01:02:23,178] {processor.py:163} INFO - Started process (PID=18573) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:23,186] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:02:23,187] {logging_mixin.py:109} INFO - [2022-06-30 01:02:23,186] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:24,286] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:24,305] {logging_mixin.py:109} INFO - [2022-06-30 01:02:24,304] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:02:24,339] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.164 seconds
+[2022-06-30 01:02:54,968] {processor.py:163} INFO - Started process (PID=18639) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:54,969] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:02:54,969] {logging_mixin.py:109} INFO - [2022-06-30 01:02:54,969] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:56,116] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:02:56,141] {logging_mixin.py:109} INFO - [2022-06-30 01:02:56,141] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:02:56,193] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.226 seconds
+[2022-06-30 01:03:26,661] {processor.py:163} INFO - Started process (PID=18705) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:26,662] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:03:26,662] {logging_mixin.py:109} INFO - [2022-06-30 01:03:26,662] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:27,545] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:27,555] {logging_mixin.py:109} INFO - [2022-06-30 01:03:27,554] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:03:27,576] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.917 seconds
+[2022-06-30 01:03:58,481] {processor.py:163} INFO - Started process (PID=18771) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:58,482] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:03:58,482] {logging_mixin.py:109} INFO - [2022-06-30 01:03:58,482] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:59,303] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:03:59,312] {logging_mixin.py:109} INFO - [2022-06-30 01:03:59,312] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:03:59,332] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.852 seconds
+[2022-06-30 01:04:29,950] {processor.py:163} INFO - Started process (PID=18837) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:04:29,951] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:04:29,951] {logging_mixin.py:109} INFO - [2022-06-30 01:04:29,951] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:04:30,776] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:04:30,785] {logging_mixin.py:109} INFO - [2022-06-30 01:04:30,785] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:04:30,811] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.863 seconds
+[2022-06-30 01:05:01,375] {processor.py:163} INFO - Started process (PID=18903) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:01,381] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:05:01,383] {logging_mixin.py:109} INFO - [2022-06-30 01:05:01,382] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:02,146] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:02,155] {logging_mixin.py:109} INFO - [2022-06-30 01:05:02,155] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:05:02,175] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.802 seconds
+[2022-06-30 01:05:32,602] {processor.py:163} INFO - Started process (PID=18969) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:32,603] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:05:32,603] {logging_mixin.py:109} INFO - [2022-06-30 01:05:32,603] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:33,421] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:05:33,430] {logging_mixin.py:109} INFO - [2022-06-30 01:05:33,430] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:05:33,454] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.854 seconds
+[2022-06-30 01:06:03,994] {processor.py:163} INFO - Started process (PID=19035) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:04,001] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:06:04,002] {logging_mixin.py:109} INFO - [2022-06-30 01:06:04,002] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:05,095] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:05,105] {logging_mixin.py:109} INFO - [2022-06-30 01:06:05,104] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:06:05,129] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.137 seconds
+[2022-06-30 01:06:35,881] {processor.py:163} INFO - Started process (PID=19101) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:35,882] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:06:35,883] {logging_mixin.py:109} INFO - [2022-06-30 01:06:35,882] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:36,679] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:06:36,693] {logging_mixin.py:109} INFO - [2022-06-30 01:06:36,693] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:06:36,722] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.843 seconds
+[2022-06-30 01:07:07,250] {processor.py:163} INFO - Started process (PID=19167) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:07,251] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:07:07,251] {logging_mixin.py:109} INFO - [2022-06-30 01:07:07,251] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:08,143] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:08,152] {logging_mixin.py:109} INFO - [2022-06-30 01:07:08,152] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:07:08,175] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.927 seconds
+[2022-06-30 01:07:38,798] {processor.py:163} INFO - Started process (PID=19233) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:38,806] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:07:38,806] {logging_mixin.py:109} INFO - [2022-06-30 01:07:38,806] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:39,653] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:07:39,665] {logging_mixin.py:109} INFO - [2022-06-30 01:07:39,664] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:07:39,690] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.894 seconds
+[2022-06-30 01:08:10,498] {processor.py:163} INFO - Started process (PID=19299) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:10,499] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:08:10,499] {logging_mixin.py:109} INFO - [2022-06-30 01:08:10,499] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:11,481] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:11,491] {logging_mixin.py:109} INFO - [2022-06-30 01:08:11,491] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:08:11,509] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.013 seconds
+[2022-06-30 01:08:42,247] {processor.py:163} INFO - Started process (PID=19365) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:42,248] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:08:42,248] {logging_mixin.py:109} INFO - [2022-06-30 01:08:42,248] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:42,990] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:08:42,999] {logging_mixin.py:109} INFO - [2022-06-30 01:08:42,999] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:08:43,022] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.777 seconds
+[2022-06-30 01:09:13,457] {processor.py:163} INFO - Started process (PID=19431) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:13,458] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:09:13,459] {logging_mixin.py:109} INFO - [2022-06-30 01:09:13,459] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:14,197] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:14,206] {logging_mixin.py:109} INFO - [2022-06-30 01:09:14,206] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:09:14,232] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.777 seconds
+[2022-06-30 01:09:44,934] {processor.py:163} INFO - Started process (PID=19497) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:44,935] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:09:44,935] {logging_mixin.py:109} INFO - [2022-06-30 01:09:44,935] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:45,836] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:09:45,845] {logging_mixin.py:109} INFO - [2022-06-30 01:09:45,845] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:09:45,865] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.934 seconds
+[2022-06-30 01:10:16,334] {processor.py:163} INFO - Started process (PID=19563) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:16,341] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:10:16,341] {logging_mixin.py:109} INFO - [2022-06-30 01:10:16,341] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:17,212] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:17,222] {logging_mixin.py:109} INFO - [2022-06-30 01:10:17,222] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:10:17,244] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.913 seconds
+[2022-06-30 01:10:47,833] {processor.py:163} INFO - Started process (PID=19629) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:47,841] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:10:47,841] {logging_mixin.py:109} INFO - [2022-06-30 01:10:47,841] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:48,636] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:10:48,645] {logging_mixin.py:109} INFO - [2022-06-30 01:10:48,645] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:10:48,667] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.835 seconds
+[2022-06-30 01:11:19,253] {processor.py:163} INFO - Started process (PID=19695) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:19,253] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:11:19,254] {logging_mixin.py:109} INFO - [2022-06-30 01:11:19,254] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:20,066] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:20,079] {logging_mixin.py:109} INFO - [2022-06-30 01:11:20,079] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:11:20,103] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.852 seconds
+[2022-06-30 01:11:50,669] {processor.py:163} INFO - Started process (PID=19761) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:50,670] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:11:50,671] {logging_mixin.py:109} INFO - [2022-06-30 01:11:50,671] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:51,513] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:11:51,522] {logging_mixin.py:109} INFO - [2022-06-30 01:11:51,522] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:11:51,544] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.876 seconds
+[2022-06-30 01:12:22,347] {processor.py:163} INFO - Started process (PID=19827) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:22,348] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:12:22,349] {logging_mixin.py:109} INFO - [2022-06-30 01:12:22,349] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:23,087] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:23,097] {logging_mixin.py:109} INFO - [2022-06-30 01:12:23,096] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:12:23,121] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.776 seconds
+[2022-06-30 01:12:53,638] {processor.py:163} INFO - Started process (PID=19893) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:53,639] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:12:53,642] {logging_mixin.py:109} INFO - [2022-06-30 01:12:53,642] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:54,420] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:12:54,430] {logging_mixin.py:109} INFO - [2022-06-30 01:12:54,429] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:12:54,455] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.820 seconds
+[2022-06-30 01:13:25,033] {processor.py:163} INFO - Started process (PID=19959) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:25,039] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:13:25,040] {logging_mixin.py:109} INFO - [2022-06-30 01:13:25,040] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:25,807] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:25,816] {logging_mixin.py:109} INFO - [2022-06-30 01:13:25,816] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:13:25,843] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.813 seconds
+[2022-06-30 01:13:56,351] {processor.py:163} INFO - Started process (PID=20025) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:56,352] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:13:56,352] {logging_mixin.py:109} INFO - [2022-06-30 01:13:56,352] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:57,181] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:13:57,192] {logging_mixin.py:109} INFO - [2022-06-30 01:13:57,192] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:13:57,217] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.869 seconds
+[2022-06-30 01:14:27,712] {processor.py:163} INFO - Started process (PID=20091) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:14:27,719] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:14:27,719] {logging_mixin.py:109} INFO - [2022-06-30 01:14:27,719] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:14:28,644] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:14:28,661] {logging_mixin.py:109} INFO - [2022-06-30 01:14:28,660] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:14:28,694] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.984 seconds
+[2022-06-30 01:14:59,329] {processor.py:163} INFO - Started process (PID=20157) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:14:59,336] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:14:59,336] {logging_mixin.py:109} INFO - [2022-06-30 01:14:59,336] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:15:00,213] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:15:00,222] {logging_mixin.py:109} INFO - [2022-06-30 01:15:00,222] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:15:00,242] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.915 seconds
+[2022-06-30 01:15:30,846] {processor.py:163} INFO - Started process (PID=20223) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:15:30,846] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:15:30,847] {logging_mixin.py:109} INFO - [2022-06-30 01:15:30,847] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:15:31,630] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:15:31,640] {logging_mixin.py:109} INFO - [2022-06-30 01:15:31,640] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:15:31,660] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.816 seconds
+[2022-06-30 01:16:02,381] {processor.py:163} INFO - Started process (PID=20289) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:02,382] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:16:02,382] {logging_mixin.py:109} INFO - [2022-06-30 01:16:02,382] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:03,353] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:03,363] {logging_mixin.py:109} INFO - [2022-06-30 01:16:03,363] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:16:03,387] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.009 seconds
+[2022-06-30 01:16:34,099] {processor.py:163} INFO - Started process (PID=20355) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:34,100] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:16:34,101] {logging_mixin.py:109} INFO - [2022-06-30 01:16:34,101] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:34,925] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:16:34,936] {logging_mixin.py:109} INFO - [2022-06-30 01:16:34,935] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:16:34,956] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.859 seconds
+[2022-06-30 01:17:04,989] {processor.py:163} INFO - Started process (PID=20421) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:04,990] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:17:04,990] {logging_mixin.py:109} INFO - [2022-06-30 01:17:04,990] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:05,912] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:05,931] {logging_mixin.py:109} INFO - [2022-06-30 01:17:05,931] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:17:05,979] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.993 seconds
+[2022-06-30 01:17:36,042] {processor.py:163} INFO - Started process (PID=20487) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:36,043] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:17:36,043] {logging_mixin.py:109} INFO - [2022-06-30 01:17:36,043] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:36,762] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:17:36,772] {logging_mixin.py:109} INFO - [2022-06-30 01:17:36,772] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:17:36,800] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.760 seconds
+[2022-06-30 01:18:07,156] {processor.py:163} INFO - Started process (PID=20553) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:07,157] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:18:07,157] {logging_mixin.py:109} INFO - [2022-06-30 01:18:07,157] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:08,069] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:08,080] {logging_mixin.py:109} INFO - [2022-06-30 01:18:08,079] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:18:08,107] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.953 seconds
+[2022-06-30 01:18:38,210] {processor.py:163} INFO - Started process (PID=20623) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:38,212] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:18:38,213] {logging_mixin.py:109} INFO - [2022-06-30 01:18:38,213] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:38,967] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:18:38,977] {logging_mixin.py:109} INFO - [2022-06-30 01:18:38,977] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:18:38,996] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.793 seconds
+[2022-06-30 01:19:09,021] {processor.py:163} INFO - Started process (PID=20693) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:09,022] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:19:09,023] {logging_mixin.py:109} INFO - [2022-06-30 01:19:09,022] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:09,723] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:09,732] {logging_mixin.py:109} INFO - [2022-06-30 01:19:09,732] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:19:09,751] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.732 seconds
+[2022-06-30 01:19:39,844] {processor.py:163} INFO - Started process (PID=20760) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:39,845] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:19:39,846] {logging_mixin.py:109} INFO - [2022-06-30 01:19:39,846] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:40,574] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:19:40,583] {logging_mixin.py:109} INFO - [2022-06-30 01:19:40,583] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:19:40,602] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.760 seconds
+[2022-06-30 01:20:11,043] {processor.py:163} INFO - Started process (PID=20826) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:11,044] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:20:11,045] {logging_mixin.py:109} INFO - [2022-06-30 01:20:11,045] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:11,868] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:11,880] {logging_mixin.py:109} INFO - [2022-06-30 01:20:11,879] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:20:11,900] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.859 seconds
+[2022-06-30 01:20:41,998] {processor.py:163} INFO - Started process (PID=20899) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:41,999] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:20:41,999] {logging_mixin.py:109} INFO - [2022-06-30 01:20:41,999] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:43,031] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:20:43,042] {logging_mixin.py:109} INFO - [2022-06-30 01:20:43,041] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:20:43,065] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.069 seconds
+[2022-06-30 01:21:13,301] {processor.py:163} INFO - Started process (PID=20966) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:13,309] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:21:13,310] {logging_mixin.py:109} INFO - [2022-06-30 01:21:13,310] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:14,103] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:14,113] {logging_mixin.py:109} INFO - [2022-06-30 01:21:14,113] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:21:14,134] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.834 seconds
+[2022-06-30 01:21:44,369] {processor.py:163} INFO - Started process (PID=21037) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:44,369] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:21:44,370] {logging_mixin.py:109} INFO - [2022-06-30 01:21:44,370] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:45,186] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:21:45,195] {logging_mixin.py:109} INFO - [2022-06-30 01:21:45,195] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:21:45,215] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.848 seconds
+[2022-06-30 01:22:15,708] {processor.py:163} INFO - Started process (PID=21103) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:15,715] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:22:15,716] {logging_mixin.py:109} INFO - [2022-06-30 01:22:15,716] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:16,549] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:16,558] {logging_mixin.py:109} INFO - [2022-06-30 01:22:16,558] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:22:16,578] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.873 seconds
+[2022-06-30 01:22:46,973] {processor.py:163} INFO - Started process (PID=21169) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:46,973] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:22:46,974] {logging_mixin.py:109} INFO - [2022-06-30 01:22:46,974] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:47,725] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:22:47,735] {logging_mixin.py:109} INFO - [2022-06-30 01:22:47,735] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:22:47,755] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.785 seconds
+[2022-06-30 01:23:18,236] {processor.py:163} INFO - Started process (PID=21235) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:18,242] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:23:18,243] {logging_mixin.py:109} INFO - [2022-06-30 01:23:18,242] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:19,072] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:19,082] {logging_mixin.py:109} INFO - [2022-06-30 01:23:19,082] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:23:19,103] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.869 seconds
+[2022-06-30 01:23:49,124] {processor.py:163} INFO - Started process (PID=21308) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:49,124] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:23:49,124] {logging_mixin.py:109} INFO - [2022-06-30 01:23:49,124] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:49,842] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:23:49,851] {logging_mixin.py:109} INFO - [2022-06-30 01:23:49,850] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:23:49,876] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.754 seconds
+[2022-06-30 01:24:20,254] {processor.py:163} INFO - Started process (PID=21374) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:20,262] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:24:20,263] {logging_mixin.py:109} INFO - [2022-06-30 01:24:20,263] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:21,008] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:21,017] {logging_mixin.py:109} INFO - [2022-06-30 01:24:21,017] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:24:21,043] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.791 seconds
+[2022-06-30 01:24:51,467] {processor.py:163} INFO - Started process (PID=21440) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:51,468] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:24:51,468] {logging_mixin.py:109} INFO - [2022-06-30 01:24:51,468] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:52,303] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:24:52,314] {logging_mixin.py:109} INFO - [2022-06-30 01:24:52,313] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:24:52,338] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.873 seconds
+[2022-06-30 01:25:22,714] {processor.py:163} INFO - Started process (PID=21506) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:22,715] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:25:22,716] {logging_mixin.py:109} INFO - [2022-06-30 01:25:22,716] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:23,515] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:23,525] {logging_mixin.py:109} INFO - [2022-06-30 01:25:23,525] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:25:23,569] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.857 seconds
+[2022-06-30 01:25:54,933] {processor.py:163} INFO - Started process (PID=21570) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:54,933] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:25:54,938] {logging_mixin.py:109} INFO - [2022-06-30 01:25:54,938] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:55,935] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:25:55,944] {logging_mixin.py:109} INFO - [2022-06-30 01:25:55,944] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:25:56,274] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.344 seconds
+[2022-06-30 01:26:27,145] {processor.py:163} INFO - Started process (PID=21652) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:26:27,146] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:26:27,146] {logging_mixin.py:109} INFO - [2022-06-30 01:26:27,146] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:26:28,499] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:26:28,510] {logging_mixin.py:109} INFO - [2022-06-30 01:26:28,510] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:26:28,540] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.397 seconds
+[2022-06-30 01:26:59,155] {processor.py:163} INFO - Started process (PID=21702) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:26:59,164] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:26:59,165] {logging_mixin.py:109} INFO - [2022-06-30 01:26:59,165] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:27:00,232] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:27:00,240] {logging_mixin.py:109} INFO - [2022-06-30 01:27:00,240] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:27:00,262] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.109 seconds
+[2022-06-30 01:27:30,800] {processor.py:163} INFO - Started process (PID=21768) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:27:30,801] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:27:30,828] {logging_mixin.py:109} INFO - [2022-06-30 01:27:30,828] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:27:31,657] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:27:31,669] {logging_mixin.py:109} INFO - [2022-06-30 01:27:31,669] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:27:31,697] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.898 seconds
+[2022-06-30 01:28:02,261] {processor.py:163} INFO - Started process (PID=21834) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:02,269] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:28:02,272] {logging_mixin.py:109} INFO - [2022-06-30 01:28:02,272] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:03,059] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:03,069] {logging_mixin.py:109} INFO - [2022-06-30 01:28:03,069] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:28:03,113] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.855 seconds
+[2022-06-30 01:28:33,694] {processor.py:163} INFO - Started process (PID=21900) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:33,718] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:28:33,718] {logging_mixin.py:109} INFO - [2022-06-30 01:28:33,718] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:34,570] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:28:34,580] {logging_mixin.py:109} INFO - [2022-06-30 01:28:34,580] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:28:34,607] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.914 seconds
+[2022-06-30 01:29:05,069] {processor.py:163} INFO - Started process (PID=21966) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:05,077] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:29:05,077] {logging_mixin.py:109} INFO - [2022-06-30 01:29:05,077] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:05,920] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:05,929] {logging_mixin.py:109} INFO - [2022-06-30 01:29:05,929] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:29:05,951] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.884 seconds
+[2022-06-30 01:29:36,472] {processor.py:163} INFO - Started process (PID=22032) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:36,472] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:29:36,473] {logging_mixin.py:109} INFO - [2022-06-30 01:29:36,473] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:37,302] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:29:37,310] {logging_mixin.py:109} INFO - [2022-06-30 01:29:37,310] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:29:37,341] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.871 seconds
+[2022-06-30 01:30:07,851] {processor.py:163} INFO - Started process (PID=22098) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:07,852] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:30:07,853] {logging_mixin.py:109} INFO - [2022-06-30 01:30:07,853] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:08,724] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:08,733] {logging_mixin.py:109} INFO - [2022-06-30 01:30:08,733] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:30:08,757] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.908 seconds
+[2022-06-30 01:30:39,186] {processor.py:163} INFO - Started process (PID=22164) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:39,187] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:30:39,187] {logging_mixin.py:109} INFO - [2022-06-30 01:30:39,187] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:40,068] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:30:40,076] {logging_mixin.py:109} INFO - [2022-06-30 01:30:40,076] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:30:40,100] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.917 seconds
+[2022-06-30 01:31:10,555] {processor.py:163} INFO - Started process (PID=22230) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:10,556] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:31:10,556] {logging_mixin.py:109} INFO - [2022-06-30 01:31:10,556] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:11,428] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:11,438] {logging_mixin.py:109} INFO - [2022-06-30 01:31:11,438] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:31:11,459] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.906 seconds
+[2022-06-30 01:31:41,893] {processor.py:163} INFO - Started process (PID=22296) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:41,900] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:31:41,901] {logging_mixin.py:109} INFO - [2022-06-30 01:31:41,901] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:42,769] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:31:42,780] {logging_mixin.py:109} INFO - [2022-06-30 01:31:42,780] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:31:42,805] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.914 seconds
+[2022-06-30 01:32:13,301] {processor.py:163} INFO - Started process (PID=22362) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:13,302] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:32:13,303] {logging_mixin.py:109} INFO - [2022-06-30 01:32:13,303] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:14,143] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:14,156] {logging_mixin.py:109} INFO - [2022-06-30 01:32:14,155] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:32:14,185] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.885 seconds
+[2022-06-30 01:32:44,621] {processor.py:163} INFO - Started process (PID=22428) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:44,627] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:32:44,628] {logging_mixin.py:109} INFO - [2022-06-30 01:32:44,628] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:45,444] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:32:45,452] {logging_mixin.py:109} INFO - [2022-06-30 01:32:45,452] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:32:45,471] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.853 seconds
+[2022-06-30 01:33:16,037] {processor.py:163} INFO - Started process (PID=22494) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:16,044] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:33:16,045] {logging_mixin.py:109} INFO - [2022-06-30 01:33:16,045] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:16,829] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:16,838] {logging_mixin.py:109} INFO - [2022-06-30 01:33:16,838] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:33:16,858] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.823 seconds
+[2022-06-30 01:33:47,134] {processor.py:163} INFO - Started process (PID=22560) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:47,141] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:33:47,141] {logging_mixin.py:109} INFO - [2022-06-30 01:33:47,141] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:47,982] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:33:47,993] {logging_mixin.py:109} INFO - [2022-06-30 01:33:47,993] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:33:48,016] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.885 seconds
+[2022-06-30 01:34:18,555] {processor.py:163} INFO - Started process (PID=22626) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:18,556] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:34:18,557] {logging_mixin.py:109} INFO - [2022-06-30 01:34:18,557] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:19,409] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:19,417] {logging_mixin.py:109} INFO - [2022-06-30 01:34:19,417] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:34:19,437] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.884 seconds
+[2022-06-30 01:34:49,937] {processor.py:163} INFO - Started process (PID=22692) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:49,939] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:34:49,939] {logging_mixin.py:109} INFO - [2022-06-30 01:34:49,939] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:50,871] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:34:50,883] {logging_mixin.py:109} INFO - [2022-06-30 01:34:50,882] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:34:50,904] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.970 seconds
+[2022-06-30 01:35:21,319] {processor.py:163} INFO - Started process (PID=22758) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:21,319] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:35:21,320] {logging_mixin.py:109} INFO - [2022-06-30 01:35:21,320] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:22,190] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:22,201] {logging_mixin.py:109} INFO - [2022-06-30 01:35:22,200] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:35:22,226] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.909 seconds
+[2022-06-30 01:35:52,833] {processor.py:163} INFO - Started process (PID=22824) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:52,834] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:35:52,834] {logging_mixin.py:109} INFO - [2022-06-30 01:35:52,834] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:53,714] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:35:53,725] {logging_mixin.py:109} INFO - [2022-06-30 01:35:53,725] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:35:53,746] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.915 seconds
+[2022-06-30 01:36:24,317] {processor.py:163} INFO - Started process (PID=22890) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:36:24,324] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 01:36:24,325] {logging_mixin.py:109} INFO - [2022-06-30 01:36:24,325] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:36:25,149] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 01:36:25,161] {logging_mixin.py:109} INFO - [2022-06-30 01:36:25,161] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 01:36:25,186] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.872 seconds
+[2022-06-30 02:54:32,346] {processor.py:163} INFO - Started process (PID=22956) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:54:32,347] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:54:32,348] {logging_mixin.py:109} INFO - [2022-06-30 02:54:32,348] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:54:35,759] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:54:36,341] {logging_mixin.py:109} INFO - [2022-06-30 02:54:36,340] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:54:36,441] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 4.094 seconds
+[2022-06-30 02:55:07,189] {processor.py:163} INFO - Started process (PID=23022) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:07,197] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:55:07,197] {logging_mixin.py:109} INFO - [2022-06-30 02:55:07,197] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:07,951] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:07,962] {logging_mixin.py:109} INFO - [2022-06-30 02:55:07,962] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:55:07,984] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.797 seconds
+[2022-06-30 02:55:38,558] {processor.py:163} INFO - Started process (PID=23088) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:38,559] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:55:38,559] {logging_mixin.py:109} INFO - [2022-06-30 02:55:38,559] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:39,506] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:55:39,519] {logging_mixin.py:109} INFO - [2022-06-30 02:55:39,519] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:55:39,552] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.997 seconds
+[2022-06-30 02:56:10,434] {processor.py:163} INFO - Started process (PID=23154) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:10,435] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:56:10,436] {logging_mixin.py:109} INFO - [2022-06-30 02:56:10,435] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:11,262] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:11,271] {logging_mixin.py:109} INFO - [2022-06-30 02:56:11,271] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:56:11,291] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.859 seconds
+[2022-06-30 02:56:41,876] {processor.py:163} INFO - Started process (PID=23220) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:41,877] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:56:41,877] {logging_mixin.py:109} INFO - [2022-06-30 02:56:41,877] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:42,728] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:56:42,737] {logging_mixin.py:109} INFO - [2022-06-30 02:56:42,736] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:56:42,771] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.897 seconds
+[2022-06-30 02:57:13,265] {processor.py:163} INFO - Started process (PID=23286) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:13,265] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:57:13,266] {logging_mixin.py:109} INFO - [2022-06-30 02:57:13,266] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:14,238] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:14,248] {logging_mixin.py:109} INFO - [2022-06-30 02:57:14,248] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:57:14,270] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 1.008 seconds
+[2022-06-30 02:57:45,073] {processor.py:163} INFO - Started process (PID=23352) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:45,080] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:57:45,080] {logging_mixin.py:109} INFO - [2022-06-30 02:57:45,080] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:46,006] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:57:46,015] {logging_mixin.py:109} INFO - [2022-06-30 02:57:46,015] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:57:46,043] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.972 seconds
+[2022-06-30 02:58:16,682] {processor.py:163} INFO - Started process (PID=23418) to work on /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:58:16,683] {processor.py:642} INFO - Processing file /opt/airflow/dags/matchData_dag.py for tasks to queue
+[2022-06-30 02:58:16,684] {logging_mixin.py:109} INFO - [2022-06-30 02:58:16,684] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:58:17,613] {processor.py:654} INFO - DAG(s) dict_keys(['match_details_dag']) retrieved from /opt/airflow/dags/matchData_dag.py
+[2022-06-30 02:58:17,628] {logging_mixin.py:109} INFO - [2022-06-30 02:58:17,627] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-06-30 02:58:17,667] {processor.py:171} INFO - Processing /opt/airflow/dags/matchData_dag.py took 0.988 seconds
